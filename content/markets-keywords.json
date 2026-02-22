@@ -3244,7 +3244,9 @@
       "media buying",
       "programmatic",
       "ad network",
-      "media agency"
+      "media agency",
+      "social media",
+      "social network"
     ],
     "l1": {
       "Streaming & Video": [
@@ -3418,7 +3420,10 @@
       "ooh",
       "billboard",
       "tv advertising",
-      "radio advertising"
+      "radio advertising",
+      "social media",
+      "social ads",
+      "social marketing"
     ],
     "l1": {
       "Digital Advertising": [
@@ -4478,7 +4483,6 @@
     "keywords": [
       "nonprofit",
       "ngo",
-      "social",
       "charity",
       "philanthropy",
       "foundation",
@@ -4521,7 +4525,6 @@
       "policy change",
       "lobbying nonprofit",
       "activism",
-      "social media nonprofit",
       "donor management",
       "crm nonprofit",
       "impact measurement nonprofit",
