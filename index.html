@@ -622,8 +622,15 @@ function renderStepPanel(matches, kwCount) {
         ? 'Step 1 — Choose a market'
         : 'Step 1 — Confirm your market';
     const hintText = isAmbiguous
-        ? `${matches.length} markets match — pick one to continue`
+        ? `${matches.length} best matches — pick one to continue`
         : 'Best match found — click to open Level 1';
+
+    // Calculate match % relative to top score
+    const topScore = matches.length > 0 ? matches[0].score : 1;
+    const withPct = matches.map(m => ({
+        ...m,
+        pct: Math.round((m.score / topScore) * 100)
+    }));
 
     stepPanel.innerHTML = `
         <div class="step-panel-header">
@@ -637,13 +644,14 @@ function renderStepPanel(matches, kwCount) {
         </div>
         ${kwCount > 3 ? '<div class="step-panel-warning">⚠ Max 3 keywords for step-by-step mode. Using first 3.</div>' : ''}
         <ul class="step-panel-list">
-            ${matches.length === 0
+            ${withPct.length === 0
                 ? `<li class="step-panel-no-result">No markets found — try different keywords.</li>`
-                : matches.map((m, i) => `
+                : withPct.map((m, i) => `
                     <li>
                         <a class="step-panel-item" href="${m.href}">
                             <span class="step-item-num">${String(i + 1).padStart(2, '0')}</span>
                             <span class="step-item-name">${m.name}</span>
+                            <span class="step-item-pct">${m.pct}%</span>
                             <svg class="step-item-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -671,7 +679,7 @@ function runQueryWithMode(mode) {
         // ── AUTO MODE ────────────────────────────────────────────
         closeStepPanel();
         const kwCount = countKeywords(query);
-        const matches = getTopMatches(query, 8);
+        const matches = getTopMatches(query, 5);
 
         if (kwCount >= 2 && matches.length > 0) {
             const top = matches[0];
@@ -731,8 +739,8 @@ function renderSearchResults(matches, query) {
     }
 
     const kwCount = query ? countKeywords(query) : 1;
-    // In auto mode with 2-3 keywords, cap dropdown at 5 (narrower intent)
-    const displayMatches = kwCount >= 2 ? matches.slice(0, 5) : matches.slice(0, 8);
+    // Auto mode: max 5 results always
+    const displayMatches = matches.slice(0, 5);
 
     searchResults.innerHTML = '';
     displayMatches.forEach(match => {
