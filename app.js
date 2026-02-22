@@ -590,8 +590,8 @@ function showSummary() {
             item.classList.add("ai-highlight");
         }
         item.innerHTML = `
-            <div class="label">${labels[i]}</div>
-            <div class="value">${selections[key] || "—"}</div>
+            <div class="label">${escapeHtml(labels[i])}</div>
+            <div class="value">${escapeHtml(String(selections[key] || "—"))}</div>
         `;
         summaryGrid.appendChild(item);
     });
@@ -800,6 +800,7 @@ function escapeHtml(str) {
 }
 
 function csvEscape(str) {
+    str = String(str ?? "");
     if (str.includes(",") || str.includes('"') || str.includes("\n")) {
         return '"' + str.replace(/"/g, '""') + '"';
     }
@@ -1023,7 +1024,7 @@ function renderAiLearningSummary() {
     const unchanged = list.reduce((sum, l) => sum + l.unchanged, 0);
     const accuracy = total ? Math.round((unchanged / total) * 100) : 0;
 
-    aiLearning.innerHTML = `AI learning today: ${accuracy}% fields unchanged. Entries: ${list.length}.`;
+    aiLearning.textContent = `AI learning today: ${accuracy}% fields unchanged. Entries: ${list.length}.`;
     aiLearning.classList.remove("hidden");
 }
 
