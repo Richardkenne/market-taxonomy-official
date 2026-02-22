@@ -10,7 +10,7 @@
 
 | Keywords typed | Max results shown | Navigation |
 |---|---|---|
-| 1 keyword | Up to 3 market matches | Show panel, user picks |
+| 1 keyword | Up to 3 market matches | Show panel with %, user picks |
 | 2 keywords | Up to 2 market matches | Show panel, or navigate direct if gap ≥ 30 |
 | 3 keywords | 1 best match | Navigate directly to L1 |
 
@@ -22,7 +22,9 @@
 - If top score gap ≥ 30 vs second → navigate directly to L1
 
 ### Step panel UI:
-- Shows numbered list of markets (max 3)
+- Shows numbered list of up to 3 markets
+- Each result shows a **match % badge** (green) relative to the top match (top = 100%)
+- Example: `01 Technology 100% →` / `02 Software 72% →`
 - Each item links directly to the market's L1 page
 - Header says: "Step 1 — Choose a market" (1 kw) or "Step 1 — Confirm your market" (2+ kw)
 - If 0 results → shows "No markets found — try different keywords"
@@ -35,9 +37,9 @@
 **Trigger:** User selects "Auto Complete" toggle (default), types a keyword, and presses Search.
 
 ### Behaviour:
-- 1 keyword → show dropdown with up to 8 matches, user clicks one
+- 1 keyword → show dropdown with up to **5 matches**, user clicks one
 - 2+ keywords + clear winner (score gap > 20) → navigate directly to L1
-- 2+ keywords + ambiguous → show dropdown with top 5 matches
+- 2+ keywords + ambiguous → show dropdown with top **5 matches**
 - 0 matches → fallback: uses local keyword mapping to guess best market
 
 ### Navigation:
@@ -47,6 +49,7 @@
 ### Key difference vs Step by Step:
 - Auto Complete is faster — skips the explicit confirmation panel
 - Shows inline dropdown (not a modal panel)
+- Max 5 results always (clean, not overwhelming)
 - Designed for users who know what they want
 
 ---
