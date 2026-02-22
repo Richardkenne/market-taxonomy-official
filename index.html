@@ -696,17 +696,31 @@ function getTopMatches(query, max) {
     if (!query || query.length < 2) return [];
     const lowerQuery = query.toLowerCase();
     const tokens = lowerQuery.split(/\s+/).filter(Boolean).slice(0, 3);
+
+    // Build bigrams from query (e.g. "social media" → ["social media"])
+    const bigrams = [];
+    for (let i = 0; i < tokens.length - 1; i++) bigrams.push(tokens[i] + ' ' + tokens[i + 1]);
+
     const scored = [];
     MARKET_INDEX.forEach(market => {
         let score = 0;
         const name = market.name.toLowerCase();
+
+        // Bigram match first — high reward (prevents "social" from winning over "social media")
+        bigrams.forEach(bg => {
+            if (market.keywords.some(kw => kw === bg)) score += 200;
+            else if (market.keywords.some(kw => kw.includes(bg))) score += 140;
+            else if ((market.l1Keywords || []).some(({ kw }) => kw.includes(bg))) score += 100;
+        });
+
+        // Single token match
         tokens.forEach(t => {
-            // Market name
+            // Market name — word boundary only (no substring, avoids "Non-profit & Social" for "social media")
             if (name === t) score += 120;
-            else if (name.startsWith(t)) score += 80;
+            else if (name.startsWith(t + ' ') || name.endsWith(' ' + t)) score += 80;
             else {
-                const nameRe = new RegExp('(?:^|\\s)' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:\\s|$)');
-                if (nameRe.test(name)) score += 60;
+                const nameRe = new RegExp('(?:^|[\\s&/-])' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:[\\s&/-]|$)');
+                if (nameRe.test(name)) score += 50;
             }
             // L0 keywords (word boundary only)
             market.keywords.forEach(kw => {
@@ -719,6 +733,7 @@ function getTopMatches(query, max) {
                 if (s > 0) score += Math.round(s * 0.75);
             });
         });
+
         if (score > 0) scored.push({ ...market, score });
     });
     scored.sort((a, b) => b.score - a.score);
@@ -896,12 +911,31 @@ searchInput.addEventListener('input', (e) => {
         searchResults.classList.add('hidden');
         return;
     }
-    // Only show dropdown in auto mode while typing
     if (getFlowMode() === 'auto') {
         const matches = searchMarkets(query);
         renderSearchResults(matches, query);
     } else {
-        searchResults.classList.add('hidden');
+        // Step mode: show top 3 with % while typing
+        const matches = getTopMatches(query, 3);
+        if (matches.length === 0) { searchResults.classList.add('hidden'); return; }
+        const topScore = matches[0].score;
+        searchResults.innerHTML = '';
+        matches.forEach(match => {
+            const pct = Math.round((match.score / topScore) * 100);
+            const item = document.createElement('a');
+            item.href = match.href;
+            item.className = 'search-result-item';
+            const nameSpan = document.createElement('span');
+            nameSpan.className = 'result-name';
+            nameSpan.textContent = match.name;
+            const pctSpan = document.createElement('span');
+            pctSpan.className = 'step-item-pct';
+            pctSpan.textContent = pct + '%';
+            item.appendChild(nameSpan);
+            item.appendChild(pctSpan);
+            searchResults.appendChild(item);
+        });
+        searchResults.classList.remove('hidden');
     }
 });
 
