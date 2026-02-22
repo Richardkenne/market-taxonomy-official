@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Development Land — Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../style.css">
+    <style>
+        .l3-divider {
+            max-width: 600px;
+            margin: 28px auto;
+            border: none;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Sources */
+        .l3-sources-label {
+            max-width: 600px;
+            margin: 0 auto 6px;
+            padding: 0 16px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+        }
+        .l3-sources-grid {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+        .l3-source-chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+        .l3-source-chip:hover { color: var(--text-primary); }
+        .l3-source-chip svg { flex-shrink: 0; opacity: 0.4; }
+
+        /* Market context box */
+        .l3-context {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-context-inner {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .l3-context-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            padding: 10px 14px 6px;
+        }
+        .l3-context-row {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 7px 14px;
+            border-top: 1px solid var(--border-light);
+        }
+        .l3-context-key {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            min-width: 110px;
+            flex-shrink: 0;
+        }
+        .l3-context-val {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Callout */
+        .l3-callout {
+            max-width: 600px;
+            margin: 0 auto 16px;
+            padding: 0 16px;
+        }
+        .l3-callout-inner {
+            border-left: 3px solid var(--green);
+            padding: 10px 14px;
+            background: var(--green-light);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Pain points */
+        .l3-pain {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-pain-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: 10px;
+        }
+        .l3-pain ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .l3-pain ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .l3-pain ul li::before {
+            content: "·";
+            font-size: 1.2rem;
+            color: var(--green);
+            line-height: 1.2;
+            flex-shrink: 0;
+        }
+
+        /* Niche box */
+        .l3-niche {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-niche-inner {
+            background: var(--border-light);
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+        .l3-niche-inner h4 {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin: 0 0 6px;
+        }
+        .l3-niche-inner p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .l3-cta {
+            max-width: 600px;
+            margin: 0 auto 48px;
+            padding: 0 16px;
+            text-align: center;
+        }
+
+        /* Explanation */
+        .l3-explanation {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+            font-size: 0.78rem;
+            color: var(--text-tertiary);
+            line-height: 1.65;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="../../../../index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="../../L2/market-real-estate-land-development.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Land Development
+            </a>
+        </div>
+
+        <!-- PART 1 — TITLE -->
+        <header class="market-page-header">
+            <div style="text-align:center; margin-bottom:12px;">
+                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 2.1</span>
+            </div>
+            <div class="market-badge">
+                <span class="market-title">Commercial Development Land</span>
+            </div>
+        </header>
+
+        <!-- PART 2 — DEFINITION -->
+        <p class="subtitle" style="max-width:560px; margin:0 auto 0;">Commercial development land encompasses parcels zoned or designated for office, retail, hospitality, or mixed-use development, acquired by commercial developers and investors for ground-up projects.</p>
+
+        <hr class="l3-divider">
+
+        <!-- PART 3 — SOURCES EXPLANATION -->
+        <p class="l3-explanation">Market data is sourced from CoStar commercial land transaction analytics, CBRE land advisory deal reports, and ULI development survey data tracking commercial land pipeline and pricing trends.</p>
+
+        <!-- PART 4 — SOURCES -->
+        <p class="l3-sources-label" style="margin-top:14px;">Sources</p>
+        <div class="l3-sources-grid">
+            <a href="https://www.costar.com/" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>CoStar Land Analytics</a>
+            <a href="https://www.cbre.com/real-estate-services/advisory-and-transaction/land" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>CBRE Land Advisory</a>
+            <a href="https://uli.org/research/" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>ULI Development Surveys</a>
+            <a href="https://www.marcusmillichap.com/research" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Marcus & Millichap Land Research</a>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 5 — MARKET CONTEXT -->
+        <div class="l3-context">
+            <div class="l3-context-inner">
+                <p class="l3-context-label">Market Context</p>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Size / Scale</span>
+                    <span class="l3-context-val">Commercial land transactions ~$30–50B annually; individual parcels range from $500K (tertiary market retail pad) to $500M+ (urban mixed-use land in gateway cities)</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Growth signal</span>
+                    <span class="l3-context-val">Mixed — retail and office land demand weak; industrial land in critical shortage; mixed-use infill land strong in select markets; hospitality land recovering with travel demand</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Key players</span>
+                    <span class="l3-context-val">CBRE Land (brokerage/advisory), JLL Land (brokerage), Colliers Land, regional land brokers; institutional buyers include Hines, Tishman Speyer, and Related Companies; national retailers (Starbucks, CVS, Chick-fil-A) as pad buyers</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Geography</span>
+                    <span class="l3-context-val">Industrial land most constrained: Inland Empire, NJ, NYC metro, Bay Area; mixed-use land active in urban infill markets; retail pad sites along major thoroughfares in growth suburbs</span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 6 — PROBLEM FRAMING -->
+        <div class="l3-callout">
+            <div class="l3-callout-inner">Commercial land brokers and developers assemble, underwrite, and transact on parcels that require synthesizing zoning, utilities, environmental, traffic, and market demand data — all from disparate sources with no integrated workflow.</div>
+        </div>
+
+        <!-- PART 7 — KNOWN PAIN POINTS -->
+        <div class="l3-pain">
+            <p class="l3-pain-label">Known Pain Points</p>
+            <ul>
+                <li>                <li>Commercial site feasibility analysis requires assembling zoning code data, traffic counts, utility availability, environmental phase 1 status, and market demand metrics from five or more separate data sources
+                <li>Assemblage coordination — buying multiple adjacent parcels from different owners to create a developable site — involves parallel negotiations, contingent closings, and confidentiality management with no purpose-built deal management tool
+                <li>Commercial land listing and marketing has no adequate platform — LoopNet and CoStar land sections are poorly maintained; reaching the right developer-buyer audience requires relationship-based outreach
+                <li>Ground lease structuring and long-term ground lease management for commercial development sites involves complex rent reset provisions and subordination arrangements tracked in bespoke spreadsheets
+            </ul>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 8 — HOW TO CHOOSE A NICHE -->
+        <div class="l3-niche">
+            <div class="l3-niche-inner">
+                <h4>How to Choose a Niche</h4>
+                <p>Commercial site feasibility analytics — combining zoning, traffic, utilities, and market data into one workflow — is the most actionable software opportunity. Target commercial land brokers (CBRE, JLL, Colliers land divisions) and national retailer real estate teams (who evaluate hundreds of sites annually) as the highest-volume users. Ground lease management software is a niche but high-value opportunity as ground lease financing becomes more common in high land-cost markets.</p>
+            </div>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 9 — CTA -->
+        <div class="l3-cta">
+            <button class="btn btn-primary btn-large" id="view-numbers">
+                Numbers
+            </button>
+        </div>
+
+    </div>
+    <script src="../../../../content/t.js"></script>
+    <script>
+        document.getElementById('view-numbers').addEventListener('click', () => {
+            window.location.href = 'numbers-real-estate-land-development-commercial-development-land.html';
+        });
+
+        document.getElementById('start-wizard').addEventListener('click', () => {
+            localStorage.setItem('selected_market', 'Real Estate — Land Development — Commercial Development Land');
+            window.location.href = '../../../problem-selection.html';
+        });
+    </script>
+<div style="max-width: 600px; margin: 48px auto; padding: 0 16px; text-align: center;"><a href="../L3/market-real-estate-land-development-commercial-development-land-l3.html" style="display: inline-block; padding: 12px 24px; background: var(--green); color: white; border-radius: 8px; text-decoration: none; font-weight: 500;">View Level 3 →</a></div></body>
+</html>

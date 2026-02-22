@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-Street / Urban Retail — Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../style.css">
+    <style>
+        .l3-divider {
+            max-width: 600px;
+            margin: 28px auto;
+            border: none;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Sources */
+        .l3-sources-label {
+            max-width: 600px;
+            margin: 0 auto 6px;
+            padding: 0 16px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+        }
+        .l3-sources-grid {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+        .l3-source-chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+        .l3-source-chip:hover { color: var(--text-primary); }
+        .l3-source-chip svg { flex-shrink: 0; opacity: 0.4; }
+
+        /* Market context box */
+        .l3-context {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-context-inner {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .l3-context-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            padding: 10px 14px 6px;
+        }
+        .l3-context-row {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 7px 14px;
+            border-top: 1px solid var(--border-light);
+        }
+        .l3-context-key {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            min-width: 110px;
+            flex-shrink: 0;
+        }
+        .l3-context-val {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Callout */
+        .l3-callout {
+            max-width: 600px;
+            margin: 0 auto 16px;
+            padding: 0 16px;
+        }
+        .l3-callout-inner {
+            border-left: 3px solid var(--green);
+            padding: 10px 14px;
+            background: var(--green-light);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Pain points */
+        .l3-pain {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-pain-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: 10px;
+        }
+        .l3-pain ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .l3-pain ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .l3-pain ul li::before {
+            content: "·";
+            font-size: 1.2rem;
+            color: var(--green);
+            line-height: 1.2;
+            flex-shrink: 0;
+        }
+
+        /* Niche box */
+        .l3-niche {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-niche-inner {
+            background: var(--border-light);
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+        .l3-niche-inner h4 {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin: 0 0 6px;
+        }
+        .l3-niche-inner p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .l3-cta {
+            max-width: 600px;
+            margin: 0 auto 48px;
+            padding: 0 16px;
+            text-align: center;
+        }
+
+        /* Explanation */
+        .l3-explanation {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+            font-size: 0.78rem;
+            color: var(--text-tertiary);
+            line-height: 1.65;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="../../../../index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="../../L2/market-real-estate-retail-shopping-centers.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Retail & Shopping Centers
+            </a>
+        </div>
+
+        <!-- PART 1 — TITLE -->
+        <header class="market-page-header">
+            <div style="text-align:center; margin-bottom:12px;">
+                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 2.1</span>
+            </div>
+            <div class="market-badge">
+                <span class="market-title">High-Street / Urban Retail</span>
+            </div>
+        </header>
+
+        <!-- PART 2 — DEFINITION -->
+        <p class="subtitle" style="max-width:560px; margin:0 auto 0;">High-street and urban retail encompasses ground-floor commercial space on major urban shopping corridors — including flagship stores, luxury boutiques, and experiential retailers — in dense city neighborhoods.</p>
+
+        <hr class="l3-divider">
+
+        <!-- PART 3 — SOURCES EXPLANATION -->
+        <p class="l3-explanation">Market data is sourced from CBRE Urban Retail reports, JLL High Street Index, and Cushman & Wakefield Main Street reports tracking ground-floor vacancy and rent trends on major urban corridors.</p>
+
+        <!-- PART 4 — SOURCES -->
+        <p class="l3-sources-label" style="margin-top:14px;">Sources</p>
+        <div class="l3-sources-grid">
+            <a href="https://www.cbre.com/insights/figures/retail-figures" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>CBRE Urban Retail Report</a>
+            <a href="https://www.cushmanwakefield.com/en/research-and-insight" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Cushman & Wakefield Main Streets Report</a>
+            <a href="https://www.us.jll.com/en/trends-and-insights/research" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>JLL Retail Outlook</a>
+            <a href="https://www.costar.com/" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>CoStar Urban Retail Analytics</a>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 5 — MARKET CONTEXT -->
+        <div class="l3-context">
+            <div class="l3-context-inner">
+                <p class="l3-context-label">Market Context</p>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Size / Scale</span>
+                    <span class="l3-context-val">Urban ground-floor retail in top 10 US cities represents ~200M+ sq ft; rents on top corridors range from $300–$3,000 PSF (NYC Fifth Avenue, Rodeo Drive); total market value $100B+</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Growth signal</span>
+                    <span class="l3-context-val">Recovery uneven — luxury flagships and experiential retail strong; mid-tier fashion soft; remote work reducing weekday foot traffic in office-dependent corridors like NYC Midtown</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Key players</span>
+                    <span class="l3-context-val">L Brands, LVMH, Uniqlo (flagship tenants); SL Green, Vornado Realty Trust (NYC landlords); Brookfield Properties (urban retail owner); Thor Equities (urban retail specialist buyer)</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Geography</span>
+                    <span class="l3-context-val">NYC (Fifth Ave, SoHo, Madison Ave), Chicago (Magnificent Mile), LA (Rodeo Drive, Abbott Kinney), SF (Union Square), Miami (Lincoln Road, Wynwood), Boston (Newbury St)</span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 6 — PROBLEM FRAMING -->
+        <div class="l3-callout">
+            <div class="l3-callout-inner">Urban retail landlords managing high-profile ground-floor space on major corridors need tenant pipeline analytics, market intelligence, and lease management tools calibrated for the deal complexity and brand value of flagship retail.</div>
+        </div>
+
+        <!-- PART 7 — KNOWN PAIN POINTS -->
+        <div class="l3-pain">
+            <p class="l3-pain-label">Known Pain Points</p>
+            <ul>
+                <li>                <li>Tenant prospecting and brand outreach for flagship urban retail spaces requires understanding brand expansion strategies and store rollout plans — no tool aggregates this intelligence for landlord leasing teams
+                <li>Pop-up and short-term retail lease management for urban corridors (flexible 3–12 month terms as brands test markets) is managed with bespoke legal agreements and no standardized platform
+                <li>Foot traffic and consumer demographic analysis for specific urban blocks varies dramatically and is expensive to obtain — landlords cannot easily benchmark their corridor against competitive streets
+                <li>Retail real estate deals on major urban corridors are highly relationship-driven with long negotiating timelines — deal pipeline and landlord-broker relationship management lacks any CRM purpose-built for retail leasing
+            </ul>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 8 — HOW TO CHOOSE A NICHE -->
+        <div class="l3-niche">
+            <div class="l3-niche-inner">
+                <h4>How to Choose a Niche</h4>
+                <p>Target urban retail-focused landlords (Thor Equities, Vornado, SL Green retail divisions) with a leasing intelligence and tenant pipeline product. Brand expansion tracking — aggregating retailer store opening announcements, lease expirations, and expansion signals — is the unique data wedge that no current tool provides. Short-term and pop-up retail management (standardized lease templates, payment automation, foot traffic reporting) is a growing sub-market with no adequate software.</p>
+            </div>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 9 — CTA -->
+        <div class="l3-cta">
+            <button class="btn btn-primary btn-large" id="view-numbers">
+                Numbers
+            </button>
+        </div>
+
+    
+        <div class="l3-cta" style="margin-top: 48px;">
+            <a class="l3-cta-btn" href="../../../numbers.html?l3=market-real-estate-retail_shopping_centers_high_street_urban_retail" style="background:var(--text-secondary);">Numbers & TAM →</a>
+        </div>
+    </div>
+    <script src="../../../../content/t.js"></script>
+    <script>
+        document.getElementById('view-numbers').addEventListener('click', () => {
+            window.location.href = 'numbers-real-estate-retail-shopping-centers-high-street-urban-retail.html';
+        });
+
+        document.getElementById('start-wizard').addEventListener('click', () => {
+            localStorage.setItem('selected_market', 'Real Estate — Retail & Shopping Centers — High-Street / Urban Retail');
+            window.location.href = '../../../problem-selection.html';
+        });
+    </script>
+</body>
+</html>

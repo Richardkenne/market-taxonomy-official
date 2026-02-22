@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed-Use Commercial — Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../style.css">
+    <style>
+        .l3-divider {
+            max-width: 600px;
+            margin: 28px auto;
+            border: none;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Sources */
+        .l3-sources-label {
+            max-width: 600px;
+            margin: 0 auto 6px;
+            padding: 0 16px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+        }
+        .l3-sources-grid {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+        .l3-source-chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+        .l3-source-chip:hover { color: var(--text-primary); }
+        .l3-source-chip svg { flex-shrink: 0; opacity: 0.4; }
+
+        /* Market context box */
+        .l3-context {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-context-inner {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .l3-context-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            padding: 10px 14px 6px;
+        }
+        .l3-context-row {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 7px 14px;
+            border-top: 1px solid var(--border-light);
+        }
+        .l3-context-key {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            min-width: 110px;
+            flex-shrink: 0;
+        }
+        .l3-context-val {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Callout */
+        .l3-callout {
+            max-width: 600px;
+            margin: 0 auto 16px;
+            padding: 0 16px;
+        }
+        .l3-callout-inner {
+            border-left: 3px solid var(--green);
+            padding: 10px 14px;
+            background: var(--green-light);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Pain points */
+        .l3-pain {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-pain-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: 10px;
+        }
+        .l3-pain ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .l3-pain ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .l3-pain ul li::before {
+            content: "·";
+            font-size: 1.2rem;
+            color: var(--green);
+            line-height: 1.2;
+            flex-shrink: 0;
+        }
+
+        /* Niche box */
+        .l3-niche {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-niche-inner {
+            background: var(--border-light);
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+        .l3-niche-inner h4 {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin: 0 0 6px;
+        }
+        .l3-niche-inner p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .l3-cta {
+            max-width: 600px;
+            margin: 0 auto 48px;
+            padding: 0 16px;
+            text-align: center;
+        }
+
+        /* Explanation */
+        .l3-explanation {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+            font-size: 0.78rem;
+            color: var(--text-tertiary);
+            line-height: 1.65;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="../../../../index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="../../L2/market-real-estate-commercial.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Commercial Real Estate
+            </a>
+        </div>
+
+        <!-- PART 1 — TITLE -->
+        <header class="market-page-header">
+            <div style="text-align:center; margin-bottom:12px;">
+                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 2.1</span>
+            </div>
+            <div class="market-badge">
+                <span class="market-title">Mixed-Use Commercial</span>
+            </div>
+        </header>
+
+        <!-- PART 2 — DEFINITION -->
+        <p class="subtitle" style="max-width:560px; margin:0 auto 0;">Mixed-use commercial developments combine two or more property types — typically retail, office, residential, and hotel — in a single project or district, creating live-work-play environments in urban and suburban settings.</p>
+
+        <hr class="l3-divider">
+
+        <!-- PART 3 — SOURCES EXPLANATION -->
+        <p class="l3-explanation">Market sizing draws on ULI mixed-use development surveys, ICSC retail-residential integration research, and CoStar mixed-use project tracking across major US metros.</p>
+
+        <!-- PART 4 — SOURCES -->
+        <p class="l3-sources-label" style="margin-top:14px;">Sources</p>
+        <div class="l3-sources-grid">
+            <a href="https://uli.org/research/" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>ULI Mixed-Use Research</a>
+            <a href="https://www.icsc.com/research" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>ICSC Research</a>
+            <a href="https://www.costar.com/" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>CoStar Mixed-Use Analytics</a>
+            <a href="https://www.cushmanwakefield.com/en/research-and-insight" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Cushman & Wakefield Mixed-Use</a>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 5 — MARKET CONTEXT -->
+        <div class="l3-context">
+            <div class="l3-context-inner">
+                <p class="l3-context-label">Market Context</p>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Size / Scale</span>
+                    <span class="l3-context-val">Mixed-use accounts for ~15–20% of new commercial development; individual projects range from $50M to $5B+; major urban mixed-use districts represent $10B+ in asset value</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Growth signal</span>
+                    <span class="l3-context-val">Suburban densification and transit-oriented development driving new mixed-use supply; adaptive reuse of retail malls into mixed-use growing as redevelopment strategy</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Key players</span>
+                    <span class="l3-context-val">Related Companies (developer, Hudson Yards), Brookfield Properties (owner/operator), Forest City (developer), Hines (developer/manager), Tanger (retail-to-mixed-use conversion)</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Geography</span>
+                    <span class="l3-context-val">Urban infill in gateway cities (NYC, Chicago, DC, Miami); suburban town center redevelopments; transit-oriented developments along light rail and commuter rail corridors</span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 6 — PROBLEM FRAMING -->
+        <div class="l3-callout">
+            <div class="l3-callout-inner">Mixed-use properties require managing fundamentally different tenant types (retail, residential, office, hotel) under one ownership structure — creating asset management, accounting, and operations complexity that no single platform handles well.</div>
+        </div>
+
+        <!-- PART 7 — KNOWN PAIN POINTS -->
+        <div class="l3-pain">
+            <p class="l3-pain-label">Known Pain Points</p>
+            <ul>
+                <li>                <li>Accounting and financial reporting for mixed-use assets requires multiple chart-of-accounts structures within a single entity — most property accounting software forces operators to choose one asset class
+                <li>Shared-area maintenance cost allocation (CAM charges, utilities, security) across different tenant types with different lease structures requires complex calculations done manually
+                <li>Parking management for a mixed-use development serving retail shoppers, office tenants, hotel guests, and residents simultaneously requires dynamic allocation with no adequate software solution
+                <li>Leasing and tenant coordination across retail, office, and residential teams within the same development often involves three separate brokerages with no unified pipeline or availability data
+            </ul>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 8 — HOW TO CHOOSE A NICHE -->
+        <div class="l3-niche">
+            <div class="l3-niche-inner">
+                <h4>How to Choose a Niche</h4>
+                <p>Target mixed-use developers and operators directly — they are frustrated buyers who know their problem is unsolved. Asset management software that handles multiple property types in one ledger is the core opportunity. Alternatively, build a parking or common area revenue management tool specifically for mixed-use properties — it is discrete, measurable, and has clear ROI.</p>
+            </div>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 9 — CTA -->
+        <div class="l3-cta">
+            <button class="btn btn-primary btn-large" id="view-numbers">
+                Numbers
+            </button>
+        </div>
+
+    
+        <div class="l3-cta" style="margin-top: 48px;">
+            <a class="l3-cta-btn" href="../../../numbers.html?l3=market-real-estate-commercial_mixed_use_commercial" style="background:var(--text-secondary);">Numbers & TAM →</a>
+        </div>
+    </div>
+    <script src="../../../../content/t.js"></script>
+    <script>
+        document.getElementById('view-numbers').addEventListener('click', () => {
+            window.location.href = 'numbers-real-estate-commercial-mixed-use-commercial.html';
+        });
+
+        document.getElementById('start-wizard').addEventListener('click', () => {
+            localStorage.setItem('selected_market', 'Real Estate — Commercial — Mixed-Use Commercial');
+            window.location.href = '../../../problem-selection.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output Sheet — Part C</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pc-wrap {
+            max-width: 600px;
+            margin: 0 auto 80px;
+            padding: 0 16px;
+        }
+
+        .pc-summary {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+        .pc-summary-row {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 12px 18px;
+            border-bottom: 1px solid var(--border-light);
+        }
+        .pc-summary-row:last-child { border-bottom: none; }
+        .pc-summary-key {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: var(--text-tertiary);
+            min-width: 120px;
+            flex-shrink: 0;
+        }
+        .pc-summary-val {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        .pc-summary-val .crumb { color: var(--text-secondary); }
+        .pc-summary-val .crumb.last { color: var(--text-primary); font-weight: 600; }
+        .pc-summary-val .sep { color: var(--text-tertiary); margin: 0 5px; font-size: 0.75rem; }
+
+        .pc-tam-chips {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .pc-tam-chip {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px 12px;
+            background: var(--border-light);
+            border-radius: 8px;
+            gap: 1px;
+        }
+        .pc-tam-chip-val {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--green);
+        }
+        .pc-tam-chip-lbl {
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+        }
+
+        .pc-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-right: 6px;
+        }
+        .pc-badge-primary { background: var(--text-primary); color: #fff; }
+        .pc-badge-secondary { background: var(--border-light); color: var(--text-secondary); border: 1px solid var(--border); }
+
+        .pc-placeholder {
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .pc-placeholder p {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            margin: 8px 0 0;
+            line-height: 1.6;
+        }
+        .pc-placeholder-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--border);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="problem-selection.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Problem Selection
+            </a>
+        </div>
+
+        <header class="market-page-header">
+            <div style="text-align:center; margin-bottom:12px;">
+                <span class="part-badge part-badge-c"><span class="part-badge-dot"></span>Part C — Output</span>
+            </div>
+            <div class="market-badge">
+                <span class="market-title">Output Sheet</span>
+            </div>
+        </header>
+
+        <div class="pc-wrap">
+
+            <!-- Summary of selections -->
+            <div class="pc-summary" id="pc-summary">
+                <div class="pc-summary-row">
+                    <span class="pc-summary-key">Market</span>
+                    <span class="pc-summary-val" id="pc-market">—</span>
+                </div>
+                <div class="pc-summary-row">
+                    <span class="pc-summary-key">Scale</span>
+                    <span class="pc-summary-val">
+                        <div class="pc-tam-chips" id="pc-tam-chips">
+                            <!-- Populated by taxonomy-numbers.js -->
+                        </div>
+                    </span>
+                </div>
+                <div class="pc-summary-row">
+                    <span class="pc-summary-key">Problem</span>
+                    <span class="pc-summary-val" id="pc-problem">—</span>
+                </div>
+            </div>
+
+            <!-- Placeholder content area -->
+            <div class="pc-placeholder">
+                <p class="pc-placeholder-label">Part C — To be defined</p>
+                <p>This is where the output sheet will be generated.<br>Content, format, and export options are still being designed.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="content/taxonomy-numbers.js"></script>
+    <script src="content/t.js"></script>
+    <script>
+        // Render TAM chips from taxonomy-numbers.js
+        (function() {
+            const chips = document.getElementById('pc-tam-chips');
+            if (!chips || typeof TAXONOMY_NUMBERS === 'undefined') return;
+            ['L1','L2','L3'].forEach(level => {
+                const n = TAXONOMY_NUMBERS[level];
+                if (!n) return;
+                const chip = document.createElement('div');
+                chip.className = 'pc-tam-chip';
+                chip.innerHTML = '<span class="pc-tam-chip-val">' + n.count + '</span><span class="pc-tam-chip-lbl">' + level + ' ' + n.label + '</span>';
+                chips.appendChild(chip);
+            });
+        })();
+
+        // Read selections from localStorage
+        const market = localStorage.getItem('selected_market') || '—';
+        const primary = localStorage.getItem('primary_problem');
+        const secondary = localStorage.getItem('secondary_problem');
+
+        // Render market as breadcrumb
+        const marketEl = document.getElementById('pc-market');
+        const parts = market.split(' — ');
+        marketEl.innerHTML = parts.map((p, i) => {
+            const isLast = i === parts.length - 1;
+            const sep = i > 0 ? '<span class="sep">›</span>' : '';
+            return `${sep}<span class="crumb${isLast ? ' last' : ''}">${p}</span>`;
+        }).join('');
+
+        // Render problems
+        const problemEl = document.getElementById('pc-problem');
+        let problemHTML = '';
+        if (primary) {
+            problemHTML += `<span class="pc-badge pc-badge-primary">✓ ${primary}</span>`;
+        }
+        if (secondary) {
+            problemHTML += `<span class="pc-badge pc-badge-secondary">+ ${secondary}</span>`;
+        }
+        if (!primary) problemHTML = '—';
+        problemEl.innerHTML = problemHTML;
+    </script>
+</body>
+</html>

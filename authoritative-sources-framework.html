@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authoritative Sources Framework — Market Taxonomy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .paper-wrap {
+            max-width: 680px;
+            margin: 0 auto 80px;
+            padding: 0 24px;
+        }
+
+        .paper-kicker {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .paper-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-align: center;
+            line-height: 1.25;
+            margin-bottom: 6px;
+        }
+
+        .paper-subtitle {
+            font-size: 0.88rem;
+            color: var(--text-tertiary);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .paper-divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 36px 0;
+        }
+
+        /* Section */
+        .paper-section {
+            margin-bottom: 36px;
+        }
+
+        .paper-section-num {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            margin-bottom: 6px;
+        }
+
+        .paper-section h2 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 12px;
+            line-height: 1.3;
+        }
+
+        .paper-section p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            margin: 0 0 10px;
+        }
+
+        .paper-section p:last-child { margin-bottom: 0; }
+
+        /* Callout */
+        .paper-callout {
+            border-left: 3px solid var(--green);
+            padding: 10px 16px;
+            background: var(--green-light);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin: 16px 0;
+        }
+
+        /* Source class cards */
+        .source-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 16px 0;
+        }
+        .source-card {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+        }
+        .source-card-title {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        .source-card-body {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+        .source-card-role {
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--green);
+            margin-top: 8px;
+            margin-bottom: 3px;
+        }
+        .source-card-limit {
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-tertiary);
+            margin-top: 6px;
+            margin-bottom: 3px;
+        }
+
+        /* Table */
+        .paper-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+            margin: 16px 0;
+        }
+        .paper-table th {
+            text-align: left;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: var(--text-tertiary);
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .paper-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            vertical-align: top;
+            line-height: 1.5;
+        }
+        .paper-table td:first-child {
+            font-weight: 600;
+            color: var(--text-primary);
+            white-space: nowrap;
+        }
+
+        /* Validation examples */
+        .validation-list {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .validation-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+        }
+        .validation-list li::before {
+            content: "✓";
+            font-size: 0.75rem;
+            color: var(--green);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Canonical box */
+        .paper-canonical {
+            background: var(--text-primary);
+            color: #fff;
+            border-radius: 12px;
+            padding: 28px 28px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .paper-canonical p {
+            font-size: 1.05rem;
+            font-weight: 500;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.9);
+            margin: 0;
+        }
+        .paper-canonical p strong {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* Mini TOC */
+        .paper-toc {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 0 0 8px;
+        }
+        .paper-toc a {
+            font-size: 0.72rem;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            transition: color 0.12s, border-color 0.12s;
+            white-space: nowrap;
+        }
+        .paper-toc a:hover {
+            color: var(--text-primary);
+            border-color: var(--text-primary);
+        }
+
+        @media (max-width: 540px) {
+            .source-cards { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="javascript:history.back()" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back
+            </a>
+        </div>
+
+        <div class="paper-wrap">
+
+            <div style="text-align:center; margin-bottom:32px;">
+                <p class="paper-kicker" style="margin-bottom:14px;">Market Taxonomy</p>
+                <h1 class="paper-title" style="margin-bottom:0;">How Market Categories Are Recognized</h1>
+                <p style="font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-tertiary); margin:6px 0 0; padding-top:8px; border-top:1px solid var(--border); display:inline-block;">Authoritative Sources Framework</p>
+            </div>
+
+            <!-- MINI TOC -->
+            <nav class="paper-toc">
+                <a href="#purpose">Purpose</a>
+                <a href="#source-classes">Source Classes</a>
+                <a href="#convergent-validation">Convergent Validation</a>
+                <a href="#venture-capital">Venture Capital</a>
+                <a href="#macro-vs-overlays">Macro vs Overlays</a>
+                <a href="#governance">Governance</a>
+            </nav>
+
+            <hr class="paper-divider">
+
+            <!-- 1. Purpose -->
+            <div class="paper-section" id="purpose">
+                <p class="paper-section-num">Section 1</p>
+                <h2>Purpose of This Document</h2>
+                <p>This document defines the authoritative source framework used by the Market Taxonomy system to recognize, validate, and structure economic markets.</p>
+                <p>Its purpose is not to predict trends, promote narratives, or rank opportunities. Its purpose is to ensure that every market category represented in the system is:</p>
+                <ul class="validation-list">
+                    <li>Externally recognizable</li>
+                    <li>Institutionally and economically grounded</li>
+                    <li>Non-arbitrary</li>
+                    <li>Consistent across time</li>
+                </ul>
+                <p>The framework governs how sources are selected, how they are interpreted, and how conflicting perspectives are resolved.</p>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 2. Authority -->
+            <div class="paper-section">
+                <p class="paper-section-num">Section 2</p>
+                <h2>What "Authority" Means in Market Definition</h2>
+                <p>A market category is considered authoritative when it is recognized by multiple independent classes of actors who participate in, regulate, measure, or allocate capital within that market.</p>
+                <div class="paper-callout">
+                    No single actor defines a market alone.<br>
+                    <strong>Authority emerges from convergence, not declaration.</strong>
+                </div>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 3. Four Classes -->
+            <div class="paper-section" id="source-classes">
+                <p class="paper-section-num">Section 3</p>
+                <h2>The Four Classes of Authoritative Sources</h2>
+                <p>The system recognizes four distinct classes of sources, each with a specific role in market definition.</p>
+
+                <div class="source-cards">
+                    <div class="source-card">
+                        <div class="source-card-title">Institutional & Classification Authorities</div>
+                        <div class="source-card-body">Global classification systems, statistical agencies, intergovernmental bodies, sector regulators.</div>
+                        <div class="source-card-role">Role</div>
+                        <div class="source-card-body">Define boundaries · Stabilize naming · Enable cross-country comparison</div>
+                        <div class="source-card-limit">Limit</div>
+                        <div class="source-card-body">Slow to adapt · Often lag emerging sub-markets</div>
+                    </div>
+                    <div class="source-card">
+                        <div class="source-card-title">Market Intelligence & Research Firms</div>
+                        <div class="source-card-body">Sector-specific research firms, analyst organizations, benchmarking and forecasting providers.</div>
+                        <div class="source-card-role">Role</div>
+                        <div class="source-card-body">Identify segments · Measure scale and growth · Track demand patterns</div>
+                        <div class="source-card-limit">Limit</div>
+                        <div class="source-card-body">Less sensitive to early structural shifts</div>
+                    </div>
+                    <div class="source-card">
+                        <div class="source-card-title">Operators & Industry Participants</div>
+                        <div class="source-card-body">Leading companies, industry associations, trade bodies, infrastructure operators.</div>
+                        <div class="source-card-role">Role</div>
+                        <div class="source-card-body">Validate operational relevance · Reveal workflow structure · Confirm economic substance</div>
+                        <div class="source-card-limit">Limit</div>
+                        <div class="source-card-body">Partial by nature · Biased toward their position in the value chain</div>
+                    </div>
+                    <div class="source-card">
+                        <div class="source-card-title">Venture Capital & Investment Actors</div>
+                        <div class="source-card-body">Venture capital firms, growth equity investors, investment theses and portfolios.</div>
+                        <div class="source-card-role">Role</div>
+                        <div class="source-card-body">Signal investability · Anticipate market emergence · Accelerate semantic convergence</div>
+                        <div class="source-card-limit">Limit</div>
+                        <div class="source-card-body">Narrative-driven · Not suitable as sole definers of categories</div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 4. Convergent Validation -->
+            <div class="paper-section" id="convergent-validation">
+                <p class="paper-section-num">Section 4</p>
+                <h2>The Principle of Convergent Validation</h2>
+                <p>A market category is considered valid in the taxonomy when it is recognized by <strong>at least two different source classes</strong>.</p>
+                <ul class="validation-list">
+                    <li>Institutional + Market Intelligence</li>
+                    <li>Operators + Venture Capital</li>
+                    <li>Market Intelligence + Operators</li>
+                </ul>
+                <p>No category is defined using only one source class. This rule prevents VC-only narratives, operator self-labeling, and purely theoretical classifications.</p>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 5. Role of VC -->
+            <div class="paper-section" id="venture-capital">
+                <p class="paper-section-num">Section 5</p>
+                <h2>The Role of Venture Capital (Clarified)</h2>
+                <p>Venture capital sources are explicitly included in the framework. However, their role is not to define markets unilaterally, but to confirm that capital treats a segment as investable, signal early institutionalization, and reveal future structural importance.</p>
+                <div class="paper-callout">
+                    VC sources are treated as <strong>legitimizers, not primary classifiers</strong>.<br>
+                    Markets do not exist because VCs name them. Markets exist when capital, operators, and structure intersect.
+                </div>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 6. Macro Markets vs Overlays -->
+            <div class="paper-section" id="macro-vs-overlays">
+                <p class="paper-section-num">Section 6</p>
+                <h2>Macro Markets vs Overlays</h2>
+                <p>The taxonomy distinguishes between two types of categories:</p>
+                <table class="paper-table">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Definition</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Macro Markets</td>
+                            <td>Foundational economic domains recognized across institutions, operators, and capital. Form the Level 0 structure.</td>
+                            <td>Real Estate · Energy · Healthcare · Financial Services · Software</td>
+                        </tr>
+                        <tr>
+                            <td>Overlays (Lenses)</td>
+                            <td>Cross-cutting themes that apply across multiple macro markets. Analytical lenses, not structural domains.</td>
+                            <td>FinTech · Cybersecurity · AI · Climate Technology</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Overlays do not replace macro markets and are not treated as standalone Level 0 categories.</p>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 7. Source Selection Rule -->
+            <div class="paper-section">
+                <p class="paper-section-num">Section 7</p>
+                <h2>Source Selection Rule (Operational)</h2>
+                <p>For each Macro Market, the system aims to reference sources that collectively cover: structural definition, market measurement, operational reality, and capital recognition.</p>
+                <p>There is no fixed quota, but the system avoids mono-source representation. <strong>Source relevance is preferred over source symmetry.</strong></p>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 8. Sources Across Levels -->
+            <div class="paper-section">
+                <p class="paper-section-num">Section 8</p>
+                <h2>How Sources Are Used Across Levels</h2>
+                <table class="paper-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Purpose</th>
+                            <th>Role of Sources</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Level 0</td>
+                            <td>Market existence</td>
+                            <td>External recognition</td>
+                        </tr>
+                        <tr>
+                            <td>Level 1</td>
+                            <td>Category structure</td>
+                            <td>Segmentation logic</td>
+                        </tr>
+                        <tr>
+                            <td>Level 2</td>
+                            <td>Sub-market clarity</td>
+                            <td>Institutional validation</td>
+                        </tr>
+                        <tr>
+                            <td>Level 3</td>
+                            <td>Segment grounding</td>
+                            <td>Contextual verification</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Sources do not generate problems, products, or solutions. They validate structure, not ideas.</p>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 9. Governance -->
+            <div class="paper-section" id="governance">
+                <p class="paper-section-num">Section 9</p>
+                <h2>Governance & Evolution</h2>
+                <p>Markets evolve. The taxonomy must adapt without breaking consistency.</p>
+                <ul class="validation-list">
+                    <li>New categories require multi-source validation</li>
+                    <li>Naming changes must reflect external convergence</li>
+                    <li>Overlays may emerge without altering macro structure</li>
+                    <li>No category is added based on narrative alone</li>
+                </ul>
+                <p>The system favors <strong>stability with controlled adaptation</strong>.</p>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 10. Note on Level 1 Category Count -->
+            <div class="paper-section">
+                <p class="paper-section-num">Note</p>
+                <h2>Note on Level 1 Category Count</h2>
+                <p>The number of Level 1 categories is not predefined. Across most macro markets, convergent validation by institutional authorities, market intelligence, operators, and capital allocation actors typically results in a limited set of stable categories. This recurring pattern reflects structural clarity and institutional practice, not an imposed numerical constraint.</p>
+            </div>
+
+            <!-- 11. Canonical -->
+            <div class="paper-canonical">
+                <p>Markets are not invented.<br><strong>They are recognized.</strong></p>
+                <p style="margin-top:14px; font-size:0.82rem; color:rgba(255,255,255,0.55);">Recognition emerges when institutions, operators, and capital independently agree that a domain exists. This document defines how that recognition is enforced within the Market Taxonomy system.</p>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="content/t.js"></script>
+</body>
+</html>
