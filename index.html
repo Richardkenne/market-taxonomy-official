@@ -737,7 +737,11 @@ function renderSearchResults(matches, query) {
         const badge = match.matchType === 'keyword' ? '<span class="result-badge">keyword match</span>'
                     : match.matchType === 'fallback' ? '<span class="result-badge">best guess</span>'
                     : '';
-        resultItem.innerHTML = `<span class="result-name">${match.name}</span>${badge}`;
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'result-name';
+        nameSpan.textContent = match.name;
+        resultItem.appendChild(nameSpan);
+        resultItem.insertAdjacentHTML('beforeend', badge);
         searchResults.appendChild(resultItem);
     });
 
