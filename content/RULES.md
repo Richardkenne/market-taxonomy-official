@@ -150,6 +150,63 @@ The `L3` column in the CSV must match `selectNiche('...')` in the HTML files exa
 
 ---
 
+## markets-keywords.json — Search Index
+
+**Purpose:** Enable fast keyword-based navigation to markets (L0) and categories (L1).
+
+**Structure:**
+```json
+{
+  "Real Estate": {
+    "keywords": ["real estate", "property", "land", "real-estate"],
+    "l1": {
+      "Residential": ["residential", "house", "apartment", "home"],
+      "Commercial": ["commercial", "office", "retail"],
+      "Industrial": ["industrial", "warehouse", "logistics"]
+    }
+  }
+}
+```
+
+**How it works:**
+1. User types keyword in search bar
+2. System matches against:
+   - Market name (L0)
+   - L0 keywords (broad market terms)
+   - L1 keywords (category keywords within market)
+3. Based on match level, router navigates directly to L1 or L2 (see Search Rules below)
+
+**How to update keywords (with synonyms):**
+
+1. **Export current keywords to CSV:**
+   - File: `~/Desktop/keywords-complete.csv`
+   - Columns: `# | MARKET (L0) | TYPE | CATEGORY (L1) | KEYWORDS | SINONIMI`
+
+2. **Edit in Excel/Google Sheets:**
+   - Each row = one L0 or one L1 category
+   - KEYWORDS: semicolon-separated (`;`)
+   - SINONIMI: add 3+ synonyms/variations separated by `|`
+   - Examples:
+     ```
+     real estate        →  property; realty; real-estate
+     single-family      →  single family; sf; sfr
+     buy-to-rent        →  btr; landlord; rental
+     ```
+
+3. **Save CSV, then convert to JSON:**
+   - Script: `build-keywords-json.py` (to be created)
+   - Input: `keywords-complete.csv`
+   - Output: `content/markets-keywords.json`
+   - Run: `python3 build-keywords-json.py`
+
+**Maintenance tips:**
+- Add synonyms when adding new L1 categories
+- Review search queries to discover missing keywords
+- Keep keywords lowercase for consistent matching
+- Use semicolons (`;`) to separate keywords, pipes (`|`) to separate synonym sets
+
+---
+
 ## Search Rules
 
 ### Step by Step Mode
