@@ -15,65 +15,67 @@
             padding: 0 16px;
         }
 
-        .pc-summary {
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 32px;
+        /* ── Spreadsheet table ── */
+        .xls-outer {
+            overflow-x: auto;
+            margin-bottom: 16px;
+            border: 1.5px solid #bfc4c9;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
         }
-        .pc-summary-row {
-            display: flex;
-            align-items: baseline;
-            gap: 12px;
-            padding: 12px 18px;
-            border-bottom: 1px solid var(--border-light);
+        .xls-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            font-size: 0.8rem;
+            min-width: 680px;
         }
-        .pc-summary-row:last-child { border-bottom: none; }
-        .pc-summary-key {
-            font-size: 0.7rem;
+        .xls-table thead tr {
+            background: #1e7e34;
+            color: #fff;
+        }
+        .xls-table thead th {
+            padding: 9px 13px;
+            font-size: 0.68rem;
             font-weight: 700;
-            text-transform: uppercase;
             letter-spacing: 0.07em;
-            color: var(--text-tertiary);
-            min-width: 120px;
-            flex-shrink: 0;
-        }
-        .pc-summary-val {
-            font-size: 0.88rem;
-            font-weight: 500;
-            color: var(--text-primary);
-        }
-        .pc-summary-val .crumb { color: var(--text-secondary); }
-        .pc-summary-val .crumb.last { color: var(--text-primary); font-weight: 600; }
-        .pc-summary-val .sep { color: var(--text-tertiary); margin: 0 5px; font-size: 0.75rem; }
-
-        .pc-tam-chips {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-        .pc-tam-chip {
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 5px 12px;
-            background: var(--border-light);
-            border-radius: 8px;
-            gap: 1px;
-        }
-        .pc-tam-chip-val {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--green);
-        }
-        .pc-tam-chip-lbl {
-            font-size: 0.62rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
             text-transform: uppercase;
-            color: var(--text-tertiary);
+            border-right: 1px solid rgba(255,255,255,0.2);
+            white-space: nowrap;
+            text-align: left;
         }
+        .xls-table thead th:last-child { border-right: none; }
+        /* row-number column */
+        .xls-table thead th.xls-rownum,
+        .xls-table tbody td.xls-rownum {
+            background: #e8ede8;
+            color: #777;
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-align: center;
+            min-width: 32px;
+            border-right: 1.5px solid #bfc4c9;
+        }
+        .xls-table thead th.xls-rownum { background: #196b2b; color: rgba(255,255,255,0.6); }
+        .xls-table tbody tr:nth-child(odd)  { background: #fff; }
+        .xls-table tbody tr:nth-child(even) { background: #f4f8f5; }
+        .xls-table tbody tr:hover { background: #eaf4ed; }
+        .xls-table tbody td {
+            padding: 9px 13px;
+            border-right: 1px solid #dde1e5;
+            border-top: 1px solid #dde1e5;
+            color: #1a1a1a;
+            white-space: nowrap;
+        }
+        .xls-table tbody td:last-child { border-right: none; }
+        .xls-td-tam {
+            color: #1a7a3a;
+            font-weight: 700;
+            font-size: 0.88rem;
+        }
+        .xls-td-muted { color: #888; font-size: 0.75rem; }
 
+        /* ── Problem badge ── */
         .pc-badge {
             display: inline-flex;
             align-items: center;
@@ -87,24 +89,113 @@
         .pc-badge-primary { background: var(--text-primary); color: #fff; }
         .pc-badge-secondary { background: var(--border-light); color: var(--text-secondary); border: 1px solid var(--border); }
 
-        .pc-placeholder {
-            border: 2px dashed var(--border);
-            border-radius: 12px;
-            padding: 48px 24px;
-            text-align: center;
+        /* ── AI sheet ── */
+        .pc-ai-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 24px;
         }
-        .pc-placeholder p {
-            font-size: 0.85rem;
-            color: var(--text-tertiary);
-            margin: 8px 0 0;
-            line-height: 1.6;
+        .pc-ai-card {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+            background: #fff;
         }
-        .pc-placeholder-label {
-            font-size: 0.65rem;
+        .pc-ai-card-label {
+            font-size: 0.62rem;
             font-weight: 700;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: var(--border);
+            color: var(--text-tertiary);
+            margin-bottom: 4px;
+        }
+        .pc-ai-card-val {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+        .pc-ai-prompt {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 18px;
+            background: #fafafa;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .pc-ai-prompt-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            margin-bottom: 6px;
+            font-style: normal;
+        }
+        .pc-signal {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #fffbea;
+            border: 1px solid #f0d060;
+            color: #7a6000;
+        }
+        .pc-mechanics-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 4px;
+        }
+        .pc-mech-tag {
+            font-size: 0.72rem;
+            font-weight: 500;
+            padding: 2px 8px;
+            background: var(--border-light);
+            border-radius: 6px;
+            color: var(--text-secondary);
+        }
+
+        /* ── Sheet section header ── */
+        .pc-sheet-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            margin-bottom: 12px;
+        }
+
+        /* ── Download button ── */
+        .pc-download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 13px 20px;
+            border-radius: 10px;
+            background: var(--text-primary);
+            color: #fff;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.15s;
+            margin-top: 8px;
+        }
+        .pc-download-btn:hover { background: #2b2b2b; }
+
+        @media (max-width: 480px) {
+            .pc-ai-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -112,11 +203,11 @@
     <div id="app">
         <div class="home-nav"><a href="index.html" class="home-link">Home</a></div>
         <div class="back-nav">
-            <a href="problem-selection.html" class="back-link">
+            <a href="#" class="back-link" onclick="history.back(); return false;">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Back to Problem Selection
+                Back
             </a>
         </div>
 
@@ -130,78 +221,280 @@
         </header>
 
         <div class="pc-wrap">
+            <!-- SHEET A: Taxonomy navigation flow -->
+            <div id="sheet-nav">
+                <p class="pc-sheet-label">Navigation Sheet — Taxonomy Flow</p>
 
-            <!-- Summary of selections -->
-            <div class="pc-summary" id="pc-summary">
-                <div class="pc-summary-row">
-                    <span class="pc-summary-key">Market</span>
-                    <span class="pc-summary-val" id="pc-market">—</span>
+                <div class="xls-outer">
+                    <table class="xls-table">
+                        <thead>
+                            <tr>
+                                <th class="xls-rownum">#</th>
+                                <th>Market</th>
+                                <th>Segment (L2)</th>
+                                <th>TAM</th>
+                                <th>TAM Source</th>
+                                <th>Sub-segment (L3)</th>
+                                <th>Problem</th>
+                                <th>Archetype</th>
+                            </tr>
+                        </thead>
+                        <tbody id="xls-tbody">
+                            <!-- rows injected by JS -->
+                        </tbody>
+                    </table>
                 </div>
-                <div class="pc-summary-row">
-                    <span class="pc-summary-key">Scale</span>
-                    <span class="pc-summary-val">
-                        <div class="pc-tam-chips" id="pc-tam-chips">
-                            <!-- Populated by taxonomy-numbers.js -->
-                        </div>
-                    </span>
-                </div>
-                <div class="pc-summary-row">
-                    <span class="pc-summary-key">Problem</span>
-                    <span class="pc-summary-val" id="pc-problem">—</span>
-                </div>
+
+                <button class="pc-download-btn" id="btn-download-nav">
+                    <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Download CSV
+                </button>
             </div>
 
-            <!-- Placeholder content area -->
-            <div class="pc-placeholder">
-                <p class="pc-placeholder-label">Part C — To be defined</p>
-                <p>This is where the output sheet will be generated.<br>Content, format, and export options are still being designed.</p>
-            </div>
+            <!-- SHEET B: AI Search -->
+            <div id="sheet-ai" style="display:none; margin-top:32px;">
+                <p class="pc-sheet-label">AI Search Sheet</p>
 
+                <div class="pc-ai-prompt">
+                    <div class="pc-ai-prompt-label">Prompt</div>
+                    <span id="ai-prompt-text">—</span>
+                </div>
+
+                <div class="pc-ai-grid">
+                    <div class="pc-ai-card">
+                        <div class="pc-ai-card-label">Market</div>
+                        <div class="pc-ai-card-val" id="ai-market">—</div>
+                    </div>
+                    <div class="pc-ai-card">
+                        <div class="pc-ai-card-label">Target</div>
+                        <div class="pc-ai-card-val" id="ai-target">—</div>
+                    </div>
+                    <div class="pc-ai-card">
+                        <div class="pc-ai-card-label">Problem</div>
+                        <div class="pc-ai-card-val" id="ai-problem">—</div>
+                    </div>
+                    <div class="pc-ai-card">
+                        <div class="pc-ai-card-label">Severity</div>
+                        <div class="pc-ai-card-val" id="ai-severity">—</div>
+                    </div>
+                    <div class="pc-ai-card">
+                        <div class="pc-ai-card-label">Existing Behavior</div>
+                        <div class="pc-ai-card-val" id="ai-behavior">—</div>
+                    </div>
+                    <div class="pc-ai-card">
+                        <div class="pc-ai-card-label">Model</div>
+                        <div class="pc-ai-card-val" id="ai-model">—</div>
+                    </div>
+                    <div class="pc-ai-card">
+                        <div class="pc-ai-card-label">GTM</div>
+                        <div class="pc-ai-card-val" id="ai-gtm">—</div>
+                    </div>
+                    <div class="pc-ai-card">
+                        <div class="pc-ai-card-label">Validation Signal</div>
+                        <div class="pc-ai-card-val" id="ai-signal">—</div>
+                    </div>
+                </div>
+
+                <div class="pc-summary" style="margin-bottom:16px;">
+                    <div class="pc-summary-row">
+                        <span class="pc-summary-key">Distribution</span>
+                        <span class="pc-summary-val"><div class="pc-mechanics-tags" id="ai-distribution"></div></span>
+                    </div>
+                    <div class="pc-summary-row">
+                        <span class="pc-summary-key">Monetization</span>
+                        <span class="pc-summary-val"><div class="pc-mechanics-tags" id="ai-monetization"></div></span>
+                    </div>
+                    <div class="pc-summary-row">
+                        <span class="pc-summary-key">Business Assets</span>
+                        <span class="pc-summary-val"><div class="pc-mechanics-tags" id="ai-assets"></div></span>
+                    </div>
+                    <div class="pc-summary-row">
+                        <span class="pc-summary-key">Op. Models</span>
+                        <span class="pc-summary-val"><div class="pc-mechanics-tags" id="ai-opmodels"></div></span>
+                    </div>
+                </div>
+
+                <button class="pc-download-btn" id="btn-download-ai">
+                    <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Download CSV
+                </button>
+            </div>
         </div>
     </div>
 
     <script src="content/taxonomy-numbers.js"></script>
     <script src="content/t.js"></script>
     <script>
-        // Render TAM chips from taxonomy-numbers.js
-        (function() {
-            const chips = document.getElementById('pc-tam-chips');
-            if (!chips || typeof TAXONOMY_NUMBERS === 'undefined') return;
-            ['L1','L2','L3'].forEach(level => {
-                const n = TAXONOMY_NUMBERS[level];
-                if (!n) return;
-                const chip = document.createElement('div');
-                chip.className = 'pc-tam-chip';
-                chip.innerHTML = '<span class="pc-tam-chip-val">' + n.count + '</span><span class="pc-tam-chip-lbl">' + level + ' ' + n.label + '</span>';
-                chips.appendChild(chip);
+        // ── L2 TAM lookup (mirrors numbers.html) ──────────────────────────────
+        const L2_TAM = {
+            'single-family_residential':              { label: 'Single-Family Residential',      value: '$11T',  source: 'Global residential RE market est.' },
+            'multi-family_residential':               { label: 'Multi-Family Residential',        value: '$3.5T', source: 'Global multi-family RE market est.' },
+            'specialized_residential':                { label: 'Specialized Residential',         value: '$420B', source: 'Global niche residential est.' },
+            'cbd_urban':                              { label: 'CBD / Urban Office',              value: '$1.4T', source: 'Global commercial office RE est.' },
+            'flex_business':                          { label: 'Flex / Business Park',            value: '$320B', source: 'Global flex office market est.' },
+            'suburban_office':                        { label: 'Suburban Office',                 value: '$480B', source: 'Global suburban office est.' },
+            'last-mile_logistics':                    { label: 'Last-Mile Logistics',             value: '$215B', source: 'Global last-mile logistics RE est.' },
+            'light_industrial':                       { label: 'Light Industrial',                value: '$380B', source: 'Global light industrial RE est.' },
+            'logistics_distribution':                 { label: 'Logistics Distribution',          value: '$650B', source: 'Global logistics RE est.' },
+            'warehousing_':                           { label: 'Warehousing',                     value: '$530B', source: 'Global warehousing RE est.' },
+            'high_street':                            { label: 'High Street / Street Retail',     value: '$1.1T', source: 'Global street retail RE est.' },
+            'neighborhood_community':                 { label: 'Neighborhood / Community Centers', value: '$480B', source: 'Global neighborhood retail RE est.' },
+            'power_centers':                          { label: 'Power Centers',                   value: '$310B', source: 'Global power center RE est.' },
+            'shopping_malls':                         { label: 'Shopping Malls',                  value: '$730B', source: 'Global mall RE est.' },
+            'residential-pm_property-management':     { label: 'Residential Property Management', value: '$22B',  source: 'Global residential PM software & services est.' },
+            'commercial-pm_property-management':      { label: 'Commercial Property Management',  value: '$18B',  source: 'Global commercial PM software & services est.' },
+            'facilities-management_property-management': { label: 'Facilities Management',        value: '$62B',  source: 'Global FM market est.' },
+            'entitled_land':                          { label: 'Entitled Land',                   value: '$180B', source: 'Global entitled land market est.' },
+            'infill_development':                     { label: 'Infill Development',              value: '$95B',  source: 'Global infill dev market est.' },
+            'mixed-use_development':                  { label: 'Mixed-Use Development Sites',     value: '$210B', source: 'Global mixed-use dev est.' },
+            'raw_undeveloped':                        { label: 'Raw / Undeveloped Land',          value: '$140B', source: 'Global raw land market est.' },
+            'data_centers':                           { label: 'Data Centers RE',                 value: '$280B', source: 'Global data center RE est.' },
+            'healthcare_real':                        { label: 'Healthcare Real Estate',          value: '$320B', source: 'Global healthcare RE est.' },
+            'hospitality_':                           { label: 'Hospitality RE',                  value: '$580B', source: 'Global hotel/hospitality RE est.' },
+            'life_sciences':                          { label: 'Life Sciences Lab RE',            value: '$130B', source: 'Global life sciences RE est.' },
+            'manufactured_housing':                   { label: 'Manufactured Housing',            value: '$90B',  source: 'Global manufactured housing est.' },
+            'self-storage_':                          { label: 'Self Storage',                    value: '$65B',  source: 'Global self-storage RE est.' },
+        };
+
+        // ── Helpers ───────────────────────────────────────────────────────────
+        function esc(str) {
+            return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        }
+        function tagsHTML(arr) {
+            if (!arr || !arr.length) return '<span style="color:var(--text-tertiary);font-size:0.8rem;">—</span>';
+            return arr.map(t => '<span class="pc-mech-tag">' + esc(t) + '</span>').join('');
+        }
+        function csvEsc(val) {
+            const s = String(val || '').replace(/"/g, '""');
+            return '"' + s + '"';
+        }
+        function downloadCSV(rows, filename) {
+            const csv = rows.map(r => r.map(csvEsc).join(',')).join('\n');
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // ── Read localStorage ─────────────────────────────────────────────────
+        const selectedMarket  = localStorage.getItem('selected_market') || '';
+        const primary         = localStorage.getItem('suggested_primary') || '';
+        const secondary       = localStorage.getItem('suggested_secondary') || '';
+        const selectedL3      = localStorage.getItem('selected_l3') || '';
+        const primaryProblem  = localStorage.getItem('primary_problem') || '';
+        const primaryProblemTxt = localStorage.getItem('primary_problem_text') || '';
+        const aiPrefillRaw    = localStorage.getItem('ai_prefill');
+
+        const tamKey = primary + '_' + secondary;
+        const tam    = L2_TAM[tamKey] || null;
+
+        // ── Sheet A: Navigation ───────────────────────────────────────────────
+        // Load saved rows from localStorage, append current entry, re-save
+        (function renderNav() {
+            const STORE_KEY = 'nav_sheet_rows';
+            let rows = [];
+            try { rows = JSON.parse(localStorage.getItem(STORE_KEY) || '[]'); } catch(e) {}
+
+            // Build current row
+            const currentRow = {
+                market:    selectedMarket,
+                segment:   tam ? tam.label : '',
+                tam:       tam ? tam.value : '',
+                tamSource: tam ? tam.source : '',
+                l3:        selectedL3,
+                problem:   primaryProblemTxt,
+                archetype: primaryProblem
+            };
+
+            // Append only if we have meaningful data and it's not a duplicate of the last row
+            const last = rows[rows.length - 1];
+            const isDupe = last && last.market === currentRow.market && last.l3 === currentRow.l3 && last.problem === currentRow.problem;
+            if (currentRow.market && !isDupe) {
+                rows.push(currentRow);
+                localStorage.setItem(STORE_KEY, JSON.stringify(rows));
+            }
+
+            // Render all rows
+            const tbody = document.getElementById('xls-tbody');
+            tbody.innerHTML = '';
+            rows.forEach(function(r, i) {
+                const tr = document.createElement('tr');
+                tr.innerHTML =
+                    '<td class="xls-rownum">' + (i + 1) + '</td>' +
+                    '<td>' + esc(r.market || '—') + '</td>' +
+                    '<td>' + esc(r.segment || '—') + '</td>' +
+                    '<td class="xls-td-tam">' + esc(r.tam || '—') + '</td>' +
+                    '<td class="xls-td-muted">' + esc(r.tamSource || '—') + '</td>' +
+                    '<td>' + esc(r.l3 || '—') + '</td>' +
+                    '<td>' + esc(r.problem || '—') + '</td>' +
+                    '<td>' + esc(r.archetype || '—') + '</td>';
+                tbody.appendChild(tr);
             });
+
+            // Scroll to last row
+            if (tbody.lastElementChild) tbody.lastElementChild.scrollIntoView({ block: 'nearest' });
         })();
 
-        // Read selections from localStorage
-        const market = localStorage.getItem('selected_market') || '—';
-        const primary = localStorage.getItem('primary_problem');
-        const secondary = localStorage.getItem('secondary_problem');
+        // Download CSV — Nav sheet (all accumulated rows)
+        document.getElementById('btn-download-nav').addEventListener('click', function() {
+            let savedRows = [];
+            try { savedRows = JSON.parse(localStorage.getItem('nav_sheet_rows') || '[]'); } catch(e) {}
+            const csvRows = [['#', 'Market', 'Segment (L2)', 'TAM', 'TAM Source', 'Sub-segment (L3)', 'Problem', 'Archetype']];
+            savedRows.forEach(function(r, i) {
+                csvRows.push([i + 1, r.market, r.segment, r.tam, r.tamSource, r.l3, r.problem, r.archetype]);
+            });
+            downloadCSV(csvRows, 'output-nav-sheet.csv');
+        });
 
-        // Render market as breadcrumb
-        const marketEl = document.getElementById('pc-market');
-        const parts = market.split(' — ');
-        marketEl.innerHTML = parts.map((p, i) => {
-            const isLast = i === parts.length - 1;
-            const sep = i > 0 ? '<span class="sep">›</span>' : '';
-            return `${sep}<span class="crumb${isLast ? ' last' : ''}">${p}</span>`;
-        }).join('');
+        // ── Sheet B: AI Search ────────────────────────────────────────────────
+        if (aiPrefillRaw) {
+            try {
+                const ai = JSON.parse(aiPrefillRaw);
+                const s  = ai.selections || {};
+                const m  = s.mechanics || {};
 
-        // Render problems
-        const problemEl = document.getElementById('pc-problem');
-        let problemHTML = '';
-        if (primary) {
-            problemHTML += `<span class="pc-badge pc-badge-primary">✓ ${primary}</span>`;
+                document.getElementById('sheet-ai').style.display = '';
+
+                document.getElementById('ai-prompt-text').textContent = ai.prompt || '—';
+                document.getElementById('ai-market').textContent      = s.market || '—';
+                document.getElementById('ai-target').textContent      = s.target || '—';
+                document.getElementById('ai-problem').textContent     = s.problem || '—';
+                document.getElementById('ai-severity').textContent    = s.severity || '—';
+                document.getElementById('ai-behavior').textContent    = s.existing_behavior || '—';
+                document.getElementById('ai-model').textContent       = s.model || '—';
+                document.getElementById('ai-gtm').textContent         = s.gtm || '—';
+                document.getElementById('ai-signal').textContent      = s.validation_signal || '—';
+
+                document.getElementById('ai-distribution').innerHTML  = tagsHTML(m['Distribution Channels']);
+                document.getElementById('ai-monetization').innerHTML  = tagsHTML(m['Monetization Models']);
+                document.getElementById('ai-assets').innerHTML        = tagsHTML(m['Business Assets']);
+                document.getElementById('ai-opmodels').innerHTML      = tagsHTML(m['Operating Models']);
+
+                // Download CSV — AI sheet
+                document.getElementById('btn-download-ai').addEventListener('click', function() {
+                    const rows = [
+                        ['Field', 'Value'],
+                        ['Prompt', ai.prompt || ''],
+                        ['Market', s.market || ''],
+                        ['Target', s.target || ''],
+                        ['Problem', s.problem || ''],
+                        ['Severity', s.severity || ''],
+                        ['Existing Behavior', s.existing_behavior || ''],
+                        ['Model', s.model || ''],
+                        ['GTM', s.gtm || ''],
+                        ['Validation Signal', s.validation_signal || ''],
+                        ['Distribution Channels', (m['Distribution Channels'] || []).join('; ')],
+                        ['Monetization Models', (m['Monetization Models'] || []).join('; ')],
+                        ['Business Assets', (m['Business Assets'] || []).join('; ')],
+                        ['Operating Models', (m['Operating Models'] || []).join('; ')],
+                    ];
+                    downloadCSV(rows, 'output-ai-search.csv');
+                });
+            } catch(e) {}
         }
-        if (secondary) {
-            problemHTML += `<span class="pc-badge pc-badge-secondary">+ ${secondary}</span>`;
-        }
-        if (!primary) problemHTML = '—';
-        problemEl.innerHTML = problemHTML;
     </script>
 </body>
 </html>
