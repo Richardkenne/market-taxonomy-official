@@ -5,33 +5,38 @@
       "Residential": [
         "Single-Family",
         "Multi-Family",
-        "Student Housing",
-        "Senior Housing"
+        "Specialized"
       ],
       "Commercial": [
-        "Office",
-        "Mixed-Use",
-        "Business Parks"
+        "CBD Urban Office",
+        "Flex Business Park",
+        "Suburban Office"
       ],
       "Industrial / Warehousing": [
-        "Logistics Warehouses",
-        "Manufacturing Facilities",
-        "Cold Storage"
+        "Last-Mile Logistics",
+        "Light Industrial",
+        "Logistics Distribution",
+        "Warehousing"
       ],
       "Retail / Shopping Centers": [
-        "Malls",
-        "Strip Centers",
-        "High-Street Retail"
+        "High Street Retail",
+        "Neighborhood Community Centers",
+        "Power Centers",
+        "Shopping Malls"
       ],
       "Land / Development": [
-        "Raw Land",
         "Entitled Land",
-        "Development Projects"
+        "Infill Development",
+        "Mixed-Use Development Sites",
+        "Raw Undeveloped Land"
       ],
-      "Property Management": [
-        "Residential PM",
-        "Commercial PM",
-        "Facilities Management"
+      "Specialty": [
+        "Data Centers",
+        "Healthcare Real Estate",
+        "Hospitality",
+        "Life Sciences Lab",
+        "Manufactured Housing",
+        "Self Storage"
       ]
     }
   },
