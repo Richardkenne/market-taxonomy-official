@@ -136,10 +136,23 @@
     });
   }
 
+  // Auto-scroll to main content on L1/L2/L3 market pages
+  function applyAutoScroll() {
+    if (!window.location.pathname.includes('/MARKETS/')) return;
+    var target = document.querySelector('.l3-niche-grid')
+               || document.querySelector('.market-l2-grid')
+               || document.querySelector('section');
+    if (!target) return;
+    setTimeout(function() {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function() { apply(); applyBackLinks(); });
+    document.addEventListener("DOMContentLoaded", function() { apply(); applyBackLinks(); applyAutoScroll(); });
   } else {
     apply();
     applyBackLinks();
+    applyAutoScroll();
   }
 })();
