@@ -571,27 +571,41 @@ function countKeywords(query) {
     return query.trim().split(/[\s,;]+/).filter(Boolean).length;
 }
 
+function wordMatch(kw, token) {
+    // Returns score: 100=exact, 70=prefix, 40=word-boundary, 0=no match
+    if (kw === token) return 100;
+    if (kw.startsWith(token + ' ') || kw.startsWith(token + '-')) return 70;
+    const re = new RegExp('(?:^|\\s)' + token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:\\s|$)');
+    if (re.test(kw)) return 40;
+    return 0;
+}
+
 function getTopMatches(query, max) {
     if (!query || query.length < 2) return [];
     const lowerQuery = query.toLowerCase();
+    const tokens = lowerQuery.split(/\s+/).filter(Boolean).slice(0, 3);
     const scored = [];
     MARKET_INDEX.forEach(market => {
         let score = 0;
         const name = market.name.toLowerCase();
-        const tokens = lowerQuery.split(/\s+/).filter(Boolean);
         tokens.forEach(t => {
-            if (name === t) score += 100;
-            else if (name.includes(t)) score += 60;
-            // L0 keywords
-            if (market.keywords.some(kw => kw === t)) score += 90;
-            else if (market.keywords.some(kw => kw.includes(t))) score += 50;
-            // L1 keywords (slightly lower weight)
-            const l1e = (market.l1Keywords || []).find(({ kw }) => kw === t);
-            if (l1e) score += 80;
+            // Market name
+            if (name === t) score += 120;
+            else if (name.startsWith(t)) score += 80;
             else {
-                const l1p = (market.l1Keywords || []).find(({ kw }) => kw.includes(t));
-                if (l1p) score += 40;
+                const nameRe = new RegExp('(?:^|\\s)' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:\\s|$)');
+                if (nameRe.test(name)) score += 60;
             }
+            // L0 keywords (word boundary only)
+            market.keywords.forEach(kw => {
+                const s = wordMatch(kw, t);
+                if (s > 0) score += s;
+            });
+            // L1 keywords (slightly lower)
+            (market.l1Keywords || []).forEach(({ kw }) => {
+                const s = wordMatch(kw, t);
+                if (s > 0) score += Math.round(s * 0.75);
+            });
         });
         if (score > 0) scored.push({ ...market, score });
     });
@@ -686,35 +700,26 @@ function runQueryWithMode(mode) {
 
     // ── STEP MODE ────────────────────────────────────────────────
     const kwCount = countKeywords(query);
+    // More keywords = tighter match: 1 kw → show max 3, 2 kw → max 2, 3 kw → navigate direct
+    const maxResults = kwCount === 1 ? 3 : kwCount === 2 ? 2 : 1;
+    const matches = getTopMatches(query, maxResults + 2); // fetch a few extra to check gap
 
-    if (kwCount === 1) {
-        // 1 keyword: show all matching markets (max 8), user picks
-        const matches = getTopMatches(query, 8);
-        if (matches.length === 1) {
-            // Single unambiguous match → navigate directly to L1
-            window.location.href = matches[0].href;
-            return;
-        }
-        renderStepPanel(matches, kwCount);
-    } else {
-        // 2-3 keywords: try to narrow down
-        const matches = getTopMatches(query, 8);
-        if (matches.length === 0) {
-            renderStepPanel([], kwCount);
-            return;
-        }
-        // Check if top match is clearly dominant (score gap > 20)
-        const top = matches[0];
-        const second = matches[1];
-        const clearMatch = !second || (top.score - second.score) > 20;
-        if (clearMatch) {
-            // Navigate directly to L1
-            window.location.href = top.href;
-            return;
-        }
-        // Ambiguous: show panel with top options (max 5–8)
-        renderStepPanel(matches.slice(0, 8), kwCount);
+    if (matches.length === 0) {
+        renderStepPanel([], kwCount);
+        return;
     }
+
+    // With 3 keywords or a single clear winner → navigate directly to L1
+    const top = matches[0];
+    const second = matches[1];
+    const clearMatch = kwCount >= 3 || !second || (top.score - second.score) >= 30;
+    if (clearMatch) {
+        window.location.href = top.href;
+        return;
+    }
+
+    // Show panel with max 3 results
+    renderStepPanel(matches.slice(0, maxResults), kwCount);
 }
 
 function renderSearchResults(matches, query) {
