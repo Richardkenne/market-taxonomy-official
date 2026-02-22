@@ -395,16 +395,124 @@
         };
 
         let MARKET_INDEX = [];
+        let TAXONOMY_DATA = {}; // L1 → [L2] structure from taxonomy-data.json
+
+        // ── URL helpers ──────────────────────────────────────────
+        function slugify(str) {
+            return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        }
+
+        function buildUrl(marketName, l1Name, l2Name) {
+            const ms = slugify(marketName);
+            const base = `MARKETS/${marketName}/`;
+            if (!l1Name) return MARKET_HREFS[marketName] || '#';
+            if (!l2Name) return `${base}L2/market-${ms}-${slugify(l1Name)}.html`;
+            return `${base}L3/market-${ms}-${slugify(l1Name)}-${slugify(l2Name)}-l3.html`;
+        }
+
+        // ── Deep match: L0 → L1 → L2 ────────────────────────────
+        function matchDeep(query) {
+            const tokens = query.toLowerCase().split(/\s+/).filter(Boolean).slice(0, 6);
+
+            // Step 1: find best L0 market
+            const l0Matches = getTopMatches(query, 3);
+            if (!l0Matches.length) return null;
+            const market = l0Matches[0];
+
+            // Step 2: try to match L1 from taxonomy data
+            const l1Options = TAXONOMY_DATA[market.name]
+                ? Object.keys(TAXONOMY_DATA[market.name].l1 || {})
+                : [];
+            if (!l1Options.length) return { market, l1: null, l2: null, l2Candidates: [] };
+
+            let bestL1 = null, bestL1Score = 0;
+            l1Options.forEach(l1Name => {
+                const l1Slug = l1Name.toLowerCase();
+                let score = 0;
+                tokens.forEach(t => {
+                    if (l1Slug === t) score += 100;
+                    else if (l1Slug.includes(t) && t.length > 2) score += 60;
+                    else {
+                        const re = new RegExp('(?:^|\\s)' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:\\s|$)');
+                        if (re.test(l1Slug)) score += 40;
+                    }
+                });
+                if (score > bestL1Score) { bestL1Score = score; bestL1 = l1Name; }
+            });
+            if (!bestL1 || bestL1Score === 0) return { market, l1: null, l2: null, l2Candidates: [] };
+
+            // Step 3: try to match L2 from taxonomy data
+            const l2Options = (TAXONOMY_DATA[market.name]?.l1?.[bestL1]) || [];
+            if (!l2Options.length) return { market, l1: bestL1, l2: null, l2Candidates: [] };
+
+            const l2Scored = [];
+            l2Options.forEach(l2Name => {
+                const l2Slug = l2Name.toLowerCase();
+                let score = 0;
+                tokens.forEach(t => {
+                    if (l2Slug === t) score += 100;
+                    else if (l2Slug.includes(t) && t.length > 2) score += 60;
+                    else {
+                        const re = new RegExp('(?:^|\\s)' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:\\s|$)');
+                        if (re.test(l2Slug)) score += 40;
+                    }
+                });
+                if (score > 0) l2Scored.push({ name: l2Name, score });
+            });
+            l2Scored.sort((a, b) => b.score - a.score);
+
+            const topL2 = l2Scored[0];
+            const secondL2 = l2Scored[1];
+            const clearL2 = topL2 && (!secondL2 || (topL2.score - secondL2.score) >= 30);
+
+            return {
+                market,
+                l1: bestL1,
+                l2: clearL2 ? topL2.name : null,
+                l2Candidates: l2Scored.slice(0, 3)
+            };
+        }
+
+        function renderL2Panel(marketName, l1Name, candidates) {
+            closeStepPanel();
+            searchResults.classList.add('hidden');
+            stepPanel.classList.remove('hidden');
+            const topScore = candidates.length > 0 ? candidates[0].score : 1;
+            const items = candidates.map((c, i) => {
+                const pct = Math.round((c.score / topScore) * 100);
+                const url = buildUrl(marketName, l1Name, c.name);
+                return `<li>
+                    <a class="step-panel-item" href="${url}">
+                        <span class="step-item-num">${String(i + 1).padStart(2, '0')}</span>
+                        <span class="step-item-name">${c.name}</span>
+                        <span class="step-item-pct">${pct}%</span>
+                        <svg class="step-item-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>`;
+            }).join('');
+            stepPanel.innerHTML = `
+                <div class="step-panel-header">
+                    <span class="step-panel-label">Step 2 — Confirm sub-market</span>
+                    <span class="step-panel-hint">${marketName} › ${l1Name}</span>
+                    <button class="step-panel-close" id="step-panel-close" title="Close">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="step-panel-list">${items}</ul>`;
+            document.getElementById('step-panel-close').addEventListener('click', () => stepPanel.classList.add('hidden'));
+        }
 
         fetch('content/markets-keywords.json')
             .then(r => r.json())
             .then(data => {
                 MARKET_INDEX = Object.entries(data).map(([name, val]) => {
-                    // Support both old format (array) and new format ({keywords, l1})
                     const keywords = Array.isArray(val) ? val : (val.keywords || []);
-                    // Build flat l1Keywords list: all keywords from all L1 sub-markets
                     const l1Keywords = [];
-                    const l1Map = {}; // l1Name -> [keywords]
+                    const l1Map = {};
                     if (val && val.l1) {
                         Object.entries(val.l1).forEach(([l1Name, kws]) => {
                             l1Map[l1Name] = kws;
@@ -415,11 +523,15 @@
                 });
             })
             .catch(() => {
-                // Fallback minimale se il JSON non è disponibile
                 MARKET_INDEX = Object.entries(MARKET_HREFS).map(([name, href]) => ({
                     name, keywords: [name.toLowerCase()], l1Keywords: [], l1Map: {}, href
                 }));
             });
+
+        fetch('content/taxonomy-data.json')
+            .then(r => r.json())
+            .then(data => { TAXONOMY_DATA = data; })
+            .catch(() => { TAXONOMY_DATA = {}; });
 
         const searchInput = document.getElementById('market-search');
         const searchResults = document.getElementById('search-results');
@@ -679,27 +791,44 @@ function runQueryWithMode(mode) {
         // ── AUTO MODE ────────────────────────────────────────────
         closeStepPanel();
         const kwCount = countKeywords(query);
-        const matches = getTopMatches(query, 5);
 
-        if (kwCount >= 2 && matches.length > 0) {
-            const top = matches[0];
-            const second = matches[1];
-            const clearMatch = !second || (top.score - second.score) > 20;
-            if (clearMatch) {
-                // Strong intent + clear match → navigate directly to L1
-                window.location.href = top.href;
-                return;
+        if (kwCount >= 2) {
+            // Try deep match L0 → L1 → L2
+            const deep = matchDeep(query);
+            if (deep && deep.market) {
+                if (deep.l2) {
+                    // L0+L1+L2 all matched → go directly to L3 (problems page)
+                    window.location.href = buildUrl(deep.market.name, deep.l1, deep.l2);
+                    return;
+                }
+                if (deep.l1 && deep.l2Candidates.length > 0) {
+                    // L0+L1 matched, L2 ambiguous → show L2 panel with %
+                    renderL2Panel(deep.market.name, deep.l1, deep.l2Candidates);
+                    return;
+                }
+                if (deep.l1) {
+                    // L0+L1 matched, no L2 data yet → go to L2 listing
+                    window.location.href = buildUrl(deep.market.name, deep.l1, null);
+                    return;
+                }
+                // L0 only clear match → go to L1
+                const second = getTopMatches(query, 2)[1];
+                const clearMatch = !second || (deep.market.score - second.score) > 20;
+                if (clearMatch) {
+                    window.location.href = deep.market.href;
+                    return;
+                }
             }
-            // Ambiguous → show dropdown (max 5)
-            renderSearchResults(matches, query);
+            // Ambiguous L0 → show dropdown
+            renderSearchResults(getTopMatches(query, 5), query);
             return;
         }
 
-        // 1 keyword or no strong match → show dropdown
+        // 1 keyword → show dropdown
+        const matches = getTopMatches(query, 5);
         if (matches.length > 0) {
             renderSearchResults(matches, query);
         } else {
-            // Fallback: use old scoring
             const result = getBestMarketMatch(query);
             routeToWizardFromQuery(query, finalMode, result ? result.match : null);
         }

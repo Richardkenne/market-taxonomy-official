@@ -34,23 +34,34 @@
 
 ## Rule 2 — Auto Complete Mode
 
-**Trigger:** User selects "Auto Complete" toggle (default), types a keyword, and presses Search.
+**Trigger:** User selects "Auto Complete" toggle (default), types keywords or a phrase (max 6 words), and presses Search.
 
-### Behaviour:
-- 1 keyword → show dropdown with up to **5 matches**, user clicks one
-- 2+ keywords + clear winner (score gap > 20) → navigate directly to L1
-- 2+ keywords + ambiguous → show dropdown with top **5 matches**
-- 0 matches → fallback: uses local keyword mapping to guess best market
+### Deep routing logic (L0 → L1 → L2 → L3):
 
-### Navigation:
-- Clicking a result always navigates to the market's L1 page
-- Does NOT go through the wizard — goes straight to the taxonomy hierarchy
+| Input specificity | System behaviour |
+|---|---|
+| 1 keyword | Show dropdown with up to 5 L0 markets |
+| 2+ keywords, L0 match only | Navigate directly to L1 page |
+| 2+ keywords, L0+L1 matched | Navigate to L2 listing page |
+| 2+ keywords, L0+L1 matched, L2 ambiguous | Show **L2 panel with % match** (max 3), user picks |
+| 2+ keywords, L0+L1+L2 all matched | Navigate directly to **L3 problems page** |
+
+### URL construction (automatic):
+- URLs are built dynamically from market/L1/L2 names using slugify
+- Works automatically when new HTML files are added — no manual mapping needed
+- Pattern: `MARKETS/{Market}/L3/market-{slug}-{l1-slug}-{l2-slug}-l3.html`
+
+### L2 panel (when L2 is ambiguous):
+- Shows "Step 2 — Confirm sub-market" header
+- Breadcrumb: `Market › L1`
+- Up to 3 options with % match relative to top score
+- Clicking navigates to the L3 problems page for that sub-market
 
 ### Key difference vs Step by Step:
-- Auto Complete is faster — skips the explicit confirmation panel
-- Shows inline dropdown (not a modal panel)
-- Max 5 results always (clean, not overwhelming)
-- Designed for users who know what they want
+- Auto Complete is faster — skips confirmation unless genuinely ambiguous
+- Shows inline dropdown for L0, panel only for L2 ambiguity
+- Max 6 words input recommended for best deep routing results
+- Designed for direct navigation to the problems page (L3)
 
 ---
 
