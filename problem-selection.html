@@ -209,6 +209,123 @@
             opacity: 1;
             pointer-events: all;
         }
+
+        /* Part 1 — 12 archetypes as cards */
+        .archetype-section {
+            max-width: 600px;
+            margin: 0 auto 32px;
+            padding: 0 16px;
+        }
+        .archetype-section-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            margin-bottom: 12px;
+        }
+        .archetype-chips {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        .archetype-chip {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: #fff;
+        }
+        .archetype-chip-header {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+        .archetype-chip-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .archetype-chip-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .archetype-chip-desc {
+            font-size: 0.72rem;
+            color: var(--text-tertiary);
+            line-height: 1.4;
+            padding-left: 15px;
+        }
+
+        /* Part 2 — niche-specific problems */
+        .niche-section {
+            max-width: 600px;
+            margin: 0 auto 32px;
+            padding: 0 16px;
+        }
+        .niche-section-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            margin-bottom: 10px;
+        }
+        .niche-section-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+        }
+        .niche-problem-card {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 1.5px solid var(--border);
+            background: #fff;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+            margin-bottom: 8px;
+            transition: border-color 0.12s, box-shadow 0.12s;
+        }
+        .niche-problem-card:hover {
+            border-color: var(--green);
+            box-shadow: 0 2px 8px rgba(61,191,160,0.1);
+        }
+        .niche-problem-card.selected {
+            border-color: var(--green);
+            box-shadow: 0 0 0 2px var(--green), 0 4px 12px rgba(61,191,160,0.12);
+        }
+        .niche-problem-card.selected .niche-problem-text {
+            color: var(--text-primary);
+        }
+        .niche-problem-archetype {
+            flex-shrink: 0;
+            font-size: 0.62rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 10px;
+            margin-top: 2px;
+        }
+        .niche-problem-text {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.45;
+        }
+        .niche-no-data {
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+            font-style: italic;
+            padding: 16px 0;
+        }
     </style>
 </head>
 <body>
@@ -233,13 +350,6 @@
             </div>
         </header>
 
-        <!-- SELECTED MARKET BREADCRUMB -->
-        <div style="text-align:center; margin-bottom:20px;">
-            <div class="pb-market-pill" id="market-breadcrumb">
-                <span class="crumb last">—</span>
-            </div>
-        </div>
-
         <!-- CONTEXT -->
         <p class="pb-context">
             These are recurring structural problems observed across markets. Select the one that best describes the core friction your product addresses.
@@ -247,99 +357,73 @@
 
         <!-- HOW TO DEFINE A PROBLEM LINK -->
         <div style="text-align:center; margin: -20px auto 28px;">
-            <a href="how-to-define-problems.html" style="font-size:0.78rem; color:var(--text-tertiary); text-decoration:none; display:inline-flex; align-items:center; gap:5px; transition:color 0.15s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-tertiary)'">
+            <a href="how-to-define-problems.html" style="font-size:0.78rem; color:var(--text-secondary); text-decoration:underline; display:inline-flex; align-items:center; gap:5px; transition:color 0.15s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">
                 <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M8 7v5M8 5v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                 How to define a monetizable problem
             </a>
         </div>
 
-        <!-- 12 PROBLEM CARDS -->
-        <div class="pb-grid">
+        <!-- PART 1: 12 ARCHETYPES — small chips for reference -->
+        <div class="archetype-section">
+            <div class="archetype-section-label">Problem archetypes — framework reference</div>
+            <div class="archetype-chips">
+                <div class="archetype-chip">
+                    <div class="archetype-chip-header"><span class="archetype-chip-dot" style="background:#ef4444"></span><span class="archetype-chip-name">01 Time / Speed</span></div>
+                    <div class="archetype-chip-desc">Processes too slow; delays destroy value or create friction</div>
+                </div>
+                <div class="archetype-chip">
+                    <div class="archetype-chip-header"><span class="archetype-chip-dot" style="background:#f97316"></span><span class="archetype-chip-name">02 Cost / Leakage</span></div>
+                    <div class="archetype-chip-desc">Money wasted, margins eroded, or fees opaque</div>
+                </div>
+                <div class="archetype-chip">
+                    <div class="archetype-chip-header"><span class="archetype-chip-dot" style="background:#f59e0b"></span><span class="archetype-chip-name">03 Coordination</span></div>
+                    <div class="archetype-chip-desc">Multiple parties can't sync — handoffs break down</div>
+                </div>
+                <div class="archetype-chip">
+                    <div class="archetype-chip-header"><span class="archetype-chip-dot" style="background:#84cc16"></span><span class="archetype-chip-name">04 Visibility / Information</span></div>
+                    <div class="archetype-chip-desc">Data missing, siloed, or arrives too late to act on</div>
+                </div>
+                <div class="archetype-chip">
+                    <div class="archetype-chip-header"><span class="archetype-chip-dot" style="background:#10b981"></span><span class="archetype-chip-name">05 Risk / Compliance</span></div>
+                    <div class="archetype-chip-desc">Regulatory burden, liability exposure, or audit failures</div>
+                </div>
+                <div class="archetype-chip">
+                    <div class="archetype-chip-header"><span class="archetype-chip-dot" style="background:#06b6d4"></span><span class="archetype-chip-name">06 Capacity / Utilization</span></div>
+                    <div class="archetype-chip-desc">Assets idle or over-strained — poor allocation</div>
+                </div>
+                <div class="archetype-chip">
+                    <div class="archetype-chip-header"><span class="archetype-chip-dot" style="background:#3b82f6"></span><span class="archetype-chip-name">07 Access / Availability</span></div>
+                    <div class="archetype-chip-desc">Products, services, or capital hard to reach</div>
+                </div>
+                <div class="archetype-chip">
+                    <div class="archetype-chip-header"><span class="archetype-chip-dot" style="background:#6366f1"></span><span class="archetype-chip-name">08 Quality / Reliability</span></div>
+                    <div class="archetype-chip-desc">Output inconsistent, error-prone, or unpredictable</div>
+                </div>
+                <div class="archetype-chip">
+                    <div class="archetype-chip-header"><span class="archetype-chip-dot" style="background:#8b5cf6"></span><span class="archetype-chip-name">09 Trust / Verification</span></div>
+                    <div class="archetype-chip-desc">Identity or credentials can't be verified at scale</div>
+                </div>
+                <div class="archetype-chip">
+                    <div class="archetype-chip-header"><span class="archetype-chip-dot" style="background:#ec4899"></span><span class="archetype-chip-name">10 Pricing / Discovery</span></div>
+                    <div class="archetype-chip-desc">Prices opaque, manipulated, or impossible to benchmark</div>
+                </div>
+                <div class="archetype-chip">
+                    <div class="archetype-chip-header"><span class="archetype-chip-dot" style="background:#f43f5e"></span><span class="archetype-chip-name">11 Incentives / Alignment</span></div>
+                    <div class="archetype-chip-desc">Misaligned agent interests cause bad outcomes</div>
+                </div>
+                <div class="archetype-chip">
+                    <div class="archetype-chip-header"><span class="archetype-chip-dot" style="background:#64748b"></span><span class="archetype-chip-name">12 Automation / Scale</span></div>
+                    <div class="archetype-chip-desc">Manual workflows block growth — can't scale without headcount</div>
+                </div>
+            </div>
+        </div>
 
-            <button class="pb-card pb-card-1" data-problem="Time / Speed">
-                <span class="pb-card-badge"></span>
-                <span class="pb-card-num">01</span>
-                <span class="pb-card-name">Time / Speed</span>
-                <span class="pb-card-desc">Processes are too slow; delays destroy value or create friction</span>
-            </button>
-
-            <button class="pb-card pb-card-2" data-problem="Cost / Leakage">
-                <span class="pb-card-badge"></span>
-                <span class="pb-card-num">02</span>
-                <span class="pb-card-name">Cost / Leakage</span>
-                <span class="pb-card-desc">Money is wasted, margins eroded, or fees are opaque</span>
-            </button>
-
-            <button class="pb-card pb-card-3" data-problem="Coordination">
-                <span class="pb-card-badge"></span>
-                <span class="pb-card-num">03</span>
-                <span class="pb-card-name">Coordination</span>
-                <span class="pb-card-desc">Multiple parties can't sync efficiently — handoffs break</span>
-            </button>
-
-            <button class="pb-card pb-card-4" data-problem="Visibility / Information">
-                <span class="pb-card-badge"></span>
-                <span class="pb-card-num">04</span>
-                <span class="pb-card-name">Visibility / Information</span>
-                <span class="pb-card-desc">Data is missing, siloed, or arrives too late to act on</span>
-            </button>
-
-            <button class="pb-card pb-card-5" data-problem="Risk / Compliance">
-                <span class="pb-card-badge"></span>
-                <span class="pb-card-num">05</span>
-                <span class="pb-card-name">Risk / Compliance</span>
-                <span class="pb-card-desc">Regulatory burden, liability exposure, or audit failures</span>
-            </button>
-
-            <button class="pb-card pb-card-6" data-problem="Capacity / Utilization">
-                <span class="pb-card-badge"></span>
-                <span class="pb-card-num">06</span>
-                <span class="pb-card-name">Capacity / Utilization</span>
-                <span class="pb-card-desc">Assets sit idle or are over-strained — poor allocation</span>
-            </button>
-
-            <button class="pb-card pb-card-7" data-problem="Access / Availability">
-                <span class="pb-card-badge"></span>
-                <span class="pb-card-num">07</span>
-                <span class="pb-card-name">Access / Availability</span>
-                <span class="pb-card-desc">Products, services, or capital are hard to reach</span>
-            </button>
-
-            <button class="pb-card pb-card-8" data-problem="Quality / Reliability">
-                <span class="pb-card-badge"></span>
-                <span class="pb-card-num">08</span>
-                <span class="pb-card-name">Quality / Reliability</span>
-                <span class="pb-card-desc">Output is inconsistent, error-prone, or unpredictable</span>
-            </button>
-
-            <button class="pb-card pb-card-9" data-problem="Trust / Verification">
-                <span class="pb-card-badge"></span>
-                <span class="pb-card-num">09</span>
-                <span class="pb-card-name">Trust / Verification</span>
-                <span class="pb-card-desc">Identity, credentials, or claims can't be verified at scale</span>
-            </button>
-
-            <button class="pb-card pb-card-10" data-problem="Pricing / Discovery">
-                <span class="pb-card-badge"></span>
-                <span class="pb-card-num">10</span>
-                <span class="pb-card-name">Pricing / Discovery</span>
-                <span class="pb-card-desc">Prices are opaque, manipulated, or impossible to benchmark</span>
-            </button>
-
-            <button class="pb-card pb-card-11" data-problem="Incentives / Alignment">
-                <span class="pb-card-badge"></span>
-                <span class="pb-card-num">11</span>
-                <span class="pb-card-name">Incentives / Alignment</span>
-                <span class="pb-card-desc">Agent interests diverge — misaligned incentives cause bad outcomes</span>
-            </button>
-
-            <button class="pb-card pb-card-12" data-problem="Automation / Scale">
-                <span class="pb-card-badge"></span>
-                <span class="pb-card-num">12</span>
-                <span class="pb-card-name">Automation / Scale</span>
-                <span class="pb-card-desc">Manual workflows block growth — can't scale without headcount</span>
-            </button>
-
+        <!-- PART 2: NICHE-SPECIFIC PROBLEMS — loaded from JSON -->
+        <div class="niche-section">
+            <div class="niche-section-label">Specific problems — <span id="niche-name-label">selected niche</span></div>
+            <div id="niche-problems-list">
+                <p class="niche-no-data">Loading...</p>
+            </div>
         </div>
 
         <!-- CTA -->
@@ -354,117 +438,63 @@
     <div id="pb-toast"></div>
     <script src="content/t.js"></script>
     <script>
-        // Back button — return to L3/L2 page, not Part C
+        // Back button — always use browser history
         const backBtn = document.getElementById('pb-back-btn');
-        const backUrl = localStorage.getItem('problem_back_url');
-        backBtn.href = backUrl || 'javascript:history.back()';
+        backBtn.addEventListener('click', function(e) { e.preventDefault(); history.back(); });
 
-        // Pre-select suggested problems from L3 context
-        const suggestedPrimary = localStorage.getItem('suggested_primary');
-        const suggestedSecondary = localStorage.getItem('suggested_secondary');
-        const selectedL3 = localStorage.getItem('selected_l3');
-
-        // Show selected market as breadcrumb
-        const marketRaw = localStorage.getItem('selected_market') || '—';
-        const parts = marketRaw.split(' — ');
-        const bc = document.getElementById('market-breadcrumb');
-        bc.innerHTML = parts.map((p, i) => {
-            const isLast = i === parts.length - 1;
-            const sep = i > 0 ? '<span class="sep">›</span>' : '';
-            return `${sep}<span class="crumb${isLast ? ' last' : ''}">${p}</span>`;
-        }).join('');
-
-        // Card selection — max 2 (primary + optional secondary)
-        const cards = document.querySelectorAll('.pb-card');
+        const selectedL3 = localStorage.getItem('selected_l3') || '';
         const continueBtn = document.getElementById('continue-btn');
-        let primary = null;   // card element
-        let secondary = null; // card element
+        let selectedCard = null;
 
-        function getBadge(card) { return card.querySelector('.pb-card-badge'); }
+        // Archetype colors for the badge
+        const ARCHETYPE_COLORS = {
+            1: '#ef4444', 2: '#f97316', 3: '#f59e0b', 4: '#84cc16',
+            5: '#10b981', 6: '#06b6d4', 7: '#3b82f6', 8: '#6366f1',
+            9: '#8b5cf6', 10: '#ec4899', 11: '#f43f5e', 12: '#64748b'
+        };
 
-        function setCardState(card, role) {
-            card.classList.remove('primary', 'secondary');
-            const badge = getBadge(card);
-            if (role === 'primary') {
-                card.classList.add('primary');
-                badge.textContent = '✓ Primary';
-            } else if (role === 'secondary') {
-                card.classList.add('secondary');
-                badge.textContent = '+ Secondary';
-            } else {
-                badge.textContent = '';
-            }
-        }
+        // Load problems from JSON
+        fetch('content/problems-by-niche.json')
+            .then(r => r.json())
+            .then(data => {
+                const list = document.getElementById('niche-problems-list');
+                const nameLabel = document.getElementById('niche-name-label');
+                nameLabel.textContent = selectedL3 || '—';
 
-        function showToast(msg) {
-            const t = document.getElementById('pb-toast');
-            t.textContent = msg;
-            t.classList.add('show');
-            clearTimeout(t._timer);
-            t._timer = setTimeout(() => t.classList.remove('show'), 2000);
-        }
-
-        function updateCTA() {
-            continueBtn.classList.toggle('active', primary !== null);
-        }
-
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                // Toggle off if already selected
-                if (card === primary) {
-                    setCardState(primary, null);
-                    primary = secondary;
-                    secondary = null;
-                    if (primary) setCardState(primary, 'primary');
-                    updateCTA();
+                const problems = data[selectedL3];
+                if (!problems || problems.length === 0) {
+                    list.innerHTML = '<p class="niche-no-data">No specific problems mapped yet for this niche. Use the archetype framework above.</p>';
                     return;
                 }
-                if (card === secondary) {
-                    setCardState(secondary, null);
-                    secondary = null;
-                    updateCTA();
-                    return;
-                }
-                // New selection
-                if (!primary) {
-                    primary = card;
-                    setCardState(primary, 'primary');
-                } else if (!secondary) {
-                    secondary = card;
-                    setCardState(secondary, 'secondary');
-                } else {
-                    // Replace secondary
-                    setCardState(secondary, null);
-                    secondary = card;
-                    setCardState(secondary, 'secondary');
-                    showToast('Max 2 selections — secondary replaced');
-                }
-                updateCTA();
-            });
-        });
 
-        // Auto pre-select based on L3 suggestion
-        if (suggestedPrimary) {
-            cards.forEach(card => {
-                if (card.dataset.problem === suggestedPrimary) {
-                    primary = card;
-                    setCardState(card, 'primary');
-                } else if (suggestedSecondary && card.dataset.problem === suggestedSecondary) {
-                    secondary = card;
-                    setCardState(card, 'secondary');
-                }
-            });
-            updateCTA();
-        }
+                list.innerHTML = '';
+                problems.forEach(function(p) {
+                    const color = ARCHETYPE_COLORS[p.archetype_id] || '#64748b';
+                    const btn = document.createElement('button');
+                    btn.className = 'niche-problem-card';
+                    btn.innerHTML =
+                        '<span class="niche-problem-archetype" style="background:' + color + '18; color:' + color + '">' + p.archetype + '</span>' +
+                        '<span class="niche-problem-text">' + p.problem + '</span>';
 
-        continueBtn.addEventListener('click', () => {
-            if (!primary) return;
-            localStorage.setItem('primary_problem', primary.dataset.problem);
-            if (secondary) {
-                localStorage.setItem('secondary_problem', secondary.dataset.problem);
-            } else {
-                localStorage.removeItem('secondary_problem');
-            }
+                    btn.addEventListener('click', function() {
+                        if (selectedCard) selectedCard.classList.remove('selected');
+                        selectedCard = btn;
+                        btn.classList.add('selected');
+                        localStorage.setItem('primary_problem', p.archetype);
+                        localStorage.setItem('primary_problem_text', p.problem);
+                        continueBtn.classList.add('active');
+                    });
+
+                    list.appendChild(btn);
+                });
+            })
+            .catch(function() {
+                document.getElementById('niche-problems-list').innerHTML =
+                    '<p class="niche-no-data">Could not load problems. Check content/problems-by-niche.json.</p>';
+            });
+
+        continueBtn.addEventListener('click', function() {
+            if (!selectedCard) return;
             window.location.href = 'output-sheet.html';
         });
     </script>

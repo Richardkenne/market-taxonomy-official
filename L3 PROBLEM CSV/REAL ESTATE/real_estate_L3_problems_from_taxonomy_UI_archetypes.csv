@@ -1,0 +1,115 @@
+L1,L2,L3,Problem,Archetype_ID,Archetype_Name
+Commercial (Office),CBD / Urban Office,Grade A Institutional,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Commercial (Office),CBD / Urban Office,Grade A Institutional,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Commercial (Office),CBD / Urban Office,Multi-Tenant Office,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Commercial (Office),CBD / Urban Office,Multi-Tenant Office,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Commercial (Office),CBD / Urban Office,Owner-Occupied Office,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Commercial (Office),CBD / Urban Office,Owner-Occupied Office,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Commercial (Office),Flex / Business Park Office,Flex Office,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Commercial (Office),Flex / Business Park Office,Flex Office,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Commercial (Office),Flex / Business Park Office,Hybrid Office-Industrial,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Commercial (Office),Flex / Business Park Office,Hybrid Office-Industrial,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Commercial (Office),Suburban Office,Campus-Style Office,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Commercial (Office),Suburban Office,Campus-Style Office,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Commercial (Office),Suburban Office,Low-Rise Office,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Commercial (Office),Suburban Office,Low-Rise Office,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Industrial / Warehousing,Last-Mile Logistics,E-Commerce Fulfillment,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Industrial / Warehousing,Last-Mile Logistics,E-Commerce Fulfillment,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Industrial / Warehousing,Last-Mile Logistics,Urban Last-Mile,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Industrial / Warehousing,Last-Mile Logistics,Urban Last-Mile,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Industrial / Warehousing,Light Industrial,Assembly / Workshop,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Industrial / Warehousing,Light Industrial,Assembly / Workshop,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Industrial / Warehousing,Light Industrial,Manufacturing-Adjacent,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Industrial / Warehousing,Light Industrial,Manufacturing-Adjacent,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Industrial / Warehousing,Logistics / Distribution,Cold Storage,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Industrial / Warehousing,Logistics / Distribution,Cold Storage,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Industrial / Warehousing,Logistics / Distribution,National Distribution Hub,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Industrial / Warehousing,Logistics / Distribution,National Distribution Hub,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Industrial / Warehousing,Logistics / Distribution,Regional Distribution Center,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Industrial / Warehousing,Logistics / Distribution,Regional Distribution Center,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Industrial / Warehousing,Warehousing,Bulk Storage,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Industrial / Warehousing,Warehousing,Bulk Storage,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Industrial / Warehousing,Warehousing,General Warehousing,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Industrial / Warehousing,Warehousing,General Warehousing,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Land / Development,Entitled Land,Partially Entitled Land,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Land / Development,Entitled Land,Partially Entitled Land,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Land / Development,Entitled Land,Shovel-Ready Land,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Land / Development,Entitled Land,Shovel-Ready Land,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Land / Development,Infill Development,Brownfield Redevelopment,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Land / Development,Infill Development,Brownfield Redevelopment,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Land / Development,Infill Development,Urban Infill,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Land / Development,Infill Development,Urban Infill,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Land / Development,Mixed-Use Development Sites,Mixed-Use Urban,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Land / Development,Mixed-Use Development Sites,Mixed-Use Urban,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Land / Development,Mixed-Use Development Sites,Transit-Oriented Development,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Land / Development,Mixed-Use Development Sites,Transit-Oriented Development,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Land / Development,Raw / Undeveloped Land,Agricultural Conversion,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Land / Development,Raw / Undeveloped Land,Agricultural Conversion,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Land / Development,Raw / Undeveloped Land,Greenfield Land,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Land / Development,Raw / Undeveloped Land,Greenfield Land,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Residential,Multi-Family Residential,Affordable Housing,"Operators face recurring compliance risk due to complex eligibility, income recertification, and subsidy rules tracked manually",05,Risk / Compliance
+Residential,Multi-Family Residential,Affordable Housing,"Operators lose time due to slow and paperwork-heavy move-in, recertification, and reporting processes on a recurring basis",01,Time / Speed
+Residential,Multi-Family Residential,Build-to-Rent,Operators lose income due to recurring vacancy and churn dynamics that reduce effective occupancy,06,Capacity / Utilization
+Residential,Multi-Family Residential,Build-to-Rent,"Operators lose time due to recurring manual leasing, renewals, and resident operations that do not scale",12,Automation / Scale
+Residential,Multi-Family Residential,Institutional MF,Institutional operators lose decision speed due to delayed and opaque asset-level KPIs and benchmarking across the portfolio,04,Visibility / Information
+Residential,Multi-Family Residential,Institutional MF,Institutional operators incur recurring inefficiency due to fragmented vendor and contractor coordination across properties,03,Coordination
+Residential,Multi-Family Residential,Market-Rate Rental,Operators lose income due to recurring vacancy and churn dynamics that reduce occupancy and effective rent,06,Capacity / Utilization
+Residential,Multi-Family Residential,Market-Rate Rental,"Operators lose time due to recurring manual leasing, renewals, and resident support workflows that do not scale with unit count",12,Automation / Scale
+Residential,Multi-Family Residential,Senior Housing,Operators increase risk due to recurring compliance and care-related documentation requirements handled inconsistently,05,Risk / Compliance
+Residential,Multi-Family Residential,Senior Housing,Operators lose performance due to recurring service reliability and response-time issues that impact resident satisfaction and retention,08,Quality / Reliability
+Residential,Multi-Family Residential,Small Private MF,Owners lose time because recurring operations are owner-managed and cannot be automated or delegated effectively,12,Automation / Scale
+Residential,Multi-Family Residential,Small Private MF,Owners lose income due to recurring vacancy and churn amplified by slow issue resolution and inconsistent tenant management,06,Capacity / Utilization
+Residential,Multi-Family Residential,Student Housing,Operators lose revenue due to seasonal utilization volatility and churn tied to academic cycles,06,Capacity / Utilization
+Residential,Multi-Family Residential,Student Housing,"Operators lose time due to recurring coordination failures in move-in/move-out, maintenance, and roommate assignment operations",03,Coordination
+Residential,Single-Family Residential,Buy-to-Rent,Operators lose rental cashflow due to late or inconsistent rent collection and payment follow-up handled manually on a recurring basis,02,Cost / Leakage
+Residential,Single-Family Residential,Buy-to-Rent,Operators lose income due to vacancy gaps and slow tenant turnover caused by recurring leasing and move-out/move-in frictions,06,Capacity / Utilization
+Residential,Single-Family Residential,Institutional Rental,Institutional operators incur recurring maintenance and make-ready cost overruns due to vendor inefficiencies and inconsistent execution at scale,02,Cost / Leakage
+Residential,Single-Family Residential,Institutional Rental,Institutional operators lose decision quality due to delayed and fragmented portfolio performance data across properties and vendors,04,Visibility / Information
+Residential,Single-Family Residential,Owner-Occupied,Households lose time due to fragmented home maintenance coordination across vendors handled manually on a recurring basis,01,Time / Speed
+Residential,Single-Family Residential,Owner-Occupied,"Households lose money due to recurring overpayment and leakage in repairs, utilities, and contractor pricing without consistent cost control",02,Cost / Leakage
+Residential,Single-Family Residential,Short-Term Rental,Operators lose revenue due to recurring pricing and availability misalignment relative to local demand and seasonality,10,Pricing / Discovery
+Residential,Single-Family Residential,Short-Term Rental,"Operators lose time and experience operational stress due to recurring coordination failures between guests, cleaning, and maintenance",03,Coordination
+Residential,Specialized Residential,Co-Living,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Residential,Specialized Residential,Co-Living,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Residential,Specialized Residential,Gated Communities,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Residential,Specialized Residential,Gated Communities,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Residential,Specialized Residential,Micro-Apartments,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Residential,Specialized Residential,Micro-Apartments,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Retail / Shopping Centers,High Street / Street Retail,Prime High Street,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Retail / Shopping Centers,High Street / Street Retail,Prime High Street,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Retail / Shopping Centers,High Street / Street Retail,Secondary Street Retail,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Retail / Shopping Centers,High Street / Street Retail,Secondary Street Retail,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Retail / Shopping Centers,Neighborhood / Community Centers,Convenience Retail,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Retail / Shopping Centers,Neighborhood / Community Centers,Convenience Retail,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Retail / Shopping Centers,Neighborhood / Community Centers,Daily-Needs Retail,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Retail / Shopping Centers,Neighborhood / Community Centers,Daily-Needs Retail,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Retail / Shopping Centers,Power Centers,Anchored Retail,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Retail / Shopping Centers,Power Centers,Anchored Retail,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Retail / Shopping Centers,Power Centers,Big-Box Retail,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Retail / Shopping Centers,Power Centers,Big-Box Retail,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Retail / Shopping Centers,Shopping Malls,Regional Mall,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Retail / Shopping Centers,Shopping Malls,Regional Mall,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Retail / Shopping Centers,Shopping Malls,Super-Regional Mall,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Retail / Shopping Centers,Shopping Malls,Super-Regional Mall,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Specialty Real Estate,Data Centers,Enterprise Data Centers,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Specialty Real Estate,Data Centers,Enterprise Data Centers,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Specialty Real Estate,Data Centers,Hyperscale Data Centers,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Specialty Real Estate,Data Centers,Hyperscale Data Centers,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Specialty Real Estate,Healthcare Real Estate,Medical Office Buildings,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Specialty Real Estate,Healthcare Real Estate,Medical Office Buildings,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Specialty Real Estate,Healthcare Real Estate,Senior Care Facilities,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Specialty Real Estate,Healthcare Real Estate,Senior Care Facilities,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Specialty Real Estate,Hospitality,Hotels,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Specialty Real Estate,Hospitality,Hotels,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Specialty Real Estate,Hospitality,Resorts,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Specialty Real Estate,Hospitality,Resorts,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Specialty Real Estate,Life Sciences / Lab,Biotech Campuses,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Specialty Real Estate,Life Sciences / Lab,Biotech Campuses,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Specialty Real Estate,Life Sciences / Lab,Research Labs,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Specialty Real Estate,Life Sciences / Lab,Research Labs,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Specialty Real Estate,Manufactured Housing,Manufactured Home Communities,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Specialty Real Estate,Manufactured Housing,Manufactured Home Communities,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Specialty Real Estate,Self-Storage,Suburban Self-Storage,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Specialty Real Estate,Self-Storage,Suburban Self-Storage,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage
+Specialty Real Estate,Self-Storage,Urban Self-Storage,Operators lose time due to recurring manual operational workflows,01,Time / Speed
+Specialty Real Estate,Self-Storage,Urban Self-Storage,Operators lose money due to recurring cost leakage without standardized controls,02,Cost / Leakage

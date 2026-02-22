@@ -129,6 +129,55 @@
             background: #2b2b2b;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
+
+        .tam-highlight {
+            max-width: 600px;
+            margin: 0 auto 28px;
+            padding: 0 16px;
+        }
+
+        .tam-highlight-card {
+            background: #f5fbf9;
+            border: 1.5px solid var(--green);
+            border-radius: 12px;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .tam-highlight-left {}
+
+        .tam-highlight-tag {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--green);
+            margin-bottom: 4px;
+        }
+
+        .tam-highlight-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 2px;
+        }
+
+        .tam-highlight-value {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+            line-height: 1.1;
+        }
+
+        .tam-highlight-source {
+            font-size: 0.68rem;
+            color: var(--text-tertiary);
+            margin-top: 4px;
+        }
     </style>
 </head>
 <body>
@@ -158,6 +207,18 @@
             The full market taxonomy spans 4 hierarchical levels — from broad macro markets down to investable niches. Each level narrows the opportunity space.
         </p>
 
+        <!-- L2 TAM HIGHLIGHT -->
+        <div class="tam-highlight" id="tam-highlight" style="display:none;">
+            <div class="tam-highlight-card">
+                <div class="tam-highlight-left">
+                    <div class="tam-highlight-tag">L2 — Selected Segment</div>
+                    <div class="tam-highlight-label" id="tam-l2-label">—</div>
+                    <div class="tam-highlight-value" id="tam-l2-value">—</div>
+                    <div class="tam-highlight-source" id="tam-l2-source"></div>
+                </div>
+            </div>
+        </div>
+
         <!-- 4 LEVEL CARDS -->
         <div class="num-grid" id="numbers-grid">
             <!-- populated by JS below -->
@@ -165,8 +226,7 @@
 
         <!-- CTA -->
         <div class="num-cta">
-            <a href="macro-markets.html" class="btn-outline">Browse all 43 Macro Markets →</a>
-            <a href="problem-selection.html" class="btn-solid">Start Problem Analysis →</a>
+<a href="problem-selection.html" class="btn-solid">Start Problem Analysis →</a>
         </div>
 
     </div>
@@ -174,6 +234,58 @@
     <script src="content/taxonomy-numbers.js"></script>
     <script src="content/t.js"></script>
     <script>
+        // TAM lookup keyed by "suggested_primary_suggested_secondary"
+        const L2_TAM = {
+            // Real Estate — Residential
+            'single-family_residential':              { label: 'Single-Family Residential',      value: '$11T',  source: 'Global residential RE market est.' },
+            'multi-family_residential':               { label: 'Multi-Family Residential',        value: '$3.5T', source: 'Global multi-family RE market est.' },
+            'specialized_residential':                { label: 'Specialized Residential',         value: '$420B', source: 'Global niche residential est.' },
+            // Real Estate — Commercial
+            'cbd_urban':                              { label: 'CBD / Urban Office',              value: '$1.4T', source: 'Global commercial office RE est.' },
+            'flex_business':                          { label: 'Flex / Business Park',            value: '$320B', source: 'Global flex office market est.' },
+            'suburban_office':                        { label: 'Suburban Office',                 value: '$480B', source: 'Global suburban office est.' },
+            // Real Estate — Industrial
+            'last-mile_logistics':                    { label: 'Last-Mile Logistics',             value: '$215B', source: 'Global last-mile logistics RE est.' },
+            'light_industrial':                       { label: 'Light Industrial',                value: '$380B', source: 'Global light industrial RE est.' },
+            'logistics_distribution':                 { label: 'Logistics Distribution',          value: '$650B', source: 'Global logistics RE est.' },
+            'warehousing_':                           { label: 'Warehousing',                     value: '$530B', source: 'Global warehousing RE est.' },
+            // Real Estate — Retail
+            'high_street':                            { label: 'High Street / Street Retail',     value: '$1.1T', source: 'Global street retail RE est.' },
+            'neighborhood_community':                 { label: 'Neighborhood / Community Centers', value: '$480B', source: 'Global neighborhood retail RE est.' },
+            'power_centers':                          { label: 'Power Centers',                   value: '$310B', source: 'Global power center RE est.' },
+            'shopping_malls':                         { label: 'Shopping Malls',                  value: '$730B', source: 'Global mall RE est.' },
+            // Real Estate — Property Management
+            'residential-pm_property-management':    { label: 'Residential Property Management', value: '$22B',  source: 'Global residential PM software & services est.' },
+            'commercial-pm_property-management':     { label: 'Commercial Property Management',  value: '$18B',  source: 'Global commercial PM software & services est.' },
+            'facilities-management_property-management': { label: 'Facilities Management',       value: '$62B',  source: 'Global FM market est.' },
+            // Real Estate — Land
+            'entitled_land':                          { label: 'Entitled Land',                   value: '$180B', source: 'Global entitled land market est.' },
+            'infill_development':                     { label: 'Infill Development',              value: '$95B',  source: 'Global infill dev market est.' },
+            'mixed-use_development':                  { label: 'Mixed-Use Development Sites',     value: '$210B', source: 'Global mixed-use dev est.' },
+            'raw_undeveloped':                        { label: 'Raw / Undeveloped Land',          value: '$140B', source: 'Global raw land market est.' },
+            // Real Estate — Specialty
+            'data_centers':                           { label: 'Data Centers RE',                 value: '$280B', source: 'Global data center RE est.' },
+            'healthcare_real':                        { label: 'Healthcare Real Estate',          value: '$320B', source: 'Global healthcare RE est.' },
+            'hospitality_':                           { label: 'Hospitality RE',                  value: '$580B', source: 'Global hotel/hospitality RE est.' },
+            'life_sciences':                          { label: 'Life Sciences Lab RE',            value: '$130B', source: 'Global life sciences RE est.' },
+            'manufactured_housing':                   { label: 'Manufactured Housing',            value: '$90B',  source: 'Global manufactured housing est.' },
+            'self-storage_':                          { label: 'Self Storage',                    value: '$65B',  source: 'Global self-storage RE est.' },
+        };
+
+        // Show L2 TAM if available
+        (function() {
+            const primary = localStorage.getItem('suggested_primary') || '';
+            const secondary = localStorage.getItem('suggested_secondary') || '';
+            const key = primary + '_' + secondary;
+            const tam = L2_TAM[key];
+            if (tam) {
+                document.getElementById('tam-highlight').style.display = '';
+                document.getElementById('tam-l2-label').textContent = tam.label;
+                document.getElementById('tam-l2-value').textContent = tam.value;
+                document.getElementById('tam-l2-source').textContent = tam.source;
+            }
+        })();
+
         const LEVEL_META = {
             L0: { cls: 'num-card-l0', desc: 'Broad economic sectors (e.g. Healthcare, Fintech, Real Estate)' },
             L1: { cls: 'num-card-l1', desc: 'Industry verticals within each macro market' },

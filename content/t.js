@@ -126,9 +126,20 @@
       .replace(/'/g, "&#39;");
   }
 
+  // Make all .back-link elements use browser history instead of hardcoded hrefs
+  function applyBackLinks() {
+    document.querySelectorAll('a.back-link').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        history.back();
+      });
+    });
+  }
+
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", apply);
+    document.addEventListener("DOMContentLoaded", function() { apply(); applyBackLinks(); });
   } else {
     apply();
+    applyBackLinks();
   }
 })();
