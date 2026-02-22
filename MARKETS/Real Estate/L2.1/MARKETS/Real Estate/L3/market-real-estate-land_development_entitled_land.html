@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entitled Land — Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../style.css">
+    <style>
+        .l3-divider {
+            max-width: 600px;
+            margin: 28px auto;
+            border: none;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Sources */
+        .l3-sources-label {
+            max-width: 600px;
+            margin: 0 auto 6px;
+            padding: 0 16px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+        }
+        .l3-sources-grid {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+        .l3-source-chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+        .l3-source-chip:hover { color: var(--text-primary); }
+        .l3-source-chip svg { flex-shrink: 0; opacity: 0.4; }
+
+        /* Market context box */
+        .l3-context {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-context-inner {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .l3-context-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            padding: 10px 14px 6px;
+        }
+        .l3-context-row {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 7px 14px;
+            border-top: 1px solid var(--border-light);
+        }
+        .l3-context-key {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            min-width: 110px;
+            flex-shrink: 0;
+        }
+        .l3-context-val {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Callout */
+        .l3-callout {
+            max-width: 600px;
+            margin: 0 auto 16px;
+            padding: 0 16px;
+        }
+        .l3-callout-inner {
+            border-left: 3px solid var(--green);
+            padding: 10px 14px;
+            background: var(--green-light);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Pain points */
+        .l3-pain {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-pain-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: 10px;
+        }
+        .l3-pain ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .l3-pain ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .l3-pain ul li::before {
+            content: "·";
+            font-size: 1.2rem;
+            color: var(--green);
+            line-height: 1.2;
+            flex-shrink: 0;
+        }
+
+        /* Niche box */
+        .l3-niche {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-niche-inner {
+            background: var(--border-light);
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+        .l3-niche-inner h4 {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin: 0 0 6px;
+        }
+        .l3-niche-inner p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .l3-cta {
+            max-width: 600px;
+            margin: 0 auto 48px;
+            padding: 0 16px;
+            text-align: center;
+        }
+
+        /* Explanation */
+        .l3-explanation {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+            font-size: 0.78rem;
+            color: var(--text-tertiary);
+            line-height: 1.65;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="../../../../index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="../../L2/market-real-estate-land-development.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Land Development
+            </a>
+        </div>
+
+        <!-- PART 1 — TITLE -->
+        <header class="market-page-header">
+            <div style="text-align:center; margin-bottom:12px;">
+                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 2.1</span>
+            </div>
+            <div class="market-badge">
+                <span class="market-title">Entitled Land</span>
+            </div>
+        </header>
+
+        <!-- PART 2 — DEFINITION -->
+        <p class="subtitle" style="max-width:560px; margin:0 auto 0;">Entitled land refers to parcels that have received government approvals (zoning, subdivision, environmental clearances, and development permits) allowing construction to begin, representing the highest-value segment of the development land market.</p>
+
+        <hr class="l3-divider">
+
+        <!-- PART 3 — SOURCES EXPLANATION -->
+        <p class="l3-explanation">Market data is sourced from NAHB entitled lot surveys, John Burns Real Estate Consulting lot inventory tracking, and homebuilder and commercial developer public filings on entitled land pipeline values.</p>
+
+        <!-- PART 4 — SOURCES -->
+        <p class="l3-sources-label" style="margin-top:14px;">Sources</p>
+        <div class="l3-sources-grid">
+            <a href="https://www.nahb.org/research/" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>NAHB Lot Supply Quarterly</a>
+            <a href="https://jbrec.com/" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>John Burns Lot Pipeline Research</a>
+            <a href="https://zondahome.com/research/" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Zonda Entitled Land Analytics</a>
+            <a href="https://www.costar.com/" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>CoStar Entitled Land Transactions</a>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 5 — MARKET CONTEXT -->
+        <div class="l3-context">
+            <div class="l3-context-inner">
+                <p class="l3-context-label">Market Context</p>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Size / Scale</span>
+                    <span class="l3-context-val">Entitled residential lots represent ~$150B+ in aggregate value nationally; entitled commercial land premium is 40–200% over raw land value in most markets; entitled industrial parcels command $30–100 PSF in top markets</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Growth signal</span>
+                    <span class="l3-context-val">Entitled land supply critically short in most growth markets; 3–7 year entitlement timelines creating significant land banking opportunities; entitled lot prices rising 10–25% annually in constrained markets</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Key players</span>
+                    <span class="l3-context-val">Forestar Group (D.R. Horton subsidiary, entitled residential lots), Richfield Real Estate (land banking), Taylor Morrison (vertical entitlement integration), LandBank Capital (private), Schuler Homes (finished lot supply)</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Geography</span>
+                    <span class="l3-context-val">Highest-value entitled lots in coastal California, NYC metro, Seattle, and DC; highest-volume entitled lot markets in Dallas-Fort Worth, Phoenix, Atlanta, Charlotte, and Houston</span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 6 — PROBLEM FRAMING -->
+        <div class="l3-callout">
+            <div class="l3-callout-inner">Entitled land is the rarest and most valuable form of development land, yet the entitlement process that creates it is managed with the least sophisticated tooling — a workflow ripe for disruption.</div>
+        </div>
+
+        <!-- PART 7 — KNOWN PAIN POINTS -->
+        <div class="l3-pain">
+            <p class="l3-pain-label">Known Pain Points</p>
+            <ul>
+                <li>                <li>Entitlement status tracking across a portfolio of parcels in various stages (pre-application, planning commission, appeals, permit issuance) has no purpose-built database — developers use Excel and shared drives
+                <li>Municipal approval process management involves coordinating engineers, attorneys, planners, and public agency staff across dozens of submission deadlines with no shared project management platform
+                <li>Condition of approval (COA) tracking — monitoring and clearing the specific conditions attached to entitlement approvals before building permits can be issued — is entirely manual and creates closing delays
+                <li>Entitled land valuation is highly localized and time-sensitive — comparable entitled lot sales data is sparse, not captured in MLS systems, and requires broker network intelligence to price accurately
+            </ul>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 8 — HOW TO CHOOSE A NICHE -->
+        <div class="l3-niche">
+            <div class="l3-niche-inner">
+                <h4>How to Choose a Niche</h4>
+                <p>Entitlement project management software is a clear, underserved opportunity — every residential and commercial developer manages entitlements manually with spreadsheets and shared drives. Build a workflow tool covering permit tracking, condition of approval management, and agency correspondence logging. Target regional homebuilders and land developers with 10–100 active entitlement projects — they have the most acute pain and clearest ROI from improved timeline management.</p>
+            </div>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 9 — CTA -->
+        <div class="l3-cta">
+            <button class="btn btn-primary btn-large" id="view-numbers">
+                Numbers
+            </button>
+        </div>
+
+    
+        <div class="l3-cta" style="margin-top: 48px;">
+            <a class="l3-cta-btn" href="../../../numbers.html?l3=market-real-estate-land_development_entitled_land" style="background:var(--text-secondary);">Numbers & TAM →</a>
+        </div>
+    </div>
+    <script src="../../../../content/t.js"></script>
+    <script>
+        document.getElementById('view-numbers').addEventListener('click', () => {
+            window.location.href = 'numbers-real-estate-land-development-entitled-land.html';
+        });
+
+        document.getElementById('start-wizard').addEventListener('click', () => {
+            localStorage.setItem('selected_market', 'Real Estate — Land Development — Entitled Land');
+            window.location.href = '../../../problem-selection.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Property Management — Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../style.css">
+    <style>
+        .l3-divider {
+            max-width: 600px;
+            margin: 28px auto;
+            border: none;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Sources */
+        .l3-sources-label {
+            max-width: 600px;
+            margin: 0 auto 6px;
+            padding: 0 16px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+        }
+        .l3-sources-grid {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5px;
+        }
+        .l3-source-chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+        .l3-source-chip:hover { color: var(--text-primary); }
+        .l3-source-chip svg { flex-shrink: 0; opacity: 0.4; }
+
+        /* Market context box */
+        .l3-context {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-context-inner {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .l3-context-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            padding: 10px 14px 6px;
+        }
+        .l3-context-row {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 7px 14px;
+            border-top: 1px solid var(--border-light);
+        }
+        .l3-context-key {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            min-width: 110px;
+            flex-shrink: 0;
+        }
+        .l3-context-val {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* Callout */
+        .l3-callout {
+            max-width: 600px;
+            margin: 0 auto 16px;
+            padding: 0 16px;
+        }
+        .l3-callout-inner {
+            border-left: 3px solid var(--green);
+            padding: 10px 14px;
+            background: var(--green-light);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Pain points */
+        .l3-pain {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-pain-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: 10px;
+        }
+        .l3-pain ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .l3-pain ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .l3-pain ul li::before {
+            content: "·";
+            font-size: 1.2rem;
+            color: var(--green);
+            line-height: 1.2;
+            flex-shrink: 0;
+        }
+
+        /* Niche box */
+        .l3-niche {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .l3-niche-inner {
+            background: var(--border-light);
+            border-radius: 10px;
+            padding: 16px 18px;
+        }
+        .l3-niche-inner h4 {
+            font-size: 0.62rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin: 0 0 6px;
+        }
+        .l3-niche-inner p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .l3-cta {
+            max-width: 600px;
+            margin: 0 auto 48px;
+            padding: 0 16px;
+            text-align: center;
+        }
+
+        /* Explanation */
+        .l3-explanation {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 16px;
+            font-size: 0.78rem;
+            color: var(--text-tertiary);
+            line-height: 1.65;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="../../../../index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="../../L2/market-real-estate-property-management.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Property Management
+            </a>
+        </div>
+
+        <!-- PART 1 — TITLE -->
+        <header class="market-page-header">
+            <div style="text-align:center; margin-bottom:12px;">
+                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 2.1</span>
+            </div>
+            <div class="market-badge">
+                <span class="market-title">Industrial Property Management</span>
+            </div>
+        </header>
+
+        <!-- PART 2 — DEFINITION -->
+        <p class="subtitle" style="max-width:560px; margin:0 auto 0;">Industrial property management covers the operational oversight of warehouses, distribution centers, flex industrial parks, and manufacturing facilities on behalf of owners, encompassing maintenance, tenant services, lease administration, and capital planning.</p>
+
+        <hr class="l3-divider">
+
+        <!-- PART 3 — SOURCES EXPLANATION -->
+        <p class="l3-explanation">Data is sourced from BOMA Industrial Experience Exchange Reports, NAIOP industrial management surveys, and Prologis and EastGroup Properties operating expense disclosures.</p>
+
+        <!-- PART 4 — SOURCES -->
+        <p class="l3-sources-label" style="margin-top:14px;">Sources</p>
+        <div class="l3-sources-grid">
+            <a href="https://www.boma.org/BOMA/Research/Research.aspx" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>BOMA Industrial Research</a>
+            <a href="https://www.naiop.org/research-and-publications/" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>NAIOP Industrial Management</a>
+            <a href="https://ir.prologis.com/" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Prologis Investor Relations</a>
+            <a href="https://ir.eastgroup.net/" class="l3-source-chip" target="_blank" rel="noopener"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>EastGroup Properties Research</a>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 5 — MARKET CONTEXT -->
+        <div class="l3-context">
+            <div class="l3-context-inner">
+                <p class="l3-context-label">Market Context</p>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Size / Scale</span>
+                    <span class="l3-context-val">Industrial PM market ~$8–10B annual revenue; growing with industrial REIT portfolios; third-party industrial PM less common than in commercial — most large owners self-manage</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Growth signal</span>
+                    <span class="l3-context-val">Growing as industrial portfolios expand; outsourcing to third-party managers increasing among private equity owners; ESG and sustainability requirements adding new management complexity</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Key players</span>
+                    <span class="l3-context-val">CBRE Industrial Management, JLL Industrial, Cushman & Wakefield Industrial, Colliers International, regional industrial specialists in major distribution markets</span>
+                </div>
+                <div class="l3-context-row">
+                    <span class="l3-context-key">Geography</span>
+                    <span class="l3-context-val">Aligned with industrial market hubs: Inland Empire CA, Dallas-Fort Worth, Chicago, Atlanta, NJ/PA corridor, Memphis, Louisville, Phoenix</span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 6 — PROBLEM FRAMING -->
+        <div class="l3-callout">
+            <div class="l3-callout-inner">Industrial property management is a relatively lean operation — fewer tenants, simpler buildouts — but portfolio scale and specialized infrastructure (docks, cranes, HVAC for large clear heights) create maintenance tracking and CapEx planning challenges that generic tools fail to address.</div>
+        </div>
+
+        <!-- PART 7 — KNOWN PAIN POINTS -->
+        <div class="l3-pain">
+            <p class="l3-pain-label">Known Pain Points</p>
+            <ul>
+                <li>                <li>Preventive maintenance scheduling for dock levelers, dock seals, overhead doors, and large-format HVAC systems across a portfolio of dozens of industrial buildings lacks purpose-built CMMS features for industrial-specific equipment
+                <li>Tenant-responsible maintenance tracking under NNN leases (where tenants self-maintain HVAC, roof, etc.) requires landlord oversight documentation that standard property management software does not support
+                <li>CapEx planning and reserve modeling for industrial roof systems, concrete parking and dock aprons, and exterior lighting across large portfolios involves complex per-square-foot cost models not built into PM software
+                <li>Sustainability and energy reporting for industrial portfolios — LED retrofits, EV charging, solar installations, and ENERGY STAR certifications — is aggregated manually from utility data and contractor invoices
+            </ul>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 8 — HOW TO CHOOSE A NICHE -->
+        <div class="l3-niche">
+            <div class="l3-niche-inner">
+                <h4>How to Choose a Niche</h4>
+                <p>Industrial property management software is the least-served property type — Yardi and MRI are built for multifamily and office, with industrial bolted on. Build an industrial-specific operations platform (maintenance scheduling, NNN compliance tracking, CapEx planning) and target private equity-owned industrial portfolios of 20–100 buildings where the institutional owner demands reporting quality that self-managed Excel-based systems cannot deliver.</p>
+            </div>
+        </div>
+
+        <hr class="l3-divider">
+
+        <!-- PART 9 — CTA -->
+        <div class="l3-cta">
+            <button class="btn btn-primary btn-large" id="view-numbers">
+                Numbers
+            </button>
+        </div>
+
+    
+        <div class="l3-cta" style="margin-top: 48px;">
+            <a class="l3-cta-btn" href="../../../numbers.html?l3=market-real-estate-property_management_industrial_property_management" style="background:var(--text-secondary);">Numbers & TAM →</a>
+        </div>
+    </div>
+    <script src="../../../../content/t.js"></script>
+    <script>
+        document.getElementById('view-numbers').addEventListener('click', () => {
+            window.location.href = 'numbers-real-estate-property-management-industrial-property-management.html';
+        });
+
+        document.getElementById('start-wizard').addEventListener('click', () => {
+            localStorage.setItem('selected_market', 'Real Estate — Property Management — Industrial Property Management');
+            window.location.href = '../../../problem-selection.html';
+        });
+    </script>
+</body>
+</html>

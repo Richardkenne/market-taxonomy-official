@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Services — Market Taxonomy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+    <style>
+        .l1-sources{display:flex;flex-direction:column;gap:6px;margin:24px auto 40px;max-width:560px;padding:0 16px;}
+        .l1-source-chip{display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--border-light);border-radius:10px;font-size:0.85rem;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:background 0.15s,color 0.15s;}
+        .l1-source-chip:hover{background:#e8f4fd;color:#1a6fa8;}
+        .l1-source-chip svg{flex-shrink:0;}
+        .l1-cards-grid{display:flex;flex-direction:column;gap:0;max-width:560px;margin:0 auto 48px;padding:0 16px;}
+        .l1-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;cursor:pointer;transition:color 0.15s;text-align:left;gap:16px;color:inherit;}
+        .l1-card:first-child{border-top:1px solid var(--border);}
+        .l1-card:hover h3{color:var(--green);}
+        .l1-card-left{flex:1;}
+        .l1-card-num{font-size:0.65rem;font-weight:700;color:var(--text-tertiary);min-width:24px;flex-shrink:0;}
+        .l1-card h3{font-size:0.95rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s;}
+        .l1-card p{font-size:0.82rem;color:var(--text-secondary);margin:0;line-height:1.4;}
+        .l1-card-tam{font-size:0.73rem;font-weight:600;color:var(--green);white-space:nowrap;flex-shrink:0;}
+        .l1-card-arrow{color:var(--text-tertiary);flex-shrink:0;}
+        .l1-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px;}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="../../../macro-markets.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to All Markets
+            </a>
+        </div>
+
+        <header class="market-page-header">
+            <div style="text-align:center; margin-bottom:12px;">
+                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 1</span>
+            </div>
+            <div class="market-badge">
+                <span class="market-number" style="font-size:1rem; padding:6px 14px;">16</span>
+                <span class="market-title">Financial Services</span>
+            </div>
+        </header>
+
+        <p class="subtitle" style="max-width:560px; margin:0 auto 32px;">
+            Financial Services markets are segmented by customer type, product category, and regulatory framework — each with distinct risk profiles, technology adoption rates, and competitive dynamics.
+        </p>
+
+        <div style="max-width:560px; margin:0 auto 8px; border:1px solid var(--border); border-radius:10px; padding:14px 18px;">
+            <p style="font-size:0.8rem; color:var(--text-tertiary); line-height:1.6; margin:0 0 10px;">
+                We reference two types of sources: <strong>global classification standards</strong> used by institutions and investors, and <strong>market-intelligence research</strong> used to size segments and track demand trends. Use these to validate market definitions before narrowing to a specific segment or geography.
+            </p>
+            <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+                <a href="../../../authoritative-sources-framework.html" style="font-size:0.72rem; color:var(--text-secondary); text-decoration:none; font-weight:500; display:inline-flex; align-items:center; gap:4px;">
+                    How market categories are recognized
+                    <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="../../../how-tam-is-calculated.html" style="font-size:0.72rem; color:var(--text-secondary); text-decoration:none; font-weight:500; display:inline-flex; align-items:center; gap:4px;">
+                    How TAM is calculated
+                    <svg width="10" height="10" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="l1-sources">
+            <a href="https://www.imf.org/en/Data" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                IMF Data
+            </a>
+            <a href="https://data.worldbank.org" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                World Bank Data
+            </a>
+            <a href="https://www.bis.org/statistics/" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                BIS Statistics
+            </a>
+            <a href="https://www.oecd.org/en/data.html" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                OECD Statistics
+            </a>
+            <a href="https://www.itu.int/en/ITU-D/Statistics" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                ITU Statistics
+            </a>
+        </div>
+
+        <section style="max-width:900px; margin:0 auto; padding:0 16px;">
+            <p style="font-size:0.82rem; color:var(--text-secondary); max-width:560px; margin:0 auto 12px; text-align:center; line-height:1.6;">
+                These categories reflect how financial services assets are owned, operated, and monetized — before narrowing to a specific use case or geography.
+            </p>
+            <p class="l1-section-label">Select a sub-market to continue</p>
+            <div class="l1-cards-grid" style="padding:0;">
+                <a href="../L2/market-financial-services-retail-consumer-banking.html" class="l1-card">
+                    <span class="l1-card-num">01</span>
+                    <div class="l1-card-left">
+                        <h3>Retail & Consumer Banking</h3>
+                        <p>Retail & Consumer Banking sub-markets and operators.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Mutual Funds, ETFs, Alternative Assets.</p>
+                    </div>
+                    <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="../L2/market-financial-services-insurance.html" class="l1-card">
+                    <span class="l1-card-num">02</span>
+                    <div class="l1-card-left">
+                        <h3>Insurance</h3>
+                        <p>Insurance sub-markets and operators.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Private Banking, Financial Planning, Robo-Advisory.</p>
+                    </div>
+                    <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="../L2/market-financial-services-capital-markets-investment-banking.html" class="l1-card">
+                    <span class="l1-card-num">03</span>
+                    <div class="l1-card-left">
+                        <h3>Capital Markets & Investment Banking</h3>
+                        <p>Capital Markets & Investment Banking sub-markets and operators.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Consumer Lending, SME Lending, Mortgage Lending.</p>
+                    </div>
+                    <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="../L2/market-financial-services-payments-transaction-processing.html" class="l1-card">
+                    <span class="l1-card-num">04</span>
+                    <div class="l1-card-left">
+                        <h3>Payments & Transaction Processing</h3>
+                        <p>Payments & Transaction Processing sub-markets and operators.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: M&A Advisory, Corporate Finance, Restructuring.</p>
+                    </div>
+                    <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="../L2/market-financial-services-wealth-asset-management.html" class="l1-card">
+                    <span class="l1-card-num">05</span>
+                    <div class="l1-card-left">
+                        <h3>Wealth & Asset Management</h3>
+                        <p>Wealth & Asset Management sub-markets and operators.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Mutual Funds, ETFs, Alternative Assets.</p>
+                    </div>
+                    <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="../L2/market-financial-services-fintech-financial-infrastructure.html" class="l1-card">
+                    <span class="l1-card-num">06</span>
+                    <div class="l1-card-left">
+                        <h3>Fintech & Financial Infrastructure</h3>
+                        <p>Fintech & Financial Infrastructure sub-markets and operators.</p>
+                        
+                    </div>
+                    <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="guidance-box" style="max-width:700px; margin:0 auto 48px;">
+            <h4>How to Choose a Niche</h4>
+            <p>Focus on segments with high compliance cost and fragmented workflows. Examples: KYC automation for wealth managers; loan origination software for alternative lenders.</p>
+        </section>
+    </div>
+    <script src="../../../content/t.js"></script>
+</body>
+</html>

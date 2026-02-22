@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate — Land & Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+    <style>
+        .l2-divider { max-width: 600px; margin: 28px auto; border: none; border-top: 1px solid var(--border); }
+        .l2-sources-label { max-width: 600px; margin: 0 auto 6px; padding: 0 16px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); }
+        .l2-sources-grid { max-width: 600px; margin: 0 auto; padding: 0 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+        .l2-source-chip { display: flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 400; color: var(--text-tertiary); text-decoration: none; transition: color 0.15s; }
+        .l2-source-chip:hover { color: var(--text-primary); }
+        .l2-source-chip svg { flex-shrink: 0; opacity: 0.4; }
+        .l2-callout { max-width: 600px; margin: 0 auto 16px; padding: 0 16px; }
+        .l2-callout-inner { border-left: 3px solid var(--green); padding: 10px 14px; background: var(--green-light, #f0faf4); border-radius: 0 8px 8px 0; }
+        .l2-callout-inner p { font-size: 0.82rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+        .l2-segments-grid { max-width: 600px; margin: 0 auto 0; padding: 0 16px; display: flex; flex-direction: column; gap: 6px; }
+        .l2-card { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 11px 14px; transition: border-color 0.15s, box-shadow 0.15s; }
+        .l2-card:hover { border-color: var(--green); box-shadow: 0 1px 8px rgba(0,0,0,0.05); }
+        .l2-card-num { font-size: 0.6rem; font-weight: 700; color: var(--text-tertiary); letter-spacing: 0.05em; flex-shrink: 0; width: 18px; }
+        .l2-card-body { flex: 1; min-width: 0; }
+        .l2-card-top { display: flex; align-items: baseline; gap: 8px; }
+        .l2-card h3 { font-size: 0.875rem; font-weight: 600; color: var(--text-primary); margin: 0; transition: color 0.15s; }
+        .l2-card:hover h3 { color: var(--green); }
+        .l2-card-size { font-size: 0.68rem; font-weight: 600; color: var(--green); white-space: nowrap; }
+        .l2-card-desc { font-size: 0.78rem; color: var(--text-secondary); margin: 1px 0 0; line-height: 1.4; white-space: normal; }
+        .l2-card-detail { font-size: 0.72rem; color: var(--text-tertiary); margin: 2px 0 0; line-height: 1.35; }
+        .l2-card-arrow { color: var(--text-tertiary); flex-shrink: 0; transition: color 0.15s, transform 0.15s; }
+        .l2-card:hover .l2-card-arrow { color: var(--green); transform: translateX(2px); }
+        .l2-niche-box { max-width: 600px; margin: 0 auto 48px; padding: 0 16px; }
+        .l2-niche-inner { background: var(--border-light); border-radius: 10px; padding: 16px 18px; }
+        .l2-niche-inner h4 { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-tertiary); margin: 0 0 6px; }
+        .l2-niche-inner p { font-size: 0.82rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+        .l2-explanation { max-width: 600px; margin: 0 auto; padding: 0 16px; font-size: 0.78rem; color: var(--text-tertiary); line-height: 1.65; text-align: center; }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="../L1/market-real-estate.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Back to Real Estate
+            </a>
+        </div>
+        <header class="market-page-header">
+            <div style="text-align:center; margin-bottom:12px;">
+                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 2</span>
+            </div>
+            <div class="market-badge">
+                <span class="market-title">Real Estate — Land & Development</span>
+            </div>
+        </header>
+        <p class="subtitle" style="max-width:560px; margin:0 auto 0;">Raw land, entitled parcels, infill sites, and active development projects across all asset classes.</p>
+        <hr class="l2-divider">
+        <p class="l2-explanation">We reference land registry data, urban planning reports, and development pipeline research to define and size these segments.</p>
+        <p class="l2-sources-label" style="margin-top:14px;">Sources</p>
+        <div class="l2-sources-grid">
+            <a href="https://www.cbre.com/insights" target="_blank" rel="noopener" class="l2-source-chip"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> CBRE Research</a>
+            <a href="https://www.jll.com/en/trends-and-insights" target="_blank" rel="noopener" class="l2-source-chip"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> JLL Research</a>
+            <a href="https://www.uli.org/research" target="_blank" rel="noopener" class="l2-source-chip"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Urban Land Institute</a>
+            <a href="https://www.savills.com/research" target="_blank" rel="noopener" class="l2-source-chip"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Savills Research</a>
+        </div>
+        <hr class="l2-divider">
+        <div class="l2-callout">
+            <div class="l2-callout-inner">
+                <p>Land and development are highly fragmented and information-asymmetric — entitlement tracking, zoning data, and project pipeline tools are structurally underbuilt.</p>
+            </div>
+        </div>
+        <div class="l2-segments-grid">
+            
+            <a href="../L3/market-real-estate-land-development-raw-undeveloped-land-l3.html" class="l2-card">
+                <span class="l2-card-num">01</span>
+                <div class="l2-card-body">
+                    <div class="l2-card-top">
+                        <h3>Raw / Undeveloped Land</h3>
+                        <span class="l2-card-size">$1T+</span>
+                    </div>
+                    <p class="l2-card-desc">Greenfield land and agricultural conversion sites; speculative or long-term hold.</p>
+                    <p class="l2-card-detail">Highly illiquid — pricing is opaque and driven by local knowledge asymmetries.</p>
+                </div>
+                <svg class="l2-card-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div style="padding: 0 14px 8px; font-size: 0.75rem;">
+                <a href="../L2.1/market-real-estate-land-development-raw-undeveloped-land.html" style="color: var(--text-secondary); text-decoration: none;">Explore segment details →</a>
+            </div>
+
+            <a href="../L3/market-real-estate-land-development-entitled-land-l3.html" class="l2-card">
+                <span class="l2-card-num">02</span>
+                <div class="l2-card-body">
+                    <div class="l2-card-top">
+                        <h3>Entitled Land</h3>
+                        <span class="l2-card-size">$500B+</span>
+                    </div>
+                    <p class="l2-card-desc">Shovel-ready and partially entitled parcels; planning-approved for development.</p>
+                    <p class="l2-card-detail">High-value transition point — entitlement de-risks land and unlocks institutional capital.</p>
+                </div>
+                <svg class="l2-card-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div style="padding: 0 14px 8px; font-size: 0.75rem;">
+                <a href="../L2.1/market-real-estate-land-development-entitled-land.html" style="color: var(--text-secondary); text-decoration: none;">Explore segment details →</a>
+            </div>
+
+            <a href="../L3/market-real-estate-land-development-infill-development-l3.html" class="l2-card">
+                <span class="l2-card-num">03</span>
+                <div class="l2-card-body">
+                    <div class="l2-card-top">
+                        <h3>Infill Development</h3>
+                        <span class="l2-card-size">$400B+</span>
+                    </div>
+                    <p class="l2-card-desc">Urban infill and brownfield redevelopment sites in established urban areas.</p>
+                </div>
+                <svg class="l2-card-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div style="padding: 0 14px 8px; font-size: 0.75rem;">
+                <a href="../L2.1/market-real-estate-land-development-infill-development.html" style="color: var(--text-secondary); text-decoration: none;">Explore segment details →</a>
+            </div>
+
+            <a href="../L3/market-real-estate-land-development-mixed-use-development-sites-l3.html" class="l2-card">
+                <span class="l2-card-num">04</span>
+                <div class="l2-card-body">
+                    <div class="l2-card-top">
+                        <h3>Mixed-Use Development Sites</h3>
+                        <span class="l2-card-size">$300B+</span>
+                    </div>
+                    <p class="l2-card-desc">Mixed-use urban sites and transit-oriented development projects combining uses.</p>
+                </div>
+                <svg class="l2-card-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div style="padding: 0 14px 8px; font-size: 0.75rem;">
+                <a href="../L2.1/market-real-estate-land-development-mixed-use-development-sites.html" style="color: var(--text-secondary); text-decoration: none;">Explore segment details →</a>
+            </div>
+
+        </div>
+        <hr class="l2-divider">
+        <div class="l2-niche-box">
+            <div class="l2-niche-inner">
+                <h4>How to Choose a Niche</h4>
+                <p>Development projects have the highest operational complexity — permitting software, cost tracking, and multi-stakeholder coordination tools are all underserved.</p>
+            </div>
+        </div>
+    </div>
+    <script src="../../../content/t.js"></script>
+</body>
+</html>

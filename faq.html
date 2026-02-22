@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — Market Taxonomy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .faq-wrap {
+            max-width: 680px;
+            margin: 0 auto 80px;
+            padding: 0 24px;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .faq-kicker {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            margin-bottom: 10px;
+        }
+
+        .faq-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        .faq-subtitle {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .faq-answer {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        .faq-answer p {
+            margin: 0 0 10px;
+        }
+
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .back-nav {
+            margin-bottom: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="javascript:history.back()" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back
+            </a>
+        </div>
+
+        <div class="faq-wrap">
+            <div class="faq-header">
+                <p class="faq-kicker">Market Taxonomy</p>
+                <h1 class="faq-title">Frequently Asked Questions</h1>
+                <p class="faq-subtitle">Common questions about the Market Taxonomy framework and how market categories are defined.</p>
+            </div>
+
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <h2 class="faq-question">Why do most markets have 5–6 Level 1 categories?</h2>
+                <div class="faq-answer">
+                    <p>The number of Level 1 categories is not predefined. Across most macro markets, convergent validation by institutional authorities, market intelligence, operators, and capital allocation actors typically results in a limited set of stable categories. This recurring pattern reflects structural clarity and institutional practice, not an imposed numerical constraint.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="content/t.js"></script>
+</body>
+</html>

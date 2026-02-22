@@ -1,0 +1,1160 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-t-title="pages.index.text.0001"></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header" style="padding-bottom: 8px;">
+            <div class="back-nav" style="margin-bottom: 16px;">
+                <a href="index.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Back to Home
+                </a>
+            </div>
+            <div style="text-align:center; margin-bottom: 6px;">
+                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 0</span>
+            </div>
+            <h1 style="font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;">Level 0 — Macro Markets</h1>
+            <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 480px; margin: 0 auto;">Foundational economic markets recognized by <a href="global-investors.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">global investors, consultants, and institutions</a>.</p>
+        </header>
+
+        <!-- Favorites Section -->
+        <section class="favorites-section hidden" id="favorites-section" style="max-width: 900px; margin: 0 auto 8px; padding: 0 16px;">
+            <div style="border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; background: var(--border-light);">
+                <p style="font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); margin-bottom: 12px;">Your starred markets</p>
+                <div class="favorites-grid" id="favorites-grid">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="macro-markets-section">
+            <div class="macro-header" style="margin-bottom: 16px;"></div>
+            <div class="macro-markets-grid">
+                <a href="MARKETS/Real Estate/L1/market-real-estate.html" class="market-card" data-market-id="real-estate" data-market-name="Real Estate">
+                    <button class="favorite-btn" data-market-id="real-estate" title="" data-t-attr="title:pages.index.attr.title.0002">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0012"></span></span>
+                    <h3><span data-t="pages.index.text.0013"></span></h3>
+                    <p><span data-t="pages.index.text.0014"></span></p>
+                </a>
+                <a href="MARKETS/Construction%20%26%20Infrastructure/L1/market-construction-infrastructure.html" class="market-card" data-market-id="construction-infrastructure" data-market-name="Construction Infrastructure">
+                    <button class="favorite-btn" data-market-id="construction-infrastructure" title="" data-t-attr="title:pages.index.attr.title.0003">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0015"></span></span>
+                    <h3><span data-t="pages.index.text.0016"></span></h3>
+                    <p><span data-t="pages.index.text.0017"></span></p>
+                </a>
+                <a href="MARKETS/Food%20%26%20Beverage/L1/market-food-beverage.html" class="market-card" data-market-id="food-beverage" data-market-name="Food Beverage">
+                    <button class="favorite-btn" data-market-id="food-beverage" title="" data-t-attr="title:pages.index.attr.title.0004">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0018"></span></span>
+                    <h3><span data-t="pages.index.text.0019"></span></h3>
+                    <p><span data-t="pages.index.text.0020"></span></p>
+                </a>
+                <a href="MARKETS/Agriculture/L1/market-agriculture.html" class="market-card" data-market-id="agriculture" data-market-name="Agriculture">
+                    <button class="favorite-btn" data-market-id="agriculture" title="" data-t-attr="title:pages.index.attr.title.0005">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0021"></span></span>
+                    <h3><span data-t="pages.index.text.0022"></span></h3>
+                    <p><span data-t="pages.index.text.0023"></span></p>
+                </a>
+                <a href="MARKETS/Energy/L1/market-energy.html" class="market-card" data-market-id="energy" data-market-name="Energy">
+                    <button class="favorite-btn" data-market-id="energy" title="" data-t-attr="title:pages.index.attr.title.0006">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0024"></span></span>
+                    <h3><span data-t="pages.index.text.0025"></span></h3>
+                    <p><span data-t="pages.index.text.0026"></span></p>
+                </a>
+                <a href="MARKETS/Utilities/L1/market-utilities.html" class="market-card" data-market-id="utilities" data-market-name="Utilities">
+                    <button class="favorite-btn" data-market-id="utilities" title="" data-t-attr="title:pages.index.attr.title.0007">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0027"></span></span>
+                    <h3><span data-t="pages.index.text.0028"></span></h3>
+                    <p><span data-t="pages.index.text.0029"></span></p>
+                </a>
+                <a href="MARKETS/Transportation%20%26%20Mobility/L1/market-transportation-mobility.html" class="market-card" data-market-id="transportation-mobility" data-market-name="Transportation Mobility">
+                    <button class="favorite-btn" data-market-id="transportation-mobility" title="" data-t-attr="title:pages.index.attr.title.0008">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0030"></span></span>
+                    <h3><span data-t="pages.index.text.0031"></span></h3>
+                    <p><span data-t="pages.index.text.0032"></span></p>
+                </a>
+                <a href="MARKETS/Automotive/L1/market-automotive.html" class="market-card" data-market-id="automotive" data-market-name="Automotive">
+                    <button class="favorite-btn" data-market-id="automotive" title="" data-t-attr="title:pages.index.attr.title.0009">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0033"></span></span>
+                    <h3><span data-t="pages.index.text.0034"></span></h3>
+                    <p><span data-t="pages.index.text.0035"></span></p>
+                </a>
+                <a href="MARKETS/Manufacturing/L1/market-manufacturing.html" class="market-card" data-market-id="manufacturing" data-market-name="Manufacturing">
+                    <button class="favorite-btn" data-market-id="manufacturing" title="" data-t-attr="title:pages.index.attr.title.0010">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0036"></span></span>
+                    <h3><span data-t="pages.index.text.0037"></span></h3>
+                    <p><span data-t="pages.index.text.0038"></span></p>
+                </a>
+                <a href="MARKETS/Consumer Goods/L1/market-consumer-goods.html" class="market-card" data-market-id="consumer-goods" data-market-name="Consumer Goods">
+                    <button class="favorite-btn" data-market-id="consumer-goods" title="" data-t-attr="title:pages.index.attr.title.0011">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0039"></span></span>
+                    <h3><span data-t="pages.index.text.0040"></span></h3>
+                    <p><span data-t="pages.index.text.0041"></span></p>
+                </a>
+                <a href="MARKETS/Retail%20%26%20E-commerce/L1/market-retail-ecommerce.html" class="market-card" data-market-id="retail-ecommerce" data-market-name="Retail Ecommerce">
+                    <button class="favorite-btn" data-market-id="retail-ecommerce" title="" data-t-attr="title:pages.index.attr.title.0012">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0042"></span></span>
+                    <h3><span data-t="pages.index.text.0043"></span></h3>
+                    <p><span data-t="pages.index.text.0044"></span></p>
+                </a>
+                <a href="MARKETS/Wholesale & Distribution/L1/market-wholesale-distribution.html" class="market-card" data-market-id="wholesale-distribution" data-market-name="Wholesale Distribution">
+                    <button class="favorite-btn" data-market-id="wholesale-distribution" title="" data-t-attr="title:pages.index.attr.title.0013">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0045"></span></span>
+                    <h3><span data-t="pages.index.text.0046"></span></h3>
+                    <p><span data-t="pages.index.text.0047"></span></p>
+                </a>
+                <a href="MARKETS/Healthcare/L1/market-healthcare.html" class="market-card" data-market-id="healthcare" data-market-name="Healthcare">
+                    <button class="favorite-btn" data-market-id="healthcare" title="" data-t-attr="title:pages.index.attr.title.0014">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0048"></span></span>
+                    <h3><span data-t="pages.index.text.0049"></span></h3>
+                    <p><span data-t="pages.index.text.0050"></span></p>
+                </a>
+                <a href="MARKETS/Pharmaceuticals & Biotech/L1/market-pharmaceuticals-biotech.html" class="market-card" data-market-id="pharmaceuticals-biotech" data-market-name="Pharmaceuticals Biotech">
+                    <button class="favorite-btn" data-market-id="pharmaceuticals-biotech" title="" data-t-attr="title:pages.index.attr.title.0015">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0051"></span></span>
+                    <h3><span data-t="pages.index.text.0052"></span></h3>
+                    <p><span data-t="pages.index.text.0053"></span></p>
+                </a>
+                <a href="MARKETS/Medical Devices/L1/market-medical-devices.html" class="market-card" data-market-id="medical-devices" data-market-name="Medical Devices">
+                    <button class="favorite-btn" data-market-id="medical-devices" title="" data-t-attr="title:pages.index.attr.title.0016">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0054"></span></span>
+                    <h3><span data-t="pages.index.text.0055"></span></h3>
+                    <p><span data-t="pages.index.text.0056"></span></p>
+                </a>
+                <a href="MARKETS/Financial Services/L1/market-financial-services.html" class="market-card" data-market-id="financial-services" data-market-name="Financial Services">
+                    <button class="favorite-btn" data-market-id="financial-services" title="" data-t-attr="title:pages.index.attr.title.0017">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0057"></span></span>
+                    <h3><span data-t="pages.index.text.0058"></span></h3>
+                    <p><span data-t="pages.index.text.0059"></span></p>
+                </a>
+                <a href="MARKETS/Banking/L1/market-banking.html" class="market-card" data-market-id="banking" data-market-name="Banking">
+                    <button class="favorite-btn" data-market-id="banking" title="" data-t-attr="title:pages.index.attr.title.0018">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0060"></span></span>
+                    <h3><span data-t="pages.index.text.0061"></span></h3>
+                    <p><span data-t="pages.index.text.0062"></span></p>
+                </a>
+                <a href="MARKETS/Insurance/L1/market-insurance.html" class="market-card" data-market-id="insurance" data-market-name="Insurance">
+                    <button class="favorite-btn" data-market-id="insurance" title="" data-t-attr="title:pages.index.attr.title.0019">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0063"></span></span>
+                    <h3><span data-t="pages.index.text.0064"></span></h3>
+                    <p><span data-t="pages.index.text.0065"></span></p>
+                </a>
+                <a href="MARKETS/Payments/L1/market-payments.html" class="market-card" data-market-id="payments" data-market-name="Payments">
+                    <button class="favorite-btn" data-market-id="payments" title="" data-t-attr="title:pages.index.attr.title.0020">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0066"></span></span>
+                    <h3><span data-t="pages.index.text.0067"></span></h3>
+                    <p><span data-t="pages.index.text.0068"></span></p>
+                </a>
+                <a href="MARKETS/Capital Markets/L1/market-capital-markets.html" class="market-card" data-market-id="capital-markets" data-market-name="Capital Markets">
+                    <button class="favorite-btn" data-market-id="capital-markets" title="" data-t-attr="title:pages.index.attr.title.0021">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0069"></span></span>
+                    <h3><span data-t="pages.index.text.0070"></span></h3>
+                    <p><span data-t="pages.index.text.0071"></span></p>
+                </a>
+                <a href="MARKETS/Technology/L1/market-technology.html" class="market-card" data-market-id="technology" data-market-name="Technology">
+                    <button class="favorite-btn" data-market-id="technology" title="" data-t-attr="title:pages.index.attr.title.0022">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0072"></span></span>
+                    <h3><span data-t="pages.index.text.0073"></span></h3>
+                    <p><span data-t="pages.index.text.0074"></span></p>
+                </a>
+                <a href="MARKETS/Software/L1/market-software.html" class="market-card" data-market-id="software" data-market-name="Software">
+                    <button class="favorite-btn" data-market-id="software" title="" data-t-attr="title:pages.index.attr.title.0023">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0075"></span></span>
+                    <h3><span data-t="pages.index.text.0076"></span></h3>
+                    <p><span data-t="pages.index.text.0077"></span></p>
+                </a>
+                <a href="MARKETS/Hardware/L1/market-hardware.html" class="market-card" data-market-id="hardware" data-market-name="Hardware">
+                    <button class="favorite-btn" data-market-id="hardware" title="" data-t-attr="title:pages.index.attr.title.0024">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0078"></span></span>
+                    <h3><span data-t="pages.index.text.0079"></span></h3>
+                    <p><span data-t="pages.index.text.0080"></span></p>
+                </a>
+                <a href="MARKETS/Telecommunications/L1/market-telecommunications.html" class="market-card" data-market-id="telecommunications" data-market-name="Telecommunications">
+                    <button class="favorite-btn" data-market-id="telecommunications" title="" data-t-attr="title:pages.index.attr.title.0025">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0081"></span></span>
+                    <h3><span data-t="pages.index.text.0082"></span></h3>
+                    <p><span data-t="pages.index.text.0083"></span></p>
+                </a>
+                <a href="MARKETS/Media & Entertainment/L1/market-media-entertainment.html" class="market-card" data-market-id="media-entertainment" data-market-name="Media Entertainment">
+                    <button class="favorite-btn" data-market-id="media-entertainment" title="" data-t-attr="title:pages.index.attr.title.0026">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0084"></span></span>
+                    <h3><span data-t="pages.index.text.0085"></span></h3>
+                    <p><span data-t="pages.index.text.0086"></span></p>
+                </a>
+                <a href="MARKETS/Gaming/L1/market-gaming.html" class="market-card" data-market-id="gaming" data-market-name="Gaming">
+                    <button class="favorite-btn" data-market-id="gaming" title="" data-t-attr="title:pages.index.attr.title.0027">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0087"></span></span>
+                    <h3><span data-t="pages.index.text.0088"></span></h3>
+                    <p><span data-t="pages.index.text.0089"></span></p>
+                </a>
+                <a href="MARKETS/Advertising & Marketing/L1/market-advertising-marketing.html" class="market-card" data-market-id="advertising-marketing" data-market-name="Advertising Marketing">
+                    <button class="favorite-btn" data-market-id="advertising-marketing" title="" data-t-attr="title:pages.index.attr.title.0028">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0090"></span></span>
+                    <h3><span data-t="pages.index.text.0091"></span></h3>
+                    <p><span data-t="pages.index.text.0092"></span></p>
+                </a>
+                <a href="MARKETS/Education/L1/market-education.html" class="market-card" data-market-id="education" data-market-name="Education">
+                    <button class="favorite-btn" data-market-id="education" title="" data-t-attr="title:pages.index.attr.title.0029">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0093"></span></span>
+                    <h3><span data-t="pages.index.text.0094"></span></h3>
+                    <p><span data-t="pages.index.text.0095"></span></p>
+                </a>
+                <a href="MARKETS/Professional Services/L1/market-professional-services.html" class="market-card" data-market-id="professional-services" data-market-name="Professional Services">
+                    <button class="favorite-btn" data-market-id="professional-services" title="" data-t-attr="title:pages.index.attr.title.0030">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0096"></span></span>
+                    <h3><span data-t="pages.index.text.0097"></span></h3>
+                    <p><span data-t="pages.index.text.0098"></span></p>
+                </a>
+                <a href="MARKETS/Legal/L1/market-legal.html" class="market-card" data-market-id="legal" data-market-name="Legal">
+                    <button class="favorite-btn" data-market-id="legal" title="" data-t-attr="title:pages.index.attr.title.0031">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0099"></span></span>
+                    <h3><span data-t="pages.index.text.0100"></span></h3>
+                    <p><span data-t="pages.index.text.0101"></span></p>
+                </a>
+                <a href="MARKETS/HR & Recruiting/L1/market-hr-recruiting.html" class="market-card" data-market-id="hr-recruiting" data-market-name="Hr Recruiting">
+                    <button class="favorite-btn" data-market-id="hr-recruiting" title="" data-t-attr="title:pages.index.attr.title.0032">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0102"></span></span>
+                    <h3><span data-t="pages.index.text.0103"></span></h3>
+                    <p><span data-t="pages.index.text.0104"></span></p>
+                </a>
+                <a href="MARKETS/Security & Defense/L1/market-security-defense.html" class="market-card" data-market-id="security-defense" data-market-name="Security Defense">
+                    <button class="favorite-btn" data-market-id="security-defense" title="" data-t-attr="title:pages.index.attr.title.0033">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0105"></span></span>
+                    <h3><span data-t="pages.index.text.0106"></span></h3>
+                    <p><span data-t="pages.index.text.0107"></span></p>
+                </a>
+                <a href="MARKETS/Government &amp; Public Sector/L1/market-government-public-sector.html" class="market-card" data-market-id="government-public" data-market-name="Government Public">
+                    <button class="favorite-btn" data-market-id="government-public" title="" data-t-attr="title:pages.index.attr.title.0034">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0108"></span></span>
+                    <h3><span data-t="pages.index.text.0109"></span></h3>
+                    <p><span data-t="pages.index.text.0110"></span></p>
+                </a>
+                <a href="MARKETS/Tourism & Hospitality/L1/market-tourism-hospitality.html" class="market-card" data-market-id="tourism-hospitality" data-market-name="Tourism Hospitality">
+                    <button class="favorite-btn" data-market-id="tourism-hospitality" title="" data-t-attr="title:pages.index.attr.title.0035">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0111"></span></span>
+                    <h3><span data-t="pages.index.text.0112"></span></h3>
+                    <p><span data-t="pages.index.text.0113"></span></p>
+                </a>
+                <a href="MARKETS/Fashion & Apparel/L1/market-fashion-apparel.html" class="market-card" data-market-id="fashion-apparel" data-market-name="Fashion Apparel">
+                    <button class="favorite-btn" data-market-id="fashion-apparel" title="" data-t-attr="title:pages.index.attr.title.0036">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0114"></span></span>
+                    <h3><span data-t="pages.index.text.0115"></span></h3>
+                    <p><span data-t="pages.index.text.0116"></span></p>
+                </a>
+                <a href="MARKETS/Logistics & Supply Chain/L1/market-logistics-supply-chain.html" class="market-card" data-market-id="logistics-supply-chain" data-market-name="Logistics Supply Chain">
+                    <button class="favorite-btn" data-market-id="logistics-supply-chain" title="" data-t-attr="title:pages.index.attr.title.0037">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0117"></span></span>
+                    <h3><span data-t="pages.index.text.0118"></span></h3>
+                    <p><span data-t="pages.index.text.0119"></span></p>
+                </a>
+                <a href="MARKETS/Chemicals & Materials/L1/market-chemicals-materials.html" class="market-card" data-market-id="chemicals-materials" data-market-name="Chemicals Materials">
+                    <button class="favorite-btn" data-market-id="chemicals-materials" title="" data-t-attr="title:pages.index.attr.title.0038">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0120"></span></span>
+                    <h3><span data-t="pages.index.text.0121"></span></h3>
+                    <p><span data-t="pages.index.text.0122"></span></p>
+                </a>
+                <a href="MARKETS/Mining/L1/market-mining.html" class="market-card" data-market-id="mining" data-market-name="Mining">
+                    <button class="favorite-btn" data-market-id="mining" title="" data-t-attr="title:pages.index.attr.title.0039">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0123"></span></span>
+                    <h3><span data-t="pages.index.text.0124"></span></h3>
+                    <p><span data-t="pages.index.text.0125"></span></p>
+                </a>
+                <a href="MARKETS/Aerospace/L1/market-aerospace.html" class="market-card" data-market-id="aerospace" data-market-name="Aerospace">
+                    <button class="favorite-btn" data-market-id="aerospace" title="" data-t-attr="title:pages.index.attr.title.0040">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0126"></span></span>
+                    <h3><span data-t="pages.index.text.0127"></span></h3>
+                    <p><span data-t="pages.index.text.0128"></span></p>
+                </a>
+                <a href="MARKETS/Environmental & Climate/L1/market-environmental-climate.html" class="market-card" data-market-id="environmental-climate" data-market-name="Environmental Climate">
+                    <button class="favorite-btn" data-market-id="environmental-climate" title="" data-t-attr="title:pages.index.attr.title.0041">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0129"></span></span>
+                    <h3><span data-t="pages.index.text.0130"></span></h3>
+                    <p><span data-t="pages.index.text.0131"></span></p>
+                </a>
+                <a href="MARKETS/Non-profit & Social/L1/market-nonprofit-social.html" class="market-card" data-market-id="nonprofit-social" data-market-name="Nonprofit Social">
+                    <button class="favorite-btn" data-market-id="nonprofit-social" title="" data-t-attr="title:pages.index.attr.title.0042">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0132"></span></span>
+                    <h3><span data-t="pages.index.text.0133"></span></h3>
+                    <p><span data-t="pages.index.text.0134"></span></p>
+                </a>
+                <a href="MARKETS/Religion & Faith/L1/market-religion-faith.html" class="market-card" data-market-id="religion-faith" data-market-name="Religion Faith">
+                    <button class="favorite-btn" data-market-id="religion-faith" title="" data-t-attr="title:pages.index.attr.title.0043">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0135"></span></span>
+                    <h3><span data-t="pages.index.text.0136"></span></h3>
+                    <p><span data-t="pages.index.text.0137"></span></p>
+                </a>
+                <a href="MARKETS/Sports & Fitness/L1/market-sports-fitness.html" class="market-card" data-market-id="sports-fitness" data-market-name="Sports Fitness">
+                    <button class="favorite-btn" data-market-id="sports-fitness" title="" data-t-attr="title:pages.index.attr.title.0044">
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" class="star-icon">
+                            <path d="M10 2l2.5 6.5L19 9l-5.5 4.5L15 20l-5-3.5L5 20l1.5-6.5L1 9l6.5-.5L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <span class="market-number"><span data-t="pages.index.text.0138"></span></span>
+                    <h3><span data-t="pages.index.text.0139"></span></h3>
+                    <p><span data-t="pages.index.text.0140"></span></p>
+                </a>
+            </div>
+        </section>
+
+        
+
+        <!-- Enhanced Footer -->
+        <footer class="site-footer-enhanced">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><span data-t="pages.index.text.0141"></span></h4>
+                    <p><span data-t="pages.index.text.0142"></span></p>
+                </div>
+                <div class="footer-section">
+                    <h4><span data-t="pages.index.text.0143"></span></h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="authoritative-sources-framework.html">Authoritative Sources Framework</a></li>
+                        <li><a href="global-investors.html"><span data-t="pages.index.text.0144"></span></a></li>
+                        <li><a href="https://github.com/Richardkenne/Market-taxonomy" target="_blank" rel="noopener"><span data-t="pages.index.text.0145"></span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><span data-t="pages.index.text.0146"></span></h4>
+                    <ul>
+                        <li><span data-t="pages.index.text.0147"></span></li>
+                        <li><span data-t="pages.index.text.0148"></span></li>
+                        <li><span data-t="pages.index.text.0149"></span></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><span data-t="pages.index.text.0150"></span></h4>
+                    <ul>
+                        <li><a href="id/index.html"><span data-t="pages.index.text.0151"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><span id="current-date-footer"></span><span data-t="pages.index.text.0152"></span></p>
+            </div>
+        </footer>
+        <script src="content/t.js"></script><script>
+        (function () {
+            var now = new Date();
+            var formatted = new Intl.DateTimeFormat("en-GB", {
+                year: "numeric", month: "long", day: "2-digit"
+            }).format(now);
+            var el = document.getElementById("current-date-footer");
+            if (el) el.textContent = "Today, " + formatted + " — Richard Kennedy";
+        })();
+        </script>
+
+
+        <!-- Progress Bar (hidden on homepage) -->
+        <div class="progress-container hidden homepage-hide" id="progress-container">
+            <div class="progress-steps">
+                <div class="step-indicator active" data-step="0">
+                    <div class="step-dot"></div>
+                    <span><span data-t="pages.index.text.0153"></span></span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-indicator" data-step="1">
+                    <div class="step-dot"></div>
+                    <span><span data-t="pages.index.text.0154"></span></span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-indicator" data-step="2">
+                    <div class="step-dot"></div>
+                    <span><span data-t="pages.index.text.0155"></span></span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-indicator" data-step="3">
+                    <div class="step-dot"></div>
+                    <span><span data-t="pages.index.text.0156"></span></span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-indicator" data-step="4">
+                    <div class="step-dot"></div>
+                    <span><span data-t="pages.index.text.0157"></span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wizard Area (hidden on homepage) -->
+        <main class="wizard-area homepage-hide">
+            <div class="step-content" id="step-content">
+                <!-- Populated by JS -->
+            </div>
+        </main>
+
+        <!-- Action Buttons (hidden on homepage) -->
+        <div class="actions hidden homepage-hide" id="actions">
+            <button class="btn btn-secondary" id="btn-back" disabled>
+                <svg width="16" height="16" viewbox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                Back
+            </button>
+            <button class="btn btn-ghost" id="btn-reset"><span data-t="pages.index.text.0158"></span></button>
+        </div>
+
+        <!-- Summary (shown after completion, hidden on homepage) -->
+        <div class="summary-area hidden homepage-hide" id="summary-area">
+            <div class="summary-card">
+                <h2><span data-t="pages.index.text.0159"></span></h2>
+                <div class="summary-grid" id="summary-grid">
+                    <!-- Populated by JS -->
+                </div>
+                <div class="summary-actions">
+                    <button class="btn btn-primary" id="btn-add-sheet">
+                        <svg width="16" height="16" viewbox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+                        Add to Sheet
+                    </button>
+                    <button class="btn btn-secondary" id="btn-new-idea"><span data-t="pages.index.text.0160"></span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sheet Section (hidden on homepage) -->
+        <section class="sheet-section hidden homepage-hide" id="sheet-section">
+            <div class="sheet-header">
+                <h2><span data-t="pages.index.text.0161"></span></h2>
+                <div class="sheet-actions">
+                    <button class="btn btn-small" id="btn-export">
+                        <svg width="14" height="14" viewbox="0 0 16 16" fill="none"><path d="M2 11v2a1 1 0 001 1h10a1 1 0 001-1v-2M8 2v8M5 7l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        Export CSV
+                    </button>
+                    <button class="btn btn-small btn-danger" id="btn-clear-sheet"><span data-t="pages.index.text.0162"></span></button>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table id="ideas-table">
+                    <thead>
+                        <tr>
+                            <th><span data-t="pages.index.text.0163"></span></th>
+                            <th><span data-t="pages.index.text.0164"></span></th>
+                            <th><span data-t="pages.index.text.0165"></span></th>
+                            <th><span data-t="pages.index.text.0166"></span></th>
+                            <th><span data-t="pages.index.text.0167"></span></th>
+                            <th><span data-t="pages.index.text.0168"></span></th>
+                            <th><span data-t="pages.index.text.0169"></span></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="ideas-body">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sources Section (hidden on homepage) -->
+        <footer class="sources-section homepage-hide" id="sources-section">
+            <div class="sources-header">
+                <h3><span data-t="pages.index.text.0170"></span></h3>
+            </div>
+            <ul class="sources-list" id="sources-list">
+                <!-- Populated by JS -->
+            </ul>
+            <div class="add-source-row">
+                <input type="text" id="source-input" placeholder="" data-t-attr="placeholder:pages.index.attr.placeholder.0045">
+                <button class="btn btn-small" id="btn-add-source"><span data-t="pages.index.text.0171"></span></button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // ═══════════════════════════════════════════════════════════
+        // FAVORITES FUNCTIONALITY
+        // ═══════════════════════════════════════════════════════════
+
+        const FAVORITES_KEY = 'market_taxonomy_favorites';
+
+        // Load favorites from localStorage
+        function loadFavorites() {
+            const stored = localStorage.getItem(FAVORITES_KEY);
+            return stored ? JSON.parse(stored) : [];
+        }
+
+        // Save favorites to localStorage
+        function saveFavorites(favorites) {
+            localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
+        }
+
+        // Toggle favorite
+        function toggleFavorite(marketId, marketName, marketHref) {
+            let favorites = loadFavorites();
+            const index = favorites.findIndex(f => f.id === marketId);
+
+            if (index > -1) {
+                // Remove from favorites
+                favorites.splice(index, 1);
+            } else {
+                // Add to favorites
+                favorites.push({ id: marketId, name: marketName, href: marketHref });
+            }
+
+            saveFavorites(favorites);
+            renderFavorites();
+            updateFavoriteButtons();
+        }
+
+        // Render favorites section
+        function renderFavorites() {
+            const favorites = loadFavorites();
+            const favSection = document.getElementById('favorites-section');
+            const favGrid = document.getElementById('favorites-grid');
+
+            if (favorites.length === 0) {
+                favSection.classList.add('hidden');
+                return;
+            }
+
+            favSection.classList.remove('hidden');
+            favGrid.innerHTML = '';
+
+            favorites.forEach(fav => {
+                const card = document.createElement('a');
+                card.href = fav.href;
+                card.className = 'market-card favorite-card';
+                card.innerHTML = `
+                    <button class="remove-favorite-btn" data-market-id="${fav.id}" title="Remove from favorites">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                    <h3>${fav.name}</h3>
+                `;
+
+                // Remove favorite handler
+                const removeBtn = card.querySelector('.remove-favorite-btn');
+                removeBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleFavorite(fav.id, fav.name, fav.href);
+                });
+
+                favGrid.appendChild(card);
+            });
+        }
+
+        // Update favorite buttons state
+        function updateFavoriteButtons() {
+            const favorites = loadFavorites();
+            const favoriteIds = favorites.map(f => f.id);
+
+            document.querySelectorAll('.favorite-btn').forEach(btn => {
+                const marketId = btn.dataset.marketId;
+                const isFavorite = favoriteIds.includes(marketId);
+
+                if (isFavorite) {
+                    btn.classList.add('active');
+                    btn.title = 'Remove from favorites';
+                } else {
+                    btn.classList.remove('active');
+                    btn.title = 'Add to favorites';
+                }
+            });
+        }
+
+        // Initialize favorites
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFavorites();
+            updateFavoriteButtons();
+
+            // Add click handlers to all favorite buttons
+            document.querySelectorAll('.favorite-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const marketId = btn.dataset.marketId;
+                    const card = btn.closest('.market-card');
+                    const marketName = card.dataset.marketName;
+                    const marketHref = card.href;
+
+                    toggleFavorite(marketId, marketName, marketHref);
+                });
+            });
+        });
+
+        // ═══════════════════════════════════════════════════════════
+        // SEARCH FUNCTIONALITY
+        // ═══════════════════════════════════════════════════════════
+
+        const MARKET_INDEX = [
+            { name: "Real Estate", keywords: ["property", "housing", "rentals", "real estate"], href: "market-real-estate.html" },
+            { name: "Construction & Infrastructure", keywords: ["construction", "buildings", "roads", "infrastructure"], href: "market-construction-infrastructure.html" },
+            { name: "Food & Beverage", keywords: ["food", "beverage", "restaurant", "cafe", "dining"], href: "market-food-beverage.html" },
+            { name: "Agriculture", keywords: ["farming", "crops", "livestock", "agriculture", "agritech"], href: "market-agriculture.html" },
+            { name: "Energy", keywords: ["oil", "gas", "renewables", "energy", "power"], href: "market-energy.html" },
+            { name: "Utilities", keywords: ["electricity", "water", "gas", "utilities"], href: "market-utilities.html" },
+            { name: "Transportation & Mobility", keywords: ["transport", "mobility", "vehicles", "logistics"], href: "market-transportation-mobility.html" },
+            { name: "Automotive", keywords: ["cars", "vehicles", "automotive", "auto"], href: "market-automotive.html" },
+            { name: "Manufacturing", keywords: ["manufacturing", "production", "factory", "industrial"], href: "market-manufacturing.html" },
+            { name: "Consumer Goods", keywords: ["cpg", "consumer", "goods", "products"], href: "market-consumer-goods.html" },
+            { name: "Retail & E-commerce", keywords: ["retail", "ecommerce", "e-commerce", "online shopping", "store"], href: "market-retail-ecommerce.html" },
+            { name: "Wholesale & Distribution", keywords: ["wholesale", "distribution", "supply"], href: "market-wholesale-distribution.html" },
+            { name: "Healthcare", keywords: ["healthcare", "medical", "health", "hospital"], href: "market-healthcare.html" },
+            { name: "Pharmaceuticals & Biotech", keywords: ["pharma", "drugs", "biotech", "medicine"], href: "market-pharmaceuticals-biotech.html" },
+            { name: "Medical Devices", keywords: ["medical devices", "equipment", "diagnostics"], href: "market-medical-devices.html" },
+            { name: "Financial Services", keywords: ["finance", "financial", "banking", "fintech"], href: "market-financial-services.html" },
+            { name: "Banking", keywords: ["bank", "credit", "deposits", "lending"], href: "market-banking.html" },
+            { name: "Insurance", keywords: ["insurance", "coverage", "insurtech"], href: "market-insurance.html" },
+            { name: "Payments", keywords: ["payments", "digital payments", "transactions"], href: "market-payments.html" },
+            { name: "Capital Markets", keywords: ["investing", "stocks", "funds", "assets", "capital"], href: "market-capital-markets.html" },
+            { name: "Technology", keywords: ["technology", "tech", "IT"], href: "market-technology.html" },
+            { name: "Software", keywords: ["software", "saas", "applications", "apps"], href: "market-software.html" },
+            { name: "Hardware", keywords: ["hardware", "devices", "electronics"], href: "market-hardware.html" },
+            { name: "Telecommunications", keywords: ["telecom", "internet", "mobile", "networks"], href: "market-telecommunications.html" },
+            { name: "Media & Entertainment", keywords: ["media", "entertainment", "content"], href: "market-media-entertainment.html" },
+            { name: "Gaming", keywords: ["gaming", "games", "esports", "video games"], href: "market-gaming.html" },
+            { name: "Advertising & Marketing", keywords: ["advertising", "marketing", "ads", "promotion", "instagram", "tiktok", "social media", "social"], href: "market-advertising-marketing.html" },
+            { name: "Education", keywords: ["education", "learning", "edtech", "training"], href: "market-education.html" },
+            { name: "Professional Services", keywords: ["consulting", "services", "professional"], href: "market-professional-services.html" },
+            { name: "Legal", keywords: ["legal", "law", "legaltech"], href: "market-legal.html" },
+            { name: "HR & Recruiting", keywords: ["hr", "recruiting", "hiring", "workforce"], href: "market-hr-recruiting.html" },
+            { name: "Security & Defense", keywords: ["security", "defense", "safety"], href: "market-security-defense.html" },
+            { name: "Government / Public Sector", keywords: ["government", "public sector"], href: "market-government-public.html" },
+            { name: "Tourism & Hospitality", keywords: ["tourism", "travel", "hotels", "hospitality"], href: "market-tourism-hospitality.html" },
+            { name: "Fashion & Apparel", keywords: ["fashion", "apparel", "clothing"], href: "market-fashion-apparel.html" },
+            { name: "Logistics & Supply Chain", keywords: ["logistics", "supply chain", "shipping", "warehousing"], href: "market-logistics-supply-chain.html" },
+            { name: "Chemicals & Materials", keywords: ["chemicals", "materials"], href: "market-chemicals-materials.html" },
+            { name: "Mining", keywords: ["mining", "resources", "extraction"], href: "market-mining.html" },
+            { name: "Aerospace", keywords: ["aerospace", "aviation", "space"], href: "market-aerospace.html" },
+            { name: "Environmental / Climate", keywords: ["environmental", "climate", "sustainability"], href: "market-environmental-climate.html" },
+            { name: "Non-profit / Social", keywords: ["nonprofit", "ngo", "social"], href: "market-nonprofit-social.html" },
+            { name: "Religion / Faith", keywords: ["religion", "faith"], href: "market-religion-faith.html" },
+            { name: "Sports & Fitness", keywords: ["sports", "fitness", "wellness"], href: "market-sports-fitness.html" }
+        ];
+
+        const searchInput = document.getElementById('market-search');
+        const searchResults = document.getElementById('search-results');
+        const btnAutoComplete = document.getElementById('btn-auto-complete');
+        const btnStepByStep = document.getElementById('btn-step-by-step');
+        const promptInput = document.getElementById('prompt-search');
+        const AI_ENDPOINT = localStorage.getItem('ai_endpoint') || 'http://localhost:3001/api/ai';
+        const AI_TIMEOUT_MS = 12000;
+
+        function searchMarkets(query) {
+            if (!query || query.length < 2) {
+                return [];
+            }
+
+            const lowerQuery = query.toLowerCase();
+            const matches = [];
+
+            MARKET_INDEX.forEach(market => {
+                // Check name
+                if (market.name.toLowerCase().includes(lowerQuery)) {
+                    matches.push({ ...market, matchType: 'name' });
+                    return;
+                }
+
+                // Check keywords
+                const keywordMatch = market.keywords.some(kw => kw.includes(lowerQuery));
+                if (keywordMatch) {
+                    matches.push({ ...market, matchType: 'keyword' });
+                }
+            });
+
+            if (matches.length === 0) {
+    const { selections } = mapQueryToSelections(query);
+    const fallbackName = selections.market || 'Advertising & Marketing';
+    const fallback = MARKET_INDEX.find(m => m.name === fallbackName) || MARKET_INDEX[0];
+    if (fallback) {
+        return [{ ...fallback, matchType: 'fallback' }];
+    }
+}
+
+return matches.slice(0, 8); // Max 8 results
+        }
+
+        function getBestMarketMatch(query) {
+            if (!query) return null;
+            const q = query.toLowerCase().trim();
+            if (!q) return null;
+
+            let best = null;
+            let bestScore = -1;
+            let secondScore = -1;
+
+            MARKET_INDEX.forEach(market => {
+                const name = market.name.toLowerCase();
+                let score = 0;
+
+                if (name === q) score += 100;
+                if (name.includes(q)) score += 80;
+                if (market.keywords.some(kw => kw === q)) score += 90;
+                if (market.keywords.some(kw => kw.includes(q))) score += 70;
+
+                const tokens = q.split(/\s+/).filter(Boolean);
+                if (tokens.length) {
+                    const tokenHits = tokens.filter(t => name.includes(t) || market.keywords.some(kw => kw.includes(t))).length;
+                    score += tokenHits * 10;
+                }
+
+                if (score > bestScore) {
+                    secondScore = bestScore;
+                    bestScore = score;
+                    best = market;
+                } else if (score > secondScore) {
+                    secondScore = score;
+                }
+            });
+
+            if (!best && q.length > 0) {
+                const { selections } = mapQueryToSelections(q);
+                const fallbackName = selections.market || 'Advertising & Marketing';
+                best = MARKET_INDEX.find(m => m.name === fallbackName) || MARKET_INDEX[0] || null;
+            }
+
+            const ambiguous = bestScore > 0 && secondScore >= bestScore - 10;
+            return { match: best, ambiguous };
+        }
+
+        function routeToWizardFromQuery(query, mode = "auto", match = null) {
+    const { selections, keywords, highlight } = mapQueryToSelections(query);
+    if (match && match.name) {
+        selections.market = match.name;
+    }
+    const payload = { prompt: query, selections, keywords, highlight };
+    localStorage.setItem('ai_prefill', JSON.stringify(payload));
+    localStorage.setItem('prefill_mode', mode);
+                if (mode === 'auto') {
+                    localStorage.setItem('auto_add_sheet', '1');
+                } else {
+                    localStorage.removeItem('auto_add_sheet');
+                }
+    if (selections.market) {
+        localStorage.setItem('selected_market', selections.market);
+    }
+    window.location.href = 'wizard.html';
+}
+
+function setFlowMode(mode) {
+    if (!btnAutoComplete || !btnStepByStep) return;
+    const nextMode = mode === 'step' ? 'step' : 'auto';
+    btnAutoComplete.classList.toggle('active', nextMode === 'auto');
+    btnStepByStep.classList.toggle('active', nextMode === 'step');
+    localStorage.setItem('flow_mode', nextMode);
+}
+
+function getFlowMode() {
+    const stored = localStorage.getItem('flow_mode');
+    if (stored === 'step' || stored === 'auto') return stored;
+    if (btnStepByStep && btnStepByStep.classList.contains('active')) return 'step';
+    return 'auto';
+}
+
+function runQueryWithMode(mode) {
+    const query = searchInput.value.trim();
+    if (!query) return;
+    const finalMode = mode || getFlowMode();
+    setFlowMode(finalMode);
+    const result = getBestMarketMatch(query);
+    const match = result ? result.match : null;
+    const ambiguous = result ? result.ambiguous : false;
+    if (finalMode === 'step') {
+        if (!match) {
+            alert('Nessun mercato trovato. Aggiungi una keyword più specifica.');
+            return;
+        }
+        if (ambiguous) {
+            alert('Trovati più mercati vicini. Aggiungi una parola chiave per identificare quello corretto.');
+            return;
+        }
+        window.location.href = match.href;
+        return;
+    }
+    routeToWizardFromQuery(query, finalMode, match);
+}
+
+function renderSearchResults(matches) {
+            if (matches.length === 0) {
+                searchResults.innerHTML = '<div class="search-no-results">No markets found</div>';
+                searchResults.classList.remove('hidden');
+                return;
+            }
+
+            searchResults.innerHTML = '';
+            matches.forEach(match => {
+                const resultItem = document.createElement('a');
+                resultItem.href = match.href;
+                resultItem.className = 'search-result-item';
+                resultItem.innerHTML = `
+                    <span class="result-name">${match.name}</span>
+                    ${match.matchType === 'keyword' ? '<span class="result-badge">keyword match</span>' : ''}${match.matchType === 'fallback' ? '<span class="result-badge">best guess</span>' : ''}
+                `;
+                searchResults.appendChild(resultItem);
+            });
+
+            searchResults.classList.remove('hidden');
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value;
+            
+            if (!query || query.length < 2) {
+                searchResults.classList.add('hidden');
+                return;
+            }
+
+            const matches = searchMarkets(query);
+            renderSearchResults(matches);
+        });
+
+        if (btnAutoComplete && btnStepByStep) {
+    btnAutoComplete.addEventListener('click', () => setFlowMode('auto'));
+    btnStepByStep.addEventListener('click', () => setFlowMode('step'));
+    setFlowMode(getFlowMode());
+}
+
+searchInput.addEventListener('focus', (e) => {
+            if (e.target.value.length >= 2) {
+                const matches = searchMarkets(e.target.value);
+                renderSearchResults(matches);
+            }
+        });
+
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key !== 'Enter') return;
+            e.preventDefault();
+            runQueryWithMode();
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.search-container')) {
+                searchResults.classList.add('hidden');
+            }
+        });
+
+        // ── AI Suggestions (mock-friendly, toggleable) ─────────
+        function mapQueryToSelections(query) {
+            const lower = query.toLowerCase();
+            const keywords = [];
+            const selections = {};
+
+            // Market guess
+            if (lower.includes('online') || lower.includes('ecommerce') || lower.includes('store')) {
+                selections.market = 'Retail & E-commerce';
+                keywords.push('online');
+            } else if (lower.includes('youtube')) {
+                selections.market = 'Media & Entertainment';
+                keywords.push('youtube');
+            } else if (lower.includes('saas')) {
+                selections.market = 'Software';
+                keywords.push('saas');
+            }
+
+            // Mechanics
+            selections.mechanics = {
+                'Distribution Channels': [],
+                'Monetization Models': [],
+                'Business Assets': [],
+                'Operating Models': []
+            };
+            if (lower.includes('youtube')) selections.mechanics['Distribution Channels'].push('YouTube');
+            if (lower.includes('email')) selections.mechanics['Distribution Channels'].push('Email');
+            if (lower.includes('seo') || lower.includes('online')) selections.mechanics['Distribution Channels'].push('SEO');
+            if (lower.includes('ads') || lower.includes('paid')) selections.mechanics['Distribution Channels'].push('Paid Ads');
+            if (lower.includes('affiliate')) selections.mechanics['Monetization Models'].push('Affiliate');
+            if (lower.includes('subscription') || lower.includes('saas')) selections.mechanics['Monetization Models'].push('Subscription');
+            if (lower.includes('data')) selections.mechanics['Business Assets'].push('Data');
+            if (lower.includes('community')) selections.mechanics['Business Assets'].push('Community');
+            if (lower.includes('solo') || lower.includes('creator')) selections.mechanics['Operating Models'].push('Solo Creator');
+            if (lower.includes('agency')) selections.mechanics['Operating Models'].push('Agency');
+            if (lower.includes('marketplace')) selections.mechanics['Operating Models'].push('Marketplace');
+
+            // Target / Problem / Model / GTM defaults
+            selections.target = lower.includes('enterprise') ? 'Enterprise' : (lower.includes('sm') ? 'SMBs' : 'Consumers (Millennials)');
+            selections.problem = lower.includes('expensive') ? 'Too expensive' : 'Access / availability';
+            selections.severity = lower.includes('critical') ? 'Critical — Blocks operations' : 'High — Significant daily pain';
+            selections.existing_behavior = lower.includes('manual') ? 'Manually (paper, Excel, WhatsApp)' : 'With improvised tools';
+            selections.model = selections.mechanics['Monetization Models'][0] || 'Subscription (SaaS)';
+            selections.gtm = lower.includes('youtube') ? 'Influencer / Creator' : 'Content Marketing / SEO';
+            selections.validation_signal = '🟡 Medium signal';
+
+            const highlight = [];
+            if (keywords.includes('online')) highlight.push('market');
+            if (keywords.includes('youtube')) highlight.push('mechanics');
+
+            if (!selections.market) {
+    selections.market = 'Advertising & Marketing';
+    if (!keywords.includes('marketing')) keywords.push('marketing');
+}
+return { selections, keywords, highlight };
+        }
+
+        function handleAiGenerate(queryOverride) {
+            const mode = localStorage.getItem('prefill_mode') || getFlowMode();
+            const query = (queryOverride ?? searchInput.value).trim();
+            if (!query) {
+                alert('Scrivi una frase da interpretare');
+                return;
+            }
+
+            const markets = MARKET_INDEX.map(m => m.name);
+            const options = {
+                markets,
+                mechanics: {
+                    "Distribution Channels": ["YouTube", "Email", "SEO", "Paid Ads", "Influencer Marketing", "Communities"],
+                    "Monetization Models": ["Subscription", "Advertising", "Lead Generation", "Affiliate", "One-off Payments"],
+                    "Business Assets": ["Audience", "Data", "Software", "Community", "Brand"],
+                    "Operating Models": ["Solo Creator", "Agency", "SaaS", "Marketplace", "Media Business"]
+                },
+                targets: ["SMBs", "Enterprise", "Startups", "Freelancers / Solopreneurs", "Consumers (Gen Z)", "Consumers (Millennials)", "Consumers (Gen X+)", "Developers", "Creators / Influencers", "Students"],
+                severities: ["Critical — Blocks operations", "High — Significant daily pain", "Medium — Noticeable friction", "Low — Minor inconvenience"],
+                behaviors: ["Manually (paper, Excel, WhatsApp)", "With improvised tools", "With an existing product", "Not solved at all", "Outsourced to people"],
+                models: ["Subscription (SaaS)", "Marketplace", "Freemium", "Pay-per-use", "Advertising", "Licensing", "Hardware + Software", "Agency / Services"],
+                gtms: ["Product-Led Growth", "Content Marketing / SEO", "Outbound Sales", "Partnerships / Channels", "Community-Led", "Paid Acquisition", "Influencer / Creator", "Events / Conferences"]
+            };
+
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), AI_TIMEOUT_MS);
+
+            fetch(AI_ENDPOINT, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ prompt: query, options }),
+                signal: controller.signal
+            })
+            .then(res => {
+                if (!res.ok) throw new Error("AI endpoint error");
+                return res.json();
+            })
+            .then(data => {
+                clearTimeout(timeout);
+                const selections = {
+                    market: data.market,
+                    problem: data.problem,
+                    target: data.target,
+                    severity: data.severity,
+                    existing_behavior: data.existing_behavior,
+                    mechanics: data.mechanics,
+                    model: data.model,
+                    gtm: data.gtm,
+                    validation_signal: "🟡 Medium signal"
+                };
+                const payload = {
+                    prompt: query,
+                    selections,
+                    keywords: data.keywords || [],
+                    highlight: data.highlight || []
+                };
+
+                localStorage.setItem('ai_prefill', JSON.stringify(payload));
+                localStorage.setItem('prefill_mode', mode);
+                if (mode === 'auto') {
+                    localStorage.setItem('auto_add_sheet', '1');
+                } else {
+                    localStorage.removeItem('auto_add_sheet');
+                }
+                if (selections.market) {
+                    localStorage.setItem('selected_market', selections.market);
+                }
+                window.location.href = 'wizard.html';
+            })
+            .catch(() => {
+                clearTimeout(timeout);
+                const { selections, keywords, highlight } = mapQueryToSelections(query);
+                const payload = { prompt: query, selections, keywords, highlight };
+                localStorage.setItem('ai_prefill', JSON.stringify(payload));
+                localStorage.setItem('prefill_mode', mode);
+                if (mode === 'auto') {
+                    localStorage.setItem('auto_add_sheet', '1');
+                } else {
+                    localStorage.removeItem('auto_add_sheet');
+                }
+                if (selections.market) {
+                    localStorage.setItem('selected_market', selections.market);
+                }
+                alert('AI non disponibile. Uso mapping locale.');
+                window.location.href = 'wizard.html';
+            });
+        }
+
+        if (promptInput) {
+            promptInput.addEventListener('keydown', (e) => {
+                if (e.key !== 'Enter') return;
+                e.preventDefault();
+                const mode = getFlowMode();
+                localStorage.setItem('prefill_mode', mode);
+                handleAiGenerate(promptInput.value);
+            });
+        }
+    </script>
+    <script src="i18n.js"></script>
+</body>
+</html>

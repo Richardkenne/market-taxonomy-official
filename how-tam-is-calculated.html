@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How TAM Is Calculated — Market Taxonomy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .paper-wrap {
+            max-width: 680px;
+            margin: 0 auto 80px;
+            padding: 0 24px;
+        }
+        .paper-kicker {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .paper-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-align: center;
+            line-height: 1.25;
+            margin-bottom: 6px;
+        }
+        .paper-divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 36px 0;
+        }
+        .paper-section {
+            margin-bottom: 36px;
+        }
+        .paper-section-num {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            margin-bottom: 6px;
+        }
+        .paper-section h2 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 12px;
+            line-height: 1.3;
+        }
+        .paper-section p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            margin: 0 0 10px;
+        }
+        .paper-section p:last-child { margin-bottom: 0; }
+        .paper-callout {
+            border-left: 3px solid var(--green);
+            padding: 10px 16px;
+            background: var(--green-light);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin: 16px 0;
+        }
+        .paper-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+            margin: 16px 0;
+        }
+        .paper-table th {
+            text-align: left;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: var(--text-tertiary);
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .paper-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            vertical-align: top;
+            line-height: 1.5;
+        }
+        .paper-table td:first-child {
+            font-weight: 600;
+            color: var(--text-primary);
+            white-space: nowrap;
+        }
+        .validation-list {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .validation-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .validation-list li::before {
+            content: "→";
+            font-size: 0.75rem;
+            color: var(--green);
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .paper-toc {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 0 0 8px;
+        }
+        .paper-toc a {
+            font-size: 0.72rem;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            transition: color 0.12s, border-color 0.12s;
+            white-space: nowrap;
+        }
+        .paper-toc a:hover {
+            color: var(--text-primary);
+            border-color: var(--text-primary);
+        }
+        .paper-canonical {
+            background: var(--text-primary);
+            color: #fff;
+            border-radius: 12px;
+            padding: 28px 28px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .paper-canonical p {
+            font-size: 1.05rem;
+            font-weight: 500;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.9);
+            margin: 0;
+        }
+        .paper-canonical p strong {
+            color: #fff;
+            font-weight: 700;
+        }
+        .appendix-label {
+            font-size: 0.62rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-tertiary);
+            padding: 4px 10px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 540px) {
+            .paper-wrap { padding: 0 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="javascript:history.back()" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back
+            </a>
+        </div>
+
+        <div class="paper-wrap">
+
+            <div style="text-align:center; margin-bottom:32px;">
+                <p class="paper-kicker" style="margin-bottom:14px;">Market Taxonomy</p>
+                <h1 class="paper-title" style="margin-bottom:0;">How TAM Is Calculated and Used</h1>
+                <p style="font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--text-tertiary); margin:6px 0 0; padding-top:8px; border-top:1px solid var(--border); display:inline-block;">TAM Methodology</p>
+            </div>
+
+            <!-- MINI TOC -->
+            <nav class="paper-toc">
+                <a href="#separation">Structure vs Size</a>
+                <a href="#where-applies">Where TAM Applies</a>
+                <a href="#level3">Why TAM Stops at L2</a>
+                <a href="#sam">Level 3 &amp; SAM</a>
+                <a href="#usage">Practical Usage</a>
+                <a href="#appendix">Appendix</a>
+            </nav>
+
+            <hr class="paper-divider">
+
+            <!-- Intro -->
+            <div class="paper-section">
+                <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.75; margin:0;">The Total Addressable Market (TAM) values used in this system are <strong>indicative, global, and order-of-magnitude estimates</strong>. They are designed to support market comparison, prioritization, and strategic reasoning — not precise valuation or revenue forecasting.</p>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 1. Separation -->
+            <div class="paper-section" id="separation">
+                <p class="paper-section-num">Section 1</p>
+                <h2>Separation of Market Structure and Market Size</h2>
+                <p>This taxonomy explicitly separates <strong>market structure</strong> from <strong>market sizing</strong>.</p>
+                <ul class="validation-list">
+                    <li><strong>Market structure</strong> — defined across Levels 0 to 3 — determines what markets exist and how they are organized.</li>
+                    <li><strong>Market size</strong> — expressed through TAM and SAM — estimates how much economic value may exist within those structures.</li>
+                </ul>
+                <div class="paper-callout">
+                    Conflating structure and size leads to authoritative-looking but misleading conclusions.
+                </div>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 2. Where TAM applies -->
+            <div class="paper-section" id="where-applies">
+                <p class="paper-section-num">Section 2</p>
+                <h2>Where TAM Applies in the Taxonomy</h2>
+                <p>TAM is not applied uniformly across all levels.</p>
+                <table class="paper-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>TAM Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Level 0</td>
+                            <td>Total global size of the macro domain — defines the upper bound of economic reality.</td>
+                        </tr>
+                        <tr>
+                            <td>Level 1</td>
+                            <td>Structural allocation of economic activity across major categories — supports comparative analysis, not execution decisions.</td>
+                        </tr>
+                        <tr>
+                            <td>Level 2</td>
+                            <td>Addressable market base of a structurally recognized sub-market. Answers: <em>is this market large enough to justify attention?</em> <strong>This is the primary and correct level for TAM.</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Level 3</td>
+                            <td>TAM does not apply. See SAM below.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 3. Why TAM stops at L2 -->
+            <div class="paper-section" id="level3">
+                <p class="paper-section-num">Section 3</p>
+                <h2>Why TAM Stops at Level 2</h2>
+                <p>Level 3 does not represent TAM. Level 3 introduces operational context — buyer type, usage pattern, scale, and institutionalization. At this level, market size becomes <strong>execution-dependent</strong>.</p>
+                <p>Applying TAM at Level 3 would mix market definition with monetization assumptions, which this system intentionally avoids.</p>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 4. SAM -->
+            <div class="paper-section" id="sam">
+                <p class="paper-section-num">Section 4</p>
+                <h2>What Level 3 Represents Instead</h2>
+                <p>At Level 3, market size should be interpreted as <strong>SAM</strong> — the Serviceable Available Market — or as a serviceable market slice expressed as a proportion of the Level 2 TAM.</p>
+                <p>This reflects the reality that businesses operate on specific, constrained segments rather than entire markets.</p>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 5. Practical Usage -->
+            <div class="paper-section" id="usage">
+                <p class="paper-section-num">Section 5</p>
+                <h2>Practical Usage</h2>
+                <table class="paper-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Use it to…</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Level 2 TAM</td>
+                            <td>Decide whether a market is worth exploring.</td>
+                        </tr>
+                        <tr>
+                            <td>Level 3 SAM</td>
+                            <td>Decide where and how a business can realistically be built.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="paper-callout">
+                    <strong>TAM justifies attention.</strong> Level 3 justifies execution.
+                </div>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- 6. Methodological Note -->
+            <div class="paper-section">
+                <p class="paper-section-num">Methodological Note</p>
+                <h2>How TAM Values Are Derived</h2>
+                <p>TAM values are derived using market-appropriate sizing methods:</p>
+                <ul class="validation-list">
+                    <li>Asset-based approaches — total value of the relevant asset stock</li>
+                    <li>Top-down market estimates — allocating a share of a global market to a structural sub-market</li>
+                    <li>Bottom-up validation — multiplying potential buyers by maximum annual spend (used to validate top-down, not replace it)</li>
+                </ul>
+                <p>No single method or source is treated as definitive. <strong>Ranges are preferred over point estimates.</strong></p>
+            </div>
+
+            <hr class="paper-divider">
+
+            <!-- Appendix -->
+            <div class="paper-section" id="appendix">
+                <div class="appendix-label">Appendix — Technical Sizing Methodology</div>
+
+                <h2>TAM Definition</h2>
+                <p>TAM is an upper-bound estimate of total market value assuming full adoption within the structural market at Level 2. <strong>TAM is not expected revenue.</strong></p>
+
+                <h2 style="margin-top:28px;">SAM at Level 3</h2>
+                <p>At Level 3, market size is derived as a slice of Level 2 TAM. The addressable proportion reflects buyer type, geography, regulatory constraints, and operational feasibility.</p>
+
+                <h2 style="margin-top:28px;">What This System Avoids by Design</h2>
+                <ul class="validation-list">
+                    <li>TAM definitions at Level 3</li>
+                    <li>Single-source TAM claims</li>
+                    <li>Precision without bounds</li>
+                    <li>Revenue-only definitions of market size</li>
+                </ul>
+
+                <h2 style="margin-top:28px;">Interpretation Rules</h2>
+                <ul class="validation-list">
+                    <li>TAM values are ranges, not facts</li>
+                    <li>Relative comparisons matter more than absolute numbers</li>
+                    <li>Execution decisions should rely on SAM and feasibility, not TAM alone</li>
+                </ul>
+            </div>
+
+            <!-- Canonical -->
+            <div class="paper-canonical">
+                <p>TAM justifies attention.<br><strong>Level 3 justifies execution.</strong></p>
+                <p style="margin-top:14px; font-size:0.82rem; color:rgba(255,255,255,0.55);">TAM values are order-of-magnitude estimates for comparison and prioritization. Always verify with primary sources before making investment or execution decisions.</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="content/t.js"></script>
+</body>
+</html>

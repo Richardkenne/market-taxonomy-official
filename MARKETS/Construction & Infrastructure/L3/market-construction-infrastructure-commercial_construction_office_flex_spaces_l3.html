@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Construction Office Flex Spaces — Level 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+    <style>
+        .l3-numbers{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:40px auto;max-width:560px;padding:0 16px;}
+        .l3-num-card{flex:1;min-width:120px;max-width:160px;padding:20px 12px;border:1px solid var(--border);border-radius:12px;background:var(--white);text-align:center;}
+        .l3-num-val{font-size:1.9rem;font-weight:700;color:var(--green);line-height:1;margin:0 0 6px;}
+        .l3-num-lbl{font-size:0.72rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-tertiary);margin:0;}
+        .l3-cta{display:flex;flex-direction:column;align-items:center;gap:12px;margin:0 auto 64px;padding:0 16px;}
+        .l3-cta-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--green);color:#fff;font-size:0.95rem;font-weight:600;border-radius:10px;text-decoration:none;border:none;cursor:pointer;transition:background 0.15s,transform 0.15s;}
+        .l3-cta-btn:hover{background:#2fa092;transform:translateY(-1px);}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="../L2/market-construction-infrastructure-commercial-construction-office.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Back to Office
+            </a>
+        </div>
+
+        <header class="market-page-header">
+            <div style="text-align:center;margin-bottom:12px;">
+                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 3</span>
+            </div>
+            <div class="market-badge">
+                <span class="market-title">Commercial Construction Office Flex Spaces</span>
+            </div>
+            <p style="font-size:0.82rem;color:var(--text-tertiary);margin:8px 0 0;">Part of: <strong>Office</strong></p>
+        </header>
+
+        <div class="l3-numbers" id="l3-numbers">
+            <!-- Populated by taxonomy-numbers.js -->
+        </div>
+
+        <div class="l3-cta">
+            <a class="l3-cta-btn" href="../../../problem-selection.html" id="start-btn">View Problem →</a>
+            <a class="l3-cta-btn" href="../../../numbers.html?l3=market-construction-infrastructure-commercial_construction_office_flex_spaces_l3" style="background:var(--text-secondary);">Numbers →</a>        </div>
+    </div>
+    <script src="../../../content/taxonomy-numbers.js"></script>
+    <script src="../../../content/t.js"></script>
+    <script>
+        // Render numbers
+        (function(){
+            var g=document.getElementById("l3-numbers");
+            if(!g||typeof TAXONOMY_NUMBERS==="undefined")return;
+            ["L1","L2","L3"].forEach(function(lv){
+                var n=TAXONOMY_NUMBERS[lv];
+                if(!n)return;
+                var d=document.createElement("div");
+                d.className="l3-num-card";
+                d.innerHTML='<div class="l3-num-val">'+n.count+'</div><p class="l3-num-lbl">'+lv+' — '+n.label+'</p>';
+                g.appendChild(d);
+            });
+        })();
+
+                document.getElementById("start-btn").addEventListener("click", function(e) {
+            e.preventDefault();
+            localStorage.setItem("problem_back_url", window.location.href);
+            localStorage.setItem("selected_l3", 'Commercial Construction Office Flex Spaces');
+            localStorage.setItem("suggested_primary", 'Automation / Scale');
+            localStorage.removeItem("suggested_secondary");
+            window.location.href = "../../../problem-selection.html";
+        });
+    </script>
+</body>
+</html>

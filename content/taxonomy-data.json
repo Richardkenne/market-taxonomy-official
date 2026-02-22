@@ -1,0 +1,1328 @@
+{
+  "Real Estate": {
+    "source": "CBRE; JLL; Cushman & Wakefield; Savills; NAREIT; Urban Land Institute",
+    "l1": {
+      "Residential": [
+        "Single-Family",
+        "Multi-Family",
+        "Student Housing",
+        "Senior Housing"
+      ],
+      "Commercial": [
+        "Office",
+        "Mixed-Use",
+        "Business Parks"
+      ],
+      "Industrial / Warehousing": [
+        "Logistics Warehouses",
+        "Manufacturing Facilities",
+        "Cold Storage"
+      ],
+      "Retail / Shopping Centers": [
+        "Malls",
+        "Strip Centers",
+        "High-Street Retail"
+      ],
+      "Land / Development": [
+        "Raw Land",
+        "Entitled Land",
+        "Development Projects"
+      ],
+      "Property Management": [
+        "Residential PM",
+        "Commercial PM",
+        "Facilities Management"
+      ]
+    }
+  },
+  "Construction & Infrastructure": {
+    "source": "FMI Corp; Dodge Data & Analytics; ENR; OECD Construction Statistics; World Bank Infrastructure",
+    "l1": {
+      "Residential Construction": [
+        "Single-Family",
+        "Multi-Family",
+        "Renovation"
+      ],
+      "Commercial Construction": [
+        "Office",
+        "Retail",
+        "Institutional"
+      ],
+      "Civil Infrastructure": [
+        "Roads & Highways",
+        "Bridges",
+        "Rail & Transit"
+      ],
+      "Engineering & Design": [
+        "Architecture",
+        "Civil Engineering",
+        "MEP Engineering"
+      ],
+      "Construction Services": [
+        "Project Management",
+        "Site Preparation",
+        "Safety & Compliance"
+      ],
+      "Construction Technology": [
+        "BIM",
+        "Scheduling Software",
+        "Site Monitoring"
+      ]
+    }
+  },
+  "Food & Beverage": {
+    "source": "USDA; FAO; Nielsen; Mintel; McKinsey CPG",
+    "l1": {
+      "Food Production": [
+        "Crop-Based",
+        "Animal-Based",
+        "Seafood"
+      ],
+      "Food Processing": [
+        "Primary Processing",
+        "Secondary Processing",
+        "Preservation"
+      ],
+      "Packaged Foods": [
+        "Snacks",
+        "Ready Meals",
+        "Frozen Foods"
+      ],
+      "Beverages": [
+        "Non-Alcoholic",
+        "Alcoholic",
+        "Functional Drinks"
+      ],
+      "Food Services": [
+        "QSR",
+        "Full-Service Restaurants",
+        "Catering"
+      ],
+      "Food Distribution": [
+        "Wholesale",
+        "Cold Chain",
+        "Foodservice Distribution"
+      ]
+    }
+  },
+  "Agriculture": {
+    "source": "FAO; USDA; World Bank Agriculture; OECD Agriculture; Rabobank",
+    "l1": {
+      "Crop Farming": [
+        "Grains",
+        "Fruits",
+        "Vegetables"
+      ],
+      "Livestock": [
+        "Cattle",
+        "Poultry",
+        "Aquaculture"
+      ],
+      "Agri Inputs": [
+        "Seeds",
+        "Fertilizers",
+        "Crop Protection"
+      ],
+      "Agri Equipment": [
+        "Tractors",
+        "Irrigation Systems",
+        "Harvesting Equipment"
+      ],
+      "Agri Services": [
+        "Advisory",
+        "Veterinary",
+        "Testing & Certification"
+      ],
+      "Agri Technology": [
+        "Precision Ag",
+        "Farm Management Software",
+        "Remote Sensing"
+      ]
+    }
+  },
+  "Energy": {
+    "source": "IEA; EIA; World Energy Council; BP Energy Outlook; OECD Energy",
+    "l1": {
+      "Fossil Fuels": [
+        "Upstream",
+        "Midstream",
+        "Downstream"
+      ],
+      "Renewable Energy": [
+        "Solar",
+        "Wind",
+        "Hydro"
+      ],
+      "Energy Generation": [
+        "Thermal Power",
+        "Renewable Plants",
+        "Distributed Generation"
+      ],
+      "Energy Storage": [
+        "Battery Storage",
+        "Grid Storage",
+        "Hydrogen"
+      ],
+      "Energy Trading": [
+        "Power Trading",
+        "Oil & Gas Trading",
+        "Carbon Credits"
+      ],
+      "Energy Services": [
+        "EPC",
+        "O&M Services",
+        "Energy Efficiency"
+      ]
+    }
+  },
+  "Utilities": {
+    "source": "IEA Power; World Bank Utilities; OECD Utilities; EEI; AWWA",
+    "l1": {
+      "Electricity Utilities": [
+        "Generation",
+        "Transmission",
+        "Distribution"
+      ],
+      "Water Utilities": [
+        "Water Supply",
+        "Treatment",
+        "Distribution"
+      ],
+      "Gas Utilities": [
+        "Distribution",
+        "Transmission",
+        "Storage"
+      ],
+      "Waste Management": [
+        "Collection",
+        "Recycling",
+        "Waste-to-Energy"
+      ],
+      "Utility Infrastructure": [
+        "Grids",
+        "Pipelines",
+        "Utility Facilities"
+      ]
+    }
+  },
+  "Transportation & Mobility": {
+    "source": "OECD Transport; IATA; UITP; World Bank Transport; McKinsey Transport",
+    "l1": {
+      "Passenger Transport": [
+        "Airlines",
+        "Rail/Metro",
+        "Urban Transit"
+      ],
+      "Freight Transport": [
+        "Ocean Freight",
+        "Trucking",
+        "Rail Freight"
+      ],
+      "Mobility Services": [
+        "Ride-Hailing",
+        "Car-Sharing",
+        "Micro-Mobility"
+      ],
+      "Fleet Management": [
+        "Telematics",
+        "Maintenance",
+        "Routing"
+      ],
+      "Transportation Infrastructure": [
+        "Roads",
+        "Airports",
+        "Ports"
+      ],
+      "Transportation Technology": [
+        "Navigation",
+        "Ticketing",
+        "Traffic Management"
+      ]
+    }
+  },
+  "Automotive": {
+    "source": "OICA; OECD Automotive; SAE International; S&P Global Mobility; McKinsey Automotive",
+    "l1": {
+      "Vehicle Manufacturing": [
+        "Passenger Vehicles",
+        "Commercial Vehicles",
+        "Assembly"
+      ],
+      "Auto Parts & Components": [
+        "Powertrain",
+        "Electronics",
+        "Chassis"
+      ],
+      "Dealerships & Sales": [
+        "New Sales",
+        "Used Sales",
+        "Financing"
+      ],
+      "Aftermarket Services": [
+        "Maintenance",
+        "Spare Parts",
+        "Accessories"
+      ],
+      "Electric Vehicles": [
+        "EV Manufacturing",
+        "Batteries",
+        "Charging"
+      ],
+      "Automotive Technology": [
+        "ADAS",
+        "Connected Car",
+        "Autonomous Systems"
+      ]
+    }
+  },
+  "Manufacturing": {
+    "source": "OECD Manufacturing; UNIDO; World Economic Forum Manufacturing; ISO",
+    "l1": {
+      "Discrete Manufacturing": [
+        "Machinery",
+        "Electronics",
+        "Automotive"
+      ],
+      "Process Manufacturing": [
+        "Chemicals",
+        "Food Processing",
+        "Pharmaceuticals"
+      ],
+      "Industrial Equipment": [
+        "Machine Tools",
+        "Robotics",
+        "Material Handling"
+      ],
+      "Contract Manufacturing": [
+        "EMS",
+        "ODM/OEM",
+        "Co-Manufacturing"
+      ],
+      "Industrial Automation": [
+        "PLCs",
+        "SCADA",
+        "Industrial IoT"
+      ]
+    }
+  },
+  "Consumer Goods (CPG)": {
+    "source": "OECD Consumer Goods; Nielsen; Euromonitor; McKinsey CPG",
+    "l1": {
+      "Food CPG": [
+        "Packaged Foods",
+        "Snacks",
+        "Beverages"
+      ],
+      "Personal Care": [
+        "Skin Care",
+        "Hair Care",
+        "Cosmetics"
+      ],
+      "Household Products": [
+        "Cleaning",
+        "Laundry",
+        "Paper Goods"
+      ],
+      "Consumer Electronics": [
+        "Mobile Devices",
+        "Audio/Video",
+        "Wearables"
+      ],
+      "Durable Goods": [
+        "Furniture",
+        "Appliances",
+        "Home Improvement"
+      ]
+    }
+  },
+  "Retail & E-commerce": {
+    "source": "OECD Retail Trade; NRF; eMarketer; McKinsey Retail",
+    "l1": {
+      "Physical Retail": [
+        "Big Box Stores",
+        "Specialty Stores",
+        "Convenience Stores"
+      ],
+      "Online Retail": [
+        "Marketplace Retail",
+        "DTC Brands",
+        "Social Commerce"
+      ],
+      "Omnichannel Retail": [
+        "Click & Collect",
+        "Unified Inventory",
+        "Cross-Channel CX"
+      ],
+      "Retail Services": [
+        "Merchandising",
+        "Store Operations",
+        "Customer Support"
+      ],
+      "Retail Technology": [
+        "POS Systems",
+        "Retail Analytics",
+        "Inventory Software"
+      ]
+    }
+  },
+  "Wholesale & Distribution": {
+    "source": "OECD Wholesale Trade; MDM Analytics; Gartner Supply Chain; McKinsey Supply Chain",
+    "l1": {
+      "Product Wholesaling": [
+        "Consumer Goods",
+        "Industrial Goods",
+        "Agricultural Products"
+      ],
+      "B2B Distribution": [
+        "Industrial Distribution",
+        "Medical Distribution",
+        "IT Distribution"
+      ],
+      "Import / Export": [
+        "Trading Houses",
+        "Customs Brokerage",
+        "Global Sourcing"
+      ],
+      "Distribution Logistics": [
+        "Warehousing",
+        "Cross-Docking",
+        "Order Fulfillment"
+      ],
+      "Trade Services": [
+        "Trade Finance",
+        "Compliance",
+        "Documentation"
+      ]
+    }
+  },
+  "Healthcare": {
+    "source": "WHO; OECD Health; World Bank Health; McKinsey Health",
+    "l1": {
+      "Healthcare Providers": [
+        "Hospitals",
+        "Clinics",
+        "Ambulatory Care"
+      ],
+      "Diagnostics": [
+        "Imaging",
+        "Laboratory Testing",
+        "Pathology"
+      ],
+      "Care Delivery": [
+        "Primary Care",
+        "Specialty Care",
+        "Home Care"
+      ],
+      "Health Services": [
+        "Care Management",
+        "Billing",
+        "Administration"
+      ],
+      "Healthcare Technology": [
+        "EHR Systems",
+        "Telemedicine",
+        "Health Analytics"
+      ]
+    }
+  },
+  "Pharmaceuticals & Biotech": {
+    "source": "FDA; EMA; PhRMA; OECD Pharma; Nature Reviews Drug Discovery",
+    "l1": {
+      "Drug Discovery": [
+        "Small Molecules",
+        "Biologics",
+        "Gene Therapy"
+      ],
+      "Drug Manufacturing": [
+        "API Production",
+        "Formulation",
+        "Packaging"
+      ],
+      "Biotechnology": [
+        "Industrial Biotech",
+        "Medical Biotech",
+        "Ag Biotech"
+      ],
+      "Clinical Research": [
+        "Clinical Trials",
+        "CRO Services",
+        "Regulatory Affairs"
+      ],
+      "Pharma Services": [
+        "Distribution",
+        "Market Access",
+        "Medical Affairs"
+      ]
+    }
+  },
+  "Medical Devices": {
+    "source": "FDA Medical Devices; ISO; AdvaMed; OECD MedTech",
+    "l1": {
+      "Diagnostic Devices": [
+        "Imaging Devices",
+        "IVD",
+        "Point-of-Care"
+      ],
+      "Therapeutic Devices": [
+        "Implants",
+        "Drug Delivery Devices",
+        "Therapy Equipment"
+      ],
+      "Surgical Equipment": [
+        "Minimally Invasive",
+        "Robotic Surgery",
+        "Surgical Tools"
+      ],
+      "Monitoring Devices": [
+        "Patient Monitoring",
+        "Wearables",
+        "Remote Monitoring"
+      ],
+      "Device Manufacturing": [
+        "OEM Manufacturing",
+        "Component Manufacturing",
+        "Assembly"
+      ]
+    }
+  },
+  "Financial Services": {
+    "source": "IMF; World Bank Finance; BIS; OECD Financial Markets; CFA Institute",
+    "l1": {
+      "Asset Management": [
+        "Mutual Funds",
+        "ETFs",
+        "Alternative Assets"
+      ],
+      "Wealth Management": [
+        "Private Banking",
+        "Financial Planning",
+        "Robo-Advisory"
+      ],
+      "Lending Services": [
+        "Consumer Lending",
+        "SME Lending",
+        "Mortgage Lending"
+      ],
+      "Financial Advisory": [
+        "M&A Advisory",
+        "Corporate Finance",
+        "Restructuring"
+      ],
+      "Financial Technology": [
+        "Digital Banking",
+        "WealthTech",
+        "Lending Platforms"
+      ]
+    }
+  },
+  "Banking": {
+    "source": "BIS; IMF; World Bank; OECD Banking; McKinsey Banking",
+    "l1": {
+      "Retail Banking": [
+        "Deposits",
+        "Consumer Loans",
+        "Cards"
+      ],
+      "Commercial Banking": [
+        "SME Banking",
+        "Corporate Lending",
+        "Treasury Services"
+      ],
+      "Investment Banking": [
+        "Capital Markets",
+        "Advisory",
+        "Underwriting"
+      ],
+      "Digital Banking": [
+        "Neobanks",
+        "Mobile Banking",
+        "API Banking"
+      ],
+      "Banking Infrastructure": [
+        "Core Banking",
+        "Payments Infrastructure",
+        "Compliance Systems"
+      ]
+    }
+  },
+  "Insurance": {
+    "source": "OECD Insurance; Swiss Re Institute; Munich Re; NAIC",
+    "l1": {
+      "Life Insurance": [
+        "Term Life",
+        "Whole Life",
+        "Annuities"
+      ],
+      "Health Insurance": [
+        "Private Health",
+        "Managed Care",
+        "Supplemental"
+      ],
+      "Property & Casualty": [
+        "Auto",
+        "Home",
+        "Commercial"
+      ],
+      "Reinsurance": [
+        "Treaty Reinsurance",
+        "Facultative Reinsurance",
+        "Retrocession"
+      ],
+      "Insurance Technology": [
+        "InsurTech Platforms",
+        "Claims Automation",
+        "Underwriting AI"
+      ]
+    }
+  },
+  "Payments": {
+    "source": "BIS; Federal Reserve Payments; OECD Payments; Visa; Mastercard",
+    "l1": {
+      "Digital Payments": [
+        "Mobile Wallets",
+        "Online Payments",
+        "QR Payments"
+      ],
+      "Card Networks": [
+        "Credit Cards",
+        "Debit Cards",
+        "Prepaid Cards"
+      ],
+      "Payment Processing": [
+        "Merchant Acquiring",
+        "Gateway Services",
+        "Settlement"
+      ],
+      "Cross-border Payments": [
+        "Remittances",
+        "FX Payments",
+        "International Transfers"
+      ],
+      "Payment Infrastructure": [
+        "Clearing",
+        "Settlement",
+        "Fraud Prevention"
+      ]
+    }
+  },
+  "Capital Markets / Investing": {
+    "source": "OECD Capital Markets; CFA Institute; NYSE; NASDAQ; S&P Global",
+    "l1": {
+      "Public Markets": [
+        "Equities",
+        "Fixed Income",
+        "Derivatives"
+      ],
+      "Private Equity": [
+        "Buyouts",
+        "Growth Equity",
+        "Secondaries"
+      ],
+      "Venture Capital": [
+        "Seed",
+        "Early Stage",
+        "Late Stage"
+      ],
+      "Trading Platforms": [
+        "Exchanges",
+        "Brokerage Platforms",
+        "Trading Software"
+      ],
+      "Investment Services": [
+        "Research",
+        "Custody",
+        "Fund Administration"
+      ]
+    }
+  },
+  "Technology (Broad)": {
+    "source": "OECD Digital Economy; Gartner; IDC; World Economic Forum",
+    "l1": {
+      "IT Infrastructure": [
+        "Data Centers",
+        "Cloud Infrastructure",
+        "Enterprise Networking"
+      ],
+      "Platforms & Ecosystems": [
+        "Operating Systems",
+        "Cloud Platforms",
+        "Marketplace Platforms"
+      ],
+      "Emerging Technologies": [
+        "AI",
+        "Blockchain",
+        "Quantum Computing"
+      ],
+      "Developer Tools": [
+        "IDEs",
+        "APIs",
+        "DevOps Tools"
+      ],
+      "Technology Services": [
+        "IT Services",
+        "Managed Services",
+        "Systems Integration"
+      ]
+    }
+  },
+  "Software": {
+    "source": "OECD Software & IT Services; Gartner; Y Combinator; Andreessen Horowitz",
+    "l1": {
+      "Horizontal Software": [
+        "CRM",
+        "ERP",
+        "Accounting Software"
+      ],
+      "Vertical Software": [
+        "HealthTech Software",
+        "FinTech Software",
+        "PropTech Software"
+      ],
+      "Infrastructure Software": [
+        "Databases",
+        "Middleware",
+        "Operating Systems"
+      ],
+      "Developer Software": [
+        "DevOps",
+        "Testing Tools",
+        "Version Control"
+      ],
+      "Enterprise Applications": [
+        "HR Software",
+        "Supply Chain Software",
+        "BI Software"
+      ]
+    }
+  },
+  "Hardware": {
+    "source": "OECD Electronics; IEEE; SEMI; Gartner",
+    "l1": {
+      "Consumer Hardware": [
+        "Smartphones",
+        "PCs",
+        "Wearables"
+      ],
+      "Industrial Hardware": [
+        "Industrial Machines",
+        "Sensors",
+        "Controllers"
+      ],
+      "Networking Equipment": [
+        "Routers",
+        "Switches",
+        "5G Equipment"
+      ],
+      "Semiconductors": [
+        "Logic Chips",
+        "Memory Chips",
+        "Power Semiconductors"
+      ],
+      "Embedded Systems": [
+        "IoT Devices",
+        "Automotive Embedded",
+        "Industrial Embedded"
+      ]
+    }
+  },
+  "Telecommunications": {
+    "source": "ITU; OECD Telecom; GSMA; Ericsson Mobility Report",
+    "l1": {
+      "Mobile Networks": [
+        "4G",
+        "5G",
+        "Mobile Infrastructure"
+      ],
+      "Fixed Networks": [
+        "Fiber",
+        "Cable",
+        "DSL"
+      ],
+      "Internet Services": [
+        "ISPs",
+        "Content Delivery",
+        "Hosting"
+      ],
+      "Network Infrastructure": [
+        "Towers",
+        "Subsea Cables",
+        "Backhaul"
+      ],
+      "Telecom Services": [
+        "Voice",
+        "Data Services",
+        "Enterprise Telecom"
+      ]
+    }
+  },
+  "Media & Entertainment": {
+    "source": "OECD Media & Culture; Nielsen; PwC Entertainment Outlook",
+    "l1": {
+      "Digital Media": [
+        "Streaming",
+        "Online Publishing",
+        "Social Media"
+      ],
+      "Film & Television": [
+        "Film Production",
+        "TV Production",
+        "Distribution"
+      ],
+      "Music & Audio": [
+        "Music Streaming",
+        "Podcasts",
+        "Audio Production"
+      ],
+      "Publishing": [
+        "Books",
+        "News Media",
+        "Magazines"
+      ],
+      "Media Platforms": [
+        "OTT Platforms",
+        "Ad-Supported Media",
+        "Creator Platforms"
+      ]
+    }
+  },
+  "Gaming": {
+    "source": "OECD Digital Games; Newzoo; ESA; Nielsen",
+    "l1": {
+      "Mobile Gaming": [
+        "Casual Games",
+        "Mid-Core Games",
+        "Hypercasual"
+      ],
+      "PC & Console Gaming": [
+        "AAA Games",
+        "Indie Games",
+        "Console Platforms"
+      ],
+      "Online Gaming": [
+        "MMOs",
+        "Live-Service Games",
+        "Cloud Gaming"
+      ],
+      "Esports": [
+        "Professional Teams",
+        "Tournaments",
+        "Streaming"
+      ],
+      "Game Development Tools": [
+        "Game Engines",
+        "Asset Marketplaces",
+        "Dev SDKs"
+      ]
+    }
+  },
+  "Advertising & Marketing": {
+    "source": "OECD Advertising; WARC; IAB; Nielsen Ad Intel",
+    "l1": {
+      "Digital Advertising": [
+        "Search Ads",
+        "Display Ads",
+        "Video Ads"
+      ],
+      "Performance Marketing": [
+        "Affiliate Marketing",
+        "Paid Social",
+        "Conversion Optimization"
+      ],
+      "Brand Marketing": [
+        "Brand Strategy",
+        "Creative",
+        "Campaign Management"
+      ],
+      "Marketing Services": [
+        "Agencies",
+        "Consulting",
+        "Outsourced Marketing"
+      ],
+      "Marketing Technology": [
+        "AdTech",
+        "MarTech",
+        "Analytics Platforms"
+      ]
+    }
+  },
+  "Education": {
+    "source": "UNESCO; OECD Education; World Bank Education; HolonIQ",
+    "l1": {
+      "K-12 Education": [
+        "Public Schools",
+        "Private Schools",
+        "Curriculum Providers"
+      ],
+      "Higher Education": [
+        "Universities",
+        "Colleges",
+        "Research Institutions"
+      ],
+      "Professional Training": [
+        "Corporate Training",
+        "Certification Programs",
+        "Upskilling"
+      ],
+      "Online Learning": [
+        "MOOCs",
+        "Learning Platforms",
+        "Tutoring"
+      ],
+      "Education Technology": [
+        "LMS",
+        "Assessment Tools",
+        "Virtual Classrooms"
+      ]
+    }
+  },
+  "Professional Services": {
+    "source": "OECD Professional Services; McKinsey; BCG; Bain",
+    "l1": {
+      "Consulting": [
+        "Management Consulting",
+        "IT Consulting",
+        "Strategy Advisory"
+      ],
+      "Accounting": [
+        "Audit",
+        "Tax Services",
+        "Bookkeeping"
+      ],
+      "Advisory Services": [
+        "Risk Advisory",
+        "Valuation",
+        "Corporate Advisory"
+      ],
+      "Outsourcing": [
+        "BPO",
+        "KPO",
+        "ITO"
+      ],
+      "Professional Technology": [
+        "Practice Management",
+        "Automation Tools",
+        "Analytics"
+      ]
+    }
+  },
+  "Legal": {
+    "source": "American Bar Association; OECD Legal Services; Thomson Reuters Legal",
+    "l1": {
+      "Legal Services": [
+        "Law Firms",
+        "In-House Counsel",
+        "Legal Outsourcing"
+      ],
+      "Corporate Law": [
+        "M&A",
+        "Corporate Governance",
+        "Securities Law"
+      ],
+      "Litigation": [
+        "Civil Litigation",
+        "Arbitration",
+        "Dispute Resolution"
+      ],
+      "Compliance Services": [
+        "Regulatory Compliance",
+        "Risk Management",
+        "Reporting"
+      ],
+      "Legal Technology": [
+        "Contract Management",
+        "eDiscovery",
+        "Legal Automation"
+      ]
+    }
+  },
+  "HR & Recruiting": {
+    "source": "OECD Labour; SHRM; Gartner HR; LinkedIn Economic Graph",
+    "l1": {
+      "Talent Acquisition": [
+        "Recruitment Agencies",
+        "Executive Search",
+        "Campus Recruiting"
+      ],
+      "Workforce Management": [
+        "Scheduling",
+        "Time & Attendance",
+        "Labor Optimization"
+      ],
+      "Payroll & Benefits": [
+        "Payroll Processing",
+        "Benefits Administration",
+        "Compensation"
+      ],
+      "HR Services": [
+        "HR Outsourcing",
+        "Compliance Services",
+        "Employee Relations"
+      ],
+      "HR Technology": [
+        "HRIS",
+        "Talent Management Systems",
+        "People Analytics"
+      ]
+    }
+  },
+  "Security & Defense": {
+    "source": "OECD Defense; SIPRI; NATO; RAND",
+    "l1": {
+      "Physical Security": [
+        "Access Control",
+        "Surveillance",
+        "Perimeter Security"
+      ],
+      "Cybersecurity": [
+        "Network Security",
+        "Endpoint Security",
+        "Cloud Security"
+      ],
+      "Defense Systems": [
+        "Weapons Systems",
+        "Command & Control",
+        "Defense Electronics"
+      ],
+      "Intelligence Services": [
+        "Threat Intelligence",
+        "Geospatial Intelligence",
+        "Signals Intelligence"
+      ],
+      "Security Technology": [
+        "Biometrics",
+        "Identity Management",
+        "Security Platforms"
+      ]
+    }
+  },
+  "Government / Public Sector": {
+    "source": "OECD Public Governance; World Bank; IMF; UN Public Administration",
+    "l1": {
+      "Public Administration": [
+        "Central Government",
+        "Local Government",
+        "Agencies"
+      ],
+      "Public Services": [
+        "Healthcare Services",
+        "Education Services",
+        "Social Services"
+      ],
+      "Defense & Safety": [
+        "Military",
+        "Police",
+        "Emergency Services"
+      ],
+      "Civic Infrastructure": [
+        "Public Buildings",
+        "Smart Cities",
+        "Urban Infrastructure"
+      ],
+      "GovTech": [
+        "Digital Government",
+        "Civic Platforms",
+        "Public IT Systems"
+      ]
+    }
+  },
+  "Tourism & Hospitality": {
+    "source": "UNWTO; OECD Tourism; WTTC; STR Global",
+    "l1": {
+      "Hotels & Lodging": [
+        "Hotels",
+        "Resorts",
+        "Short-Term Rentals"
+      ],
+      "Travel Services": [
+        "Travel Agencies",
+        "Tour Operators",
+        "Online Travel Agencies"
+      ],
+      "Food & Hospitality": [
+        "Restaurants",
+        "Catering",
+        "Food Service Operators"
+      ],
+      "Experience Providers": [
+        "Attractions",
+        "Tours",
+        "Events"
+      ],
+      "Hospitality Technology": [
+        "PMS",
+        "Booking Engines",
+        "Guest Experience Tech"
+      ]
+    }
+  },
+  "Fashion & Apparel": {
+    "source": "OECD Textile, Clothing & Footwear; UNIDO Apparel; Business of Fashion; McKinsey State of Fashion",
+    "l1": {
+      "Apparel Manufacturing": [
+        "Textiles",
+        "Garment Production",
+        "Footwear"
+      ],
+      "Fashion Brands": [
+        "Luxury Brands",
+        "Mass Market",
+        "DTC Brands"
+      ],
+      "Retail Fashion": [
+        "Online Fashion Retail",
+        "Brick & Mortar",
+        "Omnichannel Fashion"
+      ],
+      "Supply Chain": [
+        "Sourcing",
+        "Logistics",
+        "Inventory Management"
+      ],
+      "Fashion Technology": [
+        "Design Software",
+        "Virtual Try-On",
+        "Trend Analytics"
+      ]
+    }
+  },
+  "Logistics & Supply Chain": {
+    "source": "OECD Logistics; CSCMP; DHL Trend Radar; Gartner Supply Chain",
+    "l1": {
+      "Freight & Shipping": [
+        "Ocean Freight",
+        "Air Freight",
+        "Rail Freight"
+      ],
+      "Warehousing": [
+        "Storage",
+        "Fulfillment Centers",
+        "Cold Storage"
+      ],
+      "Last-Mile Delivery": [
+        "Courier Services",
+        "Urban Delivery",
+        "Parcel Networks"
+      ],
+      "Supply Chain Management": [
+        "Planning",
+        "Procurement",
+        "Demand Forecasting"
+      ],
+      "Logistics Technology": [
+        "TMS",
+        "WMS",
+        "Supply Chain Analytics"
+      ]
+    }
+  },
+  "Chemicals & Materials": {
+    "source": "OECD Chemicals & Plastics; UN ISIC C20–C22; ICIS",
+    "l1": {
+      "Basic Chemicals": [
+        "Petrochemicals",
+        "Inorganic Chemicals",
+        "Industrial Gases"
+      ],
+      "Specialty Chemicals": [
+        "Coatings",
+        "Adhesives",
+        "Performance Chemicals"
+      ],
+      "Advanced Materials": [
+        "Composites",
+        "Nanomaterials",
+        "Smart Materials"
+      ],
+      "Industrial Materials": [
+        "Metals",
+        "Plastics",
+        "Construction Materials"
+      ],
+      "Materials Processing": [
+        "Refining",
+        "Compounding",
+        "Material Treatment"
+      ]
+    }
+  },
+  "Mining": {
+    "source": "UN Statistics ISIC B; World Bank Extractives; ICMM; USGS",
+    "l1": {
+      "Mineral Extraction": [
+        "Surface Mining",
+        "Underground Mining",
+        "Quarrying"
+      ],
+      "Resource Processing": [
+        "Crushing",
+        "Smelting",
+        "Refining"
+      ],
+      "Exploration": [
+        "Geological Survey",
+        "Drilling",
+        "Sampling"
+      ],
+      "Mining Services": [
+        "Engineering Services",
+        "Equipment Services",
+        "Maintenance"
+      ],
+      "Mining Technology": [
+        "Automation",
+        "Remote Operations",
+        "Mine Analytics"
+      ]
+    }
+  },
+  "Aerospace": {
+    "source": "OECD Aerospace & Defense; UN ISIC C30; Boeing; Airbus",
+    "l1": {
+      "Aircraft Manufacturing": [
+        "Commercial Aircraft",
+        "Military Aircraft",
+        "Components"
+      ],
+      "Space Systems": [
+        "Satellites",
+        "Launch Vehicles",
+        "Space Exploration"
+      ],
+      "Defense Aerospace": [
+        "Defense Aircraft",
+        "Missile Systems",
+        "Aerospace Defense"
+      ],
+      "Maintenance Services": [
+        "MRO",
+        "Spare Parts",
+        "Lifecycle Services"
+      ],
+      "Aerospace Technology": [
+        "Avionics",
+        "Propulsion",
+        "Flight Systems"
+      ]
+    }
+  },
+  "Environmental / Climate": {
+    "source": "UNEP; IPCC; OECD Environment; World Resources Institute",
+    "l1": {
+      "Renewable Solutions": [
+        "Solar Solutions",
+        "Wind Solutions",
+        "Energy Efficiency"
+      ],
+      "Climate Services": [
+        "Carbon Advisory",
+        "Climate Risk",
+        "Sustainability Consulting"
+      ],
+      "Environmental Monitoring": [
+        "Air Monitoring",
+        "Water Monitoring",
+        "Soil Monitoring"
+      ],
+      "Carbon Management": [
+        "Carbon Accounting",
+        "Offsets",
+        "Emissions Trading"
+      ],
+      "Climate Technology": [
+        "CleanTech",
+        "Carbon Capture",
+        "Climate Analytics"
+      ]
+    }
+  },
+  "Non-profit / Social": {
+    "source": "World Bank; UNDP; OECD Social Impact; Stanford Social Innovation Review",
+    "l1": {
+      "NGOs": [
+        "International NGOs",
+        "Local NGOs",
+        "Advocacy Groups"
+      ],
+      "Foundations": [
+        "Private Foundations",
+        "Corporate Foundations",
+        "Grantmaking"
+      ],
+      "Social Enterprises": [
+        "Impact Businesses",
+        "B Corps",
+        "Hybrid Models"
+      ],
+      "Aid & Relief": [
+        "Humanitarian Aid",
+        "Disaster Relief",
+        "Development Aid"
+      ],
+      "Social Impact Technology": [
+        "Impact Measurement",
+        "Donor Platforms",
+        "Civic Tech"
+      ]
+    }
+  },
+  "Religion / Faith": {
+    "source": "Pew Research Center; Barna Group; World Council of Churches; Vatican Reports",
+    "l1": {
+      "Religious Institutions": [
+        "Churches",
+        "Mosques",
+        "Temples"
+      ],
+      "Faith Services": [
+        "Religious Education",
+        "Counseling",
+        "Community Services"
+      ],
+      "Community Organizations": [
+        "Faith-Based NGOs",
+        "Charities",
+        "Associations"
+      ],
+      "Media & Education": [
+        "Religious Media",
+        "Publishing",
+        "Education Programs"
+      ],
+      "Faith Technology": [
+        "Donation Platforms",
+        "Community Apps",
+        "Streaming Services"
+      ]
+    }
+  },
+  "Sports & Fitness": {
+    "source": "OECD Sports Satellite Accounts; FIFA; IOC; Deloitte Sports Business",
+    "l1": {
+      "Professional Sports": [
+        "Leagues",
+        "Teams",
+        "Event Management"
+      ],
+      "Fitness Services": [
+        "Gyms",
+        "Personal Training",
+        "Wellness Centers"
+      ],
+      "Sports Equipment": [
+        "Apparel",
+        "Gear",
+        "Footwear"
+      ],
+      "Wellness": [
+        "Nutrition",
+        "Mental Wellness",
+        "Recovery"
+      ],
+      "Sports Technology": [
+        "Wearables",
+        "Performance Analytics",
+        "Fan Engagement"
+      ]
+    }
+  }
+}

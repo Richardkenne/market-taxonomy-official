@@ -1,0 +1,44 @@
+<div><footer class="site-footer-enhanced">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4><span data-t="pages.footer-template.text.0001"></span></h4>
+            <p><span data-t="pages.footer-template.text.0002"></span></p>
+        </div>
+        <div class="footer-section">
+            <h4><span data-t="pages.footer-template.text.0003"></span></h4>
+            <ul>
+                <li><a href="global-investors.html"><span data-t="pages.footer-template.text.0004"></span></a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="https://github.com/Richardkenne/Market-taxonomy" target="_blank" rel="noopener"><span data-t="pages.footer-template.text.0005"></span></a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4><span data-t="pages.footer-template.text.0006"></span></h4>
+            <ul>
+                <li><span data-t="pages.footer-template.text.0007"></span></li>
+                <li><span data-t="pages.footer-template.text.0008"></span></li>
+                <li><span data-t="pages.footer-template.text.0009"></span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p><span id="current-date-footer"></span><span data-t="pages.footer-template.text.0010"></span></p>
+    </div>
+</footer>
+
+<script>
+// Footer date
+(function () {
+    var now = new Date();
+    var formatted = new Intl.DateTimeFormat("en-GB", {
+        year: "numeric",
+        month: "long",
+        day: "2-digit"
+    }).format(now);
+    var dateElement = document.getElementById("current-date-footer");
+    if (dateElement) {
+        dateElement.textContent = "Today, " + formatted + " - Richard Kennedy";
+    }
+})();
+</script>
+</div>

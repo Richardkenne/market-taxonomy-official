@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Problem Selection — Part B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .pb-header {
+            max-width: 600px;
+            margin: 0 auto 6px;
+            padding: 0 16px;
+            text-align: center;
+        }
+
+        .pb-context {
+            max-width: 560px;
+            margin: 0 auto 36px;
+            padding: 0 16px;
+            font-size: 0.82rem;
+            color: var(--text-tertiary);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .pb-market-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            background: var(--border-light);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 0.72rem;
+            color: var(--text-tertiary);
+            margin: 0 auto 24px;
+        }
+        .pb-market-pill .crumb {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .pb-market-pill .crumb.last {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        .pb-market-pill .sep {
+            margin: 0 5px;
+            font-size: 0.65rem;
+            color: var(--text-tertiary);
+            opacity: 0.7;
+        }
+
+        .pb-grid {
+            max-width: 600px;
+            margin: 0 auto 48px;
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .pb-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 1.5px solid transparent;
+            cursor: pointer;
+            transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+            text-align: left;
+            background: #fff;
+            user-select: none;
+        }
+        .pb-card:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+        .pb-card.selected {
+            box-shadow: 0 0 0 2px var(--card-accent), 0 4px 14px rgba(0,0,0,0.06);
+        }
+
+        .pb-card-num {
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            opacity: 0.5;
+            margin-bottom: 2px;
+        }
+        .pb-card-name {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+        .pb-card-desc {
+            font-size: 0.72rem;
+            color: var(--text-tertiary);
+            line-height: 1.4;
+            margin-top: 2px;
+        }
+
+        /* Color accents per card */
+        .pb-card-1  { --card-accent: #ef4444; background: #fff8f8; border-color: #fde8e8; }
+        .pb-card-2  { --card-accent: #f97316; background: #fff9f5; border-color: #fde8d8; }
+        .pb-card-3  { --card-accent: #f59e0b; background: #fffbf0; border-color: #fef3c7; }
+        .pb-card-4  { --card-accent: #84cc16; background: #f8fff0; border-color: #ecfccb; }
+        .pb-card-5  { --card-accent: #10b981; background: #f0fdf8; border-color: #d1fae5; }
+        .pb-card-6  { --card-accent: #06b6d4; background: #f0fdff; border-color: #cffafe; }
+        .pb-card-7  { --card-accent: #3b82f6; background: #f0f7ff; border-color: #dbeafe; }
+        .pb-card-8  { --card-accent: #6366f1; background: #f5f4ff; border-color: #e0e7ff; }
+        .pb-card-9  { --card-accent: #8b5cf6; background: #faf5ff; border-color: #ede9fe; }
+        .pb-card-10 { --card-accent: #ec4899; background: #fdf2f8; border-color: #fce7f3; }
+        .pb-card-11 { --card-accent: #f43f5e; background: #fff1f4; border-color: #ffe4e6; }
+        .pb-card-12 { --card-accent: #64748b; background: #f8fafc; border-color: #e2e8f0; }
+
+        .pb-card-1 .pb-card-num  { color: #ef4444; }
+        .pb-card-2 .pb-card-num  { color: #f97316; }
+        .pb-card-3 .pb-card-num  { color: #f59e0b; }
+        .pb-card-4 .pb-card-num  { color: #84cc16; }
+        .pb-card-5 .pb-card-num  { color: #10b981; }
+        .pb-card-6 .pb-card-num  { color: #06b6d4; }
+        .pb-card-7 .pb-card-num  { color: #3b82f6; }
+        .pb-card-8 .pb-card-num  { color: #6366f1; }
+        .pb-card-9 .pb-card-num  { color: #8b5cf6; }
+        .pb-card-10 .pb-card-num { color: #ec4899; }
+        .pb-card-11 .pb-card-num { color: #f43f5e; }
+        .pb-card-12 .pb-card-num { color: #64748b; }
+
+        /* Selected state */
+        .pb-card.primary {
+            border-color: var(--card-accent) !important;
+            box-shadow: 0 0 0 2px var(--card-accent), 0 4px 14px rgba(0,0,0,0.06);
+        }
+        .pb-card.secondary {
+            border-color: var(--card-accent) !important;
+            box-shadow: 0 0 0 1.5px var(--card-accent);
+            opacity: 0.8;
+        }
+        .pb-card.primary .pb-card-name,
+        .pb-card.secondary .pb-card-name { color: var(--card-accent); }
+
+        /* Badge inside card */
+        .pb-card-badge {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 2px 7px;
+            border-radius: 10px;
+            gap: 4px;
+            align-items: center;
+        }
+        .pb-card.primary .pb-card-badge,
+        .pb-card.secondary .pb-card-badge { display: inline-flex; }
+        .pb-card.primary .pb-card-badge {
+            background: var(--card-accent);
+            color: #fff;
+        }
+        .pb-card.secondary .pb-card-badge {
+            background: transparent;
+            border: 1px solid var(--card-accent);
+            color: var(--card-accent);
+        }
+
+        /* Toast */
+        #pb-toast {
+            position: fixed;
+            bottom: 28px;
+            left: 50%;
+            transform: translateX(-50%) translateY(12px);
+            background: #1a1a1a;
+            color: #fff;
+            font-size: 0.78rem;
+            padding: 8px 18px;
+            border-radius: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s, transform 0.2s;
+            white-space: nowrap;
+            z-index: 100;
+        }
+        #pb-toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* CTA */
+        .pb-cta {
+            max-width: 600px;
+            margin: 0 auto 48px;
+            padding: 0 16px;
+            text-align: center;
+        }
+        .pb-cta .btn-primary {
+            opacity: 0.35;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+        .pb-cta .btn-primary.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="#" class="back-link" id="pb-back-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back
+            </a>
+        </div>
+
+        <!-- TITLE -->
+        <header class="market-page-header">
+            <div style="text-align:center; margin-bottom:12px;">
+                <span class="part-badge part-badge-b"><span class="part-badge-dot"></span>Part B — Problem</span>
+            </div>
+            <div class="market-badge">
+                <span class="market-title">Core Problem Selection</span>
+            </div>
+        </header>
+
+        <!-- SELECTED MARKET BREADCRUMB -->
+        <div style="text-align:center; margin-bottom:20px;">
+            <div class="pb-market-pill" id="market-breadcrumb">
+                <span class="crumb last">—</span>
+            </div>
+        </div>
+
+        <!-- CONTEXT -->
+        <p class="pb-context">
+            These are recurring structural problems observed across markets. Select the one that best describes the core friction your product addresses.
+        </p>
+
+        <!-- HOW TO DEFINE A PROBLEM LINK -->
+        <div style="text-align:center; margin: -20px auto 28px;">
+            <a href="how-to-define-problems.html" style="font-size:0.78rem; color:var(--text-tertiary); text-decoration:none; display:inline-flex; align-items:center; gap:5px; transition:color 0.15s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-tertiary)'">
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M8 7v5M8 5v.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                How to define a monetizable problem
+            </a>
+        </div>
+
+        <!-- 12 PROBLEM CARDS -->
+        <div class="pb-grid">
+
+            <button class="pb-card pb-card-1" data-problem="Time / Speed">
+                <span class="pb-card-badge"></span>
+                <span class="pb-card-num">01</span>
+                <span class="pb-card-name">Time / Speed</span>
+                <span class="pb-card-desc">Processes are too slow; delays destroy value or create friction</span>
+            </button>
+
+            <button class="pb-card pb-card-2" data-problem="Cost / Leakage">
+                <span class="pb-card-badge"></span>
+                <span class="pb-card-num">02</span>
+                <span class="pb-card-name">Cost / Leakage</span>
+                <span class="pb-card-desc">Money is wasted, margins eroded, or fees are opaque</span>
+            </button>
+
+            <button class="pb-card pb-card-3" data-problem="Coordination">
+                <span class="pb-card-badge"></span>
+                <span class="pb-card-num">03</span>
+                <span class="pb-card-name">Coordination</span>
+                <span class="pb-card-desc">Multiple parties can't sync efficiently — handoffs break</span>
+            </button>
+
+            <button class="pb-card pb-card-4" data-problem="Visibility / Information">
+                <span class="pb-card-badge"></span>
+                <span class="pb-card-num">04</span>
+                <span class="pb-card-name">Visibility / Information</span>
+                <span class="pb-card-desc">Data is missing, siloed, or arrives too late to act on</span>
+            </button>
+
+            <button class="pb-card pb-card-5" data-problem="Risk / Compliance">
+                <span class="pb-card-badge"></span>
+                <span class="pb-card-num">05</span>
+                <span class="pb-card-name">Risk / Compliance</span>
+                <span class="pb-card-desc">Regulatory burden, liability exposure, or audit failures</span>
+            </button>
+
+            <button class="pb-card pb-card-6" data-problem="Capacity / Utilization">
+                <span class="pb-card-badge"></span>
+                <span class="pb-card-num">06</span>
+                <span class="pb-card-name">Capacity / Utilization</span>
+                <span class="pb-card-desc">Assets sit idle or are over-strained — poor allocation</span>
+            </button>
+
+            <button class="pb-card pb-card-7" data-problem="Access / Availability">
+                <span class="pb-card-badge"></span>
+                <span class="pb-card-num">07</span>
+                <span class="pb-card-name">Access / Availability</span>
+                <span class="pb-card-desc">Products, services, or capital are hard to reach</span>
+            </button>
+
+            <button class="pb-card pb-card-8" data-problem="Quality / Reliability">
+                <span class="pb-card-badge"></span>
+                <span class="pb-card-num">08</span>
+                <span class="pb-card-name">Quality / Reliability</span>
+                <span class="pb-card-desc">Output is inconsistent, error-prone, or unpredictable</span>
+            </button>
+
+            <button class="pb-card pb-card-9" data-problem="Trust / Verification">
+                <span class="pb-card-badge"></span>
+                <span class="pb-card-num">09</span>
+                <span class="pb-card-name">Trust / Verification</span>
+                <span class="pb-card-desc">Identity, credentials, or claims can't be verified at scale</span>
+            </button>
+
+            <button class="pb-card pb-card-10" data-problem="Pricing / Discovery">
+                <span class="pb-card-badge"></span>
+                <span class="pb-card-num">10</span>
+                <span class="pb-card-name">Pricing / Discovery</span>
+                <span class="pb-card-desc">Prices are opaque, manipulated, or impossible to benchmark</span>
+            </button>
+
+            <button class="pb-card pb-card-11" data-problem="Incentives / Alignment">
+                <span class="pb-card-badge"></span>
+                <span class="pb-card-num">11</span>
+                <span class="pb-card-name">Incentives / Alignment</span>
+                <span class="pb-card-desc">Agent interests diverge — misaligned incentives cause bad outcomes</span>
+            </button>
+
+            <button class="pb-card pb-card-12" data-problem="Automation / Scale">
+                <span class="pb-card-badge"></span>
+                <span class="pb-card-num">12</span>
+                <span class="pb-card-name">Automation / Scale</span>
+                <span class="pb-card-desc">Manual workflows block growth — can't scale without headcount</span>
+            </button>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="pb-cta">
+            <button class="btn btn-primary btn-large" id="continue-btn">
+                Continue with selected problem →
+            </button>
+        </div>
+
+    </div>
+
+    <div id="pb-toast"></div>
+    <script src="content/t.js"></script>
+    <script>
+        // Back button — return to L3/L2 page, not Part C
+        const backBtn = document.getElementById('pb-back-btn');
+        const backUrl = localStorage.getItem('problem_back_url');
+        backBtn.href = backUrl || 'javascript:history.back()';
+
+        // Pre-select suggested problems from L3 context
+        const suggestedPrimary = localStorage.getItem('suggested_primary');
+        const suggestedSecondary = localStorage.getItem('suggested_secondary');
+        const selectedL3 = localStorage.getItem('selected_l3');
+
+        // Show selected market as breadcrumb
+        const marketRaw = localStorage.getItem('selected_market') || '—';
+        const parts = marketRaw.split(' — ');
+        const bc = document.getElementById('market-breadcrumb');
+        bc.innerHTML = parts.map((p, i) => {
+            const isLast = i === parts.length - 1;
+            const sep = i > 0 ? '<span class="sep">›</span>' : '';
+            return `${sep}<span class="crumb${isLast ? ' last' : ''}">${p}</span>`;
+        }).join('');
+
+        // Card selection — max 2 (primary + optional secondary)
+        const cards = document.querySelectorAll('.pb-card');
+        const continueBtn = document.getElementById('continue-btn');
+        let primary = null;   // card element
+        let secondary = null; // card element
+
+        function getBadge(card) { return card.querySelector('.pb-card-badge'); }
+
+        function setCardState(card, role) {
+            card.classList.remove('primary', 'secondary');
+            const badge = getBadge(card);
+            if (role === 'primary') {
+                card.classList.add('primary');
+                badge.textContent = '✓ Primary';
+            } else if (role === 'secondary') {
+                card.classList.add('secondary');
+                badge.textContent = '+ Secondary';
+            } else {
+                badge.textContent = '';
+            }
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('pb-toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            clearTimeout(t._timer);
+            t._timer = setTimeout(() => t.classList.remove('show'), 2000);
+        }
+
+        function updateCTA() {
+            continueBtn.classList.toggle('active', primary !== null);
+        }
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                // Toggle off if already selected
+                if (card === primary) {
+                    setCardState(primary, null);
+                    primary = secondary;
+                    secondary = null;
+                    if (primary) setCardState(primary, 'primary');
+                    updateCTA();
+                    return;
+                }
+                if (card === secondary) {
+                    setCardState(secondary, null);
+                    secondary = null;
+                    updateCTA();
+                    return;
+                }
+                // New selection
+                if (!primary) {
+                    primary = card;
+                    setCardState(primary, 'primary');
+                } else if (!secondary) {
+                    secondary = card;
+                    setCardState(secondary, 'secondary');
+                } else {
+                    // Replace secondary
+                    setCardState(secondary, null);
+                    secondary = card;
+                    setCardState(secondary, 'secondary');
+                    showToast('Max 2 selections — secondary replaced');
+                }
+                updateCTA();
+            });
+        });
+
+        // Auto pre-select based on L3 suggestion
+        if (suggestedPrimary) {
+            cards.forEach(card => {
+                if (card.dataset.problem === suggestedPrimary) {
+                    primary = card;
+                    setCardState(card, 'primary');
+                } else if (suggestedSecondary && card.dataset.problem === suggestedSecondary) {
+                    secondary = card;
+                    setCardState(card, 'secondary');
+                }
+            });
+            updateCTA();
+        }
+
+        continueBtn.addEventListener('click', () => {
+            if (!primary) return;
+            localStorage.setItem('primary_problem', primary.dataset.problem);
+            if (secondary) {
+                localStorage.setItem('secondary_problem', secondary.dataset.problem);
+            } else {
+                localStorage.removeItem('secondary_problem');
+            }
+            window.location.href = 'output-sheet.html';
+        });
+    </script>
+</body>
+</html>

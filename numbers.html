@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Taxonomy — Numbers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .num-context {
+            max-width: 560px;
+            margin: 0 auto 36px;
+            padding: 0 16px;
+            font-size: 0.82rem;
+            color: var(--text-tertiary);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .num-grid {
+            max-width: 600px;
+            margin: 0 auto 48px;
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .num-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 22px 20px;
+            border-radius: 10px;
+            border: 1.5px solid transparent;
+            text-align: left;
+            background: #fff;
+            transition: transform 0.12s ease, box-shadow 0.12s ease;
+        }
+
+        .num-card:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        /* Neutral — no color */
+        .num-card-l0,
+        .num-card-l1,
+        .num-card-l2,
+        .num-card-l3 {
+            background: #fff;
+            border-color: var(--border);
+        }
+
+        .num-card-level {
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: var(--text-tertiary);
+            margin-bottom: 2px;
+        }
+
+        .num-card-value {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: var(--text-primary);
+        }
+
+        .num-card-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            line-height: 1.3;
+            margin-top: 2px;
+        }
+
+        .num-card-desc {
+            font-size: 0.72rem;
+            color: var(--text-tertiary);
+            line-height: 1.4;
+            margin-top: 4px;
+        }
+
+        .num-cta {
+            max-width: 600px;
+            margin: 0 auto 48px;
+            padding: 0 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: stretch;
+        }
+
+        .num-cta a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+
+        .num-cta a.btn-outline {
+            background: #fff;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+        }
+        .num-cta a.btn-outline:hover {
+            border-color: var(--green);
+            color: var(--green);
+            box-shadow: 0 2px 8px rgba(61,191,160,0.1);
+        }
+
+        .num-cta a.btn-solid {
+            background: var(--text-primary);
+            color: #fff;
+            border: 1.5px solid transparent;
+        }
+        .num-cta a.btn-solid:hover {
+            background: #2b2b2b;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="index.html" class="home-link">Home</a></div>
+        <div class="back-nav">
+            <a href="index.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back
+            </a>
+        </div>
+
+        <!-- TITLE -->
+        <header class="market-page-header">
+            <div style="text-align:center; margin-bottom:12px;">
+                <span class="part-badge part-badge-b"><span class="part-badge-dot"></span>Part B — Numbers</span>
+            </div>
+            <div class="market-badge">
+                <span class="market-title">Taxonomy at a Glance</span>
+            </div>
+        </header>
+
+        <!-- CONTEXT -->
+        <p class="num-context">
+            The full market taxonomy spans 4 hierarchical levels — from broad macro markets down to investable niches. Each level narrows the opportunity space.
+        </p>
+
+        <!-- 4 LEVEL CARDS -->
+        <div class="num-grid" id="numbers-grid">
+            <!-- populated by JS below -->
+        </div>
+
+        <!-- CTA -->
+        <div class="num-cta">
+            <a href="macro-markets.html" class="btn-outline">Browse all 43 Macro Markets →</a>
+            <a href="problem-selection.html" class="btn-solid">Start Problem Analysis →</a>
+        </div>
+
+    </div>
+
+    <script src="content/taxonomy-numbers.js"></script>
+    <script src="content/t.js"></script>
+    <script>
+        const LEVEL_META = {
+            L0: { cls: 'num-card-l0', desc: 'Broad economic sectors (e.g. Healthcare, Fintech, Real Estate)' },
+            L1: { cls: 'num-card-l1', desc: 'Industry verticals within each macro market' },
+            L2: { cls: 'num-card-l2', desc: 'Functional segments within each sub-market' },
+            L3: { cls: 'num-card-l3', desc: 'Specific investable niches ready for problem mapping' }
+        };
+
+        const grid = document.getElementById('numbers-grid');
+        ['L0','L1','L2','L3'].forEach(level => {
+            const n = TAXONOMY_NUMBERS[level];
+            const meta = LEVEL_META[level];
+            if (!n || !meta) return;
+            const card = document.createElement('div');
+            card.className = 'num-card ' + meta.cls;
+            card.innerHTML = `
+                <span class="num-card-level">${level}</span>
+                <span class="num-card-value">${n.count}</span>
+                <span class="num-card-label">${n.label}</span>
+                <span class="num-card-desc">${meta.desc}</span>
+            `;
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
