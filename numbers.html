@@ -219,11 +219,6 @@
             </div>
         </div>
 
-        <!-- 4 LEVEL CARDS -->
-        <div class="num-grid" id="numbers-grid">
-            <!-- populated by JS below -->
-        </div>
-
         <!-- CTA -->
         <div class="num-cta">
 <a href="problem-selection.html" class="btn-solid">Start Problem Analysis →</a>
@@ -286,28 +281,6 @@
             }
         })();
 
-        const LEVEL_META = {
-            L0: { cls: 'num-card-l0', desc: 'Broad economic sectors (e.g. Healthcare, Fintech, Real Estate)' },
-            L1: { cls: 'num-card-l1', desc: 'Industry verticals within each macro market' },
-            L2: { cls: 'num-card-l2', desc: 'Functional segments within each sub-market' },
-            L3: { cls: 'num-card-l3', desc: 'Specific investable niches ready for problem mapping' }
-        };
-
-        const grid = document.getElementById('numbers-grid');
-        ['L0','L1','L2','L3'].forEach(level => {
-            const n = TAXONOMY_NUMBERS[level];
-            const meta = LEVEL_META[level];
-            if (!n || !meta) return;
-            const card = document.createElement('div');
-            card.className = 'num-card ' + meta.cls;
-            card.innerHTML = `
-                <span class="num-card-level">${level}</span>
-                <span class="num-card-value">${n.count}</span>
-                <span class="num-card-label">${n.label}</span>
-                <span class="num-card-desc">${meta.desc}</span>
-            `;
-            grid.appendChild(card);
-        });
     </script>
 </body>
 </html>
