@@ -941,6 +941,9 @@ function applyAiPrefillIfAny() {
     if (!selections.gtm && prefSel.gtm) selections.gtm = prefSel.gtm;
     if (!selections.validation_signal && prefSel.validation_signal) selections.validation_signal = prefSel.validation_signal;
 
+    // Remove homepage-hide from all wizard elements so they become visible
+    document.querySelectorAll(".homepage-hide").forEach(el => el.classList.remove("homepage-hide"));
+
     const prefillMode = localStorage.getItem("prefill_mode") || "auto";
     if (prefillMode === "step") {
         currentStep = 0;
