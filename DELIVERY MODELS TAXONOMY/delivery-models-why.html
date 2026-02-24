@@ -2,136 +2,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Delivery Models Are Finite</title>
+    <title>Why Delivery Models Are Universal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <style>
-        .doc-body {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 24px 24px 80px;
-        }
-        .doc-body h2 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin: 40px 0 12px;
-            letter-spacing: -0.01em;
-        }
-        .doc-body h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin: 28px 0 8px;
-            color: var(--text-primary, #111);
-        }
-        .doc-body p {
-            font-size: 0.9rem;
-            line-height: 1.75;
-            color: var(--text-secondary, #374151);
-            margin: 0 0 16px;
-        }
-        .doc-body ul {
-            margin: 0 0 16px;
-            padding-left: 20px;
-        }
-        .doc-body ul li {
-            font-size: 0.9rem;
-            line-height: 1.75;
-            color: var(--text-secondary, #374151);
-            margin-bottom: 4px;
-        }
+        .doc-body { max-width: 720px; margin: 0 auto; padding: 24px 24px 80px; }
+        .doc-body h2 { font-size: 1.3rem; font-weight: 700; margin: 40px 0 12px; letter-spacing: -0.01em; }
+        .doc-body h3 { font-size: 1rem; font-weight: 600; margin: 28px 0 8px; }
+        .doc-body p { font-size: 0.9rem; line-height: 1.75; color: var(--text-secondary, #374151); margin: 0 0 16px; }
+        .doc-body ul { margin: 0 0 16px; padding-left: 20px; }
+        .doc-body ul li { font-size: 0.9rem; line-height: 1.75; color: var(--text-secondary, #374151); margin-bottom: 4px; }
         .doc-body strong { color: var(--text-primary, #111); font-weight: 600; }
         .doc-body em { font-style: italic; }
-        .divider {
-            border: none;
-            border-top: 1px solid var(--border, #e5e7eb);
-            margin: 32px 0;
-        }
-        .exec-statement {
-            background: #f5f3ff;
-            border-left: 3px solid #7c3aed;
-            border-radius: 0 8px 8px 0;
-            padding: 16px 20px;
-            margin: 20px 0;
-        }
+        .divider { border: none; border-top: 1px solid var(--border, #e5e7eb); margin: 32px 0; }
+        .exec-statement { background: #f5f3ff; border-left: 3px solid #7c3aed; border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0; }
         .exec-statement p { margin: 0; color: #3b1f6e; }
-
-        .systems-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .systems-list li {
-            display: flex;
-            align-items: baseline;
-            gap: 12px;
-            font-size: 0.9rem;
-            line-height: 1.6;
-            color: var(--text-secondary, #374151);
-        }
-        .sys-num {
-            font-weight: 700;
-            color: #7c3aed;
-            min-width: 28px;
-        }
-
-        .ortho-box {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin: 16px 0 24px;
-        }
-        .ortho-card {
-            border-radius: 10px;
-            padding: 16px;
-        }
-        .ortho-card.bs {
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-        }
-        .ortho-card.dm {
-            background: #f5f3ff;
-            border: 1px solid #ddd6fe;
-        }
-        .ortho-card .label {
-            font-size: 0.68rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 6px;
-        }
+        .systems-list { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 8px; }
+        .systems-list li { display: flex; align-items: baseline; gap: 12px; font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary, #374151); }
+        .sys-num { font-weight: 700; color: #7c3aed; min-width: 28px; }
+        .ortho-box { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0 24px; }
+        .ortho-card { border-radius: 10px; padding: 16px; }
+        .ortho-card.bs { background: #eff6ff; border: 1px solid #bfdbfe; }
+        .ortho-card.dm { background: #f5f3ff; border: 1px solid #ddd6fe; }
+        .ortho-card .label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
         .ortho-card.bs .label { color: #2563eb; }
         .ortho-card.dm .label { color: #7c3aed; }
         .ortho-card p { font-size: 0.82rem; margin: 0; line-height: 1.5; }
-
-        .sources-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .sources-list li {
-            background: var(--surface, #fff);
-            border: 1px solid var(--border, #e5e7eb);
-            border-radius: 10px;
-            padding: 14px 18px;
-        }
+        .matrix-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin: 16px 0 24px; }
+        .matrix-table th { background: #f5f3ff; color: #6d28d9; font-weight: 700; padding: 8px 12px; text-align: left; border: 1px solid #ddd6fe; }
+        .matrix-table td { padding: 8px 12px; border: 1px solid #e5e7eb; vertical-align: top; line-height: 1.5; }
+        .matrix-table tr:nth-child(even) td { background: #fafafa; }
+        .sources-list { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 12px; }
+        .sources-list li { background: var(--surface, #fff); border: 1px solid var(--border, #e5e7eb); border-radius: 10px; padding: 14px 18px; }
         .sources-list li strong { display: block; margin-bottom: 2px; font-size: 0.88rem; }
         .sources-list li span { font-size: 0.8rem; color: var(--text-secondary, #6b7280); }
-
-        .final-rule {
-            background: #111;
-            color: #fff;
-            border-radius: 12px;
-            padding: 24px;
-            margin-top: 32px;
-        }
+        .final-rule { background: #111; color: #fff; border-radius: 12px; padding: 24px; margin-top: 32px; }
         .final-rule p { color: #d1d5db; margin: 0 0 12px; }
         .final-rule p:last-child { margin: 0; }
         .final-rule strong { color: #fff; }
@@ -152,15 +59,15 @@
                 <span class="part-badge" style="background:#f5f3ff; color:#7c3aed; border:1px solid #ddd6fe; border-radius:20px; padding:4px 14px; font-size:0.72rem; font-weight:700; letter-spacing:0.06em;">Foundation</span>
             </div>
             <h1 style="font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;">Delivery / Operating Models</h1>
-            <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto;">How value is delivered — not how money is made.</p>
+            <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto;">How value is delivered — not how money is made. Universal across digital, physical, and service businesses.</p>
         </header>
 
         <div class="doc-body">
 
             <h2>Executive Statement</h2>
             <div class="exec-statement">
-                <p><strong>Delivery Models describe how value reaches the user. They do not define markets, and they do not define how money enters the business.</strong></p>
-                <p style="margin-top: 10px;">Every company in the world delivers value through one or more Delivery / Operating Models. These models are structural, repeatable across industries, and independent of business systems.</p>
+                <p><strong>Delivery Models describe how value reaches the user. They apply equally to a SaaS startup, a Christmas ornament manufacturer, a law firm, and a Bitcoin fund.</strong></p>
+                <p style="margin-top:10px;">Every company in the world delivers value through one or more Delivery / Operating Models. These models are structural, repeatable across industries, and independent of business systems and markets.</p>
             </div>
 
             <hr class="divider">
@@ -182,27 +89,56 @@
             <hr class="divider">
 
             <h2>Why the number is finite</h2>
-            <p>Across industrial history, software evolution, enterprise IT, and platform economics, value has been delivered through a <strong>finite set of operational patterns</strong>.</p>
-            <p>New technologies change <strong>implementation</strong>, not <strong>structure</strong>. Cloud did not create a new delivery model category — it modernized existing ones.</p>
+            <p>Across industrial history, software evolution, enterprise IT, physical logistics, and service industries, value has always been delivered through a <strong>finite set of operational patterns</strong>.</p>
+            <p>New technologies change <strong>implementation</strong>, not <strong>structure</strong>. E-commerce did not create a new delivery model — it modernized Direct Physical. SaaS did not create a new category — it is a more efficient form of software delivery.</p>
 
             <hr class="divider">
 
-            <h2>The 12 Delivery / Operating Models</h2>
+            <h2>The 12 Universal Delivery / Operating Models</h2>
             <ul class="systems-list">
-                <li><span class="sys-num">01</span><span><strong>SaaS (Cloud Software)</strong> — multi-tenant software accessed via the web</span></li>
-                <li><span class="sys-num">02</span><span><strong>API-First Service</strong> — value consumed programmatically, UI optional</span></li>
-                <li><span class="sys-num">03</span><span><strong>On-Premise Software</strong> — installed and operated in the customer's environment</span></li>
-                <li><span class="sys-num">04</span><span><strong>Managed Service</strong> — software plus human operation on behalf of the client</span></li>
-                <li><span class="sys-num">05</span><span><strong>Platform / Ecosystem Delivery</strong> — core product extended by third-party developers</span></li>
-                <li><span class="sys-num">06</span><span><strong>Embedded Software</strong> — software integrated into hardware or external systems</span></li>
-                <li><span class="sys-num">07</span><span><strong>Desktop / Local Software</strong> — locally installed applications</span></li>
-                <li><span class="sys-num">08</span><span><strong>Mobile-Native App</strong> — primary experience delivered via mobile OS</span></li>
-                <li><span class="sys-num">09</span><span><strong>Data Feed / Data Access</strong> — structured datasets delivered via stream or batch</span></li>
-                <li><span class="sys-num">10</span><span><strong>Open-Core + Hosted</strong> — open-source core with managed hosting or enterprise layers</span></li>
-                <li><span class="sys-num">11</span><span><strong>Marketplace Infrastructure</strong> — infrastructure enabling transactions between third parties</span></li>
-                <li><span class="sys-num">12</span><span><strong>Hybrid Delivery</strong> — stable combination of multiple delivery models</span></li>
+                <li><span class="sys-num">01</span><span><strong>SaaS / Cloud Software</strong> — multi-tenant software accessed via browser</span></li>
+                <li><span class="sys-num">02</span><span><strong>API-First / Embedded Digital</strong> — value consumed programmatically, UI optional</span></li>
+                <li><span class="sys-num">03</span><span><strong>On-Premise / Installed Software</strong> — deployed in the customer's own environment</span></li>
+                <li><span class="sys-num">04</span><span><strong>Open-Core + Hosted</strong> — open-source core with commercial hosting or enterprise layers</span></li>
+                <li><span class="sys-num">05</span><span><strong>Direct Physical / D2C</strong> — goods shipped directly to the end customer</span></li>
+                <li><span class="sys-num">06</span><span><strong>Retail / In-store</strong> — products sold through physical retail locations</span></li>
+                <li><span class="sys-num">07</span><span><strong>On-demand / Last-mile</strong> — rapid physical delivery triggered by real-time order</span></li>
+                <li><span class="sys-num">08</span><span><strong>Wholesale / B2B Distribution</strong> — goods sold in bulk to businesses or distributors</span></li>
+                <li><span class="sys-num">09</span><span><strong>In-person / On-site Service</strong> — service delivered physically at client location or venue</span></li>
+                <li><span class="sys-num">10</span><span><strong>Remote / Virtual Service</strong> — service delivered entirely online</span></li>
+                <li><span class="sys-num">11</span><span><strong>Platform / Ecosystem Delivery</strong> — infrastructure extended by third parties</span></li>
+                <li><span class="sys-num">12</span><span><strong>Hybrid / Phygital</strong> — intentional blend of digital and physical delivery</span></li>
             </ul>
-            <p><strong>Hybrid is not a shortcut.</strong> It exists because real businesses rarely deliver value through a single form.</p>
+            <p><strong>Hybrid is not a shortcut.</strong> It exists because real businesses at scale rarely deliver value through a single form.</p>
+
+            <hr class="divider">
+
+            <h2>Business System × Delivery Model Matrix</h2>
+            <p>Any Business System can be paired with any Delivery Model. The two axes are <strong>orthogonal</strong>. Below are common real-world combinations:</p>
+
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th>Business System</th>
+                        <th>Common Delivery Models</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Subscription</td><td>SaaS, Mobile-Native, On-Premise</td><td>Netflix (SaaS), Adobe CC (desktop)</td></tr>
+                    <tr><td>Transaction Fee</td><td>Direct Physical, Retail, Wholesale</td><td>Ornament mfg (wholesale), Shopify (platform)</td></tr>
+                    <tr><td>Usage-Based</td><td>API-First, SaaS</td><td>AWS, Twilio</td></tr>
+                    <tr><td>Licensing / IP</td><td>Direct Physical, Retail, Remote Service</td><td>Hair brand (retail), Qualcomm (embedded)</td></tr>
+                    <tr><td>Marketplace</td><td>Platform / Ecosystem, On-demand</td><td>Amazon, Uber Eats</td></tr>
+                    <tr><td>Advertising</td><td>SaaS, Mobile-Native</td><td>Google, Meta</td></tr>
+                    <tr><td>Asset Ownership</td><td>Direct Physical, Wholesale, In-person</td><td>REITs, crypto funds, construction assets</td></tr>
+                    <tr><td>Service / Retainer</td><td>In-person, Remote, On-site</td><td>Law firms, contractors, consultants</td></tr>
+                    <tr><td>Performance / Outcome</td><td>Remote, In-person</td><td>Investment banks (IPOs), affiliate networks</td></tr>
+                    <tr><td>Data / Insight</td><td>API-First, SaaS</td><td>Bloomberg, Nielsen</td></tr>
+                    <tr><td>Platform / Ecosystem</td><td>Platform / Ecosystem, SaaS</td><td>Salesforce, App Store</td></tr>
+                    <tr><td>Hybrid / Stack</td><td>Hybrid / Phygital + any</td><td>Amazon, Microsoft, Nike</td></tr>
+                </tbody>
+            </table>
 
             <hr class="divider">
 
@@ -210,38 +146,36 @@
             <div class="ortho-box">
                 <div class="ortho-card bs">
                     <div class="label">Business Systems</div>
-                    <p>How money enters the firm.<br>e.g. Subscription</p>
+                    <p>How money enters the firm.<br>e.g. Service / Retainer</p>
                 </div>
                 <div class="ortho-card dm">
                     <div class="label">Delivery Models</div>
-                    <p>How value reaches the user.<br>e.g. SaaS</p>
+                    <p>How value reaches the user.<br>e.g. In-person / On-site</p>
                 </div>
             </div>
-            <p>The two are <strong>orthogonal</strong> and must never be conflated. A company can be Subscription + SaaS, or Subscription + On-Premise, or Transaction Fee + API-First. The combination is always explicit.</p>
+            <p>Example: a law firm uses <strong>Service / Retainer</strong> (Business System) + <strong>In-person / On-site</strong> (Delivery Model). A remote legal platform uses the same Business System with <strong>Remote / Virtual</strong> delivery. Same system, different model.</p>
 
             <hr class="divider">
 
             <h2>Authoritative Sources (Top 7)</h2>
-            <p>Unlike Business Systems, Delivery Models are operational — shaped by technology, IT standards, and enterprise practice. Fewer but more technical sources provide stronger validation. <strong>Technical authority beats volume.</strong></p>
-
+            <p>Delivery Models are operational — shaped by technology, logistics, IT standards, and business practice. <strong>Technical authority beats volume.</strong></p>
             <ul class="sources-list">
-                <li><strong>1. IEEE — Institute of Electrical and Electronics Engineers</strong><span>Software systems, embedded systems, and delivery architectures.</span></li>
-                <li><strong>2. NIST — National Institute of Standards and Technology</strong><span>Cloud, service models, deployment and operational definitions.</span></li>
+                <li><strong>1. IEEE</strong><span>Software systems, embedded systems, and delivery architectures.</span></li>
+                <li><strong>2. NIST</strong><span>Cloud, service models, deployment and operational definitions.</span></li>
                 <li><strong>3. Gartner</strong><span>SaaS, PaaS, IaaS, platform and delivery classifications.</span></li>
-                <li><strong>4. ISO — International Organization for Standardization</strong><span>Software lifecycle, service delivery, IT operations.</span></li>
-                <li><strong>5. ACM — Association for Computing Machinery</strong><span>Software architecture, systems delivery models.</span></li>
-                <li><strong>6. McKinsey &amp; Company</strong><span>Enterprise operating models and digital delivery patterns.</span></li>
-                <li><strong>7. Cloud Security Alliance</strong><span>Cloud and hybrid delivery definitions.</span></li>
+                <li><strong>4. ISO</strong><span>Software lifecycle, service delivery, IT operations.</span></li>
+                <li><strong>5. ACM</strong><span>Software architecture, systems delivery models.</span></li>
+                <li><strong>6. McKinsey &amp; Company</strong><span>Enterprise operating models, physical and digital delivery patterns.</span></li>
+                <li><strong>7. WTO / OECD</strong><span>Physical trade, services trade, and digital delivery classifications at global scale.</span></li>
             </ul>
-
-            <p><em>This taxonomy intentionally limits sources to a small number of top-tier technical and institutional authorities. Additional sources were excluded due to redundancy and lack of incremental structural insight.</em></p>
 
             <hr class="divider">
 
             <div class="final-rule">
                 <p><strong>Final rule (non-negotiable)</strong></p>
-                <p>If someone says "we are a SaaS" — they are describing a Delivery Model.</p>
-                <p>The business itself exists only when a Business System is specified.</p>
+                <p>If someone says "we ship products" — that is a Delivery Model (Direct Physical or Wholesale).</p>
+                <p>If someone says "we are a SaaS" — that is a Delivery Model (SaaS / Cloud).</p>
+                <p>The business exists only when a <strong>Business System</strong> is also specified.</p>
             </div>
 
         </div>
