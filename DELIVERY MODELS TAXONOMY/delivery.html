@@ -1,0 +1,225 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Models Taxonomy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .dm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px 16px 48px;
+        }
+        .dm-card {
+            background: var(--surface, #fff);
+            border: 1px solid var(--border, #e5e7eb);
+            border-radius: 12px;
+            padding: 20px;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            transition: box-shadow 0.15s, border-color 0.15s;
+        }
+        .dm-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-color: #7c3aed;
+        }
+        .dm-number {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: #7c3aed;
+            background: #f5f3ff;
+            border-radius: 6px;
+            padding: 2px 8px;
+            width: fit-content;
+            letter-spacing: 0.06em;
+        }
+        .dm-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        .dm-card p {
+            font-size: 0.8rem;
+            color: var(--text-secondary, #6b7280);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Why row link */
+        .why-row {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .why-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--surface, #fff);
+            border: 1px solid var(--border, #e5e7eb);
+            border-radius: 12px;
+            padding: 16px 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.15s, border-color 0.15s;
+            margin-bottom: 8px;
+        }
+        .why-link:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-color: #7c3aed;
+        }
+        .why-link-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .why-link-tag {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #7c3aed;
+        }
+        .why-link-title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .why-link-sub {
+            font-size: 0.8rem;
+            color: var(--text-secondary, #6b7280);
+        }
+        .why-link-arrow {
+            color: #7c3aed;
+            font-size: 1.2rem;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-tertiary, #9ca3af);
+            max-width: 960px;
+            margin: 24px auto 0;
+            padding: 0 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header class="header" style="padding-bottom: 8px;">
+            <div class="back-nav" style="margin-bottom: 16px;">
+                <a href="../index.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Back to Home
+                </a>
+            </div>
+            <div style="text-align:center; margin-bottom: 6px;">
+                <span class="part-badge" style="background:#f5f3ff; color:#7c3aed; border:1px solid #ddd6fe; border-radius:20px; padding:4px 14px; font-size:0.72rem; font-weight:700; letter-spacing:0.06em;">Part C — Delivery Models</span>
+            </div>
+            <h1 style="font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;">12 Delivery / Operating Models</h1>
+            <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto;">The finite set of structural patterns through which value reaches the user — independent of market, business system, or technology era.</p>
+        </header>
+
+        <!-- Why row -->
+        <div class="why-row" style="margin-top: 24px;">
+            <a href="delivery-models-why.html" class="why-link">
+                <div class="why-link-left">
+                    <span class="why-link-tag">Foundation</span>
+                    <span class="why-link-title">Why Delivery Models Are Finite & Orthogonal to Business Systems</span>
+                    <span class="why-link-sub">The theory, the sources, and the distinction that matters.</span>
+                </div>
+                <span class="why-link-arrow">→</span>
+            </a>
+        </div>
+
+        <!-- 12 Models -->
+        <p class="section-label">The 12 canonical delivery models</p>
+        <div class="dm-grid">
+
+            <div class="dm-card">
+                <span class="dm-number">01 — SaaS</span>
+                <h3>SaaS (Cloud Software)</h3>
+                <p>Multi-tenant software accessed via the web. No installation, continuous updates, shared infrastructure. Examples: Salesforce, Notion, Slack.</p>
+            </div>
+
+            <div class="dm-card">
+                <span class="dm-number">02 — API-First</span>
+                <h3>API-First Service</h3>
+                <p>Value consumed programmatically — UI optional. Built to be integrated, not used directly. Examples: Stripe, Twilio, OpenAI API.</p>
+            </div>
+
+            <div class="dm-card">
+                <span class="dm-number">03 — On-Premise</span>
+                <h3>On-Premise Software</h3>
+                <p>Installed and operated in the customer's own environment. Maximum control, full IT responsibility. Examples: SAP on-prem, Oracle DB, legacy enterprise software.</p>
+            </div>
+
+            <div class="dm-card">
+                <span class="dm-number">04 — Managed Service</span>
+                <h3>Managed Service</h3>
+                <p>Software plus human operation on behalf of the client. The provider runs it, the client uses outcomes. Examples: managed security, cloud MSPs, outsourced IT.</p>
+            </div>
+
+            <div class="dm-card">
+                <span class="dm-number">05 — Platform / Ecosystem</span>
+                <h3>Platform / Ecosystem Delivery</h3>
+                <p>Core product extended by third-party developers. Value grows through the ecosystem, not just the core. Examples: Apple App Store, Salesforce AppExchange, Android.</p>
+            </div>
+
+            <div class="dm-card">
+                <span class="dm-number">06 — Embedded</span>
+                <h3>Embedded Software</h3>
+                <p>Software integrated into hardware or external systems. Invisible to the end user, essential to the product. Examples: automotive firmware, IoT OS, chip software.</p>
+            </div>
+
+            <div class="dm-card">
+                <span class="dm-number">07 — Desktop / Local</span>
+                <h3>Desktop / Local Software</h3>
+                <p>Locally installed applications. Purchased once or via licence. Offline-capable. Examples: Adobe Creative Suite, Microsoft Office (perpetual), Final Cut Pro.</p>
+            </div>
+
+            <div class="dm-card">
+                <span class="dm-number">08 — Mobile-Native</span>
+                <h3>Mobile-Native App</h3>
+                <p>Primary experience delivered via mobile OS. Designed for touch, notifications, and device sensors. Examples: Instagram, Uber, Revolut.</p>
+            </div>
+
+            <div class="dm-card">
+                <span class="dm-number">09 — Data Feed</span>
+                <h3>Data Feed / Data Access</h3>
+                <p>Structured datasets delivered via stream or batch. The product is the data itself, not an interface. Examples: Bloomberg Terminal, financial data APIs, satellite imagery feeds.</p>
+            </div>
+
+            <div class="dm-card">
+                <span class="dm-number">10 — Open-Core</span>
+                <h3>Open-Core + Hosted</h3>
+                <p>Open-source core with managed hosting or enterprise layers on top. Community drives adoption; commercial layer captures revenue. Examples: GitLab, HashiCorp, Elastic.</p>
+            </div>
+
+            <div class="dm-card">
+                <span class="dm-number">11 — Marketplace Infra</span>
+                <h3>Marketplace Infrastructure</h3>
+                <p>Infrastructure enabling transactions between third parties. The operator provides the rails, not the goods. Examples: AWS Marketplace, Shopify, payment rails.</p>
+            </div>
+
+            <div class="dm-card">
+                <span class="dm-number">12 — Hybrid Delivery</span>
+                <h3>Hybrid Delivery</h3>
+                <p>Stable combination of multiple delivery models. Not a shortcut — a structural outcome when real businesses serve diverse access needs. Examples: Microsoft 365 (SaaS + desktop + API), AWS (IaaS + PaaS + marketplace).</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

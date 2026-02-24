@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-t-title="pages.index.text.0001">Market Taxonomy - Pick Your Market</title>
+    <title data-t-title="pages.index.text.0001">Market, Business & Delivery Models Taxonomy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
@@ -53,6 +53,8 @@
                 <p class="ai-helper-text">Uses AI to auto-complete the full flow.</p>
                 <div style="margin-top: 16px; text-align: center;">
                     <a href="macro-markets.html" class="btn btn-small" style="background: var(--green); color: white; padding: 10px 24px;">Explore 43 Markets →</a>
+                    <a href="BUSINESS SYSTEMS TAXONOMY/business.html" class="btn btn-small" style="background: #2563eb; color: white; padding: 10px 24px; margin-left: 10px;">Business Systems →</a>
+                    <a href="DELIVERY MODELS TAXONOMY/delivery.html" class="btn btn-small" style="background: #7c3aed; color: white; padding: 10px 24px; margin-left: 10px;">Delivery Models →</a>
                 </div>
             </div>
 
@@ -343,6 +345,63 @@
                 });
             });
         });
+
+        // ═══════════════════════════════════════════════════════════
+        // BUSINESS SYSTEMS & DELIVERY MODELS INDEX
+        // ═══════════════════════════════════════════════════════════
+        const BUSINESS_SYSTEMS_INDEX = [
+            { name: "Subscription", href: "BUSINESS SYSTEMS TAXONOMY/business.html#01", keywords: ["subscription", "recurring", "saas", "membership", "access", "netflix", "spotify"] },
+            { name: "Transaction Fee", href: "BUSINESS SYSTEMS TAXONOMY/business.html#02", keywords: ["transaction", "commission", "fee", "payment", "stripe", "paypal", "marketplace fee"] },
+            { name: "Usage-Based", href: "BUSINESS SYSTEMS TAXONOMY/business.html#03", keywords: ["usage", "pay per use", "metered", "consumption", "aws", "twilio", "api calls"] },
+            { name: "Licensing / IP", href: "BUSINESS SYSTEMS TAXONOMY/business.html#04", keywords: ["licensing", "licence", "ip", "royalty", "intellectual property", "franchise", "brand"] },
+            { name: "Marketplace", href: "BUSINESS SYSTEMS TAXONOMY/business.html#05", keywords: ["marketplace", "platform", "two-sided", "multisided", "amazon", "uber", "etsy", "network"] },
+            { name: "Advertising / Attention", href: "BUSINESS SYSTEMS TAXONOMY/business.html#06", keywords: ["advertising", "ads", "attention", "media", "google", "meta", "youtube", "monetize audience"] },
+            { name: "Asset Ownership", href: "BUSINESS SYSTEMS TAXONOMY/business.html#07", keywords: ["asset", "ownership", "real estate", "reit", "leasing", "infrastructure", "yield"] },
+            { name: "Service / Retainer", href: "BUSINESS SYSTEMS TAXONOMY/business.html#08", keywords: ["service", "retainer", "consulting", "agency", "professional services", "law firm"] },
+            { name: "Performance / Outcome", href: "BUSINESS SYSTEMS TAXONOMY/business.html#09", keywords: ["performance", "outcome", "results", "affiliate", "commission", "carried interest"] },
+            { name: "Data / Insight", href: "BUSINESS SYSTEMS TAXONOMY/business.html#10", keywords: ["data", "insight", "analytics", "bloomberg", "nielsen", "palantir", "data product"] },
+            { name: "Platform / Ecosystem", href: "BUSINESS SYSTEMS TAXONOMY/business.html#11", keywords: ["platform", "ecosystem", "app store", "salesforce", "android", "third party", "standard"] },
+            { name: "Hybrid / Stack", href: "BUSINESS SYSTEMS TAXONOMY/business.html#12", keywords: ["hybrid", "stack", "combination", "mixed model"] },
+        ];
+
+        const DELIVERY_MODELS_INDEX = [
+            { name: "SaaS (Cloud Software)", href: "DELIVERY MODELS TAXONOMY/delivery.html#01", keywords: ["saas", "cloud software", "cloud", "multi-tenant", "web app", "notion", "slack"] },
+            { name: "API-First Service", href: "DELIVERY MODELS TAXONOMY/delivery.html#02", keywords: ["api", "api-first", "programmatic", "integration", "stripe api", "twilio", "openai api"] },
+            { name: "On-Premise Software", href: "DELIVERY MODELS TAXONOMY/delivery.html#03", keywords: ["on-premise", "on-prem", "self-hosted", "local install", "enterprise software"] },
+            { name: "Managed Service", href: "DELIVERY MODELS TAXONOMY/delivery.html#04", keywords: ["managed service", "msp", "outsourced", "managed security", "operated"] },
+            { name: "Platform / Ecosystem Delivery", href: "DELIVERY MODELS TAXONOMY/delivery.html#05", keywords: ["platform delivery", "ecosystem", "app store", "extensions", "plugins", "third party dev"] },
+            { name: "Embedded Software", href: "DELIVERY MODELS TAXONOMY/delivery.html#06", keywords: ["embedded", "firmware", "iot", "hardware software", "chip", "automotive software"] },
+            { name: "Desktop / Local Software", href: "DELIVERY MODELS TAXONOMY/delivery.html#07", keywords: ["desktop", "local software", "installed", "packaged software", "adobe", "final cut"] },
+            { name: "Mobile-Native App", href: "DELIVERY MODELS TAXONOMY/delivery.html#08", keywords: ["mobile", "app", "ios", "android app", "native app", "instagram", "revolut"] },
+            { name: "Data Feed / Data Access", href: "DELIVERY MODELS TAXONOMY/delivery.html#09", keywords: ["data feed", "data access", "stream", "batch", "bloomberg terminal", "satellite data"] },
+            { name: "Open-Core + Hosted", href: "DELIVERY MODELS TAXONOMY/delivery.html#10", keywords: ["open source", "open core", "self-hosted", "gitlab", "hashicorp", "elastic", "community edition"] },
+            { name: "Marketplace Infrastructure", href: "DELIVERY MODELS TAXONOMY/delivery.html#11", keywords: ["marketplace infrastructure", "rails", "shopify", "payment rails", "aws marketplace"] },
+            { name: "Hybrid Delivery", href: "DELIVERY MODELS TAXONOMY/delivery.html#12", keywords: ["hybrid delivery", "multi-channel", "omnichannel", "combined delivery"] },
+        ];
+
+        function searchExtended(query) {
+            if (!query || query.length < 2) return [];
+            const q = query.toLowerCase();
+            const results = [];
+
+            [...BUSINESS_SYSTEMS_INDEX].forEach(item => {
+                const nameMatch = item.name.toLowerCase().includes(q);
+                const kwMatch = item.keywords.some(kw => kw.includes(q));
+                if (nameMatch || kwMatch) {
+                    results.push({ ...item, category: 'business', matchType: 'business' });
+                }
+            });
+
+            [...DELIVERY_MODELS_INDEX].forEach(item => {
+                const nameMatch = item.name.toLowerCase().includes(q);
+                const kwMatch = item.keywords.some(kw => kw.includes(q));
+                if (nameMatch || kwMatch) {
+                    results.push({ ...item, category: 'delivery', matchType: 'delivery' });
+                }
+            });
+
+            return results;
+        }
 
         // ═══════════════════════════════════════════════════════════
         // SEARCH FUNCTIONALITY
@@ -876,17 +935,20 @@ function runQueryWithMode(mode) {
 
 function renderSearchResults(matches, query) {
     closeStepPanel();
-    if (matches.length === 0) {
-        searchResults.innerHTML = '<div class="search-no-results">No markets found</div>';
+
+    const extendedMatches = searchExtended(query);
+    const allEmpty = matches.length === 0 && extendedMatches.length === 0;
+
+    if (allEmpty) {
+        searchResults.innerHTML = '<div class="search-no-results">No results found</div>';
         searchResults.classList.remove('hidden');
         return;
     }
 
-    const kwCount = query ? countKeywords(query) : 1;
-    // Auto mode: max 5 results always
-    const displayMatches = matches.slice(0, 5);
-
     searchResults.innerHTML = '';
+
+    // Market results (max 4 to leave room for extended)
+    const displayMatches = matches.slice(0, 4);
     displayMatches.forEach(match => {
         const resultItem = document.createElement('a');
         resultItem.href = match.href;
@@ -899,6 +961,26 @@ function renderSearchResults(matches, query) {
         nameSpan.textContent = match.name;
         resultItem.appendChild(nameSpan);
         resultItem.insertAdjacentHTML('beforeend', badge);
+        searchResults.appendChild(resultItem);
+    });
+
+    // Business Systems & Delivery Models results (max 3 total)
+    extendedMatches.slice(0, 3).forEach(match => {
+        const resultItem = document.createElement('a');
+        resultItem.href = match.href;
+        resultItem.className = 'search-result-item';
+
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'result-name';
+        nameSpan.textContent = match.name;
+
+        const badgeStyle = match.category === 'business'
+            ? 'background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;'
+            : 'background:#f5f3ff;color:#7c3aed;border:1px solid #ddd6fe;';
+        const badgeLabel = match.category === 'business' ? 'Business System' : 'Delivery Model';
+
+        resultItem.appendChild(nameSpan);
+        resultItem.insertAdjacentHTML('beforeend', `<span class="result-badge" style="${badgeStyle}padding:2px 7px;border-radius:5px;font-size:0.65rem;font-weight:700;">${badgeLabel}</span>`);
         searchResults.appendChild(resultItem);
     });
 

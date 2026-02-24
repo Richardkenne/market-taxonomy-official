@@ -1,0 +1,227 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Systems Taxonomy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .bs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px 16px 48px;
+        }
+        .bs-card {
+            background: var(--surface, #fff);
+            border: 1px solid var(--border, #e5e7eb);
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.15s, border-color 0.15s;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            cursor: default;
+        }
+        .bs-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-color: #2563eb;
+        }
+        .bs-number {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: #2563eb;
+            background: #eff6ff;
+            border-radius: 6px;
+            padding: 2px 8px;
+            width: fit-content;
+            letter-spacing: 0.06em;
+        }
+        .bs-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        .bs-card p {
+            font-size: 0.8rem;
+            color: var(--text-secondary, #6b7280);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Why row link */
+        .why-row {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        .why-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--surface, #fff);
+            border: 1px solid var(--border, #e5e7eb);
+            border-radius: 12px;
+            padding: 16px 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.15s, border-color 0.15s;
+            margin-bottom: 8px;
+        }
+        .why-link:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-color: #2563eb;
+        }
+        .why-link-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .why-link-tag {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #2563eb;
+        }
+        .why-link-title {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .why-link-sub {
+            font-size: 0.8rem;
+            color: var(--text-secondary, #6b7280);
+        }
+        .why-link-arrow {
+            color: #2563eb;
+            font-size: 1.2rem;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-tertiary, #9ca3af);
+            max-width: 960px;
+            margin: 24px auto 0;
+            padding: 0 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header class="header" style="padding-bottom: 8px;">
+            <div class="back-nav" style="margin-bottom: 16px;">
+                <a href="../index.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Back to Home
+                </a>
+            </div>
+            <div style="text-align:center; margin-bottom: 6px;">
+                <span class="part-badge" style="background:#eff6ff; color:#2563eb; border:1px solid #bfdbfe; border-radius:20px; padding:4px 14px; font-size:0.72rem; font-weight:700; letter-spacing:0.06em;">Part B — Business Systems</span>
+            </div>
+            <h1 style="font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;">12 Business Systems</h1>
+            <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto;">The only twelve mechanisms that exist to convert value into sustained cash flow — across any market, era, or technology.</p>
+        </header>
+
+        <!-- Why row -->
+        <div class="why-row" style="margin-top: 24px;">
+            <a href="business-systems-why.html" class="why-link">
+                <div class="why-link-left">
+                    <span class="why-link-tag">Foundation</span>
+                    <span class="why-link-title">Why There Are Exactly 12 Business Systems</span>
+                    <span class="why-link-sub">The theory, the sources, and why the number is not arbitrary.</span>
+                </div>
+                <span class="why-link-arrow">→</span>
+            </a>
+        </div>
+
+        <!-- 12 Systems -->
+        <p class="section-label">The 12 canonical systems</p>
+        <div class="bs-grid">
+
+            <div class="bs-card">
+                <span class="bs-number">01 — Subscription</span>
+                <h3>Subscription</h3>
+                <p>Recurring fee for continuous access. Predictable revenue, retention-driven. Examples: Netflix, Spotify, SaaS tools.</p>
+            </div>
+
+            <div class="bs-card">
+                <span class="bs-number">02 — Transaction Fee</span>
+                <h3>Transaction Fee</h3>
+                <p>Commission charged per exchange facilitated. Revenue scales with volume. Examples: Stripe, PayPal, Airbnb.</p>
+            </div>
+
+            <div class="bs-card">
+                <span class="bs-number">03 — Usage-Based</span>
+                <h3>Usage-Based</h3>
+                <p>Pay per unit consumed — compute, storage, API calls. No commitment, pure metering. Examples: AWS, Twilio, Snowflake.</p>
+            </div>
+
+            <div class="bs-card">
+                <span class="bs-number">04 — Licensing / IP</span>
+                <h3>Licensing / IP</h3>
+                <p>Rights to IP, brand, or technology rented to third parties. Asset-light, high-margin. Examples: Qualcomm, ARM, franchise brands.</p>
+            </div>
+
+            <div class="bs-card">
+                <span class="bs-number">05 — Marketplace</span>
+                <h3>Marketplace</h3>
+                <p>Multi-sided intermediation connecting buyers and sellers. Network effects compound defensibility. Examples: Amazon, Uber, Etsy.</p>
+            </div>
+
+            <div class="bs-card">
+                <span class="bs-number">06 — Advertising / Attention</span>
+                <h3>Advertising / Attention</h3>
+                <p>Audience attention monetised by third-party advertisers. Scale and engagement are the moat. Examples: Google, Meta, YouTube.</p>
+            </div>
+
+            <div class="bs-card">
+                <span class="bs-number">07 — Asset Ownership</span>
+                <h3>Asset Ownership</h3>
+                <p>Cash-flowing physical or financial assets held and operated. Returns from yield, appreciation, or utilisation. Examples: REITs, leasing, infrastructure.</p>
+            </div>
+
+            <div class="bs-card">
+                <span class="bs-number">08 — Service / Retainer</span>
+                <h3>Service / Retainer</h3>
+                <p>Revenue from paid human expertise and execution. Project-based or ongoing retainer. Examples: consulting, agencies, law firms.</p>
+            </div>
+
+            <div class="bs-card">
+                <span class="bs-number">09 — Performance / Outcome</span>
+                <h3>Performance / Outcome-Based</h3>
+                <p>Paid only on results delivered — leads, conversions, AUM. Aligns incentives fully. Examples: affiliate networks, performance agencies, carried interest.</p>
+            </div>
+
+            <div class="bs-card">
+                <span class="bs-number">10 — Data / Insight</span>
+                <h3>Data / Insight</h3>
+                <p>Aggregated or analysed data sold as reports, feeds, or API access. Information itself is the product. Examples: Bloomberg, Nielsen, Palantir.</p>
+            </div>
+
+            <div class="bs-card">
+                <span class="bs-number">11 — Platform / Ecosystem</span>
+                <h3>Platform / Ecosystem</h3>
+                <p>A standard on which third parties build and monetise. Revenue from the layer below. Examples: Apple App Store, Salesforce, Android.</p>
+            </div>
+
+            <div class="bs-card">
+                <span class="bs-number">12 — Hybrid / Stack</span>
+                <h3>Hybrid / Stack</h3>
+                <p>A stable, intentional combination of two or more systems above. Not an escape hatch — a structural outcome at scale. Examples: Amazon (01+02+05+07), Google (06+11).</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
