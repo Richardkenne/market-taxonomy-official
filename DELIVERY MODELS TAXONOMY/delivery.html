@@ -29,87 +29,36 @@
         }
         .dm-card:hover {
             box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            border-color: #7c3aed;
         }
         .dm-number {
             font-size: 0.68rem;
             font-weight: 700;
-            color: #7c3aed;
-            background: #f5f3ff;
             border-radius: 6px;
             padding: 2px 8px;
             width: fit-content;
             letter-spacing: 0.06em;
         }
-        .dm-card h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin: 0;
-        }
-        .dm-card p {
-            font-size: 0.8rem;
-            color: var(--text-secondary, #6b7280);
-            margin: 0;
-            line-height: 1.5;
-        }
+        .dm-card h3 { font-size: 1rem; font-weight: 600; margin: 0; }
+        .dm-card p { font-size: 0.8rem; color: var(--text-secondary, #6b7280); margin: 0; line-height: 1.5; }
 
-        /* Why row link */
-        .why-row {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
+        .why-row { max-width: 960px; margin: 0 auto; padding: 0 16px; }
         .why-link {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--surface, #fff);
-            border: 1px solid var(--border, #e5e7eb);
-            border-radius: 12px;
-            padding: 16px 20px;
-            text-decoration: none;
-            color: inherit;
-            transition: box-shadow 0.15s, border-color 0.15s;
-            margin-bottom: 8px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: var(--surface, #fff); border: 1px solid var(--border, #e5e7eb);
+            border-radius: 12px; padding: 16px 20px; text-decoration: none; color: inherit;
+            transition: box-shadow 0.15s, border-color 0.15s; margin-bottom: 8px;
         }
-        .why-link:hover {
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            border-color: #7c3aed;
-        }
-        .why-link-left {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-        .why-link-tag {
-            font-size: 0.68rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #7c3aed;
-        }
-        .why-link-title {
-            font-size: 1rem;
-            font-weight: 600;
-        }
-        .why-link-sub {
-            font-size: 0.8rem;
-            color: var(--text-secondary, #6b7280);
-        }
-        .why-link-arrow {
-            color: #7c3aed;
-            font-size: 1.2rem;
-        }
+        .why-link:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-color: #7c3aed; }
+        .why-link-left { display: flex; flex-direction: column; gap: 4px; }
+        .why-link-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #7c3aed; }
+        .why-link-title { font-size: 1rem; font-weight: 600; }
+        .why-link-sub { font-size: 0.8rem; color: var(--text-secondary, #6b7280); }
+        .why-link-arrow { color: #7c3aed; font-size: 1.2rem; }
 
         .section-label {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-tertiary, #9ca3af);
-            max-width: 960px;
-            margin: 24px auto 0;
-            padding: 0 16px;
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--text-tertiary, #9ca3af);
+            max-width: 960px; margin: 24px auto 0; padding: 0 16px;
         }
     </style>
 </head>
@@ -128,95 +77,103 @@
                 <span class="part-badge" style="background:#f5f3ff; color:#7c3aed; border:1px solid #ddd6fe; border-radius:20px; padding:4px 14px; font-size:0.72rem; font-weight:700; letter-spacing:0.06em;">Part C — Delivery Models</span>
             </div>
             <h1 style="font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;">12 Delivery / Operating Models</h1>
-            <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto;">The finite set of structural patterns through which value reaches the user — independent of market, business system, or technology era.</p>
+            <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 560px; margin: 0 auto;">The finite set of structural patterns through which value reaches the user — across digital, physical, and service-based businesses, independent of market or era.</p>
         </header>
 
-        <!-- Why row -->
         <div class="why-row" style="margin-top: 24px;">
             <a href="delivery-models-why.html" class="why-link">
                 <div class="why-link-left">
                     <span class="why-link-tag">Foundation</span>
-                    <span class="why-link-title">Why Delivery Models Are Finite & Orthogonal to Business Systems</span>
+                    <span class="why-link-title">Why Delivery Models Are Universal & Orthogonal to Business Systems</span>
                     <span class="why-link-sub">The theory, the sources, and the distinction that matters.</span>
                 </div>
                 <span class="why-link-arrow">→</span>
             </a>
         </div>
 
-        <!-- 12 Models -->
-        <p class="section-label">The 12 canonical delivery models</p>
+        <p class="section-label">Digital delivery</p>
         <div class="dm-grid">
 
-            <div class="dm-card">
-                <span class="dm-number">01 — SaaS</span>
-                <h3>SaaS (Cloud Software)</h3>
-                <p>Multi-tenant software accessed via the web. No installation, continuous updates, shared infrastructure. Examples: Salesforce, Notion, Slack.</p>
+            <div class="dm-card" style="border-color:#bae6fd; background:#f0f9ff;">
+                <span class="dm-number" style="color:#0369a1; background:#e0f2fe;">01 — SaaS / Cloud</span>
+                <h3>SaaS / Cloud Software</h3>
+                <p>Multi-tenant software accessed via browser. No installation, continuous updates. Examples: Salesforce, Notion, Slack.</p>
             </div>
 
-            <div class="dm-card">
-                <span class="dm-number">02 — API-First</span>
-                <h3>API-First Service</h3>
-                <p>Value consumed programmatically — UI optional. Built to be integrated, not used directly. Examples: Stripe, Twilio, OpenAI API.</p>
+            <div class="dm-card" style="border-color:#6ee7b7; background:#ecfdf5;">
+                <span class="dm-number" style="color:#047857; background:#d1fae5;">02 — API-First</span>
+                <h3>API-First / Embedded Digital</h3>
+                <p>Value consumed programmatically — UI optional. Built to integrate into other products. Examples: Stripe, Twilio, OpenAI API.</p>
             </div>
 
-            <div class="dm-card">
-                <span class="dm-number">03 — On-Premise</span>
-                <h3>On-Premise Software</h3>
-                <p>Installed and operated in the customer's own environment. Maximum control, full IT responsibility. Examples: SAP on-prem, Oracle DB, legacy enterprise software.</p>
+            <div class="dm-card" style="border-color:#fca5a5; background:#fff1f2;">
+                <span class="dm-number" style="color:#b91c1c; background:#fee2e2;">03 — On-Premise</span>
+                <h3>On-Premise / Installed Software</h3>
+                <p>Deployed in the customer's own environment. Maximum control, full IT responsibility. Examples: SAP on-prem, Oracle DB.</p>
             </div>
 
-            <div class="dm-card">
-                <span class="dm-number">04 — Managed Service</span>
-                <h3>Managed Service</h3>
-                <p>Software plus human operation on behalf of the client. The provider runs it, the client uses outcomes. Examples: managed security, cloud MSPs, outsourced IT.</p>
-            </div>
-
-            <div class="dm-card">
-                <span class="dm-number">05 — Platform / Ecosystem</span>
-                <h3>Platform / Ecosystem Delivery</h3>
-                <p>Core product extended by third-party developers. Value grows through the ecosystem, not just the core. Examples: Apple App Store, Salesforce AppExchange, Android.</p>
-            </div>
-
-            <div class="dm-card">
-                <span class="dm-number">06 — Embedded</span>
-                <h3>Embedded Software</h3>
-                <p>Software integrated into hardware or external systems. Invisible to the end user, essential to the product. Examples: automotive firmware, IoT OS, chip software.</p>
-            </div>
-
-            <div class="dm-card">
-                <span class="dm-number">07 — Desktop / Local</span>
-                <h3>Desktop / Local Software</h3>
-                <p>Locally installed applications. Purchased once or via licence. Offline-capable. Examples: Adobe Creative Suite, Microsoft Office (perpetual), Final Cut Pro.</p>
-            </div>
-
-            <div class="dm-card">
-                <span class="dm-number">08 — Mobile-Native</span>
-                <h3>Mobile-Native App</h3>
-                <p>Primary experience delivered via mobile OS. Designed for touch, notifications, and device sensors. Examples: Instagram, Uber, Revolut.</p>
-            </div>
-
-            <div class="dm-card">
-                <span class="dm-number">09 — Data Feed</span>
-                <h3>Data Feed / Data Access</h3>
-                <p>Structured datasets delivered via stream or batch. The product is the data itself, not an interface. Examples: Bloomberg Terminal, financial data APIs, satellite imagery feeds.</p>
-            </div>
-
-            <div class="dm-card">
-                <span class="dm-number">10 — Open-Core</span>
+            <div class="dm-card" style="border-color:#c4b5fd; background:#faf5ff;">
+                <span class="dm-number" style="color:#7c3aed; background:#ede9fe;">04 — Open-Core</span>
                 <h3>Open-Core + Hosted</h3>
-                <p>Open-source core with managed hosting or enterprise layers on top. Community drives adoption; commercial layer captures revenue. Examples: GitLab, HashiCorp, Elastic.</p>
+                <p>Open-source core with commercial hosting or enterprise layers. Community drives adoption; hosted tier captures revenue. Examples: GitLab, Elastic, HashiCorp.</p>
             </div>
 
-            <div class="dm-card">
-                <span class="dm-number">11 — Marketplace Infra</span>
-                <h3>Marketplace Infrastructure</h3>
-                <p>Infrastructure enabling transactions between third parties. The operator provides the rails, not the goods. Examples: AWS Marketplace, Shopify, payment rails.</p>
+        </div>
+
+        <p class="section-label">Physical delivery</p>
+        <div class="dm-grid">
+
+            <div class="dm-card" style="border-color:#bbf7d0; background:#f0fdf4;">
+                <span class="dm-number" style="color:#15803d; background:#dcfce7;">05 — Direct Physical (D2C)</span>
+                <h3>Direct Physical / D2C</h3>
+                <p>Goods manufactured or sourced and shipped directly to the end customer, bypassing intermediaries. Examples: hair brands, ornament manufacturers, DTC food brands.</p>
             </div>
 
-            <div class="dm-card">
-                <span class="dm-number">12 — Hybrid Delivery</span>
-                <h3>Hybrid Delivery</h3>
-                <p>Stable combination of multiple delivery models. Not a shortcut — a structural outcome when real businesses serve diverse access needs. Examples: Microsoft 365 (SaaS + desktop + API), AWS (IaaS + PaaS + marketplace).</p>
+            <div class="dm-card" style="border-color:#fed7aa; background:#fff7ed;">
+                <span class="dm-number" style="color:#c2410c; background:#ffedd5;">06 — Retail / In-store</span>
+                <h3>Retail / In-store</h3>
+                <p>Products sold through physical retail locations — owned stores or third-party retailers. Examples: consumer goods, fashion, construction materials.</p>
+            </div>
+
+            <div class="dm-card" style="border-color:#fde68a; background:#fffbeb;">
+                <span class="dm-number" style="color:#b45309; background:#fef3c7;">07 — On-demand / Last-mile</span>
+                <h3>On-demand / Last-mile</h3>
+                <p>Rapid physical delivery triggered by real-time order. Speed is the core proposition. Examples: food delivery, q-commerce, courier networks.</p>
+            </div>
+
+            <div class="dm-card" style="border-color:#fbcfe8; background:#fdf2f8;">
+                <span class="dm-number" style="color:#be185d; background:#fce7f3;">08 — Wholesale / B2B Distribution</span>
+                <h3>Wholesale / B2B Distribution</h3>
+                <p>Goods sold in bulk to businesses, distributors, or retailers. Volume-driven, relationship-based. Examples: manufacturing supply chains, commodity trading, construction materials.</p>
+            </div>
+
+        </div>
+
+        <p class="section-label">Service delivery</p>
+        <div class="dm-grid">
+
+            <div class="dm-card" style="border-color:#a7f3d0; background:#ecfdf5;">
+                <span class="dm-number" style="color:#065f46; background:#d1fae5;">09 — In-person / On-site</span>
+                <h3>In-person / On-site Service</h3>
+                <p>Service delivered physically at the client's location or a dedicated venue. Examples: construction, legal advice, medical care, consulting on-site.</p>
+            </div>
+
+            <div class="dm-card" style="border-color:#bfdbfe; background:#eff6ff;">
+                <span class="dm-number" style="color:#1d4ed8; background:#dbeafe;">10 — Remote / Virtual</span>
+                <h3>Remote / Virtual Service</h3>
+                <p>Service delivered entirely online — video, async, or digital tools. Lower cost, global reach. Examples: remote legal, virtual advisory, online coaching.</p>
+            </div>
+
+            <div class="dm-card" style="border-color:#ddd6fe; background:#f5f3ff;">
+                <span class="dm-number" style="color:#6d28d9; background:#ede9fe;">11 — Platform / Ecosystem</span>
+                <h3>Platform / Ecosystem Delivery</h3>
+                <p>Core product or infrastructure extended by third-party developers, sellers, or service providers. Value scales through the ecosystem. Examples: App Store, Shopify, AWS Marketplace.</p>
+            </div>
+
+            <div class="dm-card" style="border-color:#cbd5e1; background:#f8fafc;">
+                <span class="dm-number" style="color:#475569; background:#e2e8f0;">12 — Hybrid (Phygital)</span>
+                <h3>Hybrid / Phygital</h3>
+                <p>Intentional blend of digital and physical delivery. Not a fallback — a structural choice for businesses that serve multiple access needs. Examples: Microsoft 365, Nike (D2C + retail + app), WeWork.</p>
             </div>
 
         </div>
