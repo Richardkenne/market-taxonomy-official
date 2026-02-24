@@ -10,108 +10,132 @@
     <style>
         .bs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 16px;
             max-width: 960px;
             margin: 0 auto;
             padding: 24px 16px 48px;
         }
         .bs-card {
-            background: var(--surface, #fff);
-            border: 1px solid var(--border, #e5e7eb);
             border-radius: 12px;
             padding: 20px;
-            text-decoration: none;
             color: inherit;
-            transition: box-shadow 0.15s, border-color 0.15s;
             display: flex;
             flex-direction: column;
             gap: 8px;
-            cursor: default;
+            border: 1px solid var(--border, #e5e7eb);
+            background: var(--surface, #fff);
+            transition: box-shadow 0.15s;
         }
-        .bs-card:hover {
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            border-color: #2563eb;
-        }
+        .bs-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
         .bs-number {
             font-size: 0.68rem;
             font-weight: 700;
-            color: #2563eb;
-            background: #eff6ff;
             border-radius: 6px;
             padding: 2px 8px;
             width: fit-content;
             letter-spacing: 0.06em;
         }
-        .bs-card h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin: 0;
-        }
-        .bs-card p {
-            font-size: 0.8rem;
-            color: var(--text-secondary, #6b7280);
-            margin: 0;
-            line-height: 1.5;
-        }
+        .bs-card h3 { font-size: 1rem; font-weight: 600; margin: 0; }
+        .bs-card p { font-size: 0.8rem; color: var(--text-secondary, #6b7280); margin: 0; line-height: 1.5; }
 
-        /* Why row link */
-        .why-row {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
-        .why-link {
+        /* Collapsible Unit Economics */
+        .ue-toggle {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            background: var(--surface, #fff);
-            border: 1px solid var(--border, #e5e7eb);
-            border-radius: 12px;
-            padding: 16px 20px;
-            text-decoration: none;
-            color: inherit;
-            transition: box-shadow 0.15s, border-color 0.15s;
-            margin-bottom: 8px;
-        }
-        .why-link:hover {
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            border-color: #2563eb;
-        }
-        .why-link-left {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-        .why-link-tag {
-            font-size: 0.68rem;
+            gap: 6px;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(0,0,0,0.07);
+            background: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            cursor: pointer;
+            font-size: 0.72rem;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #2563eb;
+            letter-spacing: 0.04em;
+            color: #6b7280;
+            text-align: left;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+            transition: color 0.15s;
         }
-        .why-link-title {
-            font-size: 1rem;
+        .ue-toggle:hover { color: #111; }
+        .ue-toggle .ue-arrow {
+            font-size: 0.65rem;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+        .ue-toggle.open .ue-arrow { transform: rotate(90deg); }
+
+        .ue-body {
+            display: none;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            flex-direction: column;
+            gap: 6px;
+        }
+        .ue-body.open { display: flex; }
+        .ue-unit {
+            font-size: 0.7rem;
             font-weight: 600;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            margin-bottom: 4px;
         }
-        .why-link-sub {
-            font-size: 0.8rem;
-            color: var(--text-secondary, #6b7280);
+        .ue-metric {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 8px;
+            font-size: 0.78rem;
+            line-height: 1.5;
+            color: #374151;
         }
-        .why-link-arrow {
-            color: #2563eb;
-            font-size: 1.2rem;
+        .ue-metric-name { flex: 1; }
+        .ue-metric-val {
+            font-weight: 700;
+            font-size: 0.78rem;
+            white-space: nowrap;
+            color: #111;
+        }
+        .ue-rule {
+            margin-top: 8px;
+            font-size: 0.72rem;
+            line-height: 1.5;
+            color: #6b7280;
+            font-style: italic;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            padding-top: 8px;
         }
 
+        /* Why / Foundation rows */
+        .why-row { max-width: 960px; margin: 0 auto; padding: 0 16px; display: flex; flex-direction: column; gap: 8px; }
+        .why-link {
+            display: flex; align-items: center; justify-content: space-between;
+            background: var(--surface, #fff); border: 1px solid var(--border, #e5e7eb);
+            border-radius: 12px; padding: 16px 20px; text-decoration: none; color: inherit;
+            transition: box-shadow 0.15s, border-color 0.15s;
+        }
+        .why-link:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-color: #2563eb; }
+        .why-link-left { display: flex; flex-direction: column; gap: 4px; }
+        .why-link-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #2563eb; }
+        .why-link-tag.ue { color: #0891b2; }
+        .why-link-title { font-size: 1rem; font-weight: 600; }
+        .why-link-sub { font-size: 0.8rem; color: var(--text-secondary, #6b7280); }
+        .why-link-arrow { color: #2563eb; font-size: 1.2rem; }
+        .why-link-arrow.ue { color: #0891b2; }
+        .why-link.ue:hover { border-color: #0891b2; }
+
         .section-label {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-tertiary, #9ca3af);
-            max-width: 960px;
-            margin: 24px auto 0;
-            padding: 0 16px;
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--text-tertiary, #9ca3af);
+            max-width: 960px; margin: 24px auto 0; padding: 0 16px;
         }
     </style>
 </head>
@@ -133,7 +157,7 @@
             <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto;">The only twelve mechanisms that exist to convert value into sustained cash flow — across any market, era, or technology.</p>
         </header>
 
-        <!-- Why row -->
+        <!-- Foundation rows -->
         <div class="why-row" style="margin-top: 24px;">
             <a href="business-systems-why.html" class="why-link">
                 <div class="why-link-left">
@@ -143,85 +167,245 @@
                 </div>
                 <span class="why-link-arrow">→</span>
             </a>
+            <a href="unit-economics-why.html" class="why-link ue">
+                <div class="why-link-left">
+                    <span class="why-link-tag ue">Unit Economics</span>
+                    <span class="why-link-title">Why These Numbers?</span>
+                    <span class="why-link-sub">The benchmarks are system-driven, not arbitrary — here's the evidence.</span>
+                </div>
+                <span class="why-link-arrow ue">→</span>
+            </a>
         </div>
 
         <!-- 12 Systems -->
-        <p class="section-label">The 12 canonical systems</p>
+        <p class="section-label">The 12 canonical systems — click Unit Economics to expand</p>
         <div class="bs-grid">
 
             <div class="bs-card" style="border-color:#bfdbfe; background:#eff6ff;">
                 <span class="bs-number" style="color:#1d4ed8; background:#dbeafe;">01 — Subscription</span>
                 <h3>Subscription</h3>
                 <p>Recurring fee for continuous access. Predictable revenue, retention-driven. Examples: Netflix, Spotify, SaaS tools.</p>
+                <button class="ue-toggle" onclick="toggleUE(this)">
+                    <span class="ue-arrow">▶</span> Unit Economics
+                </button>
+                <div class="ue-body">
+                    <div class="ue-unit">Unit: account / seat</div>
+                    <div class="ue-metric"><span class="ue-metric-name">LTV / CAC</span><span class="ue-metric-val">≥ 3×</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Gross Margin</span><span class="ue-metric-val">≥ 70%</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Net Revenue Retention</span><span class="ue-metric-val">≥ 100%</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">CAC Payback</span><span class="ue-metric-val">≤ 12 months</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Logo Churn</span><span class="ue-metric-val">≤ 5% / yr (B2B)</span></div>
+                    <div class="ue-rule">If NRR &lt; 100%, the business is leaking value faster than it acquires it.</div>
+                </div>
             </div>
 
             <div class="bs-card" style="border-color:#bbf7d0; background:#f0fdf4;">
                 <span class="bs-number" style="color:#15803d; background:#dcfce7;">02 — Transaction Fee</span>
                 <h3>Transaction Fee</h3>
                 <p>Commission charged per exchange facilitated. Revenue scales with volume. Examples: Stripe, PayPal, Airbnb.</p>
+                <button class="ue-toggle" onclick="toggleUE(this)">
+                    <span class="ue-arrow">▶</span> Unit Economics
+                </button>
+                <div class="ue-body">
+                    <div class="ue-unit">Unit: transaction</div>
+                    <div class="ue-metric"><span class="ue-metric-name">Take rate</span><span class="ue-metric-val">Sustainable for market</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Net margin per tx</span><span class="ue-metric-val">Positive</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Volume × take rate</span><span class="ue-metric-val">&gt; variable costs</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Price elasticity</span><span class="ue-metric-val">Low</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Volume concentration</span><span class="ue-metric-val">Acceptable top-user mix</span></div>
+                    <div class="ue-rule">Take rate is the structural bet — too high kills supply, too low kills the business.</div>
+                </div>
             </div>
 
             <div class="bs-card" style="border-color:#fed7aa; background:#fff7ed;">
                 <span class="bs-number" style="color:#c2410c; background:#ffedd5;">03 — Usage-Based</span>
                 <h3>Usage-Based</h3>
                 <p>Pay per unit consumed — compute, storage, API calls. No commitment, pure metering. Examples: AWS, Twilio, Snowflake.</p>
+                <button class="ue-toggle" onclick="toggleUE(this)">
+                    <span class="ue-arrow">▶</span> Unit Economics
+                </button>
+                <div class="ue-body">
+                    <div class="ue-unit">Unit: unit consumed</div>
+                    <div class="ue-metric"><span class="ue-metric-name">Gross margin per unit</span><span class="ue-metric-val">Stable</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Marginal costs</span><span class="ue-metric-val">Predictable</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Pricing vs perceived value</span><span class="ue-metric-val">Aligned</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Revenue growth vs usage</span><span class="ue-metric-val">Revenue ≥ usage growth</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Unbillable cost spikes</span><span class="ue-metric-val">None</span></div>
+                    <div class="ue-rule">If usage grows faster than revenue, pricing is misaligned with cost structure.</div>
+                </div>
             </div>
 
             <div class="bs-card" style="border-color:#ddd6fe; background:#f5f3ff;">
                 <span class="bs-number" style="color:#6d28d9; background:#ede9fe;">04 — Licensing / IP</span>
                 <h3>Licensing / IP</h3>
                 <p>Rights to IP, brand, or technology rented to third parties. Asset-light, high-margin. Examples: Qualcomm, ARM, franchise brands.</p>
+                <button class="ue-toggle" onclick="toggleUE(this)">
+                    <span class="ue-arrow">▶</span> Unit Economics
+                </button>
+                <div class="ue-body">
+                    <div class="ue-unit">Unit: licence</div>
+                    <div class="ue-metric"><span class="ue-metric-name">Gross Margin</span><span class="ue-metric-val">≥ 80%</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Renewals</span><span class="ue-metric-val">Clear & frequent</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Contractual enforcement</span><span class="ue-metric-val">Real</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Ancillary service dependency</span><span class="ue-metric-val">Low</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Piracy / leakage</span><span class="ue-metric-val">Controlled</span></div>
+                    <div class="ue-rule">High gross margin is the structural advantage — protect it by controlling enforcement and renewal cadence.</div>
+                </div>
             </div>
 
             <div class="bs-card" style="border-color:#fde68a; background:#fffbeb;">
                 <span class="bs-number" style="color:#b45309; background:#fef3c7;">05 — Marketplace</span>
                 <h3>Marketplace</h3>
                 <p>Multi-sided intermediation connecting buyers and sellers. Network effects compound defensibility. Examples: Amazon, Uber, Etsy.</p>
+                <button class="ue-toggle" onclick="toggleUE(this)">
+                    <span class="ue-arrow">▶</span> Unit Economics
+                </button>
+                <div class="ue-body">
+                    <div class="ue-unit">Unit: successful match</div>
+                    <div class="ue-metric"><span class="ue-metric-name">Liquidity</span><span class="ue-metric-val">Achievable locally</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Take rate</span><span class="ue-metric-val">Sustainable</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">CAC &lt; LTV</span><span class="ue-metric-val">Both sides</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Transaction frequency</span><span class="ue-metric-val">Growing</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Cold-start</span><span class="ue-metric-val">Solvable</span></div>
+                    <div class="ue-rule">A marketplace with no liquidity has no unit economics — solve cold-start before optimising take rate.</div>
+                </div>
             </div>
 
             <div class="bs-card" style="border-color:#fbcfe8; background:#fdf2f8;">
                 <span class="bs-number" style="color:#be185d; background:#fce7f3;">06 — Advertising / Attention</span>
                 <h3>Advertising / Attention</h3>
                 <p>Audience attention monetised by third-party advertisers. Scale and engagement are the moat. Examples: Google, Meta, YouTube.</p>
+                <button class="ue-toggle" onclick="toggleUE(this)">
+                    <span class="ue-arrow">▶</span> Unit Economics
+                </button>
+                <div class="ue-body">
+                    <div class="ue-unit">Unit: impression / audience unit</div>
+                    <div class="ue-metric"><span class="ue-metric-name">CPM / CPC</span><span class="ue-metric-val">&gt; audience cost</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Monetisable inventory</span><span class="ue-metric-val">Sufficient</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Audience retention</span><span class="ue-metric-val">Stable</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">ARPU</span><span class="ue-metric-val">Growing</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">3rd-party platform dependency</span><span class="ue-metric-val">Limited</span></div>
+                    <div class="ue-rule">Audience is the asset — if retention declines, CPM falls and the entire unit economics inverts.</div>
+                </div>
             </div>
 
             <div class="bs-card" style="border-color:#a7f3d0; background:#ecfdf5;">
                 <span class="bs-number" style="color:#065f46; background:#d1fae5;">07 — Asset Ownership</span>
                 <h3>Asset Ownership</h3>
                 <p>Cash-flowing physical or financial assets held and operated. Returns from yield, appreciation, or utilisation. Examples: REITs, leasing, infrastructure.</p>
+                <button class="ue-toggle" onclick="toggleUE(this)">
+                    <span class="ue-arrow">▶</span> Unit Economics
+                </button>
+                <div class="ue-body">
+                    <div class="ue-unit">Unit: asset</div>
+                    <div class="ue-metric"><span class="ue-metric-name">Net yield</span><span class="ue-metric-val">Positive</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Cashflow vs opex</span><span class="ue-metric-val">CF &gt; operating costs</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Leverage</span><span class="ue-metric-val">Under control</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Macro risk</span><span class="ue-metric-val">Sustainable</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Exit optionality</span><span class="ue-metric-val">Available</span></div>
+                    <div class="ue-rule">If cashflow doesn't cover operating costs without leverage, the asset is not performing — it's speculating.</div>
+                </div>
             </div>
 
             <div class="bs-card" style="border-color:#bae6fd; background:#f0f9ff;">
                 <span class="bs-number" style="color:#0369a1; background:#e0f2fe;">08 — Service / Retainer</span>
                 <h3>Service / Retainer</h3>
                 <p>Revenue from paid human expertise and execution. Project-based or ongoing retainer. Examples: consulting, agencies, law firms.</p>
+                <button class="ue-toggle" onclick="toggleUE(this)">
+                    <span class="ue-arrow">▶</span> Unit Economics
+                </button>
+                <div class="ue-body">
+                    <div class="ue-unit">Unit: hour / project / client</div>
+                    <div class="ue-metric"><span class="ue-metric-name">Gross margin per hour</span><span class="ue-metric-val">Positive</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Utilisation rate</span><span class="ue-metric-val">≥ 70%</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Pricing model</span><span class="ue-metric-val">Not purely time-based</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Founder dependency</span><span class="ue-metric-val">Declining</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Repeatable processes</span><span class="ue-metric-val">In place</span></div>
+                    <div class="ue-rule">A service business where founder dependency isn't declining is not scalable — it's a job, not a system.</div>
+                </div>
             </div>
 
             <div class="bs-card" style="border-color:#fca5a5; background:#fff1f2;">
                 <span class="bs-number" style="color:#b91c1c; background:#fee2e2;">09 — Performance / Outcome</span>
                 <h3>Performance / Outcome-Based</h3>
                 <p>Paid only on results delivered — leads, conversions, AUM. Aligns incentives fully. Examples: affiliate networks, performance agencies, carried interest.</p>
+                <button class="ue-toggle" onclick="toggleUE(this)">
+                    <span class="ue-arrow">▶</span> Unit Economics
+                </button>
+                <div class="ue-body">
+                    <div class="ue-unit">Unit: result achieved</div>
+                    <div class="ue-metric"><span class="ue-metric-name">Downside</span><span class="ue-metric-val">Limited</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Upside</span><span class="ue-metric-val">Uncapped</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Risk-adjusted return</span><span class="ue-metric-val">Positive</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Deal flow access</span><span class="ue-metric-val">Stable</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Asymmetry</span><span class="ue-metric-val">Favourable</span></div>
+                    <div class="ue-rule">The only viable outcome-based model is one where your cost base survives a run of non-conversions.</div>
+                </div>
             </div>
 
             <div class="bs-card" style="border-color:#c4b5fd; background:#faf5ff;">
                 <span class="bs-number" style="color:#7c3aed; background:#ede9fe;">10 — Data / Insight</span>
                 <h3>Data / Insight</h3>
                 <p>Aggregated or analysed data sold as reports, feeds, or API access. Information itself is the product. Examples: Bloomberg, Nielsen, Palantir.</p>
+                <button class="ue-toggle" onclick="toggleUE(this)">
+                    <span class="ue-arrow">▶</span> Unit Economics
+                </button>
+                <div class="ue-body">
+                    <div class="ue-unit">Unit: dataset / insight</div>
+                    <div class="ue-metric"><span class="ue-metric-name">Data collection costs</span><span class="ue-metric-val">Amortisable</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Gross margin</span><span class="ue-metric-val">High</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Data replicability</span><span class="ue-metric-val">Hard to replicate</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Update frequency</span><span class="ue-metric-val">Useful cadence</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Decisional value</span><span class="ue-metric-val">Real</span></div>
+                    <div class="ue-rule">Data that can be easily replicated or scraped freely has no durable unit economics.</div>
+                </div>
             </div>
 
             <div class="bs-card" style="border-color:#6ee7b7; background:#ecfdf5;">
                 <span class="bs-number" style="color:#047857; background:#d1fae5;">11 — Platform / Ecosystem</span>
                 <h3>Platform / Ecosystem</h3>
                 <p>A standard on which third parties build and monetise. Revenue from the layer below. Examples: Apple App Store, Salesforce, Android.</p>
+                <button class="ue-toggle" onclick="toggleUE(this)">
+                    <span class="ue-arrow">▶</span> Unit Economics
+                </button>
+                <div class="ue-body">
+                    <div class="ue-unit">Unit: developer / app / integration</div>
+                    <div class="ue-metric"><span class="ue-metric-name">Core product</span><span class="ue-metric-val">Already monetisable</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Network effects</span><span class="ue-metric-val">Real</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Governance</span><span class="ue-metric-val">Clear</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Revenue share</span><span class="ue-metric-val">Sustainable</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Switching costs</span><span class="ue-metric-val">Growing</span></div>
+                    <div class="ue-rule">A platform with no core product monetisation is a subsidy programme, not a business.</div>
+                </div>
             </div>
 
             <div class="bs-card" style="border-color:#cbd5e1; background:#f8fafc;">
                 <span class="bs-number" style="color:#475569; background:#e2e8f0;">12 — Hybrid / Stack</span>
                 <h3>Hybrid / Stack</h3>
                 <p>A stable, intentional combination of two or more systems above. Not an escape hatch — a structural outcome at scale. Examples: Amazon (01+02+05+07), Google (06+11).</p>
+                <button class="ue-toggle" onclick="toggleUE(this)">
+                    <span class="ue-arrow">▶</span> Unit Economics
+                </button>
+                <div class="ue-body">
+                    <div class="ue-unit">Unit: composite system</div>
+                    <div class="ue-metric"><span class="ue-metric-name">Systems compatibility</span><span class="ue-metric-val">Confirmed</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Cross-subsidy</span><span class="ue-metric-val">Intentional</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">KPIs</span><span class="ue-metric-val">Separable per system</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Complexity</span><span class="ue-metric-val">Manageable</span></div>
+                    <div class="ue-metric"><span class="ue-metric-name">Synergies</span><span class="ue-metric-val">Real, not assumed</span></div>
+                    <div class="ue-rule">A hybrid where KPIs cannot be separated per system is not a strategy — it's accounting opacity.</div>
+                </div>
             </div>
 
         </div>
     </div>
+
+    <script>
+        function toggleUE(btn) {
+            btn.classList.toggle('open');
+            const body = btn.nextElementSibling;
+            body.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
