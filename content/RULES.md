@@ -34,17 +34,33 @@ style.css                   ← All styles (mobile + iPad responsive included)
 numbers.html                ← Part B step 1: TAM card for selected L2 (shared by all L3)
 problem-selection.html      ← Part B step 2: specific problems + 12 archetypes
 output-sheet.html           ← Part C: full analysis sheet
+faq.html                    ← FAQ and general information
+global-investors.html       ← Global investors and institutions database
+how-tam-is-calculated.html  ← TAM calculation methodology
+how-to-define-problems.html ← Problem definition framework
+macro-markets.html          ← 43 Macro Markets overview
 build-problems-json.py      ← Script: regenerates content/problems-by-niche.json from CSV
 content/
   markets-keywords.json     ← L0 keyword index for search matching
   taxonomy-data.json        ← L0 → L1 → L2 structure (used for deep routing)
   taxonomy-numbers.js       ← L0/L1/L2/L3 counts (single source of truth)
   problems-by-niche.json    ← L3 sub-segment problems (auto-generated from CSV)
-  en.json                   ← Translation strings
+  en.json                   ← Translation strings (i18n)
   RULES.md                  ← This file
   LEVEL-1-TEMPLATE.md       ← HTML template guide for L1 pages
   LEVEL-2-TEMPLATE.md       ← HTML template guide for L2 pages
   LEVEL-3-TEMPLATE.md       ← HTML template guide for L3 pages
+  BUSINESS-DOMAINS-TEMPLATE.md  ← Template guide for Business Domains framework
+BUSINESS DOMAINS TAXONOMY/
+  business-domains.html              ← Grid view of 12 Business Domains
+  business-domains-detail.html       ← Detailed explanations with anchor links
+BUSINESS SYSTEMS TAXONOMY/
+  business.html                      ← 12 Business Systems framework
+  business-systems-why.html          ← Why 12 Business Systems exist
+  unit-economics-why.html            ← Unit Economics benchmarks explained
+DELIVERY MODELS TAXONOMY/
+  delivery.html                      ← 12 Delivery Models framework
+  delivery-models-why.html           ← Why Delivery Models are universal
 L3 PROBLEM CSV/
   {MARKET}/
     *.csv                   ← Source CSV for problems per market
@@ -238,12 +254,42 @@ The `L3` column in the CSV must match `selectNiche('...')` in the HTML files exa
 
 ---
 
+## Project Sections
+
+The project now has three integrated frameworks accessible from the homepage:
+
+### Part A — Market Structure
+- **43 Macro Markets** with L0 → L1 → L2 → L3 taxonomy
+- **Business Domains** (12 functional areas organizing value flow)
+- **Business Systems** (12 monetization mechanisms)
+- **Delivery Models** (12 ways to reach customers)
+
+### Part B — Wizard / Analysis
+- Search markets by keyword or use auto-complete
+- Step-by-step or auto-complete flow modes
+- TAM calculation for selected market segments
+- Problem selection with 12 archetypes
+
+### Part C — Output Sheet
+- Build and export analysis
+- Save favorite markets and problems
+- CSV export for external tools
+
+---
+
 ## Current Status (Feb 2026)
 
-| Market | L1 | L2 | L3 | Problems CSV | taxonomy-data.json |
-|---|---|---|---|---|---|
-| Real Estate | ✅ | ✅ | ✅ | ✅ 57 niches | ✅ updated |
-| Healthcare | ✅ | ❌ | ❌ | ❌ | ⚠️ partial |
-| All others (41) | ❌ | ❌ | ❌ | ❌ | ⚠️ generic |
+| Component | Status | Coverage |
+|---|---|---|
+| Homepage & Navigation | ✅ | Complete |
+| Business Domains | ✅ | 12/12 domains documented |
+| Business Systems | ✅ | 12/12 systems documented |
+| Delivery Models | ✅ | 12/12 models documented |
+| Markets — Real Estate | ✅ | 57 L3 niches with problems |
+| Markets — Healthcare | ⚠️ | L1 only, needs L2-L3 |
+| Markets — Other (41) | ❌ | Placeholder L1 only |
 
-**Next step:** add L1 → L2 → L3 files for each market, add CSV, run `build-problems-json.py`.
+**Next steps:**
+1. Add L1 → L2 → L3 files for remaining markets
+2. Add Problem CSV files and regenerate `problems-by-niche.json`
+3. Run `python3 build-problems-json.py` for each new market
