@@ -1,118 +1,128 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Domains — Detailed Guide</title>
+    <title>Business Domains — Foundation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
     <style>
-        .detail-container {
-            max-width: 880px;
+        .doc-body {
+            max-width: 720px;
             margin: 0 auto;
-            padding: 24px 16px 48px;
+            padding: 24px 24px 80px;
         }
-        .domain-section {
-            margin-bottom: 48px;
-            scroll-margin-top: 100px;
-        }
-        .domain-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #f3f4f6;
-        }
-        .domain-icon {
-            font-size: 2.8rem;
-            line-height: 1;
-        }
-        .domain-title-block h2 {
-            font-size: 1.6rem;
+        .doc-body h2 {
+            font-size: 1.3rem;
             font-weight: 700;
-            margin: 0 0 8px;
-            color: #111;
+            margin: 40px 0 12px;
+            letter-spacing: -0.01em;
         }
-        .domain-title-block p {
-            font-size: 0.95rem;
-            color: #6b7280;
-            margin: 0;
-            line-height: 1.5;
-        }
-        .domain-content {
-            padding-left: 20px;
-            border-left: 2px solid #e5e7eb;
-        }
-        .domain-content h3 {
+        .doc-body h3 {
             font-size: 1rem;
-            font-weight: 700;
-            color: #1f2937;
-            margin: 16px 0 8px;
+            font-weight: 600;
+            margin: 28px 0 8px;
+            color: var(--text-primary, #111);
         }
-        .domain-content p {
+        .doc-body p {
             font-size: 0.9rem;
-            color: #374151;
-            line-height: 1.7;
-            margin: 0 0 12px;
+            line-height: 1.75;
+            color: var(--text-secondary, #374151);
+            margin: 0 0 16px;
         }
-        .domain-content ul {
-            margin: 12px 0;
+        .doc-body ul {
+            margin: 0 0 16px;
             padding-left: 20px;
         }
-        .domain-content li {
+        .doc-body ul li {
             font-size: 0.9rem;
-            color: #374151;
-            line-height: 1.6;
-            margin-bottom: 6px;
+            line-height: 1.75;
+            color: var(--text-secondary, #374151);
+            margin-bottom: 4px;
         }
-        .systems-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
+        .doc-body strong {
+            color: var(--text-primary, #111);
+            font-weight: 600;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border, #e5e7eb);
+            margin: 32px 0;
+        }
+        .exec-statement {
             background: #ecfdf5;
-            color: #047857;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-top: 12px;
+            border-left: 3px solid #059669;
+            border-radius: 0 8px 8px 0;
+            padding: 16px 20px;
+            margin: 20px 0;
         }
-        .toc {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 32px;
+        .exec-statement p {
+            margin: 0;
+            color: #064e3b;
         }
-        .toc h3 {
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: #6b7280;
-            margin: 0 0 12px;
-        }
-        .toc-list {
+        .domains-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 16px;
             display: flex;
             flex-direction: column;
             gap: 8px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
         }
-        .toc-list li a {
+        .domains-list li {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
             font-size: 0.9rem;
-            color: #059669;
-            text-decoration: none;
-            padding: 6px 0;
-            border-radius: 4px;
-            transition: background 0.15s;
+            line-height: 1.6;
+            color: var(--text-secondary, #374151);
         }
-        .toc-list li a:hover {
-            background: rgba(5, 150, 105, 0.1);
+        .dom-num {
+            font-weight: 700;
+            color: #059669;
+            min-width: 28px;
+        }
+        .final-rule {
+            background: #111;
+            color: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 32px;
+        }
+        .final-rule p {
+            color: #d1d5db;
+            margin: 0 0 12px;
+            font-size: 0.9rem;
+            line-height: 1.75;
+        }
+        .final-rule p:last-child { margin: 0; }
+        .final-rule strong { color: #fff; }
+        .domain-block {
+            border: 1px solid var(--border, #e5e7eb);
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+        }
+        .domain-block-title {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--text-primary, #111);
+            margin: 0 0 6px;
+        }
+        .domain-block-num {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #059669;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .domain-block p {
+            font-size: 0.85rem;
+            color: var(--text-secondary, #6b7280);
+            margin: 0;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -124,487 +134,141 @@
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    Back to Domains
+                    Back to Business Domains
                 </a>
             </div>
             <div style="text-align:center; margin-bottom: 6px;">
-                <span class="part-badge" style="background:#dbeafe; color:#059669; border:1px solid #86efac; border-radius:20px; padding:4px 14px; font-size:0.72rem; font-weight:700; letter-spacing:0.06em;">Part A — Market Structure</span>
+                <span class="part-badge" style="background:#ecfdf5; color:#059669; border:1px solid #6ee7b7; border-radius:20px; padding:4px 14px; font-size:0.72rem; font-weight:700; letter-spacing:0.06em;">Foundation</span>
             </div>
-            <h1 style="font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;">Business Domains — Detailed Guide</h1>
-            <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 720px; margin: 0 auto;">Deep dive into the 12 functional areas that organize value creation and flow through any business system.</p>
+            <h1 style="font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;">What Are Business Domains & Why 12?</h1>
+            <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 560px; margin: 0 auto;">The structural basis of the framework — and why Domains are distinct from Business Systems and Delivery Models.</p>
         </header>
 
-        <div class="detail-container">
+        <div class="doc-body">
 
-            <!-- Table of Contents -->
-            <div class="toc">
-                <h3>Table of Contents</h3>
-                <ul class="toc-list">
-                    <li><a href="#product">1. Product Development & Innovation</a></li>
-                    <li><a href="#distribution">2. Market Access & Distribution</a></li>
-                    <li><a href="#acquisition">3. Customer Acquisition & Growth</a></li>
-                    <li><a href="#retention">4. Customer Retention & Success</a></li>
-                    <li><a href="#operations">5. Operations & Execution</a></li>
-                    <li><a href="#pricing">6. Pricing & Revenue Optimization</a></li>
-                    <li><a href="#data">7. Data & Insight</a></li>
-                    <li><a href="#network">8. Network Effects & Community</a></li>
-                    <li><a href="#brand">9. Brand & Market Position</a></li>
-                    <li><a href="#partnerships">10. Partnerships & Ecosystem</a></li>
-                    <li><a href="#people">11. People & Organization</a></li>
-                    <li><a href="#finance">12. Finance & Capital</a></li>
-                </ul>
+            <h2>Executive Statement</h2>
+            <div class="exec-statement">
+                <p><strong>Every business operates across twelve functional domains. These are not departments — they are the universal areas in which all value is created, captured, and sustained, regardless of market, industry, or technology.</strong></p>
+                <p style="margin-top: 10px;">The 12 Business Domains are orthogonal to the 12 Business Systems and 12 Delivery Models. Systems answer "how does money enter?". Delivery Models answer "how does value reach the user?". Domains answer "what does the business actually do to create and sustain that value?"</p>
             </div>
 
-            <!-- 1. Product Development -->
-            <div class="domain-section" id="product">
-                <div class="domain-header">
-                    <div class="domain-icon">🔬</div>
-                    <div class="domain-title-block">
-                        <h2>Product Development & Innovation</h2>
-                        <p>The engine of differentiation and competitive advantage</p>
-                    </div>
-                </div>
-                <div class="domain-content">
-                    <h3>What It Is</h3>
-                    <p>Product Development encompasses all activities involved in creating, designing, engineering, and iterating products or services. It's the domain that transforms ideas into offerings that solve customer problems.</p>
+            <hr class="divider">
 
-                    <h3>Why It Matters</h3>
-                    <p>A business that stops innovating becomes commoditized. Product development is where you build defensibility—through features, UX, quality, and emotional resonance. It's also the primary driver of pricing power and market leadership.</p>
+            <h2>Definition</h2>
+            <p>A <strong>Business Domain</strong> is a functional area of activity that:</p>
+            <ul>
+                <li>exists in every business at some level of sophistication,</li>
+                <li>is <strong>independent of revenue model or delivery mechanism</strong>,</li>
+                <li>represents a distinct set of decisions, resources, and trade-offs,</li>
+                <li>and has measurable impact on competitive position or profitability.</li>
+            </ul>
+            <p>If removing a domain from the business does not affect its ability to create or capture value, it was never a domain — it was overhead.</p>
 
-                    <h3>Key Activities</h3>
-                    <ul>
-                        <li>Research and customer discovery</li>
-                        <li>Product design and prototyping</li>
-                        <li>Engineering and technical development</li>
-                        <li>Quality assurance and testing</li>
-                        <li>Continuous iteration and feature releases</li>
-                        <li>User experience (UX) and accessibility</li>
-                        <li>Technology stack decisions and infrastructure</li>
-                    </ul>
+            <hr class="divider">
 
-                    <h3>Economic Impact</h3>
-                    <p>Strong product development enables higher margins (pricing power), faster time-to-market, and stronger competitive moats. Weak product development leads to commoditization and price competition.</p>
+            <h2>The 12 Domains</h2>
 
-                    <span class="systems-tag">Business Systems: 01 · 10 · 11</span>
-                </div>
+            <div class="domain-block">
+                <span class="domain-block-num">01</span>
+                <div class="domain-block-title">Product Development & Innovation</div>
+                <p>Research, design, engineering, and iteration. The primary source of differentiation. Without it, the business commoditises — competing solely on price or distribution.</p>
             </div>
 
-            <!-- 2. Market Access & Distribution -->
-            <div class="domain-section" id="distribution">
-                <div class="domain-header">
-                    <div class="domain-icon">📦</div>
-                    <div class="domain-title-block">
-                        <h2>Market Access & Distribution</h2>
-                        <p>Determines marginal unit economics and reach</p>
-                    </div>
-                </div>
-                <div class="domain-content">
-                    <h3>What It Is</h3>
-                    <p>Distribution is the physical and digital infrastructure that moves products/services from the producer to the customer. It controls marginal unit economics, geographic reach, and availability.</p>
-
-                    <h3>Why It Matters</h3>
-                    <p>A great product in the wrong distribution channel dies. Distribution determines whether you can reach customers profitably. It also affects inventory, fulfillment costs, and customer satisfaction.</p>
-
-                    <h3>Key Activities</h3>
-                    <ul>
-                        <li>Channel selection and management (direct, wholesale, wholesale, retail, online)</li>
-                        <li>Logistics and supply chain optimization</li>
-                        <li>Inventory management</li>
-                        <li>Fulfillment and shipping</li>
-                        <li>Retail partnerships and negotiations</li>
-                        <li>Regional expansion strategy</li>
-                        <li>Last-mile delivery and customer experience</li>
-                    </ul>
-
-                    <h3>Economic Impact</h3>
-                    <p>Efficient distribution enables higher take rates (for marketplaces), lower fulfillment costs, and faster customer acquisition. Poor distribution choice can make a profitable product unprofitable.</p>
-
-                    <span class="systems-tag">Business Systems: 02 · 05 · 07</span>
-                </div>
+            <div class="domain-block">
+                <span class="domain-block-num">02</span>
+                <div class="domain-block-title">Pricing & Revenue Optimization</div>
+                <p>Monetisation model, price level, packaging, and payment terms. Often the highest-leverage decision in the business: a 10% price improvement flows directly to operating profit without additional cost.</p>
             </div>
 
-            <!-- 3. Customer Acquisition -->
-            <div class="domain-section" id="acquisition">
-                <div class="domain-header">
-                    <div class="domain-icon">📈</div>
-                    <div class="domain-title-block">
-                        <h2>Customer Acquisition & Growth</h2>
-                        <p>Drives top-line revenue and market share</p>
-                    </div>
-                </div>
-                <div class="domain-content">
-                    <h3>What It Is</h3>
-                    <p>Customer Acquisition includes all activities required to identify, reach, and convert new customers. It encompasses sales, marketing, partnerships, and growth strategy.</p>
-
-                    <h3>Why It Matters</h3>
-                    <p>Growth is oxygen. Without a scalable customer acquisition engine, even great products stall. This domain determines your CAC, your growth rate, and ultimately your market share.</p>
-
-                    <h3>Key Activities</h3>
-                    <ul>
-                        <li>Marketing strategy and campaigns (paid, organic, viral)</li>
-                        <li>Sales process design and execution</li>
-                        <li>Lead generation and lead scoring</li>
-                        <li>Conversion rate optimization</li>
-                        <li>Pricing and packaging strategy</li>
-                        <li>Partnerships and referral programs</li>
-                        <li>Performance marketing and CAC analysis</li>
-                    </ul>
-
-                    <h3>Economic Impact</h3>
-                    <p>Efficient acquisition (CAC < LTV) enables profitable scaling. Inefficient acquisition kills growth. The unit economics of this domain directly determine business viability.</p>
-
-                    <span class="systems-tag">Business Systems: 06 · 09</span>
-                </div>
+            <div class="domain-block">
+                <span class="domain-block-num">03</span>
+                <div class="domain-block-title">Operations & Execution</div>
+                <p>Manufacturing, delivery, and fulfillment. Controls gross margin and quality. Operational inefficiency is permanent — it does not self-correct and compounds over time.</p>
             </div>
 
-            <!-- 4. Customer Retention -->
-            <div class="domain-section" id="retention">
-                <div class="domain-header">
-                    <div class="domain-icon">❤️</div>
-                    <div class="domain-title-block">
-                        <h2>Customer Retention & Success</h2>
-                        <p>Maximizes lifetime value and reduces churn</p>
-                    </div>
-                </div>
-                <div class="domain-content">
-                    <h3>What It Is</h3>
-                    <p>Customer Retention and Success covers all activities that keep customers engaged, satisfied, and coming back. It's the flip side of acquisition—capturing value from customers over time.</p>
-
-                    <h3>Why It Matters</h3>
-                    <p>In subscription and repeat-purchase models, retention is often more profitable than acquisition. A 5% improvement in retention can translate to 25%+ improvement in LTV. It's the leakage in your bucket.</p>
-
-                    <h3>Key Activities</h3>
-                    <ul>
-                        <li>Customer support and service</li>
-                        <li>Success management and onboarding</li>
-                        <li>Engagement and usage tracking</li>
-                        <li>Loyalty and rewards programs</li>
-                        <li>Churn analysis and intervention</li>
-                        <li>Community building and advocacy</li>
-                        <li>Feedback and product improvement loops</li>
-                    </ul>
-
-                    <h3>Economic Impact</h3>
-                    <p>High retention (low churn) unlocks compounding LTV and enables unit economics magic in subscription models. Network effects and viral growth often emerge from strong retention.</p>
-
-                    <span class="systems-tag">Business Systems: 01 · 02 · 05</span>
-                </div>
+            <div class="domain-block">
+                <span class="domain-block-num">04</span>
+                <div class="domain-block-title">Market Access & Distribution</div>
+                <p>Channels, logistics, and infrastructure to reach customers. A great product in the wrong channel fails. Distribution determines whether unit economics are achievable at scale.</p>
             </div>
 
-            <!-- 5. Operations & Execution -->
-            <div class="domain-section" id="operations">
-                <div class="domain-header">
-                    <div class="domain-icon">⚙️</div>
-                    <div class="domain-title-block">
-                        <h2>Operations & Execution</h2>
-                        <p>Controls cost structure and quality</p>
-                    </div>
-                </div>
-                <div class="domain-content">
-                    <h3>What It Is</h3>
-                    <p>Operations encompasses the core processes of making and delivering your product or service. It's the machinery that turns inputs into outputs at scale.</p>
-
-                    <h3>Why It Matters</h3>
-                    <p>Operational excellence (or failure) determines gross margin, customer satisfaction, and scalability. It's also where many businesses hide hidden waste—inefficient operations kill growth faster than bad products.</p>
-
-                    <h3>Key Activities</h3>
-                    <ul>
-                        <li>Manufacturing or service delivery process</li>
-                        <li>Quality control and assurance</li>
-                        <li>Supplier management and procurement</li>
-                        <li>Capacity planning and scaling</li>
-                        <li>Process optimization and automation</li>
-                        <li>Cost control and waste reduction</li>
-                        <li>Returns and reverse logistics</li>
-                    </ul>
-
-                    <h3>Economic Impact</h3>
-                    <p>Operational efficiency directly flows to gross margin. A 5% improvement in COGS can mean 20%+ improvement in operating income. Poor operations become a permanent drag on profitability.</p>
-
-                    <span class="systems-tag">Business Systems: 02 · 03 · 07 · 08</span>
-                </div>
+            <div class="domain-block">
+                <span class="domain-block-num">05</span>
+                <div class="domain-block-title">Customer Acquisition & Growth</div>
+                <p>Sales, marketing, and growth strategy. Determines CAC, revenue ramp, and market share. A business without a repeatable acquisition engine is a project, not a business.</p>
             </div>
 
-            <!-- 6. Pricing & Revenue -->
-            <div class="domain-section" id="pricing">
-                <div class="domain-header">
-                    <div class="domain-icon">💰</div>
-                    <div class="domain-title-block">
-                        <h2>Pricing & Revenue Optimization</h2>
-                        <p>Unlocks profit potential</p>
-                    </div>
-                </div>
-                <div class="domain-content">
-                    <h3>What It Is</h3>
-                    <p>Pricing encompasses the strategy, model, and mechanics of how you capture value from customers. It includes deciding the price level, structure (one-time, recurring, usage-based), and packaging.</p>
-
-                    <h3>Why It Matters</h3>
-                    <p>Pricing is often the highest-leverage business decision. A 10% increase in price (without volume loss) is a 30%+ increase in operating profit. Most businesses under-optimize pricing.</p>
-
-                    <h3>Key Activities</h3>
-                    <ul>
-                        <li>Price level optimization (value-based vs. cost-based)</li>
-                        <li>Pricing model selection (subscription, usage, freemium, etc.)</li>
-                        <li>Packaging and tiering strategy</li>
-                        <li>Payment terms and financing options</li>
-                        <li>Discounting and promotional strategy</li>
-                        <li>Price elasticity testing and analysis</li>
-                        <li>Revenue recognition and accounting</li>
-                    </ul>
-
-                    <h3>Economic Impact</h3>
-                    <p>Right pricing unlocks profitability without adding complexity or cost. It also signals value to market and enables sustainable CAC ratios.</p>
-
-                    <span class="systems-tag">Business Systems: 01 · 02 · 03 · 04</span>
-                </div>
+            <div class="domain-block">
+                <span class="domain-block-num">06</span>
+                <div class="domain-block-title">Customer Retention & Success</div>
+                <p>Support, success management, and churn reduction. In recurring-revenue models, retention economics typically exceed acquisition economics — yet most businesses under-invest here.</p>
             </div>
 
-            <!-- 7. Data & Insight -->
-            <div class="domain-section" id="data">
-                <div class="domain-header">
-                    <div class="domain-icon">📊</div>
-                    <div class="domain-title-block">
-                        <h2>Data & Insight</h2>
-                        <p>The foundation of evidence-based strategy</p>
-                    </div>
-                </div>
-                <div class="domain-content">
-                    <h3>What It Is</h3>
-                    <p>Data & Insight covers analytics, metrics, dashboards, and decision intelligence. It's the domain that turns raw numbers into strategic clarity.</p>
-
-                    <h3>Why It Matters</h3>
-                    <p>Decisions based on data beat decisions based on gut feel. This domain enables you to see what's working, what's not, and where to invest next. It's also increasingly becoming a product offering itself.</p>
-
-                    <h3>Key Activities</h3>
-                    <ul>
-                        <li>Data collection and tracking (analytics, events, logs)</li>
-                        <li>Data warehouse and infrastructure</li>
-                        <li>Dashboard and reporting design</li>
-                        <li>KPI definition and tracking</li>
-                        <li>Cohort analysis and segmentation</li>
-                        <li>Predictive analytics and forecasting</li>
-                        <li>Data visualization and storytelling</li>
-                    </ul>
-
-                    <h3>Economic Impact</h3>
-                    <p>Good data drives better decisions, which compounds over time. It also enables you to monetize data as a product (in some business models). Poor data leads to wasted marketing spend and missed opportunities.</p>
-
-                    <span class="systems-tag">Business Systems: 10 · 06</span>
-                </div>
+            <div class="domain-block">
+                <span class="domain-block-num">07</span>
+                <div class="domain-block-title">Data & Insight</div>
+                <p>Analytics, metrics, and decision intelligence. Turns raw signals into strategic clarity. In some business models (Bloomberg, Nielsen, Palantir), data itself becomes the sellable product.</p>
             </div>
 
-            <!-- 8. Network Effects -->
-            <div class="domain-section" id="network">
-                <div class="domain-header">
-                    <div class="domain-icon">🕸️</div>
-                    <div class="domain-title-block">
-                        <h2>Network Effects & Community</h2>
-                        <p>Compounds defensibility</p>
-                    </div>
-                </div>
-                <div class="domain-content">
-                    <h3>What It Is</h3>
-                    <p>Network Effects occur when the value of the product/platform increases as more people use it. Community encompasses user-generated content, engagement, and emergent behavior.</p>
-
-                    <h3>Why It Matters</h3>
-                    <p>Network effects are the most durable moat in business. They create exponential value curves. Once you achieve them, competitors struggle to compete because the user base is sticky.</p>
-
-                    <h3>Key Activities</h3>
-                    <ul>
-                        <li>Two-sided marketplace design (supply/demand balance)</li>
-                        <li>Viral mechanics and referral programs</li>
-                        <li>Community engagement and moderation</li>
-                        <li>User-generated content systems</li>
-                        <li>Network density optimization (critical mass)</li>
-                        <li>Cold-start problem solutions</li>
-                        <li>Platform economics and incentive alignment</li>
-                    </ul>
-
-                    <h3>Economic Impact</h3>
-                    <p>Strong network effects reduce CAC, increase LTV, and create compounding growth. They're also hard to fake—networks either work or they don't. Once they work, they're nearly unbeatable.</p>
-
-                    <span class="systems-tag">Business Systems: 05 · 06 · 11</span>
-                </div>
+            <div class="domain-block">
+                <span class="domain-block-num">08</span>
+                <div class="domain-block-title">Network Effects & Community</div>
+                <p>Two-sided dynamics, platform liquidity, and community engagement. The most durable moat in business because it compounds: value increases with scale, making imitation progressively harder.</p>
             </div>
 
-            <!-- 9. Brand -->
-            <div class="domain-section" id="brand">
-                <div class="domain-header">
-                    <div class="domain-icon">🎯</div>
-                    <div class="domain-title-block">
-                        <h2>Brand & Market Position</h2>
-                        <p>Enables pricing power and loyalty</p>
-                    </div>
-                </div>
-                <div class="domain-content">
-                    <h3>What It Is</h3>
-                    <p>Brand is the emotional and perceptual position of your business in the customer's mind. It includes positioning, messaging, visual identity, and the entire customer experience.</p>
-
-                    <h3>Why It Matters</h3>
-                    <p>Strong brands command premium pricing, attract better talent, and create loyalty. They reduce customer acquisition costs because people seek you out. Brand is often the difference between a commodity and a premium offering.</p>
-
-                    <h3>Key Activities</h3>
-                    <ul>
-                        <li>Brand strategy and positioning</li>
-                        <li>Brand identity and visual design</li>
-                        <li>Messaging and tone of voice</li>
-                        <li>Content marketing and thought leadership</li>
-                        <li>Public relations and media relations</li>
-                        <li>Influencer and partnership strategy</li>
-                        <li>Brand monitoring and reputation management</li>
-                    </ul>
-
-                    <h3>Economic Impact</h3>
-                    <p>Strong brands enable 10-30% price premiums without volume loss. They also lower CAC because of word-of-mouth and organic demand. Brand is a long-term asset that compounds.</p>
-
-                    <span class="systems-tag">Business Systems: 04 · 06 · 09</span>
-                </div>
+            <div class="domain-block">
+                <span class="domain-block-num">09</span>
+                <div class="domain-block-title">Brand & Market Position</div>
+                <p>Positioning, identity, and perception. Strong brands command 10–30% pricing premiums and lower CAC through organic demand. Brand is a long-term asset — it cannot be created quickly.</p>
             </div>
 
-            <!-- 10. Partnerships -->
-            <div class="domain-section" id="partnerships">
-                <div class="domain-header">
-                    <div class="domain-icon">🤝</div>
-                    <div class="domain-title-block">
-                        <h2>Partnerships & Ecosystem</h2>
-                        <p>Multiplies market reach</p>
-                    </div>
-                </div>
-                <div class="domain-content">
-                    <h3>What It Is</h3>
-                    <p>Partnerships cover strategic alliances, integrations, API relationships, and ecosystem participation. It's about amplifying reach and value through third parties.</p>
-
-                    <h3>Why It Matters</h3>
-                    <p>Partnerships can accelerate growth exponentially. They can open new markets, reduce friction, and create new revenue streams. They're also how platforms create defensibility.</p>
-
-                    <h3>Key Activities</h3>
-                    <ul>
-                        <li>Strategic partnership identification and negotiation</li>
-                        <li>Integration and API development</li>
-                        <li>Channel partner management and enablement</li>
-                        <li>Co-marketing and co-sales arrangements</li>
-                        <li>Ecosystem platform development</li>
-                        <li>Technology partnerships and standards participation</li>
-                        <li>Customer partnership programs (resellers, agencies)</li>
-                    </ul>
-
-                    <h3>Economic Impact</h3>
-                    <p>Good partnerships multiply reach and reduce customer acquisition costs. Bad partnerships drain resources. Strategic partnerships can enable 2-3x growth without proportional cost increases.</p>
-
-                    <span class="systems-tag">Business Systems: 11 · 04</span>
-                </div>
+            <div class="domain-block">
+                <span class="domain-block-num">10</span>
+                <div class="domain-block-title">Partnerships & Ecosystem</div>
+                <p>Strategic alliances, integrations, and platform relationships. Good partnerships multiply reach without proportional cost. Bad partnerships drain resources without reciprocal value.</p>
             </div>
 
-            <!-- 11. People & Organization -->
-            <div class="domain-section" id="people">
-                <div class="domain-header">
-                    <div class="domain-icon">👥</div>
-                    <div class="domain-title-block">
-                        <h2>People & Organization</h2>
-                        <p>The limiting factor in execution and innovation</p>
-                    </div>
-                </div>
-                <div class="domain-content">
-                    <h3>What It Is</h3>
-                    <p>People & Organization covers hiring, culture, management, training, and organizational design. It's the domain that determines whether a strategy gets executed.</p>
-
-                    <h3>Why It Matters</h3>
-                    <p>Great strategy with mediocre execution fails. Mediocre strategy with great execution succeeds. People are the limiting factor. Culture, capability, and alignment determine everything.</p>
-
-                    <h3>Key Activities</h3>
-                    <ul>
-                        <li>Hiring and recruiting</li>
-                        <li>Culture development and values alignment</li>
-                        <li>Performance management and feedback</li>
-                        <li>Compensation and equity</li>
-                        <li>Training and development</li>
-                        <li>Organizational design and roles</li>
-                        <li>Retention and employee engagement</li>
-                    </ul>
-
-                    <h3>Economic Impact</h3>
-                    <p>Good teams execute faster, make fewer mistakes, and attract customers. Bad teams burn cash and lose direction. Payroll is often 50-70% of operating expense—it determines your burn rate.</p>
-
-                    <span class="systems-tag">Business Systems: 08</span>
-                </div>
+            <div class="domain-block">
+                <span class="domain-block-num">11</span>
+                <div class="domain-block-title">People & Organisation</div>
+                <p>Hiring, culture, and team capability. Payroll typically represents 50–70% of operating expense. The quality of this domain determines whether any strategy gets executed — or simply documented.</p>
             </div>
 
-            <!-- 12. Finance & Capital -->
-            <div class="domain-section" id="finance">
-                <div class="domain-header">
-                    <div class="domain-icon">💳</div>
-                    <div class="domain-title-block">
-                        <h2>Finance & Capital</h2>
-                        <p>Fuels growth and enables optionality</p>
-                    </div>
-                </div>
-                <div class="domain-content">
-                    <h3>What It Is</h3>
-                    <p>Finance & Capital covers fundraising, cash management, investor relations, financial planning, and capital structure. It's the oxygen that fuels scaling.</p>
+            <div class="domain-block">
+                <span class="domain-block-num">12</span>
+                <div class="domain-block-title">Finance & Capital</div>
+                <p>Funding, cash management, and investor relations. Determines runway, growth capacity, and exit optionality. Running out of cash kills profitable businesses as effectively as unprofitable ones.</p>
+            </div>
 
-                    <h3>Why It Matters</h3>
-                    <p>Cash is king. Running out of cash kills the best businesses. This domain determines whether you can fund your growth, survive downturns, and maintain optionality. It also signals health to employees and partners.</p>
+            <hr class="divider">
 
-                    <h3>Key Activities</h3>
-                    <ul>
-                        <li>Fundraising and capital raising</li>
-                        <li>Investor relations and board management</li>
-                        <li>Cash flow forecasting and management</li>
-                        <li>Financial planning and budgeting</li>
-                        <li>Unit economics analysis and modeling</li>
-                        <li>M&A strategy and due diligence</li>
-                        <li>Exit strategy and valuation</li>
-                    </ul>
+            <h2>Domains vs Systems vs Delivery Models</h2>
+            <p>These three frameworks are orthogonal — they answer different questions:</p>
+            <ul>
+                <li><strong>Business Systems</strong> — how does money enter the firm? (subscription, transaction, licensing, etc.)</li>
+                <li><strong>Delivery Models</strong> — how does value reach the user? (SaaS, physical, on-site, platform, etc.)</li>
+                <li><strong>Business Domains</strong> — what does the business do to create and sustain that value?</li>
+            </ul>
+            <p>A SaaS company (Delivery Model: 01) using subscriptions (Business System: 01) still operates across all 12 domains — its competitive position is determined by how well it executes each of them relative to alternatives.</p>
 
-                    <h3>Economic Impact</h3>
-                    <p>Well-managed capital extends runway and enables optionality. Poor capital management creates unnecessary dilution or forces unfavorable exits. Capital structure determines your long-term ownership.</p>
+            <hr class="divider">
 
-                    <span class="systems-tag">Business Systems: 07</span>
-                </div>
+            <h2>Why the number is 12</h2>
+            <p>The number 12 is not arbitrary. It emerges from convergent analysis of:</p>
+            <ul>
+                <li><strong>Porter's Value Chain</strong> — primary and support activities cover the same functional territory, resolved to 12 non-overlapping domains.</li>
+                <li><strong>Corporate function taxonomy</strong> — every public company organises its operations across the same recurring set of functional areas. None has introduced a 13th that is not a sub-function of an existing one.</li>
+                <li><strong>Strategic frameworks</strong> (McKinsey 7-S, OKR structures, balanced scorecards) — each resolves to the same 12 areas when collapsed to first principles.</li>
+                <li><strong>Job-to-be-done analysis</strong> — the functional "jobs" a business must perform for customers, investors, and itself map to exactly these 12 categories.</li>
+            </ul>
+            <p>Every proposed 13th domain is either a sub-domain of an existing one or a combination of two.</p>
+
+            <div class="final-rule">
+                <p><strong>The rule:</strong> A business that ignores any domain does not eliminate it — it outsources it, neglects it, or lets it degrade by default. The question is never whether a domain exists, but who owns it and how well it is being executed.</p>
+                <p>Mapping your business across all 12 domains reveals not just what you are doing, but what you are not doing — and whether that is a deliberate strategic choice or an invisible gap.</p>
             </div>
 
         </div>
-
-        <!-- Footer -->
-        <footer class="site-footer-enhanced">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Business Domains Framework</h4>
-                    <p>The 12 functional areas that organize how value flows through any business system—from scrappy startups to Fortune 500 enterprises.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Related</h4>
-                    <ul>
-                        <li><a href="business-domains.html">Business Domains →</a></li>
-                        <li><a href="../BUSINESS SYSTEMS TAXONOMY/business.html">12 Business Systems →</a></li>
-                        <li><a href="../BUSINESS SYSTEMS TAXONOMY/business-systems-why.html">Why 12 Systems</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="../../index.html">Home</a></li>
-                        <li><a href="../../macro-markets.html">43 Markets</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p><span id="current-date-footer"></span> • Business Domains — Detailed Framework</p>
-            </div>
-        </footer>
-
-        <script src="../../content/t.js"></script>
-        <script>
-            (function () {
-                var now = new Date();
-                var formatted = new Intl.DateTimeFormat("en-GB", {
-                    year: "numeric", month: "long", day: "2-digit"
-                }).format(now);
-                var el = document.getElementById("current-date-footer");
-                if (el) el.textContent = "Today, " + formatted + " — Richard Kennedy";
-            })();
-        </script>
-
     </div>
 </body>
 </html>
