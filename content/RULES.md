@@ -2,6 +2,144 @@
 
 ---
 
+## UI / Visual Style Guide
+
+This section defines the canonical design patterns used across ALL pages. Follow exactly when creating or editing any HTML file.
+
+### Typography & Spacing
+- **Font:** Inter (300, 400, 500, 600, 700) via Google Fonts
+- **Body text:** `0.9rem` / `line-height: 1.75` / `color: #374151`
+- **Card descriptions:** `0.8rem` / `line-height: 1.5` / `color: var(--text-secondary, #6b7280)`
+- **Section labels:** `0.7rem`, `font-weight: 700`, uppercase, `letter-spacing: 0.1em`, `color: #9ca3af`
+- **Headings h1:** `1.6rem`, `font-weight: 700`, `letter-spacing: -0.02em`
+- **Headings h2 (doc pages):** `1.3rem`, `font-weight: 700`, `letter-spacing: -0.01em`
+
+### Header Pattern (all taxonomy/detail pages)
+```html
+<header class="header" style="padding-bottom: 8px;">
+    <div class="back-nav" style="margin-bottom: 16px;">
+        <a href="../index.html" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back to [Page Name]
+        </a>
+    </div>
+    <div style="text-align:center; margin-bottom: 6px;">
+        <span class="part-badge" style="background:#eff6ff; color:#2563eb; border:1px solid #bfdbfe; border-radius:20px; padding:4px 14px; font-size:0.72rem; font-weight:700; letter-spacing:0.06em;">Part B — Business Systems</span>
+    </div>
+    <h1 style="font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;">Title</h1>
+    <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto;">Subtitle.</p>
+</header>
+```
+
+### Part Badge Colors
+| Section | Background | Color | Border |
+|---------|-----------|-------|--------|
+| Part A — Market / Domains | `#ecfdf5` | `#059669` | `#6ee7b7` |
+| Part B — Business Systems | `#eff6ff` | `#2563eb` | `#bfdbfe` |
+| Part C — Delivery Models | `#f5f3ff` | `#7c3aed` | `#ddd6fe` |
+| Foundation | same as parent section | — | — |
+
+### Card Grid Pattern (taxonomy overview pages)
+```css
+/* Grid */
+.xx-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+}
+/* Card */
+.xx-card {
+    background: var(--surface, #fff);
+    border: 1px solid var(--border, #e5e7eb);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: box-shadow 0.15s;
+}
+.xx-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+/* Number tag */
+.xx-number {
+    font-size: 0.68rem; font-weight: 700;
+    border-radius: 6px; padding: 2px 8px;
+    width: fit-content; letter-spacing: 0.06em;
+}
+```
+
+### Card Content Rules
+- **Number tag format:** `01 — Name` (zero-padded, em-dash, short name)
+- **Card title (h3):** `font-size: 1rem; font-weight: 600; margin: 0;`
+- **Card description (p):** `font-size: 0.8rem; color: var(--text-secondary); margin: 0; line-height: 1.5;`
+- **Description length:** 1–2 lines max. One observation + one example or consequence.
+- **NO emojis** anywhere in the UI
+- **NO long descriptions** on card grids — brevity is the rule
+
+### Foundation / Why-Link Pattern
+Used below the header, before the card grid, to link to explanatory "why" pages:
+```html
+<div class="why-row" style="margin-top: 24px;">
+    <a href="xxx-why.html" class="why-link">
+        <div class="why-link-left">
+            <span class="why-link-tag">Foundation</span>
+            <span class="why-link-title">Why There Are Exactly 12 [X]</span>
+            <span class="why-link-sub">The theory, the sources, and why the number is not arbitrary.</span>
+        </div>
+        <span class="why-link-arrow">→</span>
+    </a>
+</div>
+```
+- `.why-link-tag` color matches section accent color
+- `.why-link-arrow` color matches section accent color
+- Hover border-color matches section accent color
+
+### Section Labels
+```html
+<p class="section-label">Label text</p>
+```
+Used to group cards thematically. Keep labels short (2–4 words). Comes before each card grid block.
+
+### "Why" / Foundation Document Pages
+Detailed explanatory pages (e.g. `business-systems-why.html`). Pattern:
+```css
+.doc-body { max-width: 720px; margin: 0 auto; padding: 24px 24px 80px; }
+.exec-statement { background: [accent-light]; border-left: 3px solid [accent]; border-radius: 0 8px 8px 0; padding: 16px 20px; }
+.final-rule { background: #111; color: #fff; border-radius: 12px; padding: 24px; margin-top: 32px; }
+```
+- Uses `h2` and `h3` for structure
+- Long-form prose is allowed here (unlike card grids)
+- Ends with a `final-rule` dark box containing the key takeaway
+
+### Color Palette per Section
+
+**Business Systems (blue):**
+- Each system has a unique pastel color pair (border-color + background)
+- 01 blue, 02 green, 03 orange, 04 purple, 05 yellow, 06 pink, 07 teal, 08 sky, 09 red, 10 violet, 11 emerald, 12 slate
+
+**Delivery Models (purple, `#7c3aed`):**
+- Section accent: `#7c3aed` / `#f5f3ff` / `#ddd6fe`
+
+**Business Domains (green, `#059669`):**
+- Section accent: `#059669` / `#ecfdf5` / `#6ee7b7`
+
+**Markets (green, `var(--green)`):**
+- Section accent: `var(--green)` / `#f0fdf4` / `#bbf7d0`
+
+### What NOT to do
+- Do not use emojis in any page
+- Do not write card descriptions longer than 2 sentences
+- Do not create elaborate multi-section layouts with "What It Is / Why It Matters / Key Activities" headings on card pages — that pattern belongs only in Foundation/Why doc pages
+- Do not add decorative elements (dividers, icons, ornaments) not already in the codebase
+- Do not change fonts, weights, or spacing outside the values above
+- Do not hardcode colors not in this palette
+
+---
+
 ## What This Project Does
 
 A personal research tool to identify **business problems** across 43 macro-markets.

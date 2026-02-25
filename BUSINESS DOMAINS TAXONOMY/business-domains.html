@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,64 +10,53 @@
     <style>
         .bd-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            max-width: 960px;
             margin: 0 auto;
             padding: 24px 16px 48px;
         }
         .bd-card {
+            background: var(--surface, #fff);
+            border: 1px solid var(--border, #e5e7eb);
             border-radius: 12px;
-            padding: 24px;
+            padding: 20px;
             color: inherit;
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            border: 1px solid #e5e7eb;
-            background: #fff;
-            transition: box-shadow 0.15s, border-color 0.15s;
-            text-decoration: none;
+            gap: 8px;
+            transition: box-shadow 0.15s;
         }
-        .bd-card:hover {
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-            border-color: #059669;
-        }
-        .bd-icon {
-            font-size: 2.4rem;
-            line-height: 1;
-        }
-        .bd-title {
-            font-size: 1.1rem;
+        .bd-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+        .bd-number {
+            font-size: 0.68rem;
             font-weight: 700;
-            margin: 0;
-            color: #111;
+            border-radius: 6px;
+            padding: 2px 8px;
+            width: fit-content;
+            letter-spacing: 0.06em;
         }
-        .bd-desc {
-            font-size: 0.85rem;
-            color: #6b7280;
-            margin: 0;
-            line-height: 1.6;
-            flex: 1;
+        .bd-card h3 { font-size: 1rem; font-weight: 600; margin: 0; }
+        .bd-card p { font-size: 0.8rem; color: var(--text-secondary, #6b7280); margin: 0; line-height: 1.5; }
+
+        .why-row { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+        .why-link {
+            display: flex; align-items: center; justify-content: space-between;
+            background: var(--surface, #fff); border: 1px solid var(--border, #e5e7eb);
+            border-radius: 12px; padding: 16px 20px; text-decoration: none; color: inherit;
+            transition: box-shadow 0.15s, border-color 0.15s; margin-bottom: 8px;
         }
-        .bd-systems {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #059669;
-            margin-top: 8px;
-            padding-top: 12px;
-            border-top: 1px solid #f3f4f6;
-        }
+        .why-link:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-color: #059669; }
+        .why-link-left { display: flex; flex-direction: column; gap: 4px; }
+        .why-link-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #059669; }
+        .why-link-title { font-size: 1rem; font-weight: 600; }
+        .why-link-sub { font-size: 0.8rem; color: var(--text-secondary, #6b7280); }
+        .why-link-arrow { color: #059669; font-size: 1.2rem; }
+
         .section-label {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #9ca3af;
-            max-width: 1200px;
-            margin: 24px auto 0;
-            padding: 0 16px;
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: var(--text-tertiary, #9ca3af);
+            max-width: 960px; margin: 24px auto 0; padding: 0 16px;
         }
     </style>
 </head>
@@ -84,166 +72,114 @@
                 </a>
             </div>
             <div style="text-align:center; margin-bottom: 6px;">
-                <span class="part-badge" style="background:#dbeafe; color:#059669; border:1px solid #86efac; border-radius:20px; padding:4px 14px; font-size:0.72rem; font-weight:700; letter-spacing:0.06em;">Part A — Market Structure</span>
+                <span class="part-badge" style="background:#ecfdf5; color:#059669; border:1px solid #6ee7b7; border-radius:20px; padding:4px 14px; font-size:0.72rem; font-weight:700; letter-spacing:0.06em;">Part A — Business Domains</span>
             </div>
-            <h1 style="font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;">Business Domains</h1>
-            <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 720px; margin: 0 auto;">The functional areas that define how value flows through a business. Each domain represents a distinct set of activities and economic mechanisms.</p>
+            <h1 style="font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;">12 Business Domains</h1>
+            <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 560px; margin: 0 auto;">The twelve functional areas that organize how value is created and flows through any business — across any market, system, or era.</p>
         </header>
 
-        <!-- Foundation rows -->
         <div class="why-row" style="margin-top: 24px;">
             <a href="business-domains-detail.html" class="why-link">
                 <div class="why-link-left">
                     <span class="why-link-tag">Foundation</span>
-                    <span class="why-link-title">What Are Business Domains?</span>
-                    <span class="why-link-sub">Understand the structural basis of business organization and value creation.</span>
+                    <span class="why-link-title">What Are Business Domains & Why 12?</span>
+                    <span class="why-link-sub">The structural basis, the sources, and the distinction from Business Systems.</span>
                 </div>
                 <span class="why-link-arrow">→</span>
             </a>
         </div>
 
-        <!-- Business Domains Grid -->
-        <p class="section-label">12 Business Domains — Core functional areas</p>
+        <p class="section-label">Value creation</p>
         <div class="bd-grid">
 
-            <!-- 1. Product Development & Innovation -->
-            <a href="business-domains-detail.html#product" class="bd-card">
-                <div class="bd-icon">🔬</div>
-                <h3 class="bd-title">Product Development & Innovation</h3>
-                <p class="bd-desc">Research, design, engineering, and product iteration. The engine of differentiation and competitive advantage.</p>
-                <div class="bd-systems">01 · 10 · 11</div>
-            </a>
+            <div class="bd-card" style="border-color:#bfdbfe; background:#eff6ff;">
+                <span class="bd-number" style="color:#1d4ed8; background:#dbeafe;">01 — Product & Innovation</span>
+                <h3>Product Development & Innovation</h3>
+                <p>Research, design, engineering, and continuous iteration. The primary source of differentiation and pricing power.</p>
+            </div>
 
-            <!-- 2. Market Access & Distribution -->
-            <a href="business-domains-detail.html#distribution" class="bd-card">
-                <div class="bd-icon">📦</div>
-                <h3 class="bd-title">Market Access & Distribution</h3>
-                <p class="bd-desc">Channels, logistics, and infrastructure to reach customers. Determines marginal unit economics.</p>
-                <div class="bd-systems">02 · 05 · 07</div>
-            </a>
+            <div class="bd-card" style="border-color:#6ee7b7; background:#ecfdf5;">
+                <span class="bd-number" style="color:#047857; background:#d1fae5;">02 — Pricing & Revenue</span>
+                <h3>Pricing & Revenue Optimization</h3>
+                <p>Monetisation model, price level, and packaging. Often the highest-leverage lever in the business — affects margin directly.</p>
+            </div>
 
-            <!-- 3. Customer Acquisition & Growth -->
-            <a href="business-domains-detail.html#acquisition" class="bd-card">
-                <div class="bd-icon">📈</div>
-                <h3 class="bd-title">Customer Acquisition & Growth</h3>
-                <p class="bd-desc">Sales, marketing, and user/customer growth strategies. Drives top-line revenue and market share.</p>
-                <div class="bd-systems">06 · 09</div>
-            </a>
-
-            <!-- 4. Customer Retention & Success -->
-            <a href="business-domains-detail.html#retention" class="bd-card">
-                <div class="bd-icon">❤️</div>
-                <h3 class="bd-title">Customer Retention & Success</h3>
-                <p class="bd-desc">Support, success management, and loyalty. Maximizes lifetime value and reduces churn.</p>
-                <div class="bd-systems">01 · 02 · 05</div>
-            </a>
-
-            <!-- 5. Operations & Execution -->
-            <a href="business-domains-detail.html#operations" class="bd-card">
-                <div class="bd-icon">⚙️</div>
-                <h3 class="bd-title">Operations & Execution</h3>
-                <p class="bd-desc">Manufacturing, delivery, and service fulfillment. Controls cost structure and quality.</p>
-                <div class="bd-systems">02 · 03 · 07 · 08</div>
-            </a>
-
-            <!-- 6. Pricing & Revenue Optimization -->
-            <a href="business-domains-detail.html#pricing" class="bd-card">
-                <div class="bd-icon">💰</div>
-                <h3 class="bd-title">Pricing & Revenue Optimization</h3>
-                <p class="bd-desc">Monetisation strategy, pricing models, and revenue structure. Unlocks profit potential.</p>
-                <div class="bd-systems">01 · 02 · 03 · 04</div>
-            </a>
-
-            <!-- 7. Data & Insight -->
-            <a href="business-domains-detail.html#data" class="bd-card">
-                <div class="bd-icon">📊</div>
-                <h3 class="bd-title">Data & Insight</h3>
-                <p class="bd-desc">Analytics, metrics, and decision intelligence. The foundation of evidence-based strategy.</p>
-                <div class="bd-systems">10 · 06</div>
-            </a>
-
-            <!-- 8. Network Effects & Community -->
-            <a href="business-domains-detail.html#network" class="bd-card">
-                <div class="bd-icon">🕸️</div>
-                <h3 class="bd-title">Network Effects & Community</h3>
-                <p class="bd-desc">Two-sided dynamics, community engagement, and viral growth. Compounds defensibility.</p>
-                <div class="bd-systems">05 · 06 · 11</div>
-            </a>
-
-            <!-- 9. Brand & Market Position -->
-            <a href="business-domains-detail.html#brand" class="bd-card">
-                <div class="bd-icon">🎯</div>
-                <h3 class="bd-title">Brand & Market Position</h3>
-                <p class="bd-desc">Brand strategy, positioning, and market perception. Enables pricing power and loyalty.</p>
-                <div class="bd-systems">04 · 06 · 09</div>
-            </a>
-
-            <!-- 10. Partnerships & Ecosystem -->
-            <a href="business-domains-detail.html#partnerships" class="bd-card">
-                <div class="bd-icon">🤝</div>
-                <h3 class="bd-title">Partnerships & Ecosystem</h3>
-                <p class="bd-desc">Strategic alliances, integrations, and platform relationships. Multiplies market reach.</p>
-                <div class="bd-systems">11 · 04</div>
-            </a>
-
-            <!-- 11. People & Organization -->
-            <a href="business-domains-detail.html#people" class="bd-card">
-                <div class="bd-icon">👥</div>
-                <h3 class="bd-title">People & Organization</h3>
-                <p class="bd-desc">Hiring, culture, and team capability. The limiting factor in execution and innovation.</p>
-                <div class="bd-systems">08</div>
-            </a>
-
-            <!-- 12. Finance & Capital -->
-            <a href="business-domains-detail.html#finance" class="bd-card">
-                <div class="bd-icon">💳</div>
-                <h3 class="bd-title">Finance & Capital</h3>
-                <p class="bd-desc">Funding, cash management, and investor relations. Fuels growth and enables optionality.</p>
-                <div class="bd-systems">07</div>
-            </a>
+            <div class="bd-card" style="border-color:#fed7aa; background:#fff7ed;">
+                <span class="bd-number" style="color:#c2410c; background:#ffedd5;">03 — Operations</span>
+                <h3>Operations & Execution</h3>
+                <p>Manufacturing, delivery, and fulfillment processes. Controls cost structure, quality, and gross margin.</p>
+            </div>
 
         </div>
 
-        <!-- Footer -->
-        <footer class="site-footer-enhanced">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Business Domains</h4>
-                    <p>The 12 functional areas that organize how value flows through any business system.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Related</h4>
-                    <ul>
-                        <li><a href="business-domains-detail.html">Business Domains Detailed →</a></li>
-                        <li><a href="business.html">12 Business Systems →</a></li>
-                        <li><a href="business-systems-why.html">Why 12 Systems</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="../../index.html">Home</a></li>
-                        <li><a href="../../macro-markets.html">43 Markets</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p><span id="current-date-footer"></span> • Business Domains Framework</p>
-            </div>
-        </footer>
+        <p class="section-label">Market & growth</p>
+        <div class="bd-grid">
 
-        <script src="../../content/t.js"></script>
-        <script>
-            (function () {
-                var now = new Date();
-                var formatted = new Intl.DateTimeFormat("en-GB", {
-                    year: "numeric", month: "long", day: "2-digit"
-                }).format(now);
-                var el = document.getElementById("current-date-footer");
-                if (el) el.textContent = "Today, " + formatted + " — Richard Kennedy";
-            })();
-        </script>
+            <div class="bd-card" style="border-color:#ddd6fe; background:#f5f3ff;">
+                <span class="bd-number" style="color:#6d28d9; background:#ede9fe;">04 — Distribution</span>
+                <h3>Market Access & Distribution</h3>
+                <p>Channels, logistics, and reach infrastructure. Determines marginal unit economics and geographic scalability.</p>
+            </div>
 
+            <div class="bd-card" style="border-color:#fde68a; background:#fffbeb;">
+                <span class="bd-number" style="color:#b45309; background:#fef3c7;">05 — Acquisition</span>
+                <h3>Customer Acquisition & Growth</h3>
+                <p>Sales, marketing, and top-line growth strategy. Drives CAC, revenue ramp, and market share. The growth engine.</p>
+            </div>
+
+            <div class="bd-card" style="border-color:#fbcfe8; background:#fdf2f8;">
+                <span class="bd-number" style="color:#be185d; background:#fce7f3;">06 — Retention</span>
+                <h3>Customer Retention & Success</h3>
+                <p>Support, success management, and churn reduction. Maximises LTV. In subscription models, often more profitable than acquisition.</p>
+            </div>
+
+        </div>
+
+        <p class="section-label">Intelligence & moats</p>
+        <div class="bd-grid">
+
+            <div class="bd-card" style="border-color:#a7f3d0; background:#ecfdf5;">
+                <span class="bd-number" style="color:#065f46; background:#d1fae5;">07 — Data & Insight</span>
+                <h3>Data & Insight</h3>
+                <p>Analytics, metrics, and decision intelligence. Turns raw data into strategic clarity. Can also become the product itself.</p>
+            </div>
+
+            <div class="bd-card" style="border-color:#bae6fd; background:#f0f9ff;">
+                <span class="bd-number" style="color:#0369a1; background:#e0f2fe;">08 — Network Effects</span>
+                <h3>Network Effects & Community</h3>
+                <p>Two-sided dynamics, platform liquidity, and community engagement. The most durable moat — compounds over time.</p>
+            </div>
+
+            <div class="bd-card" style="border-color:#c4b5fd; background:#faf5ff;">
+                <span class="bd-number" style="color:#7c3aed; background:#ede9fe;">09 — Brand</span>
+                <h3>Brand & Market Position</h3>
+                <p>Positioning, identity, and market perception. Strong brands command pricing premiums and reduce CAC through organic demand.</p>
+            </div>
+
+        </div>
+
+        <p class="section-label">Organisation & capital</p>
+        <div class="bd-grid">
+
+            <div class="bd-card" style="border-color:#fca5a5; background:#fff1f2;">
+                <span class="bd-number" style="color:#b91c1c; background:#fee2e2;">10 — Partnerships</span>
+                <h3>Partnerships & Ecosystem</h3>
+                <p>Strategic alliances, integrations, and platform relationships. Multiplies reach without proportional cost increases.</p>
+            </div>
+
+            <div class="bd-card" style="border-color:#bbf7d0; background:#f0fdf4;">
+                <span class="bd-number" style="color:#15803d; background:#dcfce7;">11 — People</span>
+                <h3>People & Organisation</h3>
+                <p>Hiring, culture, and team capability. The limiting factor in execution and innovation. Payroll is typically 50–70% of opex.</p>
+            </div>
+
+            <div class="bd-card" style="border-color:#cbd5e1; background:#f8fafc;">
+                <span class="bd-number" style="color:#475569; background:#e2e8f0;">12 — Finance & Capital</span>
+                <h3>Finance & Capital</h3>
+                <p>Funding, cash management, and investor relations. Determines runway, growth capacity, and exit optionality.</p>
+            </div>
+
+        </div>
     </div>
 </body>
 </html>
