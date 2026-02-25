@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Domains</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .bd-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 16px 48px;
+        }
+        .bd-card {
+            border-radius: 12px;
+            padding: 24px;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border: 1px solid #e5e7eb;
+            background: #fff;
+            transition: box-shadow 0.15s, border-color 0.15s;
+            text-decoration: none;
+        }
+        .bd-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            border-color: #059669;
+        }
+        .bd-icon {
+            font-size: 2.4rem;
+            line-height: 1;
+        }
+        .bd-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+            color: #111;
+        }
+        .bd-desc {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin: 0;
+            line-height: 1.6;
+            flex: 1;
+        }
+        .bd-systems {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #059669;
+            margin-top: 8px;
+            padding-top: 12px;
+            border-top: 1px solid #f3f4f6;
+        }
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #9ca3af;
+            max-width: 1200px;
+            margin: 24px auto 0;
+            padding: 0 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header class="header" style="padding-bottom: 8px;">
+            <div class="back-nav" style="margin-bottom: 16px;">
+                <a href="../../index.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Back to Home
+                </a>
+            </div>
+            <div style="text-align:center; margin-bottom: 6px;">
+                <span class="part-badge" style="background:#dbeafe; color:#059669; border:1px solid #86efac; border-radius:20px; padding:4px 14px; font-size:0.72rem; font-weight:700; letter-spacing:0.06em;">Part A — Market Structure</span>
+            </div>
+            <h1 style="font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;">Business Domains</h1>
+            <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 720px; margin: 0 auto;">The functional areas that define how value flows through a business. Each domain represents a distinct set of activities and economic mechanisms.</p>
+        </header>
+
+        <!-- Foundation rows -->
+        <div class="why-row" style="margin-top: 24px;">
+            <a href="business-domains-detail.html" class="why-link">
+                <div class="why-link-left">
+                    <span class="why-link-tag">Foundation</span>
+                    <span class="why-link-title">What Are Business Domains?</span>
+                    <span class="why-link-sub">Understand the structural basis of business organization and value creation.</span>
+                </div>
+                <span class="why-link-arrow">→</span>
+            </a>
+        </div>
+
+        <!-- Business Domains Grid -->
+        <p class="section-label">12 Business Domains — Core functional areas</p>
+        <div class="bd-grid">
+
+            <!-- 1. Product Development & Innovation -->
+            <a href="business-domains-detail.html#product" class="bd-card">
+                <div class="bd-icon">🔬</div>
+                <h3 class="bd-title">Product Development & Innovation</h3>
+                <p class="bd-desc">Research, design, engineering, and product iteration. The engine of differentiation and competitive advantage.</p>
+                <div class="bd-systems">01 · 10 · 11</div>
+            </a>
+
+            <!-- 2. Market Access & Distribution -->
+            <a href="business-domains-detail.html#distribution" class="bd-card">
+                <div class="bd-icon">📦</div>
+                <h3 class="bd-title">Market Access & Distribution</h3>
+                <p class="bd-desc">Channels, logistics, and infrastructure to reach customers. Determines marginal unit economics.</p>
+                <div class="bd-systems">02 · 05 · 07</div>
+            </a>
+
+            <!-- 3. Customer Acquisition & Growth -->
+            <a href="business-domains-detail.html#acquisition" class="bd-card">
+                <div class="bd-icon">📈</div>
+                <h3 class="bd-title">Customer Acquisition & Growth</h3>
+                <p class="bd-desc">Sales, marketing, and user/customer growth strategies. Drives top-line revenue and market share.</p>
+                <div class="bd-systems">06 · 09</div>
+            </a>
+
+            <!-- 4. Customer Retention & Success -->
+            <a href="business-domains-detail.html#retention" class="bd-card">
+                <div class="bd-icon">❤️</div>
+                <h3 class="bd-title">Customer Retention & Success</h3>
+                <p class="bd-desc">Support, success management, and loyalty. Maximizes lifetime value and reduces churn.</p>
+                <div class="bd-systems">01 · 02 · 05</div>
+            </a>
+
+            <!-- 5. Operations & Execution -->
+            <a href="business-domains-detail.html#operations" class="bd-card">
+                <div class="bd-icon">⚙️</div>
+                <h3 class="bd-title">Operations & Execution</h3>
+                <p class="bd-desc">Manufacturing, delivery, and service fulfillment. Controls cost structure and quality.</p>
+                <div class="bd-systems">02 · 03 · 07 · 08</div>
+            </a>
+
+            <!-- 6. Pricing & Revenue Optimization -->
+            <a href="business-domains-detail.html#pricing" class="bd-card">
+                <div class="bd-icon">💰</div>
+                <h3 class="bd-title">Pricing & Revenue Optimization</h3>
+                <p class="bd-desc">Monetisation strategy, pricing models, and revenue structure. Unlocks profit potential.</p>
+                <div class="bd-systems">01 · 02 · 03 · 04</div>
+            </a>
+
+            <!-- 7. Data & Insight -->
+            <a href="business-domains-detail.html#data" class="bd-card">
+                <div class="bd-icon">📊</div>
+                <h3 class="bd-title">Data & Insight</h3>
+                <p class="bd-desc">Analytics, metrics, and decision intelligence. The foundation of evidence-based strategy.</p>
+                <div class="bd-systems">10 · 06</div>
+            </a>
+
+            <!-- 8. Network Effects & Community -->
+            <a href="business-domains-detail.html#network" class="bd-card">
+                <div class="bd-icon">🕸️</div>
+                <h3 class="bd-title">Network Effects & Community</h3>
+                <p class="bd-desc">Two-sided dynamics, community engagement, and viral growth. Compounds defensibility.</p>
+                <div class="bd-systems">05 · 06 · 11</div>
+            </a>
+
+            <!-- 9. Brand & Market Position -->
+            <a href="business-domains-detail.html#brand" class="bd-card">
+                <div class="bd-icon">🎯</div>
+                <h3 class="bd-title">Brand & Market Position</h3>
+                <p class="bd-desc">Brand strategy, positioning, and market perception. Enables pricing power and loyalty.</p>
+                <div class="bd-systems">04 · 06 · 09</div>
+            </a>
+
+            <!-- 10. Partnerships & Ecosystem -->
+            <a href="business-domains-detail.html#partnerships" class="bd-card">
+                <div class="bd-icon">🤝</div>
+                <h3 class="bd-title">Partnerships & Ecosystem</h3>
+                <p class="bd-desc">Strategic alliances, integrations, and platform relationships. Multiplies market reach.</p>
+                <div class="bd-systems">11 · 04</div>
+            </a>
+
+            <!-- 11. People & Organization -->
+            <a href="business-domains-detail.html#people" class="bd-card">
+                <div class="bd-icon">👥</div>
+                <h3 class="bd-title">People & Organization</h3>
+                <p class="bd-desc">Hiring, culture, and team capability. The limiting factor in execution and innovation.</p>
+                <div class="bd-systems">08</div>
+            </a>
+
+            <!-- 12. Finance & Capital -->
+            <a href="business-domains-detail.html#finance" class="bd-card">
+                <div class="bd-icon">💳</div>
+                <h3 class="bd-title">Finance & Capital</h3>
+                <p class="bd-desc">Funding, cash management, and investor relations. Fuels growth and enables optionality.</p>
+                <div class="bd-systems">07</div>
+            </a>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer-enhanced">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Business Domains</h4>
+                    <p>The 12 functional areas that organize how value flows through any business system.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Related</h4>
+                    <ul>
+                        <li><a href="business-domains-detail.html">Business Domains Detailed →</a></li>
+                        <li><a href="business.html">12 Business Systems →</a></li>
+                        <li><a href="business-systems-why.html">Why 12 Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../../macro-markets.html">43 Markets</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><span id="current-date-footer"></span> • Business Domains Framework</p>
+            </div>
+        </footer>
+
+        <script src="../../content/t.js"></script>
+        <script>
+            (function () {
+                var now = new Date();
+                var formatted = new Intl.DateTimeFormat("en-GB", {
+                    year: "numeric", month: "long", day: "2-digit"
+                }).format(now);
+                var el = document.getElementById("current-date-footer");
+                if (el) el.textContent = "Today, " + formatted + " — Richard Kennedy";
+            })();
+        </script>
+
+    </div>
+</body>
+</html>
