@@ -1,27 +1,35 @@
 # Step by Step — Market Taxonomy
 
-## Fase 1 — Core (completata)
-- [x] Definire tassonomia 43 mercati
-- [x] Generare pagine L1 per tutti i mercati
-- [x] Generare pagine L2 (476 pagine)
-- [x] Generare pagine L3 (1,417 pagine)
-- [x] Homepage + macro-markets grid
-- [x] Problem selection page (12 problemi)
-- [x] Output sheet page
-- [x] Numbers page
-- [x] Sistema i18n
-- [x] Pagine supporto (FAQ, global-investors, how-to-define-problems, etc.)
+## Fase 1 — Struttura base (completata)
+- [x] 43 market folders con L1/L2/L3
+- [x] Homepage + macro-markets + flow A→B→C
+- [x] Problem selection + output sheet
+- [x] i18n + taxonomy-numbers.js
 
-## Fase 2 — Pulizia
-- [ ] Rimuovere "cartella senza nome" (vecchie versioni)
-- [ ] Rimuovere directory duplicata MARKETS/Real Estate/L2.1/MARKETS/
-- [ ] Rimuovere file .DS_Store dal repo
-- [ ] Valutare L2.1 pages: migrare a L2/L3 o eliminare
-- [ ] Aggiungere .DS_Store a .gitignore
+## Fase 2 — L1 Rewrite (in corso)
+- [x] Healthcare, Energy, Insurance, Legal, Telecommunications (manuale)
+- [x] Real Estate (gia buona qualita)
+- [ ] 37 L1 rimanenti (5 agent in background)
 
-## Fase 3 — Verifica consistenza
-- [ ] Verificare che tutti i link L1→L2 funzionino per ogni mercato
-- [ ] Verificare che tutti i link L2→L3 funzionino per ogni mercato
-- [ ] Verificare che il back button L3→L2→L1 funzioni
-- [ ] Verificare i18n su tutte le pagine root
-- [ ] Test flow completo A→B→C su almeno 5 mercati diversi
+## Fase 3 — Vertical Market Build
+Per ogni mercato, in ordine:
+1. [ ] Verificare L1 (fonti autorevoli, categorie corrette)
+2. [ ] Riscrivere L2 pages (fonti segment-level, 4-5 segmenti)
+3. [ ] Creare/aggiornare L2.1 pages (dettaglio segmento)
+4. [ ] Riscrivere L3 pages (3-5 niches per segmento, fonti niche-level)
+5. [ ] Verificare catena link L1→L2→L2.1→L3
+
+### Mercati da fare (0/43):
+- [ ] Real Estate (parzialmente fatto, ha L2.1)
+- [ ] Healthcare
+- [ ] Energy
+- [ ] Insurance
+- [ ] Legal
+- [ ] Telecommunications
+- [ ] (+ altri 37)
+
+## Fase 4 — Pulizia
+- [ ] Rimuovere "cartella senza nome"
+- [ ] Rimuovere MARKETS/Real Estate/L2.1/MARKETS/ (duplicato)
+- [ ] Rimuovere .DS_Store, aggiungere a .gitignore
+- [ ] Verificare consistenza globale link e i18n
