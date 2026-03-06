@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beef Cattle & Feedlots — Niches — Agriculture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+    <style>
+        .l3-niche-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;gap:16px;color:inherit}.l3-niche-card:first-child{border-top:1px solid var(--border)}.l3-niche-card:hover h3{color:var(--green)}.l3-niche-card h3{font-size:0.9rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s}.l3-niche-card p{font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4}.l3-niche-grid{max-width:560px;margin:0 auto 48px}.l3-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+        <div class="back-nav"><a href="../L2/market-agriculture-livestock-dairy.html" class="back-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to Livestock & Dairy</a></div>
+        <header class="market-page-header">
+            <div style="text-align:center;margin-bottom:12px;"><span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 3</span></div>
+            <div class="market-badge"><span class="market-title">Beef Cattle & Feedlots — Niches</span></div>
+        </header>
+        <p class="subtitle" style="max-width:560px;margin:0 auto 32px;">Select a niche within Beef Cattle & Feedlots to see specific problems and begin your analysis.</p>
+        <section style="max-width:560px;margin:0 auto;padding:0 16px;">
+            <p class="l3-section-label">Select a niche</p>
+            <div class="l3-niche-grid">
+                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Cattle Health & BRD Early Detection')"><div><h3>Cattle Health & BRD Early Detection</h3><p>Remote monitoring systems using ear tags, cameras, and AI to detect bovine respiratory disease and other illnesses 24-48 hours before visual symptoms, reducing death loss and treatment costs by $50-100/head.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Feedlot Feed Optimization & Bunk Management')"><div><h3>Feedlot Feed Optimization & Bunk Management</h3><p>Precision feeding systems that adjust rations at the pen level using intake sensors, performance data, and commodity price feeds to optimize feed conversion and reduce the 60-70% of cost that is feed.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Beef Traceability & Source Verification')"><div><h3>Beef Traceability & Source Verification</h3><p>Individual animal ID, blockchain-based chain of custody, and source verification platforms connecting cow-calf producers to feedlots and packers for premium program qualification and export compliance.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+        </section>
+        <section class="guidance-box" style="max-width:700px;margin:0 auto 48px;"><h4>How to Choose a Niche</h4><p>BRD early detection has the most proven ROI and growing adoption (companies like Merck Animal Health, HerdDogg are active). Feed optimization targets the largest cost center but requires integration with existing feed management systems. Traceability is regulatory-driven and increasingly mandatory for export markets.</p></section>
+    </div>
+    <script src="../../../content/t.js"></script>
+    <script>
+    function selectNiche(n){localStorage.setItem('selected_l3',n);localStorage.setItem('problem_back_url',window.location.href);window.location.href='../../../numbers.html';}
+    </script>
+</body>
+</html>
