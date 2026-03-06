@@ -129,9 +129,13 @@ Each level uses progressively more granular sources (industry standards → segm
      │                                                                       │
      ▼                                                                       │
 [L2 Page]                                                                    │
+     │                  │                                                    │
+     │ (card click)     │ ("Explore details →")                              │
+     ▼                  ▼                                                    │
+[L3 Page]          [L2.1 Page]                                               │
+     │              (detail — no onward flow)                                │
      │                                                                       │
-     ▼                                                                       │
-[L3 Page]  ── "View Problem →" ──────────────────────────────────────────┐  │
+     ── "View Problem →" ──────────────────────────────────────────────┐     │
                                                                           │  │
                                                               ┌───────────┘  │
                                                               │              │
