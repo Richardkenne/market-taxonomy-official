@@ -16,7 +16,7 @@
 - [x] Batch 4: Non-profit, Payments, Pharma & Biotech, Professional Services, Religion, Retail, Security & Defense
 - [x] Batch 5: Software, Sports & Fitness, Technology, Tourism, Transportation, Utilities, Wholesale & Distribution
 
-## Fase 3 — Vertical Market Build (1/43)
+## Fase 3 — Vertical Market Build (2/43)
 Per ogni mercato, in ordine dalla grid L0:
 1. Verificare/finalizzare L1 (fonti, categorie)
 2. Riscrivere L2 pages (4-5 segmenti, fonti segment-level)
