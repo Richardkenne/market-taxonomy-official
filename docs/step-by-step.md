@@ -71,7 +71,7 @@ Per ogni mercato, in ordine dalla grid L0:
 
 ## Fase 4 — Pulizia & Verifica
 - [ ] Rimuovere "cartella senza nome"
-- [ ] Rimuovere MARKETS/Real Estate/L2.1/MARKETS/ (duplicato)
-- [ ] Rimuovere .DS_Store, aggiungere a .gitignore
+- [x] Rimuovere MARKETS/Real Estate/L2.1/MARKETS/ (duplicato)
+- [x] Rimuovere .DS_Store, aggiungere a .gitignore
 - [ ] Verificare consistenza globale link e i18n
 - [ ] Implementare search bar full-text
