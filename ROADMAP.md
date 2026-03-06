@@ -22,9 +22,14 @@
   - L3: 26 niche pages (tutte funzionanti)
   - 0 link rotti nella catena L1→L2→L2.1/L3
 - [x] Pulizia: rimossa directory duplicata L2.1/MARKETS/, .DS_Store, aggiunto .gitignore
+- [x] Vertical build #02 — Construction & Infrastructure completato:
+  - L2: 6 pagine principali + 18 sub-segment (fonti: NAHB, Census Bureau, ENR, McKinsey, Dodge)
+  - L2.1: 18 segment detail pages
+  - L3: 18 niche-list + 36 niche specifiche = 54 file
+  - Link chain L2→L3 e L2→L2.1 funzionanti
 
 ## Prossimi step (prioritizzati)
-1. **Vertical build #02 — Construction & Infrastructure** (ha gia L2.1 — usare come reference)
+1. **Vertical build #03 — Food & Beverage** (ha gia L2.1)
 2. **Vertical build #03 — Food & Beverage** (ha gia L2.1)
 3. **Vertical build #04 — Agriculture** (ha gia L2.1)
 4. Continuare con Energy (#05), Utilities (#06), ecc.
