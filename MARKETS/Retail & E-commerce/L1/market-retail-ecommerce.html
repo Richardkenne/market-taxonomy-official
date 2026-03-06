@@ -9,94 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../style.css">
     <style>
-        .l1-sources {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            margin: 24px auto 40px;
-            max-width: 560px;
-            padding: 0 16px;
-        }
-        .l1-source-chip {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
-            background: var(--border-light);
-            border-radius: 10px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: background 0.15s, color 0.15s;
-        }
-        .l1-source-chip:hover { background: #e8f4fd; color: #1a6fa8; }
-        .l1-source-chip svg { flex-shrink: 0; }
-        .l1-cards-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            max-width: 560px;
-            margin: 0 auto 48px;
-            padding: 0 16px;
-        }
-        .l1-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-decoration: none;
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 4px;
-            cursor: pointer;
-            transition: color 0.15s;
-            text-align: left;
-            gap: 16px;
-            color: inherit;
-        }
-        .l1-card:first-child { border-top: 1px solid var(--border); }
-        .l1-card:hover h3 { color: var(--green); }
-        .l1-card-left { flex: 1; }
-        .l1-card-num {
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: var(--text-tertiary);
-            min-width: 24px;
-            flex-shrink: 0;
-        }
-        .l1-card h3 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin: 0 0 2px;
-            transition: color 0.15s;
-        }
-        .l1-card p {
-            font-size: 0.82rem;
-            color: var(--text-secondary);
-            margin: 0;
-            line-height: 1.4;
-        }
-        .l1-card-tam {
-            font-size: 0.73rem;
-            font-weight: 600;
-            color: var(--green);
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-        .l1-card-arrow {
-            color: var(--text-tertiary);
-            flex-shrink: 0;
-        }
-        .l1-section-label {
-            text-align: center;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--text-tertiary);
-            margin-bottom: 16px;
-        }
+        .l1-sources{display:flex;flex-direction:column;gap:6px;margin:24px auto 40px;max-width:560px;padding:0 16px;}
+        .l1-source-chip{display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--border-light);border-radius:10px;font-size:0.85rem;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:background 0.15s,color 0.15s;}
+        .l1-source-chip:hover{background:#e8f4fd;color:#1a6fa8;}
+        .l1-source-chip svg{flex-shrink:0;}
+        .l1-cards-grid{display:flex;flex-direction:column;gap:0;max-width:560px;margin:0 auto 48px;padding:0 16px;}
+        .l1-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;cursor:pointer;transition:color 0.15s;text-align:left;gap:16px;color:inherit;}
+        .l1-card:first-child{border-top:1px solid var(--border);}
+        .l1-card:hover h3{color:var(--green);}
+        .l1-card-left{flex:1;}
+        .l1-card-num{font-size:0.65rem;font-weight:700;color:var(--text-tertiary);min-width:24px;flex-shrink:0;}
+        .l1-card h3{font-size:0.95rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s;}
+        .l1-card p{font-size:0.82rem;color:var(--text-secondary);margin:0;line-height:1.4;}
+        .l1-card-tam{font-size:0.73rem;font-weight:600;color:var(--green);white-space:nowrap;flex-shrink:0;}
+        .l1-card-arrow{color:var(--text-tertiary);flex-shrink:0;}
+        .l1-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px;}
     </style>
 </head>
 <body>
@@ -122,12 +49,12 @@
         </header>
 
         <p class="subtitle" style="max-width:560px; margin:0 auto 32px;">
-            This market covers the sale of goods and services to end consumers through physical stores, online channels, and omnichannel formats.
+            Retail and e-commerce markets are segmented by channel format, merchandise category, and fulfillment model — each with distinct store economics, customer acquisition strategies, and supply-chain requirements.
         </p>
 
-        <div style="max-width:560px; margin:0 auto 8px; padding:0 16px; border:1px solid var(--border); border-radius:10px; padding:14px 18px;">
+        <div style="max-width:560px; margin:0 auto 8px; border:1px solid var(--border); border-radius:10px; padding:14px 18px;">
             <p style="font-size:0.8rem; color:var(--text-tertiary); line-height:1.6; margin:0 0 10px;">
-                These sources classify retail by channel format, merchandise category, and transaction volume tracked by the U.S. Census, NRF, and e-commerce platforms.
+                We reference two types of sources: <strong>government retail trade statistics</strong> tracking sales volumes by store type and channel, and <strong>retail industry research</strong> used to size segments and forecast e-commerce penetration. Use these to validate market definitions before narrowing to a specific format or merchandise vertical.
             </p>
             <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
                 <a href="../../../authoritative-sources-framework.html" style="font-size:0.72rem; color:var(--text-secondary); text-decoration:none; font-weight:500; display:inline-flex; align-items:center; gap:4px;">
@@ -142,89 +69,101 @@
         </div>
 
         <div class="l1-sources">
-            <a href="https://www.census.gov/retail/index.html" target="_blank" rel="noopener" class="l1-source-chip">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <a href="https://www.census.gov/retail/index.html" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                 U.S. Census — Monthly Retail Trade Survey
             </a>
-            <a href="https://nrf.com/research-insights" target="_blank" rel="noopener" class="l1-source-chip">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                National Retail Federation (NRF)
-            </a>
-            <a href="https://www.census.gov/naics/?input=44&chart=no" target="_blank" rel="noopener" class="l1-source-chip">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <a href="https://www.census.gov/naics/?input=44&chart=2022" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                 NAICS 44-45 — Retail Trade
             </a>
-            <a href="https://www.emarketer.com/topics/topic/retail-ecommerce" target="_blank" rel="noopener" class="l1-source-chip">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                eMarketer — E-commerce & Retail
+            <a href="https://nrf.com/research-insights" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                National Retail Federation (NRF) — Research & Insights
             </a>
-            <a href="https://www.shopify.com/research/future-of-commerce" target="_blank" rel="noopener" class="l1-source-chip">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                Shopify Commerce Trends Report
+            <a href="https://www.emarketer.com/topics/topic/retail-ecommerce" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                eMarketer / Insider Intelligence — E-commerce Data
+            </a>
+            <a href="https://www.mckinsey.com/industries/retail/our-insights" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                McKinsey Retail Practice
+            </a>
+            <a href="https://www.euromonitor.com/retailing" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Euromonitor — Global Retailing Data
             </a>
         </div>
 
         <section style="max-width:900px; margin:0 auto; padding:0 16px;">
             <p style="font-size:0.82rem; color:var(--text-secondary); max-width:560px; margin:0 auto 12px; text-align:center; line-height:1.6;">
-                Segments are divided by channel format and merchandise type because store economics, technology stacks, and customer acquisition strategies differ fundamentally between brick-and-mortar, pure-play e-commerce, and marketplace formats.
+                These categories follow NAICS 44-45 retail trade divisions and GICS consumer discretionary/staples sub-industries, reflecting how retail is organized by channel format, merchandise assortment, and price positioning.
             </p>
+
             <p class="l1-section-label">Select a sub-market to continue</p>
 
             <div class="l1-cards-grid" style="padding:0;">
-                <a href="#" class="l1-card">
+
+                <a href="../L2/market-retail-e-commerce-e-commerce-online-retail.html" class="l1-card">
                     <span class="l1-card-num">01</span>
                     <div class="l1-card-left">
                         <h3>E-commerce & Online Retail</h3>
-                        <p>Direct-to-consumer and marketplace web sales across all product categories through digital storefronts.</p>
+                        <p>Direct-to-consumer brands, online marketplaces, and digitally-native retailers selling across product categories through web and mobile storefronts.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Online Marketplaces, DTC Brands, Social Commerce, Subscription E-commerce.</p>
                     </div>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#" class="l1-card">
+
+                <a href="../L2/market-retail-e-commerce-general-merchandise-department-stores.html" class="l1-card">
                     <span class="l1-card-num">02</span>
                     <div class="l1-card-left">
                         <h3>General Merchandise & Department Stores</h3>
-                        <p>Big-box, warehouse, and department store retailers selling broad assortments across categories.</p>
+                        <p>Big-box retailers, warehouse clubs, and department stores selling broad product assortments across apparel, home, electronics, and everyday essentials.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Department Stores, Warehouse Clubs, Discount Retailers, Mass Merchants.</p>
                     </div>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#" class="l1-card">
+
+                <a href="../L2/market-retail-e-commerce-grocery-convenience-retail.html" class="l1-card">
                     <span class="l1-card-num">03</span>
                     <div class="l1-card-left">
                         <h3>Grocery & Convenience Retail</h3>
-                        <p>Supermarkets, convenience stores, and food-drug-mass retailers selling perishable and packaged goods.</p>
+                        <p>Supermarkets, convenience stores, and food-drug-mass retailers selling perishable and packaged goods with high purchase frequency and thin margins.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Supermarkets, Convenience Stores (C-Stores), Natural/Organic Grocers, Online Grocery.</p>
                     </div>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#" class="l1-card">
+
+                <a href="../L2/market-retail-e-commerce-specialty-retail.html" class="l1-card">
                     <span class="l1-card-num">04</span>
                     <div class="l1-card-left">
                         <h3>Specialty Retail</h3>
-                        <p>Category-focused stores in apparel, electronics, sporting goods, home improvement, and health products.</p>
+                        <p>Category-focused chains in apparel, electronics, home improvement, sporting goods, and health/beauty — where deep assortment and expert service drive differentiation.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Apparel Chains, Electronics Retailers, Home Improvement, Sporting Goods, Health & Beauty.</p>
                     </div>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#" class="l1-card">
+
+                <a href="../L2/market-retail-e-commerce-luxury-premium-retail.html" class="l1-card">
                     <span class="l1-card-num">05</span>
                     <div class="l1-card-left">
                         <h3>Luxury & Premium Retail</h3>
-                        <p>High-end fashion, jewelry, watches, and lifestyle brands sold through selective distribution channels.</p>
+                        <p>High-end fashion houses, jewelry and watch retailers, and premium lifestyle brands sold through selective distribution, boutiques, and concession counters.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Luxury Fashion, Fine Jewelry & Watches, Premium Beauty, Designer Boutiques.</p>
                     </div>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#" class="l1-card">
+
+                <a href="../L2/market-retail-e-commerce-retail-technology-commerce-platforms.html" class="l1-card">
                     <span class="l1-card-num">06</span>
                     <div class="l1-card-left">
                         <h3>Retail Technology & Commerce Platforms</h3>
-                        <p>POS systems, inventory management, e-commerce infrastructure, and omnichannel fulfillment solutions.</p>
+                        <p>POS systems, e-commerce infrastructure, inventory management, order management, and omnichannel fulfillment solutions powering modern retail operations.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: POS Systems, E-commerce Platforms, OMS/WMS, Personalization Engines, Loyalty Tech.</p>
                     </div>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
+
             </div>
         </section>
 
         <section class="guidance-box" style="max-width:700px; margin:0 auto 48px;">
             <h4>How to Choose a Niche</h4>
-            <p>Start by defining the channel (online vs. in-store vs. omni) and category before exploring technology or operations pain points — inventory shrinkage, cart abandonment, and loyalty economics are channel-specific problems. L2 niches include personalization engines, returns management, and supply-chain visibility for retailers.</p>
+            <p>Start by defining the channel (online vs. in-store vs. omnichannel) and merchandise category before exploring technology or operations pain points. Examples: inventory optimization software for multi-location specialty retailers; returns management platforms for DTC e-commerce brands; demand forecasting tools for grocery chains managing perishable SKUs; clienteling apps for luxury boutiques tracking high-value customer relationships.</p>
         </section>
     </div>
     <script src="../../../content/t.js"></script>
