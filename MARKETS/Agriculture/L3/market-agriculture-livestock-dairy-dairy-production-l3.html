@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dairy Production — Niches — Agriculture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../style.css">
+    <style>
+        .l3-niche-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;gap:16px;color:inherit}.l3-niche-card:first-child{border-top:1px solid var(--border)}.l3-niche-card:hover h3{color:var(--green)}.l3-niche-card h3{font-size:0.9rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s}.l3-niche-card p{font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4}.l3-niche-grid{max-width:560px;margin:0 auto 48px}.l3-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+        <div class="back-nav"><a href="../L2/market-agriculture-livestock-dairy.html" class="back-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to Livestock & Dairy</a></div>
+        <header class="market-page-header">
+            <div style="text-align:center;margin-bottom:12px;"><span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 3</span></div>
+            <div class="market-badge"><span class="market-title">Dairy Production — Niches</span></div>
+        </header>
+        <p class="subtitle" style="max-width:560px;margin:0 auto 32px;">Select a niche within Dairy Production to see specific problems and begin your analysis.</p>
+        <section style="max-width:560px;margin:0 auto;padding:0 16px;">
+            <p class="l3-section-label">Select a niche</p>
+            <div class="l3-niche-grid">
+                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Reproductive Performance Analytics')"><div><h3>Reproductive Performance Analytics</h3><p>Heat detection, conception rate optimization, and breeding program management tools that reduce calving intervals by 20-40 days, worth $3-5/day per cow in avoided costs and increased milk lifetime output.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Dairy Methane Measurement & Reduction')"><div><h3>Dairy Methane Measurement & Reduction</h3><p>On-farm methane quantification systems and feed additive verification platforms enabling compliance with emerging emissions regulations and monetization of carbon credits worth $20-50/cow/year.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Dynamic Ration Formulation & Feed Management')"><div><h3>Dynamic Ration Formulation & Feed Management</h3><p>Real-time forage quality testing and adaptive ration adjustment systems that account for actual (not book-value) feed composition, improving milk yield 3-5% while reducing feed waste.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            </div>
+        </section>
+        <section class="guidance-box" style="max-width:700px;margin:0 auto 48px;"><h4>How to Choose a Niche</h4><p>Reproductive analytics has the most mature market with established competitors (Afimilk, SCR/Allflex) but still massive room for improvement on mid-size farms. Methane measurement is early-stage with strong regulatory and carbon market tailwinds. Dynamic ration formulation is technically complex but targets the largest operational cost.</p></section>
+    </div>
+    <script src="../../../content/t.js"></script>
+    <script>
+    function selectNiche(n){localStorage.setItem('selected_l3',n);localStorage.setItem('problem_back_url',window.location.href);window.location.href='../../../numbers.html';}
+    </script>
+</body>
+</html>
