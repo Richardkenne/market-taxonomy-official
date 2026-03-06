@@ -20,6 +20,16 @@
         .l1-card-tam{font-size:0.73rem;font-weight:600;color:var(--green);white-space:nowrap;flex-shrink:0;}
         .l1-card-arrow{color:var(--text-tertiary);flex-shrink:0;}
         .l1-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px;}
+        .l2-detail-link{font-size:0.75rem;color:var(--green);text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:6px;font-weight:500;}
+        .l2-detail-link:hover{text-decoration:underline;}
+        .source-list{max-width:560px;margin:0 auto 32px;padding:0 16px;}
+        .source-list p{font-size:0.75rem;color:var(--text-tertiary);margin:0 0 6px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;}
+        .source-list ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px 12px;}
+        .source-list li a{font-size:0.75rem;color:var(--green);text-decoration:none;}
+        .source-list li a:hover{text-decoration:underline;}
+        .l2-explanation{max-width:560px;margin:0 auto 24px;padding:0 16px;font-size:0.82rem;color:var(--text-secondary);line-height:1.6;text-align:center;}
+        .l2-callout{max-width:560px;margin:0 auto 32px;padding:0 16px;}
+        .l2-callout-inner{border-left:3px solid var(--green);padding:10px 14px;background:var(--green-light,#f0faf4);border-radius:0 8px 8px 0;font-size:0.82rem;color:var(--text-secondary);line-height:1.6;}
     </style>
 </head>
 <body>
@@ -43,46 +53,67 @@
             </div>
         </header>
 
-        <p class="subtitle" style="max-width:560px; margin:0 auto 32px;">
-            Construction Services within Construction & Infrastructure — select a segment to explore niches and problems.
+        <p class="subtitle" style="max-width:560px; margin:0 auto 24px;">
+            Project management, safety compliance, site preparation, and all professional services supporting the construction process from pre-construction through closeout.
         </p>
+
+        <div class="source-list">
+            <p>Sources</p>
+            <ul>
+                <li><a href="https://www.cmaanet.org" target="_blank">CMAA</a></li>
+                <li><a href="https://www.agc.org" target="_blank">AGC</a></li>
+                <li><a href="https://www.enr.com" target="_blank">ENR</a></li>
+                <li><a href="https://www.osha.gov/construction" target="_blank">OSHA</a></li>
+                <li><a href="https://www.construction.com" target="_blank">Dodge</a></li>
+            </ul>
+        </div>
+
+        <p class="l2-explanation">These segments follow CMAA professional service categories and AGC specialty contractor classifications.</p>
+
+        <div class="l2-callout">
+            <div class="l2-callout-inner">Construction services is where operational complexity lives — project delays, safety incidents, and cost overruns are solved (or caused) at this layer.</div>
+        </div>
 
         <section style="max-width:900px; margin:0 auto; padding:0 16px;">
             <p class="l1-section-label">Select a segment to continue</p>
             <div class="l1-cards-grid" style="padding:0;">
-                <a href="../L2.1/market-construction-infrastructure-construction-services-project-management.html" class="l1-card">
+                <a href="../L3/market-construction-infrastructure-construction-services-project-management-l3.html" class="l1-card">
                     <span class="l1-card-num">01</span>
                     <div class="l1-card-left">
                         <h3>Project Management</h3>
-                        <p>Project Management — segments and niches within Construction Services.</p>
+                        <p>Construction management, owner's representation, program management, and scheduling services across project lifecycles.</p>
+                        <a href="../L2.1/market-construction-infrastructure-construction-services-project-management.html" class="l2-detail-link" onclick="event.stopPropagation();">Explore segment details &rarr;</a>
                     </div>
-                    <span class="l1-card-tam">$—</span>
+                    <span class="l1-card-tam">$55B+</span>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="../L2.1/market-construction-infrastructure-construction-services-safety-compliance.html" class="l1-card">
+                <a href="../L3/market-construction-infrastructure-construction-services-safety-compliance-l3.html" class="l1-card">
                     <span class="l1-card-num">02</span>
                     <div class="l1-card-left">
                         <h3>Safety & Compliance</h3>
-                        <p>Safety & Compliance — segments and niches within Construction Services.</p>
+                        <p>OSHA compliance, site safety management, environmental monitoring, and regulatory documentation services.</p>
+                        <span style="display:block;font-size:0.73rem;color:var(--text-tertiary);margin-top:4px;">Construction accounts for 20% of all US workplace fatalities — safety is non-negotiable.</span>
+                        <a href="../L2.1/market-construction-infrastructure-construction-services-safety-compliance.html" class="l2-detail-link" onclick="event.stopPropagation();">Explore segment details &rarr;</a>
                     </div>
-                    <span class="l1-card-tam">$—</span>
+                    <span class="l1-card-tam">$15B+</span>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="../L2.1/market-construction-infrastructure-construction-services-site-preparation.html" class="l1-card">
+                <a href="../L3/market-construction-infrastructure-construction-services-site-preparation-l3.html" class="l1-card">
                     <span class="l1-card-num">03</span>
                     <div class="l1-card-left">
                         <h3>Site Preparation</h3>
-                        <p>Site Preparation — segments and niches within Construction Services.</p>
+                        <p>Earthwork, excavation, grading, demolition, environmental remediation, and utility installation before vertical construction.</p>
+                        <a href="../L2.1/market-construction-infrastructure-construction-services-site-preparation.html" class="l2-detail-link" onclick="event.stopPropagation();">Explore segment details &rarr;</a>
                     </div>
-                    <span class="l1-card-tam">$—</span>
+                    <span class="l1-card-tam">$70B+</span>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
             </div>
         </section>
 
         <section class="guidance-box" style="max-width:700px; margin:0 auto 48px;">
-            <h4>How to Choose a Niche</h4>
-            <p>Focus on the segment with the most operational friction or unmet software need within Construction Services.</p>
+            <h4>Niche Selection Advice</h4>
+            <p>Safety compliance has the strongest regulatory tailwind — OSHA enforcement + insurance requirements = mandatory spending.</p>
         </section>
     </div>
     <script src="../../../content/t.js"></script>
