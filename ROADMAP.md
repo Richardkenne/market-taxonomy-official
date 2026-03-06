@@ -4,29 +4,42 @@
 - [x] Struttura tassonomica L0→L1→L2→L2.1→L3 definita
 - [x] 43 market folders con L1, L2, L3
 - [x] Homepage + macro-markets grid + flow Part A→B→C
-- [x] L1 riscritti con fonti autorevoli reali (43/43 in corso via agent)
 - [x] 12 problemi strutturali in problem-selection.html
 - [x] Sistema i18n + numbers centralizzati
+- [x] Doc di progetto creati (CLAUDE.md, ROADMAP.md, FLOW.md aggiornato, docs/)
+- [x] L1 rewrite — 35/43 completati con fonti autorevoli reali:
+  - Manuale (6): Healthcare, Energy, Insurance, Legal, Telecommunications, Real Estate
+  - Agent batch 1 (8): Advertising, Aerospace, Agriculture, Automotive, Banking, Capital Markets, Chemicals, Construction
+  - Agent batch 3 (7): Hardware, HR & Recruiting, Logistics, Manufacturing, Media, Medical Devices, Mining
+  - Agent batch 4 (7): Non-profit, Payments, Pharma & Biotech, Professional Services, Religion, Retail, Security & Defense
+  - Agent batch 5 (7): Software, Sports & Fitness, Technology, Tourism, Transportation, Utilities, Wholesale & Distribution
 
-## In corso
-- L1 rewrite: 5 agent in background stanno riscrivendo i 38 L1 rimanenti
-
-## Problemi da risolvere
-1. **L2.1 mancanti**: esiste solo per 4 mercati (Real Estate, Construction, Food & Beverage, Agriculture) — servono per tutti i 43
-2. **Contenuto L2/L3 scadente**: descrizioni pigre, "Includes" sbagliati, fonti placeholder
-3. **Pulizia**: "cartella senza nome", directory duplicata in Real Estate/L2.1/MARKETS/, .DS_Store
-4. **Coerenza verticale**: L1→L2→L2.1→L3 devono derivare dalle stesse fonti per ogni mercato
+## L1 ancora da fare (8 — batch 2 fallito per rate limit)
+- [ ] Consumer Goods
+- [ ] Education
+- [ ] Environmental & Climate
+- [ ] Fashion & Apparel
+- [ ] Financial Services
+- [ ] Food & Beverage
+- [ ] Gaming
+- [ ] Government & Public Sector
 
 ## Prossimi step (prioritizzati)
-1. Completare L1 rewrite (agent in corso)
-2. Primo mercato verticale completo: L1→L2→L2.1→L3 con fonti reali a ogni livello
-3. Replicare su tutti i 43 mercati (2-3 per sessione)
-4. Pulizia file legacy
-5. Verifica link e consistenza globale
+1. **Completare gli 8 L1 mancanti** (batch 2)
+2. **Vertical build mercato per mercato** (L1→L2→L2.1→L3) — partire da Real Estate (#01)
+3. Convention: 5±2 items per livello, MECE, fonti dettano categorie
+4. Stima: 3-4 mercati verticali per sessione, ~10-12 sessioni per tutti i 43
+5. Pulizia file legacy dopo vertical build
+
+## Problemi da risolvere
+1. **L2.1 mancanti**: esiste solo per 4 mercati — servono per tutti i 43
+2. **Contenuto L2/L3 scadente**: descrizioni pigre, "Includes" sbagliati, fonti placeholder
+3. **Pulizia**: "cartella senza nome", directory duplicata, .DS_Store
+4. **Coerenza verticale**: L1→L2→L2.1→L3 devono derivare dalle stesse fonti
 
 ## Metodo di lavoro
 - **Verticale per mercato**, non orizzontale per livello
-- Fonti autorevoli dettano ogni livello
+- Fonti autorevoli dettano ogni livello (source cascade)
 - Convention: 5±2 items per livello (MECE)
 - L2 page: card click → L3, "Explore details →" → L2.1
 
