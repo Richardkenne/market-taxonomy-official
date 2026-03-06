@@ -7,22 +7,14 @@
 - [x] i18n + taxonomy-numbers.js
 - [x] Doc governance (CLAUDE.md, ROADMAP.md, FLOW.md, docs/)
 
-## Fase 2 — L1 Rewrite (35/43 completati)
+## Fase 2 — L1 Rewrite (43/43 completati)
 - [x] Healthcare, Energy, Insurance, Legal, Telecommunications (manuale)
 - [x] Real Estate (gia buona qualita)
 - [x] Batch 1: Advertising, Aerospace, Agriculture, Automotive, Banking, Capital Markets, Chemicals, Construction
+- [x] Batch 2: Consumer Goods, Education, Environmental & Climate, Fashion & Apparel, Financial Services, Food & Beverage, Gaming, Government & Public Sector
 - [x] Batch 3: Hardware, HR & Recruiting, Logistics, Manufacturing, Media, Medical Devices, Mining
 - [x] Batch 4: Non-profit, Payments, Pharma & Biotech, Professional Services, Religion, Retail, Security & Defense
 - [x] Batch 5: Software, Sports & Fitness, Technology, Tourism, Transportation, Utilities, Wholesale & Distribution
-- [ ] Batch 2 (fallito per rate limit — 8 mercati):
-  - [ ] Consumer Goods
-  - [ ] Education
-  - [ ] Environmental & Climate
-  - [ ] Fashion & Apparel
-  - [ ] Financial Services
-  - [ ] Food & Beverage
-  - [ ] Gaming
-  - [ ] Government & Public Sector
 
 ## Fase 3 — Vertical Market Build (0/43)
 Per ogni mercato, in ordine dalla grid L0:
