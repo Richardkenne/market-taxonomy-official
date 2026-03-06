@@ -30,9 +30,8 @@
 
 ## Prossimi step (prioritizzati)
 1. **Vertical build #03 — Food & Beverage** (ha gia L2.1)
-2. **Vertical build #03 — Food & Beverage** (ha gia L2.1)
-3. **Vertical build #04 — Agriculture** (ha gia L2.1)
-4. Continuare con Energy (#05), Utilities (#06), ecc.
+2. **Vertical build #04 — Agriculture** (ha gia L2.1)
+3. Continuare con Energy (#05), Utilities (#06), ecc.
 5. Convention: 5±2 items per livello, MECE, fonti dettano categorie
 6. Stima: 3-4 mercati verticali per sessione, ~10-12 sessioni per tutti i 43
 7. Pulizia file legacy dopo vertical build
