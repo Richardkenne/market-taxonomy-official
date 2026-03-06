@@ -19,10 +19,18 @@ PART C — Output Sheet
 **Levels:**
 ```
 L0 — Macro Markets       (index.html / macro-markets.html)
-  → L1 — Sub-markets     (MARKETS/{name}/L1/)
-    → L2 — Segments      (MARKETS/{name}/L2/)
-      → L3 — Niches      (MARKETS/{name}/L3/)
+  → L1 — Sub-markets     (MARKETS/{name}/L1/)        5-6 per market
+    → L2 — Segments      (MARKETS/{name}/L2/)         4-5 per sub-market
+      → L2.1 — Detail    (MARKETS/{name}/L2.1/)       1 per segment (via "Explore segment details →")
+      → L3 — Niches      (MARKETS/{name}/L3/)         3-5 per segment (via card click)
 ```
+
+**L2 page has two navigation paths:**
+- Card click → L3 (niches — continues the main flow toward Problem Selection)
+- "Explore segment details →" link → L2.1 (segment deep-dive — informational)
+
+**Source cascade:** Authoritative sources dictate categories at every level.
+Each level uses progressively more granular sources (industry standards → segment research → niche operational data).
 
 **CTA on L3:** "View Problem →" → saves context to localStorage → goes to Part B (problem-selection.html)
 
