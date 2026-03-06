@@ -3,15 +3,37 @@
 ## What it is
 Static HTML/JS tool for navigating economic markets taxonomically and selecting structural problems to solve. No backend — state via localStorage.
 
-## Architecture
-```
-Flow: Part A (Market Navigation) → Part B (Problem Selection) → Part C (Output Sheet)
+## Core Principle
+**Authoritative sources dictate the taxonomy.** Every level (L1→L2→L2.1→L3) is derived from recognized classification standards and market research — not invented. Sources become more granular at each level.
 
-Levels:
-  L0 — 43 Macro Markets       → macro-markets.html
-  L1 — 230+ Sub-markets       → MARKETS/{name}/L1/
-  L2 — 4,370+ Segments        → MARKETS/{name}/L2/
-  L3 — 50,000+ Niches         → MARKETS/{name}/L3/
+## Architecture — 5 Levels
+```
+L0 — 43 Macro Markets         → macro-markets.html
+L1 — Sub-markets (5-6 per L0) → MARKETS/{name}/L1/
+L2 — Segments (4-5 per L1)    → MARKETS/{name}/L2/
+L2.1 — Segment Detail         → MARKETS/{name}/L2.1/  (accessed from L2 via "Explore segment details →")
+L3 — Niches (3-5 per L2)      → MARKETS/{name}/L3/    (accessed from L2 via card click)
+```
+
+## Navigation Flow
+```
+L1 → click sub-market → L2 page (lists segments as cards)
+  L2 card click → L3 (niches → leads to Problem Selection)
+  L2 "Explore segment details →" link → L2.1 (segment deep-dive)
+```
+
+## Taxonomy Conventions
+- **Items per level**: 5 +/- 2 (follows GICS/NAICS/ICB standards + Miller's Law)
+- **MECE**: Mutually Exclusive, Collectively Exhaustive at every level
+- **Source cascade**: L1 sources (industry-level) → L2 sources (segment-level) → L3 sources (niche-level)
+- **No placeholders**: every source must have a real URL, never href="#"
+- **No lazy descriptions**: every sub-market/segment must have a real description, never "{Name} sub-markets and operators"
+
+## Flow (Part A → B → C)
+```
+Part A: Market Navigation (L0 → L1 → L2 → L2.1/L3)
+Part B: Problem Selection (12 structural problems)
+Part C: Output Sheet (summary of selections)
 ```
 
 ## Stack
@@ -27,26 +49,16 @@ Levels:
 - `numbers.html` — overview scala tassonomia
 - `problem-selection.html` — 12 problemi strutturali
 - `output-sheet.html` — riepilogo selezioni
-- `how-to-define-problems.html` — guida problemi monetizzabili
-- `global-investors.html` — fonti autorevoli
-- `authoritative-sources-framework.html` — framework fonti
 - `content/taxonomy-numbers.js` — single source of truth per i conteggi
-- `content/footer-template.html` — footer condiviso
+
+## Working Method
+Build vertically per market (not horizontally per level):
+1. Research authoritative sources for the market
+2. Sources dictate L1 categories
+3. L1 categories dictate L2 segments
+4. Each L2 gets a L2.1 detail page + 3-5 L3 niches
+5. Verify all links work in chain
 
 ## File Counts (actual)
-- 43 market folders in MARKETS/
-- 43 L1 pages (tutti i mercati)
-- 44 L2 folders, 476 L2 pages
-- 44 L3 folders, 1,417 L3 pages
-- ~1,401 L2.1 pages (formato legacy, solo Real Estate, Construction, Food & Beverage, Agriculture)
-
-## Conventions
-- Naming pagine: `market-{market-name}-{segment}.html`
-- L3 pages end with `-l3.html`
-- i18n keys: `data-t="pages.{page}.text.{id}"`
-- Stato tra pagine: localStorage (selected_market, primary_problem, etc.)
-
-## Known Issues
-- "cartella senza nome" contiene vecchie versioni di index.html e macro-markets.html (da rimuovere)
-- L2.1 folder è un formato legacy presente in 4 mercati — da valutare migrazione o pulizia
-- Duplicati nested in `MARKETS/Real Estate/L2.1/MARKETS/` (directory copiata per errore)
+- 43 market folders, 43 L1 pages
+- 476 L2 pages, ~1,401 L2.1 pages (only 4 markets), 1,417 L3 pages
