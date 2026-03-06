@@ -26,7 +26,7 @@ Per ogni mercato, in ordine dalla grid L0:
 
 ### Ordine (dalla grid macro-markets.html):
 - [x] 01. Real Estate — L2(6) + L2.1(24) + L3(26) = 0 link rotti
-- [ ] 02. Construction & Infrastructure (ha gia L2.1)
+- [x] 02. Construction & Infrastructure — L2(6+18) + L2.1(18) + L3(54)
 - [ ] 03. Food & Beverage (ha gia L2.1)
 - [ ] 04. Agriculture (ha gia L2.1)
 - [ ] 05. Energy
