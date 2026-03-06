@@ -28,13 +28,23 @@
   - L3: 18 niche-list + 36 niche specifiche = 54 file
   - Link chain L2→L3 e L2→L2.1 funzionanti
 
+## In corso (parzialmente scritti — da completare prossima sessione)
+Vertical build #03-#10 iniziato ma interrotto. File parziali presenti:
+- Food & Beverage: L2=2, L2.1=8, L3=8 (parziale, mancano 4 L2)
+- Agriculture: L2=2, L2.1=10, L3=7 (parziale, mancano 4 L2)
+- Energy: L2=6, L2.1=7, L3=0 (L2 ok, L2.1 parziale, L3 mancanti)
+- Utilities: L2=5, L2.1=15, L3=0 (L2 ok, L2.1 ok, L3 mancanti)
+- Transportation: L2=6, L2.1=6, L3=0 (L2 ok, L2.1 parziale, L3 mancanti)
+- Automotive: L2=1, L2.1=0, L3=0 (quasi tutto da fare)
+- Manufacturing: L2=8, L2.1=3, L3=0 (L2 ok, resto mancante)
+- Consumer Goods: L2=6, L2.1=6, L3=0 (L2 ok, L2.1 parziale, L3 mancanti)
+
 ## Prossimi step (prioritizzati)
-1. **Vertical build #03 — Food & Beverage** (ha gia L2.1)
-2. **Vertical build #04 — Agriculture** (ha gia L2.1)
-3. Continuare con Energy (#05), Utilities (#06), ecc.
-5. Convention: 5±2 items per livello, MECE, fonti dettano categorie
-6. Stima: 3-4 mercati verticali per sessione, ~10-12 sessioni per tutti i 43
-7. Pulizia file legacy dopo vertical build
+1. **Completare vertical build #03-#10** (riprendere da dove interrotto)
+2. Continuare con #11-#20
+3. Convention: 5±2 items per livello, MECE, fonti dettano categorie
+4. Stima: ~8-10 sessioni rimanenti per tutti i 43
+5. Pulizia file legacy dopo vertical build
 
 ## Problemi da risolvere
 1. **L2.1 mancanti**: completato per Real Estate — restano 42 mercati
