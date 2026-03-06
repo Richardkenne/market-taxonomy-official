@@ -9,94 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../style.css">
     <style>
-        .l1-sources {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            margin: 24px auto 40px;
-            max-width: 560px;
-            padding: 0 16px;
-        }
-        .l1-source-chip {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
-            background: var(--border-light);
-            border-radius: 10px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: background 0.15s, color 0.15s;
-        }
-        .l1-source-chip:hover { background: #e8f4fd; color: #1a6fa8; }
-        .l1-source-chip svg { flex-shrink: 0; }
-        .l1-cards-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            max-width: 560px;
-            margin: 0 auto 48px;
-            padding: 0 16px;
-        }
-        .l1-card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-decoration: none;
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 4px;
-            cursor: pointer;
-            transition: color 0.15s;
-            text-align: left;
-            gap: 16px;
-            color: inherit;
-        }
-        .l1-card:first-child { border-top: 1px solid var(--border); }
-        .l1-card:hover h3 { color: var(--green); }
-        .l1-card-left { flex: 1; }
-        .l1-card-num {
-            font-size: 0.65rem;
-            font-weight: 700;
-            color: var(--text-tertiary);
-            min-width: 24px;
-            flex-shrink: 0;
-        }
-        .l1-card h3 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin: 0 0 2px;
-            transition: color 0.15s;
-        }
-        .l1-card p {
-            font-size: 0.82rem;
-            color: var(--text-secondary);
-            margin: 0;
-            line-height: 1.4;
-        }
-        .l1-card-tam {
-            font-size: 0.73rem;
-            font-weight: 600;
-            color: var(--green);
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-        .l1-card-arrow {
-            color: var(--text-tertiary);
-            flex-shrink: 0;
-        }
-        .l1-section-label {
-            text-align: center;
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: var(--text-tertiary);
-            margin-bottom: 16px;
-        }
+        .l1-sources{display:flex;flex-direction:column;gap:6px;margin:24px auto 40px;max-width:560px;padding:0 16px;}
+        .l1-source-chip{display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--border-light);border-radius:10px;font-size:0.85rem;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:background 0.15s,color 0.15s;}
+        .l1-source-chip:hover{background:#e8f4fd;color:#1a6fa8;}
+        .l1-source-chip svg{flex-shrink:0;}
+        .l1-cards-grid{display:flex;flex-direction:column;gap:0;max-width:560px;margin:0 auto 48px;padding:0 16px;}
+        .l1-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;cursor:pointer;transition:color 0.15s;text-align:left;gap:16px;color:inherit;}
+        .l1-card:first-child{border-top:1px solid var(--border);}
+        .l1-card:hover h3{color:var(--green);}
+        .l1-card-left{flex:1;}
+        .l1-card-num{font-size:0.65rem;font-weight:700;color:var(--text-tertiary);min-width:24px;flex-shrink:0;}
+        .l1-card h3{font-size:0.95rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s;}
+        .l1-card p{font-size:0.82rem;color:var(--text-secondary);margin:0;line-height:1.4;}
+        .l1-card-tam{font-size:0.73rem;font-weight:600;color:var(--green);white-space:nowrap;flex-shrink:0;}
+        .l1-card-arrow{color:var(--text-tertiary);flex-shrink:0;}
+        .l1-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px;}
     </style>
 </head>
 <body>
@@ -122,12 +49,12 @@
         </header>
 
         <p class="subtitle" style="max-width:560px; margin:0 auto 32px;">
-            This market covers organizations pursuing public benefit missions through charitable services, advocacy, education, and social enterprise models funded by donations, grants, and earned revenue.
+            Non-profit and social-impact markets are segmented by mission type, funding model, and organizational structure — each with distinct governance requirements, donor dynamics, and program delivery patterns.
         </p>
 
-        <div style="max-width:560px; margin:0 auto 8px; padding:0 16px; border:1px solid var(--border); border-radius:10px; padding:14px 18px;">
+        <div style="max-width:560px; margin:0 auto 8px; border:1px solid var(--border); border-radius:10px; padding:14px 18px;">
             <p style="font-size:0.8rem; color:var(--text-tertiary); line-height:1.6; margin:0 0 10px;">
-                These sources classify non-profits by mission category, revenue source, and organizational size tracked by NCCS, Urban Institute, and philanthropic research bodies.
+                We reference two types of sources: <strong>classification standards</strong> used by the IRS, NCCS, and international bodies to categorize tax-exempt organizations, and <strong>philanthropic research</strong> used to size giving markets and track nonprofit sector trends. Use these to validate mission categories before narrowing to a specific service area or funding model.
             </p>
             <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
                 <a href="../../../authoritative-sources-framework.html" style="font-size:0.72rem; color:var(--text-secondary); text-decoration:none; font-weight:500; display:inline-flex; align-items:center; gap:4px;">
@@ -142,89 +69,101 @@
         </div>
 
         <div class="l1-sources">
-            <a href="https://nccs.urban.org/" target="_blank" rel="noopener" class="l1-source-chip">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <a href="https://nccs.urban.org/" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
                 NCCS — National Center for Charitable Statistics
             </a>
-            <a href="https://givingusa.org/" target="_blank" rel="noopener" class="l1-source-chip">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                Giving USA — Charitable Giving Research
+            <a href="https://www.census.gov/naics/?input=813&chart=2022" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                NAICS 813 — Religious, Grantmaking, Civic & Social Organizations
             </a>
-            <a href="https://www.census.gov/naics/?input=813&chart=no" target="_blank" rel="noopener" class="l1-source-chip">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                NAICS 813 — Religious, Civic & Social Organizations
+            <a href="https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                IRS — Exempt Organizations Data (NTEE Codes)
             </a>
-            <a href="https://cof.org/resources/data/" target="_blank" rel="noopener" class="l1-source-chip">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                Council on Foundations
+            <a href="https://givingusa.org/" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Giving USA — Annual Philanthropy Report
             </a>
-            <a href="https://candid.org/research-and-insights/" target="_blank" rel="noopener" class="l1-source-chip">
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                Candid — GuideStar Nonprofit Data
+            <a href="https://candid.org/research-and-insights" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Candid (GuideStar + Foundation Center)
+            </a>
+            <a href="https://www.mckinsey.com/industries/public-sector/how-we-help-clients" target="_blank" rel="noopener" class="l1-source-chip"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                McKinsey Social Sector Practice
             </a>
         </div>
 
         <section style="max-width:900px; margin:0 auto; padding:0 16px;">
             <p style="font-size:0.82rem; color:var(--text-secondary); max-width:560px; margin:0 auto 12px; text-align:center; line-height:1.6;">
-                Segments are divided by mission type and funding model because operational structures, donor relationships, and technology needs differ substantially between human services organizations, foundations, advocacy groups, and social enterprises.
+                These categories follow the IRS National Taxonomy of Exempt Entities (NTEE) classification system and NAICS 813 divisions, reflecting how nonprofits are organized by mission focus, funding source, and operational model.
             </p>
+
             <p class="l1-section-label">Select a sub-market to continue</p>
 
             <div class="l1-cards-grid" style="padding:0;">
-                <a href="#" class="l1-card">
+
+                <a href="../L2/market-non-profit-social-human-services-community-organizations.html" class="l1-card">
                     <span class="l1-card-num">01</span>
                     <div class="l1-card-left">
                         <h3>Human Services & Community Organizations</h3>
-                        <p>Food banks, homeless shelters, domestic violence programs, and social service agencies serving vulnerable populations.</p>
+                        <p>Social service agencies delivering direct assistance — food banks, homeless shelters, job training programs, and community development organizations serving vulnerable populations.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Food Banks, Emergency Shelters, Workforce Development, Community Action Agencies.</p>
                     </div>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#" class="l1-card">
+
+                <a href="../L2/market-non-profit-social-health-medical-charities.html" class="l1-card">
                     <span class="l1-card-num">02</span>
                     <div class="l1-card-left">
                         <h3>Health & Medical Charities</h3>
-                        <p>Disease-focused foundations, hospital auxiliaries, and public health nonprofits funding research and patient support.</p>
+                        <p>Disease-focused foundations, hospital auxiliaries, and public health nonprofits funding medical research, patient support services, and health education campaigns.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Disease Research Foundations, Hospital Auxiliaries, Mental Health Nonprofits, Public Health Campaigns.</p>
                     </div>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#" class="l1-card">
+
+                <a href="../L2/market-non-profit-social-education-youth-development.html" class="l1-card">
                     <span class="l1-card-num">03</span>
                     <div class="l1-card-left">
                         <h3>Education & Youth Development</h3>
-                        <p>Scholarship foundations, after-school programs, literacy initiatives, and college access nonprofits.</p>
+                        <p>Scholarship foundations, after-school programs, literacy initiatives, mentoring organizations, and college access nonprofits serving K-12 and young adult populations.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Scholarship Funds, After-School Programs, Mentoring Networks, College Access Initiatives.</p>
                     </div>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#" class="l1-card">
+
+                <a href="../L2/market-non-profit-social-environmental-animal-organizations.html" class="l1-card">
                     <span class="l1-card-num">04</span>
                     <div class="l1-card-left">
                         <h3>Environmental & Animal Organizations</h3>
-                        <p>Conservation groups, environmental advocacy organizations, animal shelters, and humane societies.</p>
+                        <p>Conservation groups, environmental advocacy organizations, wildlife protection agencies, animal shelters, and humane societies focused on ecological and species welfare.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Land Conservation Trusts, Environmental Advocacy, Animal Shelters, Wildlife Protection.</p>
                     </div>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#" class="l1-card">
+
+                <a href="../L2/market-non-profit-social-foundations-philanthropic-giving.html" class="l1-card">
                     <span class="l1-card-num">05</span>
                     <div class="l1-card-left">
                         <h3>Foundations & Philanthropic Giving</h3>
-                        <p>Private foundations, community foundations, and donor-advised fund sponsors deploying capital for public benefit.</p>
+                        <p>Private foundations, community foundations, corporate giving programs, and donor-advised fund sponsors deploying capital through grants and impact investments.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Private Foundations, Community Foundations, DAF Sponsors, Corporate Philanthropy.</p>
                     </div>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="#" class="l1-card">
+
+                <a href="../L2/market-non-profit-social-nonprofit-technology-fundraising-platforms.html" class="l1-card">
                     <span class="l1-card-num">06</span>
                     <div class="l1-card-left">
                         <h3>Nonprofit Technology & Fundraising Platforms</h3>
-                        <p>Donor management CRM, fundraising software, grant management, volunteer coordination, and nonprofit analytics tools.</p>
+                        <p>Donor management CRMs, online fundraising tools, grant management software, volunteer coordination platforms, and impact measurement analytics built for mission-driven organizations.</p>
+                        <p style="font-size:0.75rem; color:var(--text-tertiary); margin-top:3px;">Includes: Donor CRM, Online Fundraising, Grant Management, Volunteer Platforms, Impact Analytics.</p>
                     </div>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
+
             </div>
         </section>
 
         <section class="guidance-box" style="max-width:700px; margin:0 auto 48px;">
             <h4>How to Choose a Niche</h4>
-            <p>Select a mission category and funding model (grant-dependent vs. earned revenue vs. major gifts) before exploring operational or technology pain points — a food bank's inventory management needs are completely different from a foundation's grant-making workflow or an advocacy group's digital organizing tools. L2 niches include donation processing platforms, program impact measurement, and volunteer engagement technology.</p>
+            <p>Select a mission category and funding model (grant-dependent vs. earned revenue vs. major gifts) before exploring operational pain points. Examples: donor retention analytics for mid-size human services nonprofits; grant compliance reporting tools for community foundations; volunteer scheduling software for animal rescue networks; peer-to-peer fundraising platforms for disease-research charities.</p>
         </section>
     </div>
     <script src="../../../content/t.js"></script>
