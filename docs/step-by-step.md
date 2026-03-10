@@ -16,7 +16,7 @@
 - [x] Batch 4: Non-profit, Payments, Pharma & Biotech, Professional Services, Religion, Retail, Security & Defense
 - [x] Batch 5: Software, Sports & Fitness, Technology, Tourism, Transportation, Utilities, Wholesale & Distribution
 
-## Fase 3 — Vertical Market Build (19/43)
+## Fase 3 — Vertical Market Build (33/43)
 Per ogni mercato, in ordine dalla grid L0:
 1. Verificare/finalizzare L1 (fonti, categorie)
 2. Riscrivere L2 pages (4-5 segmenti, fonti segment-level)
@@ -42,23 +42,23 @@ Per ogni mercato, in ordine dalla grid L0:
 - [x] 15. Medical Devices — 6 L2, 23 L2.1, 23 L3 (FDA CDRH, EvaluateMedTech, AdvaMed)
 - [x] 16. Financial Services — 6 L2, 21 L2.1, 21 L3 (BIS, IMF, McKinsey, BCG)
 - [x] 17. Banking — 6 L2, 18 L2.1, 18 L3 (FDIC, OCC, Federal Reserve, BIS Basel)
-- [ ] 18. Insurance
-- [ ] 19. Payments
-- [ ] 20. Capital Markets
-- [ ] 21. Technology
+- [x] 18. Insurance — 6 L2, 18 L2.1, 18 L3 (NAIC, AM Best, Swiss Re)
+- [x] 19. Payments — 6 L2, 18 L2.1, 18 L3 (Nilson, McKinsey Payments, BIS)
+- [x] 20. Capital Markets — 6 L2, 18 L2.1, 18 L3 (SIFMA, BIS, WFE)
+- [x] 21. Technology — 7 L2, 23 L2.1, 23 L3 (Gartner, IDC, Forrester, SIA)
 - [x] 22. Software — 6 L2, 18 L2.1, 18 L3 (Gartner, IDC, Forrester, Synergy Research)
-- [ ] 23. Hardware
-- [ ] 24. Telecommunications
-- [ ] 25. Media & Entertainment
-- [ ] 26. Gaming
+- [x] 23. Hardware — 6 L2, 18 L2.1, 18 L3 (IDC, Gartner, TechInsights)
+- [x] 24. Telecommunications — 6 L2, 18 L2.1, 18 L3 (ITU, GSMA, FCC)
+- [x] 25. Media & Entertainment — 6 L2, 18 L2.1, 18 L3 (PwC, MPA, IFPI)
+- [x] 26. Gaming — 6 L2, 18 L2.1, 18 L3 (Newzoo, SuperData, ESA)
 - [x] 27. Advertising & Marketing — 6 L2, 19 L2.1, 19 L3 (IAB, eMarketer, GroupM, Magna)
-- [ ] 28. Education
-- [ ] 29. Professional Services
-- [ ] 30. Legal
-- [ ] 31. HR & Recruiting
-- [ ] 32. Security & Defense
-- [ ] 33. Government & Public Sector
-- [ ] 34. Tourism & Hospitality
+- [x] 28. Education — 6 L2, 18 L2.1, 18 L3 (UNESCO, NCES, HolonIQ)
+- [x] 29. Professional Services — 6 L2, 18 L2.1, 18 L3 (IBISWorld, Source Global)
+- [x] 30. Legal — 6 L2, 18 L2.1, 18 L3 (Thomson Reuters, ALM, Clio)
+- [x] 31. HR & Recruiting — 6 L2, 18 L2.1, 18 L3 (SHRM, SIA, Bersin)
+- [x] 32. Security & Defense — 6 L2, 18 L2.1, 18 L3 (SIPRI, Janes, DSCA)
+- [x] 33. Government & Public Sector — 6 L2, 18 L2.1, 18 L3 (OECD, IMF, World Bank)
+- [x] 34. Tourism & Hospitality — 6 L2, 18 L2.1, 18 L3 (UNWTO, WTTC, STR)
 - [ ] 35. Fashion & Apparel
 - [ ] 36. Logistics & Supply Chain
 - [ ] 37. Chemicals & Materials
