@@ -16,7 +16,7 @@
 - [x] Batch 4: Non-profit, Payments, Pharma & Biotech, Professional Services, Religion, Retail, Security & Defense
 - [x] Batch 5: Software, Sports & Fitness, Technology, Tourism, Transportation, Utilities, Wholesale & Distribution
 
-## Fase 3 — Vertical Market Build (2/43)
+## Fase 3 — Vertical Market Build (17/43)
 Per ogni mercato, in ordine dalla grid L0:
 1. Verificare/finalizzare L1 (fonti, categorie)
 2. Riscrivere L2 pages (4-5 segmenti, fonti segment-level)
@@ -27,21 +27,21 @@ Per ogni mercato, in ordine dalla grid L0:
 ### Ordine (dalla grid macro-markets.html):
 - [x] 01. Real Estate — L2(6) + L2.1(24) + L3(26) = 0 link rotti
 - [x] 02. Construction & Infrastructure — L2(6+18) + L2.1(18) + L3(54)
-- [ ] 03. Food & Beverage (ha gia L2.1)
-- [ ] 04. Agriculture (ha gia L2.1)
+- [x] 03. Food & Beverage — 6 L2, 22 L2.1, 22 L3 (Euromonitor, USDA ERS, FDA, FAO)
+- [x] 04. Agriculture — 6 L2, 22 L2.1, 22 L3 (USDA, FAO, AgFunder, CropLife)
 - [x] 05. Energy — 6 L2, 25 L2.1, 25 L3 (IEA, EIA, IRENA, BloombergNEF)
 - [x] 06. Utilities — 5 L2, 20 L2.1, 20 L3 (EIA, EPA, AWWA, FERC)
-- [ ] 07. Transportation & Mobility
-- [ ] 08. Automotive
-- [ ] 09. Manufacturing
+- [x] 07. Transportation & Mobility — 6 L2, 24 L2.1, 24 L3 (IATA, IRF, USDOT, McKinsey)
+- [x] 08. Automotive — 6 L2, 18 L2.1, 18 L3 (OICA, S&P Global Mobility, NADA, SAE)
+- [x] 09. Manufacturing — 5 L2, 24 L2.1, 24 L3 (UNIDO, NAM, McKinsey, Deloitte)
 - [x] 10. Consumer Goods — 6 L2, 27 L2.1, 27 L3 (Euromonitor, NielsenIQ, Statista)
-- [ ] 11. Retail & E-commerce
-- [ ] 12. Wholesale & Distribution
-- [ ] 13. Healthcare
-- [ ] 14. Pharmaceuticals & Biotech
-- [ ] 15. Medical Devices
-- [ ] 16. Financial Services
-- [ ] 17. Banking
+- [x] 11. Retail & E-commerce — 6 L2, 19 L2.1, 19 L3 (NRF, Euromonitor, eMarketer)
+- [x] 12. Wholesale & Distribution — 6 L2, 20 L2.1, 20 L3 (NAW, MDM, IBISWorld)
+- [x] 13. Healthcare — 6 L2, 19 L2.1, 19 L3 (CMS, WHO, AHA, IQVIA)
+- [x] 14. Pharmaceuticals & Biotech — 6 L2, 23 L2.1, 23 L3 (FDA, EMA, IQVIA)
+- [x] 15. Medical Devices — 6 L2, 23 L2.1, 23 L3 (FDA CDRH, EvaluateMedTech, AdvaMed)
+- [x] 16. Financial Services — 6 L2, 21 L2.1, 21 L3 (BIS, IMF, McKinsey, BCG)
+- [x] 17. Banking — 6 L2, 18 L2.1, 18 L3 (FDIC, OCC, Federal Reserve, BIS Basel)
 - [ ] 18. Insurance
 - [ ] 19. Payments
 - [ ] 20. Capital Markets
