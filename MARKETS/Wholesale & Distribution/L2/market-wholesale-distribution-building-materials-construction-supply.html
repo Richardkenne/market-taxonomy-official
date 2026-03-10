@@ -20,6 +20,10 @@
         .l1-card-tam{font-size:0.73rem;font-weight:600;color:var(--green);white-space:nowrap;flex-shrink:0;}
         .l1-card-arrow{color:var(--text-tertiary);flex-shrink:0;}
         .l1-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px;}
+        .l2-sources{display:flex;flex-direction:column;gap:6px;margin:0 auto 32px;max-width:560px;padding:0 16px;}
+        .l2-source-chip{display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--border-light);border-radius:10px;font-size:0.82rem;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:background 0.15s,color 0.15s;}
+        .l2-source-chip:hover{background:#e8f4fd;color:#1a6fa8;}
+        .l2-source-chip svg{flex-shrink:0;}
     </style>
 </head>
 <body>
@@ -30,42 +34,79 @@
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Back to Wholesale & Distribution
+                Back to Wholesale &amp; Distribution
             </a>
         </div>
+
         <header class="market-page-header">
             <div style="text-align:center; margin-bottom:12px;">
                 <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 2</span>
             </div>
-            <div class="market-badge"><span class="market-title">Building Materials & Construction Supply</span></div>
+            <div class="market-badge">
+                <span class="market-title">Building Materials & Construction Supply</span>
+            </div>
         </header>
-        <p class="subtitle" style="max-width:560px; margin:0 auto 32px;">Building Materials & Construction Supply within Wholesale & Distribution — select a segment to explore niches and problems.</p>
+
+        <p class="subtitle" style="max-width:560px; margin:0 auto 24px;">
+            Distributors of lumber, plumbing, electrical, HVAC, and roofing materials serving general contractors, specialty trades, and residential builders.
+        </p>
+
+        <div class="l2-sources">
+            <a href="https://www.census.gov/naics/?input=4233&chart=2022" target="_blank" rel="noopener" class="l2-source-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                NAICS 4233 — Lumber & Construction Materials
+            </a>
+            <a href="https://www.naw.org/advocacy-policy/research/" target="_blank" rel="noopener" class="l2-source-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                NAW Construction Supply Research
+            </a>
+            <a href="https://www.mdm.com/top-distributors/construction" target="_blank" rel="noopener" class="l2-source-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                MDM Top Construction Distributors
+            </a>
+            <a href="https://www.ibisworld.com/industry/building-material-wholesaling.html" target="_blank" rel="noopener" class="l2-source-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                IBISWorld Building Material Wholesaling
+            </a>
+        </div>
+
         <section style="max-width:900px; margin:0 auto; padding:0 16px;">
             <p class="l1-section-label">Select a segment to continue</p>
             <div class="l1-cards-grid" style="padding:0;">
-                <a href="../L2.1/market-wholesale-distribution-building-materials-construction-supply-building-operations.html" class="l1-card">
+
+                <a href="../L2.1/market-wholesale-distribution-building-materials-construction-supply-lumber-structural.html" class="l1-card">
                     <span class="l1-card-num">01</span>
-                    <div class="l1-card-left"><h3>Building Operations</h3><p>Building Operations — segments within Building Materials & Construction Supply.</p></div>
-                    <span class="l1-card-tam">$—</span>
+                    <div class="l1-card-left">
+                        <h3>Lumber & Structural Materials Distribution</h3>
+                        <p>Wholesale distribution of dimensional lumber, engineered wood products, structural steel, and framing materials to resid...</p>
+                    </div>
+                    <span class="l1-card-tam">$60B+</span>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="../L2.1/market-wholesale-distribution-building-materials-construction-supply-building-technology.html" class="l1-card">
+                <a href="../L2.1/market-wholesale-distribution-building-materials-construction-supply-plumbing-hvac.html" class="l1-card">
                     <span class="l1-card-num">02</span>
-                    <div class="l1-card-left"><h3>Building Technology</h3><p>Building Technology — segments within Building Materials & Construction Supply.</p></div>
-                    <span class="l1-card-tam">$—</span>
+                    <div class="l1-card-left">
+                        <h3>Plumbing & HVAC Distribution</h3>
+                        <p>Wholesale distribution of pipes, fittings, valves, water heaters, HVAC systems, and refrigeration equipment to mechanica...</p>
+                    </div>
+                    <span class="l1-card-tam">$55B+</span>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="../L2.1/market-wholesale-distribution-building-materials-construction-supply-building-services.html" class="l1-card">
+                <a href="../L2.1/market-wholesale-distribution-building-materials-construction-supply-electrical-supply.html" class="l1-card">
                     <span class="l1-card-num">03</span>
-                    <div class="l1-card-left"><h3>Building Services</h3><p>Building Services — segments within Building Materials & Construction Supply.</p></div>
-                    <span class="l1-card-tam">$—</span>
+                    <div class="l1-card-left">
+                        <h3>Electrical Supply Distribution</h3>
+                        <p>Distribution of wire, cable, conduit, switchgear, lighting, and electrical controls to electrical contractors, utilities...</p>
+                    </div>
+                    <span class="l1-card-tam">$60B+</span>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
             </div>
         </section>
+
         <section class="guidance-box" style="max-width:700px; margin:0 auto 48px;">
             <h4>How to Choose a Niche</h4>
-            <p>Focus on the segment with the most operational friction within Building Materials & Construction Supply.</p>
+            <p>Focus on segments where regulatory compliance, inventory complexity, or supply chain fragmentation create recurring pain points. Look for sub-markets with high SKU counts, mandatory documentation workflows, or multi-party coordination challenges — these produce the strongest demand for software solutions.</p>
         </section>
     </div>
     <script src="../../../content/t.js"></script>

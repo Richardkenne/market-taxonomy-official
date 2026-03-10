@@ -20,6 +20,10 @@
         .l1-card-tam{font-size:0.73rem;font-weight:600;color:var(--green);white-space:nowrap;flex-shrink:0;}
         .l1-card-arrow{color:var(--text-tertiary);flex-shrink:0;}
         .l1-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px;}
+        .l2-sources{display:flex;flex-direction:column;gap:6px;margin:0 auto 32px;max-width:560px;padding:0 16px;}
+        .l2-source-chip{display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--border-light);border-radius:10px;font-size:0.82rem;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:background 0.15s,color 0.15s;}
+        .l2-source-chip:hover{background:#e8f4fd;color:#1a6fa8;}
+        .l2-source-chip svg{flex-shrink:0;}
     </style>
 </head>
 <body>
@@ -30,42 +34,88 @@
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Back to Wholesale & Distribution
+                Back to Wholesale &amp; Distribution
             </a>
         </div>
+
         <header class="market-page-header">
             <div style="text-align:center; margin-bottom:12px;">
                 <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 2</span>
             </div>
-            <div class="market-badge"><span class="market-title">Food & Foodservice Distribution</span></div>
+            <div class="market-badge">
+                <span class="market-title">Food & Foodservice Distribution</span>
+            </div>
         </header>
-        <p class="subtitle" style="max-width:560px; margin:0 auto 32px;">Food & Foodservice Distribution within Wholesale & Distribution — select a segment to explore niches and problems.</p>
+
+        <p class="subtitle" style="max-width:560px; margin:0 auto 24px;">
+            Broadline and specialty food distributors supplying restaurants, institutional kitchens, grocery retailers, and convenience stores with perishable and shelf-stable products.
+        </p>
+
+        <div class="l2-sources">
+            <a href="https://www.census.gov/naics/?input=4244&chart=2022" target="_blank" rel="noopener" class="l2-source-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                NAICS 4244–4249 — Grocery & Food Wholesalers
+            </a>
+            <a href="https://www.ifda.org/resources/research" target="_blank" rel="noopener" class="l2-source-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                IFDA — Intl Foodservice Distributors Association
+            </a>
+            <a href="https://www.mdm.com/top-distributors/food-beverage" target="_blank" rel="noopener" class="l2-source-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                MDM Top Food & Beverage Distributors
+            </a>
+            <a href="https://www.ibisworld.com/industry/food-wholesaling.html" target="_blank" rel="noopener" class="l2-source-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                IBISWorld Food Wholesaling
+            </a>
+        </div>
+
         <section style="max-width:900px; margin:0 auto; padding:0 16px;">
             <p class="l1-section-label">Select a segment to continue</p>
             <div class="l1-cards-grid" style="padding:0;">
-                <a href="../L2.1/market-wholesale-distribution-food-foodservice-distribution-it-distribution.html" class="l1-card">
+
+                <a href="../L2.1/market-wholesale-distribution-food-foodservice-distribution-broadline-foodservice.html" class="l1-card">
                     <span class="l1-card-num">01</span>
-                    <div class="l1-card-left"><h3>IT Distribution</h3><p>IT Distribution — segments within Food & Foodservice Distribution.</p></div>
-                    <span class="l1-card-tam">$—</span>
+                    <div class="l1-card-left">
+                        <h3>Broadline Foodservice Distribution</h3>
+                        <p>Full-line distribution of food products, beverages, disposables, and kitchen supplies to restaurants, hotels, hospitals,...</p>
+                    </div>
+                    <span class="l1-card-tam">$200B+</span>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="../L2.1/market-wholesale-distribution-food-foodservice-distribution-industrial-distribution.html" class="l1-card">
+                <a href="../L2.1/market-wholesale-distribution-food-foodservice-distribution-specialty-gourmet.html" class="l1-card">
                     <span class="l1-card-num">02</span>
-                    <div class="l1-card-left"><h3>Industrial Distribution</h3><p>Industrial Distribution — segments within Food & Foodservice Distribution.</p></div>
-                    <span class="l1-card-tam">$—</span>
+                    <div class="l1-card-left">
+                        <h3>Specialty & Gourmet Distribution</h3>
+                        <p>Distribution of artisan, organic, ethnic, and premium specialty food products to independent retailers, gourmet shops, a...</p>
+                    </div>
+                    <span class="l1-card-tam">$45B+</span>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="../L2.1/market-wholesale-distribution-food-foodservice-distribution-medical-distribution.html" class="l1-card">
+                <a href="../L2.1/market-wholesale-distribution-food-foodservice-distribution-produce-perishables.html" class="l1-card">
                     <span class="l1-card-num">03</span>
-                    <div class="l1-card-left"><h3>Medical Distribution</h3><p>Medical Distribution — segments within Food & Foodservice Distribution.</p></div>
-                    <span class="l1-card-tam">$—</span>
+                    <div class="l1-card-left">
+                        <h3>Produce & Perishables Distribution</h3>
+                        <p>Wholesale distribution of fresh fruits, vegetables, dairy, meat, and seafood with cold-chain logistics to grocery, foods...</p>
+                    </div>
+                    <span class="l1-card-tam">$80B+</span>
+                    <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="../L2.1/market-wholesale-distribution-food-foodservice-distribution-frozen-refrigerated.html" class="l1-card">
+                    <span class="l1-card-num">04</span>
+                    <div class="l1-card-left">
+                        <h3>Frozen & Refrigerated Distribution</h3>
+                        <p>Specialized cold-chain distribution of frozen foods, ice cream, refrigerated beverages, and temperature-sensitive produc...</p>
+                    </div>
+                    <span class="l1-card-tam">$55B+</span>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
             </div>
         </section>
+
         <section class="guidance-box" style="max-width:700px; margin:0 auto 48px;">
             <h4>How to Choose a Niche</h4>
-            <p>Focus on the segment with the most operational friction within Food & Foodservice Distribution.</p>
+            <p>Focus on segments where regulatory compliance, inventory complexity, or supply chain fragmentation create recurring pain points. Look for sub-markets with high SKU counts, mandatory documentation workflows, or multi-party coordination challenges — these produce the strongest demand for software solutions.</p>
         </section>
     </div>
     <script src="../../../content/t.js"></script>

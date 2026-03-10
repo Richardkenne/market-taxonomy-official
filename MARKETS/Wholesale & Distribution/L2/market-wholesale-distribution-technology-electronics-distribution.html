@@ -20,6 +20,10 @@
         .l1-card-tam{font-size:0.73rem;font-weight:600;color:var(--green);white-space:nowrap;flex-shrink:0;}
         .l1-card-arrow{color:var(--text-tertiary);flex-shrink:0;}
         .l1-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px;}
+        .l2-sources{display:flex;flex-direction:column;gap:6px;margin:0 auto 32px;max-width:560px;padding:0 16px;}
+        .l2-source-chip{display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--border-light);border-radius:10px;font-size:0.82rem;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:background 0.15s,color 0.15s;}
+        .l2-source-chip:hover{background:#e8f4fd;color:#1a6fa8;}
+        .l2-source-chip svg{flex-shrink:0;}
     </style>
 </head>
 <body>
@@ -30,42 +34,79 @@
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Back to Wholesale & Distribution
+                Back to Wholesale &amp; Distribution
             </a>
         </div>
+
         <header class="market-page-header">
             <div style="text-align:center; margin-bottom:12px;">
                 <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 2</span>
             </div>
-            <div class="market-badge"><span class="market-title">Technology & Electronics Distribution</span></div>
+            <div class="market-badge">
+                <span class="market-title">Technology & Electronics Distribution</span>
+            </div>
         </header>
-        <p class="subtitle" style="max-width:560px; margin:0 auto 32px;">Technology & Electronics Distribution within Wholesale & Distribution — select a segment to explore niches and problems.</p>
+
+        <p class="subtitle" style="max-width:560px; margin:0 auto 24px;">
+            IT hardware distributors, electronic component brokers, and value-added resellers connecting OEMs with enterprise buyers and channel partners.
+        </p>
+
+        <div class="l2-sources">
+            <a href="https://www.census.gov/naics/?input=4236&chart=2022" target="_blank" rel="noopener" class="l2-source-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                NAICS 4236 — Electronic & Appliance Wholesalers
+            </a>
+            <a href="https://www.comptia.org/content/research" target="_blank" rel="noopener" class="l2-source-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                CompTIA Channel Research
+            </a>
+            <a href="https://www.mdm.com/top-distributors/electronics" target="_blank" rel="noopener" class="l2-source-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                MDM Top Electronics Distributors
+            </a>
+            <a href="https://www.ibisworld.com/industry/electronic-parts-wholesaling.html" target="_blank" rel="noopener" class="l2-source-chip">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                IBISWorld Electronic Parts Wholesaling
+            </a>
+        </div>
+
         <section style="max-width:900px; margin:0 auto; padding:0 16px;">
             <p class="l1-section-label">Select a segment to continue</p>
             <div class="l1-cards-grid" style="padding:0;">
-                <a href="../L2.1/market-wholesale-distribution-technology-electronics-distribution-it-distribution.html" class="l1-card">
+
+                <a href="../L2.1/market-wholesale-distribution-technology-electronics-distribution-it-hardware-infrastructure.html" class="l1-card">
                     <span class="l1-card-num">01</span>
-                    <div class="l1-card-left"><h3>IT Distribution</h3><p>IT Distribution — segments within Technology & Electronics Distribution.</p></div>
-                    <span class="l1-card-tam">$—</span>
+                    <div class="l1-card-left">
+                        <h3>IT Hardware & Infrastructure Distribution</h3>
+                        <p>Wholesale distribution of servers, networking equipment, storage systems, PCs, and peripherals to resellers, MSPs, and e...</p>
+                    </div>
+                    <span class="l1-card-tam">$200B+</span>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="../L2.1/market-wholesale-distribution-technology-electronics-distribution-industrial-distribution.html" class="l1-card">
+                <a href="../L2.1/market-wholesale-distribution-technology-electronics-distribution-electronic-components.html" class="l1-card">
                     <span class="l1-card-num">02</span>
-                    <div class="l1-card-left"><h3>Industrial Distribution</h3><p>Industrial Distribution — segments within Technology & Electronics Distribution.</p></div>
-                    <span class="l1-card-tam">$—</span>
+                    <div class="l1-card-left">
+                        <h3>Electronic Components Distribution</h3>
+                        <p>Distribution of semiconductors, passive components, connectors, and electromechanical parts to electronics manufacturers...</p>
+                    </div>
+                    <span class="l1-card-tam">$180B+</span>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="../L2.1/market-wholesale-distribution-technology-electronics-distribution-medical-distribution.html" class="l1-card">
+                <a href="../L2.1/market-wholesale-distribution-technology-electronics-distribution-cloud-software-licensing.html" class="l1-card">
                     <span class="l1-card-num">03</span>
-                    <div class="l1-card-left"><h3>Medical Distribution</h3><p>Medical Distribution — segments within Technology & Electronics Distribution.</p></div>
-                    <span class="l1-card-tam">$—</span>
+                    <div class="l1-card-left">
+                        <h3>Cloud & Software Licensing Distribution</h3>
+                        <p>Distribution and aggregation of cloud services, SaaS subscriptions, software licenses, and managed services through chan...</p>
+                    </div>
+                    <span class="l1-card-tam">$70B+</span>
                     <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
             </div>
         </section>
+
         <section class="guidance-box" style="max-width:700px; margin:0 auto 48px;">
             <h4>How to Choose a Niche</h4>
-            <p>Focus on the segment with the most operational friction within Technology & Electronics Distribution.</p>
+            <p>Focus on segments where regulatory compliance, inventory complexity, or supply chain fragmentation create recurring pain points. Look for sub-markets with high SKU counts, mandatory documentation workflows, or multi-party coordination challenges — these produce the strongest demand for software solutions.</p>
         </section>
     </div>
     <script src="../../../content/t.js"></script>
