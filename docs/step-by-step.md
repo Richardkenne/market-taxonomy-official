@@ -29,12 +29,12 @@ Per ogni mercato, in ordine dalla grid L0:
 - [x] 02. Construction & Infrastructure — L2(6+18) + L2.1(18) + L3(54)
 - [ ] 03. Food & Beverage (ha gia L2.1)
 - [ ] 04. Agriculture (ha gia L2.1)
-- [ ] 05. Energy
-- [ ] 06. Utilities
+- [x] 05. Energy — 6 L2, 25 L2.1, 25 L3 (IEA, EIA, IRENA, BloombergNEF)
+- [x] 06. Utilities — 5 L2, 20 L2.1, 20 L3 (EIA, EPA, AWWA, FERC)
 - [ ] 07. Transportation & Mobility
 - [ ] 08. Automotive
 - [ ] 09. Manufacturing
-- [ ] 10. Consumer Goods
+- [x] 10. Consumer Goods — 6 L2, 27 L2.1, 27 L3 (Euromonitor, NielsenIQ, Statista)
 - [ ] 11. Retail & E-commerce
 - [ ] 12. Wholesale & Distribution
 - [ ] 13. Healthcare
@@ -70,8 +70,8 @@ Per ogni mercato, in ordine dalla grid L0:
 - [ ] 43. Environmental & Climate
 
 ## Fase 4 — Pulizia & Verifica
-- [ ] Rimuovere "cartella senza nome"
+- [x] Rimuovere "cartella senza nome"
 - [x] Rimuovere MARKETS/Real Estate/L2.1/MARKETS/ (duplicato)
 - [x] Rimuovere .DS_Store, aggiungere a .gitignore
 - [ ] Verificare consistenza globale link e i18n
-- [ ] Implementare search bar full-text
+- [x] Implementare search bar full-text (multi-categoria: Markets + BD + BS + DM)

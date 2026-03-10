@@ -28,16 +28,19 @@
   - L3: 18 niche-list + 36 niche specifiche = 54 file
   - Link chain L2→L3 e L2→L2.1 funzionanti
 
-## In corso (parzialmente scritti — da completare prossima sessione)
-Vertical build #03-#10 iniziato ma interrotto. File parziali presenti:
+## In corso (parzialmente scritti — da completare)
+Vertical build #03-#10 iniziato. Batch A completato (2026-03-10):
+- [x] Energy: 6 L2, 25 L2.1, 25 L3 (fonti: IEA, EIA, IRENA, BloombergNEF, Wood Mackenzie)
+- [x] Utilities: 5 L2, 20 L2.1, 20 L3 (fonti: EIA, EPA, AWWA, FERC, NARUC)
+- [x] Consumer Goods: 6 L2, 27 L2.1, 27 L3 (fonti: Euromonitor, NielsenIQ, Statista, IDC)
+- 223 file duplicati/orfani eliminati, 144 file creati/modificati
+
+Ancora da completare:
 - Food & Beverage: L2=2, L2.1=8, L3=8 (parziale, mancano 4 L2)
 - Agriculture: L2=2, L2.1=10, L3=7 (parziale, mancano 4 L2)
-- Energy: L2=6, L2.1=7, L3=0 (L2 ok, L2.1 parziale, L3 mancanti)
-- Utilities: L2=5, L2.1=15, L3=0 (L2 ok, L2.1 ok, L3 mancanti)
 - Transportation: L2=6, L2.1=6, L3=0 (L2 ok, L2.1 parziale, L3 mancanti)
 - Automotive: L2=1, L2.1=0, L3=0 (quasi tutto da fare)
 - Manufacturing: L2=8, L2.1=3, L3=0 (L2 ok, resto mancante)
-- Consumer Goods: L2=6, L2.1=6, L3=0 (L2 ok, L2.1 parziale, L3 mancanti)
 
 ## Prossimi step (prioritizzati)
 1. **Completare vertical build #03-#10** (riprendere da dove interrotto)

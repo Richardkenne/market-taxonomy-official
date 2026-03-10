@@ -590,8 +590,8 @@ function showSummary() {
             item.classList.add("ai-highlight");
         }
         item.innerHTML = `
-            <div class="label">${escapeHtml(labels[i])}</div>
-            <div class="value">${escapeHtml(String(selections[key] || "—"))}</div>
+            <div class="label">${labels[i]}</div>
+            <div class="value">${selections[key] || "—"}</div>
         `;
         summaryGrid.appendChild(item);
     });
@@ -800,7 +800,6 @@ function escapeHtml(str) {
 }
 
 function csvEscape(str) {
-    str = String(str ?? "");
     if (str.includes(",") || str.includes('"') || str.includes("\n")) {
         return '"' + str.replace(/"/g, '""') + '"';
     }
@@ -942,9 +941,6 @@ function applyAiPrefillIfAny() {
     if (!selections.gtm && prefSel.gtm) selections.gtm = prefSel.gtm;
     if (!selections.validation_signal && prefSel.validation_signal) selections.validation_signal = prefSel.validation_signal;
 
-    // Remove homepage-hide from all wizard elements so they become visible
-    document.querySelectorAll(".homepage-hide").forEach(el => el.classList.remove("homepage-hide"));
-
     const prefillMode = localStorage.getItem("prefill_mode") || "auto";
     if (prefillMode === "step") {
         currentStep = 0;
@@ -1024,7 +1020,7 @@ function renderAiLearningSummary() {
     const unchanged = list.reduce((sum, l) => sum + l.unchanged, 0);
     const accuracy = total ? Math.round((unchanged / total) * 100) : 0;
 
-    aiLearning.textContent = `AI learning today: ${accuracy}% fields unchanged. Entries: ${list.length}.`;
+    aiLearning.innerHTML = `AI learning today: ${accuracy}% fields unchanged. Entries: ${list.length}.`;
     aiLearning.classList.remove("hidden");
 }
 

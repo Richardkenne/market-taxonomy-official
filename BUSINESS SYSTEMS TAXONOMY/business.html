@@ -158,6 +158,18 @@
             </div>
             <h1 style="font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px;">12 Business Systems</h1>
             <p class="subtitle" style="font-size: 0.875rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto;">The only twelve mechanisms that exist to convert value into sustained cash flow — across any market, era, or technology.</p>
+
+            <!-- Search Bar -->
+            <div style="max-width: 520px; margin: 20px auto 0; position: relative;">
+                <div style="display: flex; align-items: center; gap: 8px; background: var(--surface, #fff); border: 1.5px solid var(--border, #e5e7eb); border-radius: 12px; padding: 8px 16px;">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" style="flex-shrink:0; color:#9ca3af;">
+                        <path d="M9 17A8 8 0 109 1a8 8 0 000 16zM19 19l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <input type="text" id="bs-search" placeholder="Search business systems..." autocomplete="off" style="border:none; outline:none; font-size:0.9rem; width:100%; background:transparent; color:inherit; font-family:inherit;">
+                </div>
+                <div id="bs-search-results" class="hidden" style="position:absolute; top:100%; left:0; right:0; margin-top:6px; background:var(--white,#fff); border:1.5px solid var(--border,#e5e7eb); border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.1); max-height:300px; overflow-y:auto; z-index:100;">
+                </div>
+            </div>
         </header>
 
         <!-- Foundation rows -->
@@ -409,6 +421,112 @@
             const body = btn.nextElementSibling;
             body.classList.toggle('open');
         }
+
+        // ── Business Systems Search ─────────────────────────────────
+        (function() {
+            const BS_DATA = [
+                { name: 'Subscription', number: '01', keywords: ['subscription', 'recurring', 'saas', 'netflix', 'spotify', 'retention', 'nrr', 'churn', 'seat'] },
+                { name: 'Transaction Fee', number: '02', keywords: ['transaction', 'commission', 'fee', 'stripe', 'paypal', 'airbnb', 'take rate', 'volume'] },
+                { name: 'Usage-Based', number: '03', keywords: ['usage', 'metering', 'pay per use', 'consumption', 'aws', 'twilio', 'snowflake', 'compute'] },
+                { name: 'Licensing / IP', number: '04', keywords: ['licensing', 'ip', 'intellectual property', 'franchise', 'royalty', 'qualcomm', 'arm', 'rights'] },
+                { name: 'Marketplace', number: '05', keywords: ['marketplace', 'two-sided', 'buyer', 'seller', 'amazon', 'uber', 'etsy', 'network effect', 'liquidity'] },
+                { name: 'Advertising / Attention', number: '06', keywords: ['advertising', 'ads', 'attention', 'cpm', 'cpc', 'google', 'meta', 'youtube', 'arpu', 'audience'] },
+                { name: 'Asset Ownership', number: '07', keywords: ['asset', 'ownership', 'reit', 'leasing', 'infrastructure', 'yield', 'appreciation', 'property'] },
+                { name: 'Service / Retainer', number: '08', keywords: ['service', 'retainer', 'consulting', 'agency', 'law firm', 'project-based', 'utilisation', 'hour'] },
+                { name: 'Performance / Outcome-Based', number: '09', keywords: ['performance', 'outcome', 'affiliate', 'carried interest', 'results', 'conversion', 'pay for results'] },
+                { name: 'Data / Insight', number: '10', keywords: ['data', 'insight', 'bloomberg', 'nielsen', 'palantir', 'reports', 'api access', 'intelligence'] },
+                { name: 'Platform / Ecosystem', number: '11', keywords: ['platform', 'ecosystem', 'app store', 'salesforce', 'android', 'developer', 'marketplace platform'] },
+                { name: 'Hybrid / Stack', number: '12', keywords: ['hybrid', 'stack', 'composite', 'multi-system', 'cross-subsidy', 'combination'] }
+            ];
+
+            const searchInput = document.getElementById('bs-search');
+            const resultsEl = document.getElementById('bs-search-results');
+            const allCards = document.querySelectorAll('.bs-card');
+
+            function searchSystems(query) {
+                if (!query || query.length < 2) return [];
+                const lq = query.toLowerCase();
+                const tokens = lq.split(/\s+/).filter(Boolean);
+                const scored = [];
+
+                BS_DATA.forEach((item, idx) => {
+                    let score = 0;
+                    const nameLower = item.name.toLowerCase();
+                    if (nameLower === lq) score += 100;
+                    if (nameLower.includes(lq)) score += 80;
+                    if (item.keywords.some(kw => kw === lq)) score += 90;
+                    if (item.keywords.some(kw => kw.includes(lq))) score += 60;
+                    tokens.forEach(t => {
+                        if (nameLower.includes(t)) score += 30;
+                        if (item.keywords.some(kw => kw.includes(t))) score += 20;
+                    });
+                    if (score > 0) scored.push({ ...item, score, cardIndex: idx });
+                });
+
+                scored.sort((a, b) => b.score - a.score);
+                return scored.slice(0, 5);
+            }
+
+            function scrollToCard(index) {
+                const card = allCards[index];
+                if (!card) return;
+                // Remove previous highlights
+                allCards.forEach(c => c.style.outline = '');
+                // Highlight and scroll
+                card.style.outline = '3px solid #2563eb';
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => { card.style.outline = ''; }, 3000);
+            }
+
+            searchInput.addEventListener('input', () => {
+                const query = searchInput.value.trim();
+                if (query.length < 2) {
+                    resultsEl.classList.add('hidden');
+                    resultsEl.innerHTML = '';
+                    return;
+                }
+                const matches = searchSystems(query);
+                if (matches.length === 0) {
+                    resultsEl.innerHTML = '<div style="padding:12px 16px; font-size:0.85rem; color:#9ca3af;">No systems found</div>';
+                    resultsEl.classList.remove('hidden');
+                    return;
+                }
+
+                resultsEl.innerHTML = '';
+                matches.forEach(m => {
+                    const el = document.createElement('div');
+                    el.style.cssText = 'padding:10px 16px; cursor:pointer; font-size:0.875rem; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #f3f4f6; transition:background 0.1s;';
+                    el.innerHTML = `<span style="font-weight:500;">${m.number} — ${m.name}</span><span style="font-size:0.7rem; color:#2563eb; font-weight:600;">GO</span>`;
+                    el.addEventListener('mouseenter', () => el.style.background = '#eff6ff');
+                    el.addEventListener('mouseleave', () => el.style.background = '');
+                    el.addEventListener('click', () => {
+                        scrollToCard(m.cardIndex);
+                        resultsEl.classList.add('hidden');
+                        searchInput.value = m.name;
+                    });
+                    resultsEl.appendChild(el);
+                });
+                resultsEl.classList.remove('hidden');
+            });
+
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    const matches = searchSystems(searchInput.value.trim());
+                    if (matches.length > 0) {
+                        scrollToCard(matches[0].cardIndex);
+                        resultsEl.classList.add('hidden');
+                        searchInput.value = matches[0].name;
+                    }
+                }
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('#bs-search') && !e.target.closest('#bs-search-results')) {
+                    resultsEl.classList.add('hidden');
+                }
+            });
+        })();
     </script>
 </body>
 </html>
