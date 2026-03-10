@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>E-commerce Platforms & Infrastructure — Niches — Retail &amp; E-commerce</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../../style.css">
+<style>.l3-niche-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;gap:16px;color:inherit}.l3-niche-card:first-child{border-top:1px solid var(--border)}.l3-niche-card:hover h3{color:var(--green)}.l3-niche-card h3{font-size:0.9rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s}.l3-niche-card p{font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4}.l3-niche-grid{max-width:560px;margin:0 auto 48px}.l3-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}</style></head>
+<body><div id="app">
+<div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+<div class="back-nav"><a href="../L2/market-retail-ecommerce-retail-technology.html" class="back-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to Retail Technology &amp; Commerce Platforms</a></div>
+<header class="market-page-header"><div style="text-align:center; margin-bottom:12px;"><span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 3</span></div><div class="market-badge"><span class="market-title">E-commerce Platforms &amp; Infrastructure — Niches</span></div></header>
+<p class="subtitle" style="max-width:560px; margin:0 auto 32px;">Select a niche within E-commerce Platforms & Infrastructure to discover specific problems and begin your analysis.</p>
+<section style="max-width:560px; margin:0 auto; padding:0 16px;">
+<p class="l3-section-label">Select a niche</p>
+<div class="l3-niche-grid">
+<div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Headless Commerce Components')"><div><h3>Headless Commerce Components</h3><p>API-first commerce building blocks — search, checkout, product pages, cart — for composable commerce architectures.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Commerce Integration & Middleware')"><div><h3>Commerce Integration & Middleware</h3><p>iPaaS and middleware connecting composable commerce tools, legacy system adapters, and data synchronization for multi-vendor stacks.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('International Commerce Enablement')"><div><h3>International Commerce Enablement</h3><p>Cross-border checkout, multi-currency pricing, international tax compliance, and localization tools for global e-commerce expansion.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</section>
+<section class="guidance-box" style="max-width:700px; margin:0 auto 48px;"><h4>How to Choose a Niche</h4><p>Headless commerce components (search, checkout, PDP) are a growing niche — build one piece exceptionally well rather than a full platform. Commerce middleware and integration platforms (connecting composable tools) have strong demand. International commerce enablement (multi-currency, cross-border tax, localized checkout) is an underserved horizontal need. Avoid building another Shopify competitor — focus on enterprise/mid-market or specific verticals.</p></section>
+</div>
+<script src="../../../content/t.js"></script>
+<script>
+function selectNiche(nicheName) {
+    localStorage.setItem('selected_l3', nicheName);
+    localStorage.setItem('problem_back_url', window.location.href);
+    localStorage.setItem('suggested_primary', 'platform');
+    localStorage.setItem('suggested_secondary', 'retail');
+    window.location.href = '../../../problem-selection.html';
+}
+</script>
+</body></html>

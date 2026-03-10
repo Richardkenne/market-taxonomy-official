@@ -1,68 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee & Tea — Niches — Food & Beverage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../../style.css">
-    <style>
-        .l3-niche-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;gap:16px;color:inherit;}
-        .l3-niche-card:first-child{border-top:1px solid var(--border);}
-        .l3-niche-card:hover h3{color:var(--green);}
-        .l3-niche-card h3{font-size:0.9rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s;}
-        .l3-niche-card p{font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4;}
-        .l3-niche-grid{max-width:560px;margin:0 auto 48px;}
-        .l3-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px;}
-    </style>
-</head>
-<body>
-    <div id="app">
-        <div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
-        <div class="back-nav">
-            <a href="../L2/market-food-beverage-beverages.html" class="back-link">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Back to Beverages
-            </a>
-        </div>
-        <header class="market-page-header">
-            <div style="text-align:center; margin-bottom:12px;">
-                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 3</span>
-            </div>
-            <div class="market-badge"><span class="market-title">Coffee & Tea — Niches</span></div>
-        </header>
-        <p class="subtitle" style="max-width:560px; margin:0 auto 32px;">Select a niche within Coffee & Tea to see specific problems and begin your analysis.</p>
-        <section style="max-width:560px; margin:0 auto; padding:0 16px;">
-            <p class="l3-section-label">Select a niche</p>
-            <div class="l3-niche-grid">
-                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Specialty & Single-Origin Coffee')">
-                    <div><h3>Specialty & Single-Origin Coffee</h3><p>Third-wave specialty coffee scoring 80+ on SCA scale, single-origin beans with full traceability, and micro-lot roasting — commanding $20-50/lb retail prices vs. $8-12 for commodity coffee. Led by Blue Bottle, Counter Culture, and Intelligentsia.</p></div>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Matcha & Premium Tea')">
-                    <div><h3>Matcha & Premium Tea</h3><p>Ceremonial-grade matcha, premium loose-leaf tea, and specialty tea brands — matcha alone is a $4B+ global market growing 10% annually, driven by wellness positioning, social media aesthetics, and cafe culture expansion.</p></div>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('RTD Coffee & Cold Brew')">
-                    <div><h3>RTD Coffee & Cold Brew</h3><p>Ready-to-drink bottled and canned coffee, cold brew concentrates, and nitro coffee — a $30B+ segment growing 8% CAGR as consumers shift from hot to cold coffee and demand grab-and-go convenience.</p></div>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-            </div>
-        </section>
-        <section class="guidance-box" style="max-width:700px; margin:0 auto 48px;">
-            <h4>How to Choose a Niche</h4>
-            <p>Specialty coffee rewards sourcing relationships and roasting craftsmanship but requires direct trade networks. Matcha and premium tea reward cultural authenticity and quality sourcing from Japan, China, or Taiwan. RTD coffee rewards manufacturing scale and retail distribution — it is the most capital-intensive but also the largest addressable market.</p>
-        </section>
-    </div>
-    <script src="../../../content/t.js"></script>
-    <script>
-    function selectNiche(nicheName) {
-        localStorage.setItem('selected_l3', nicheName);
-        localStorage.setItem('problem_back_url', window.location.href);
-        window.location.href = '../../../numbers.html';
-    }
-    </script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Coffee &amp; Tea — Niches — Food &amp; Beverage</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../../style.css">
+<style>.l3-niche-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;gap:16px;color:inherit}.l3-niche-card:first-child{border-top:1px solid var(--border)}.l3-niche-card:hover h3{color:var(--green)}.l3-niche-card h3{font-size:0.9rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s}.l3-niche-card p{font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4}.l3-niche-grid{max-width:560px;margin:0 auto 48px}.l3-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}</style></head>
+<body><div id="app">
+<div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+<div class="back-nav"><a href="../L2/market-food-beverage-beverages.html" class="back-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to Beverages</a></div>
+<header class="market-page-header"><div style="text-align:center; margin-bottom:12px;"><span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 3</span></div><div class="market-badge"><span class="market-title">Coffee &amp; Tea — Niches</span></div></header>
+<p class="subtitle" style="max-width:560px; margin:0 auto 32px;">Select a niche within Coffee &amp; Tea to discover specific problems and begin your analysis.</p>
+<section style="max-width:560px; margin:0 auto; padding:0 16px;">
+<p class="l3-section-label">Select a niche</p>
+<div class="l3-niche-grid">
+<div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Specialty &amp; Single-Origin Coffee')"><div><h3>Specialty &amp; Single-Origin Coffee</h3><p>Direct trade, micro-lot, and specialty roasting — the premium segment commanding 3-5x commodity pricing.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Coffee Capsules &amp; RTD Coffee')"><div><h3>Coffee Capsules &amp; RTD Coffee</h3><p>Single-serve pods, canned cold brew, and bottled coffee — convenience-driven with sustainability pressure.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Premium &amp; Specialty Tea')"><div><h3>Premium &amp; Specialty Tea</h3><p>Loose-leaf, matcha, functional tea blends, and RTD tea — premiumizing from commodity to specialty.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</section>
+<section class="guidance-box" style="max-width:700px; margin:0 auto 48px;"><h4>How to Choose a Niche</h4><p>Specialty coffee sourcing and traceability platforms have the strongest PMF. Coffee shop operations software (beyond POS) is underserved for multi-unit operators.</p></section>
+</div>
+<script src="../../../content/t.js"></script>
+<script>
+function selectNiche(nicheName) {
+    localStorage.setItem('selected_l3', nicheName);
+    localStorage.setItem('problem_back_url', window.location.href);
+    localStorage.setItem('suggested_primary', 'coffee');
+    localStorage.setItem('suggested_secondary', 'hot-drinks');
+    window.location.href = '../../../problem-selection.html';
+}
+</script>
+</body></html>

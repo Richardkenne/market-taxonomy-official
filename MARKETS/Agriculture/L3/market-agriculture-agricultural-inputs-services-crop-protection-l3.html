@@ -1,65 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crop Protection — Niches — Agriculture</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../../style.css">
-    <style>
-        .l3-niche-card{display:flex;align-items:center;justify-content:space-between;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;gap:16px;cursor:pointer;}
-        .l3-niche-card:first-child{border-top:1px solid var(--border);}
-        .l3-niche-card:hover h3{color:var(--green);}
-        .l3-niche-card h3{font-size:0.9rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s;}
-        .l3-niche-card p{font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4;}
-        .l3-niche-grid{max-width:560px;margin:0 auto 48px;}
-        .l3-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px;}
-    </style>
-</head>
-<body>
-    <div id="app">
-        <div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
-        <div class="back-nav">
-            <a href="../L2.1/market-agriculture-agricultural-inputs-services-crop-protection.html" class="back-link">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Back to Crop Protection
-            </a>
-        </div>
-        <header class="market-page-header">
-            <div style="text-align:center; margin-bottom:12px;">
-                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 3</span>
-            </div>
-            <div class="market-badge"><span class="market-title">Crop Protection — Niches</span></div>
-        </header>
-        <p class="subtitle" style="max-width:560px; margin:0 auto 32px;">Select a niche within Crop Protection to see specific problems and begin your analysis.</p>
-        <section style="max-width:560px; margin:0 auto; padding:0 16px;">
-            <p class="l3-section-label">Select a niche</p>
-            <div class="l3-niche-grid">
-                <div class="l3-niche-card" onclick="selectNiche('Crop Protection Operators')"><div><h3>Crop Protection Operators</h3><p>Core operators and service providers within Crop Protection.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                <div class="l3-niche-card" onclick="selectNiche('Crop Protection Technology Buyers')"><div><h3>Crop Protection Technology Buyers</h3><p>Organizations purchasing software for Crop Protection workflows.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                <div class="l3-niche-card" onclick="selectNiche('Crop Protection Service Providers')"><div><h3>Crop Protection Service Providers</h3><p>Consultants and specialists serving the Crop Protection market.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            </div>
-        </section>
-        <section class="guidance-box" style="max-width:700px; margin:0 auto 48px;">
-            <h4>How to Choose a Niche</h4>
-            <p>Focus on the niche with the most recurring pain — operators tend to have the highest willingness to pay.</p>
-        </section>
-    
-        <div class="l3-cta" style="margin-top: 48px;">
-            <a class="l3-cta-btn" href="../../../numbers.html?l3=market-agriculture-agricultural-inputs-services-crop-protection" style="background:var(--text-secondary);">Numbers & TAM →</a>
-        </div>
-    </div>
-    <script src="../../../content/t.js"></script>
-    <script>
-    function selectNiche(nicheName) {
-        localStorage.setItem('selected_l3', nicheName);
-        localStorage.setItem('problem_back_url', window.location.href);
-        const words = nicheName.toLowerCase().split(/[\s\/&-]+/).filter(w => w.length > 2);
-        localStorage.setItem('suggested_primary', words[0] || '');
-        localStorage.setItem('suggested_secondary', words[1] || '');
-        window.location.href = '../../../problem-selection.html';
-    }
-    </script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Crop Protection &amp; Agrochemicals — Niches — Agriculture</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../../style.css">
+<style>.l3-niche-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;gap:16px;color:inherit}.l3-niche-card:first-child{border-top:1px solid var(--border)}.l3-niche-card:hover h3{color:var(--green)}.l3-niche-card h3{font-size:0.9rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s}.l3-niche-card p{font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4}.l3-niche-grid{max-width:560px;margin:0 auto 48px}.l3-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}</style></head>
+<body><div id="app">
+<div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+<div class="back-nav"><a href="../L2/market-agriculture-agricultural-inputs-services.html" class="back-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to Agricultural Inputs &amp; Services</a></div>
+<header class="market-page-header"><div style="text-align:center;margin-bottom:12px;"><span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 3</span></div><div class="market-badge"><span class="market-title">Crop Protection &amp; Agrochemicals — Niches</span></div></header>
+<p class="subtitle" style="max-width:560px;margin:0 auto 32px;">Select a niche within Crop Protection &amp; Agrochemicals to see specific problems and begin your analysis.</p>
+<section style="max-width:560px;margin:0 auto;padding:0 16px;">
+<p class="l3-section-label">Select a niche</p>
+<div class="l3-niche-grid"><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('AI-Powered Pest & Weed Identification')"><div><h3>AI-Powered Pest & Weed Identification</h3><p>Computer vision apps and drone-based detection systems that identify weed species, insect pests, and plant diseases from photos — enabling targeted rather than broadcast treatment.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Precision Spray & Spot Application')"><div><h3>Precision Spray & Spot Application</h3><p>See-and-spray technology and variable-rate application systems that reduce chemical use 60-90% by treating only detected weeds/pests rather than entire fields.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Integrated Pest Management Advisory')"><div><h3>Integrated Pest Management Advisory</h3><p>Decision-support platforms that combine scouting data, weather models, and economic thresholds to recommend optimal timing and product selection for pest management.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+</section>
+<section class="guidance-box" style="max-width:700px;margin:0 auto 48px;"><h4>How to Choose a Niche</h4><p>See-and-spray technology (John Deere/Blue River) has proven the concept — 60-90% herbicide reduction — but current solutions are expensive ($500K+ retrofit). There is whitespace for more affordable, targeted spray solutions. AI pest ID apps have high user adoption but struggle to monetize. IPM advisory tools that reduce spray costs have the clearest path to farmer-paid subscription revenue.</p></section>
+</div>
+<script src="../../../content/t.js"></script>
+<script>function selectNiche(n){localStorage.setItem('selected_l3',n);localStorage.setItem('problem_back_url',window.location.href);window.location.href='../../../numbers.html';}</script>
+</body></html>

@@ -1,90 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alcoholic Beverages — Beverages — Food & Beverage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../../style.css">
-    <style>
-        .l3-divider{max-width:600px;margin:28px auto;border:none;border-top:1px solid var(--border)}
-        .l3-sources-label{max-width:600px;margin:0 auto 6px;padding:0 16px;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary)}
-        .l3-sources-grid{max-width:600px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:1fr 1fr;gap:5px}
-        .l3-source-chip{display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:6px;font-size:0.75rem;color:var(--text-tertiary);text-decoration:none;transition:color 0.15s}
-        .l3-source-chip:hover{color:var(--text-primary)}
-        .l3-source-chip svg{flex-shrink:0;opacity:0.4}
-        .l3-context{max-width:600px;margin:0 auto;padding:0 16px}
-        .l3-context-inner{border:1px solid var(--border);border-radius:10px;overflow:hidden}
-        .l3-context-label{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);padding:10px 14px 6px}
-        .l3-context-row{display:flex;align-items:baseline;gap:12px;padding:7px 14px;border-top:1px solid var(--border-light)}
-        .l3-context-key{font-size:0.75rem;color:var(--text-tertiary);min-width:110px;flex-shrink:0}
-        .l3-context-val{font-size:0.8rem;font-weight:500;color:var(--text-primary)}
-        .l3-callout{max-width:600px;margin:0 auto 16px;padding:0 16px}
-        .l3-callout-inner{border-left:3px solid var(--green);padding:10px 14px;background:var(--green-light,#f0faf4);border-radius:0 8px 8px 0;font-size:0.82rem;color:var(--text-secondary);line-height:1.6}
-        .l3-pain{max-width:600px;margin:0 auto;padding:0 16px}
-        .l3-pain-label{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);margin-bottom:10px}
-        .l3-pain ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px}
-        .l3-pain ul li{display:flex;align-items:flex-start;gap:10px;font-size:0.83rem;color:var(--text-secondary);line-height:1.5}
-        .l3-pain ul li::before{content:"·";font-size:1.2rem;color:var(--green);line-height:1.2;flex-shrink:0}
-        .l3-niche{max-width:600px;margin:0 auto;padding:0 16px}
-        .l3-niche-inner{background:var(--border-light);border-radius:10px;padding:16px 18px}
-        .l3-niche-inner h4{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);margin:0 0 6px}
-        .l3-niche-inner p{font-size:0.82rem;color:var(--text-secondary);margin:0;line-height:1.6}
-        .l3-cta{max-width:600px;margin:0 auto 48px;padding:0 16px;text-align:center}
-        .l3-explanation{max-width:600px;margin:0 auto;padding:0 16px;font-size:0.78rem;color:var(--text-tertiary);line-height:1.65;text-align:center}
-    </style>
-</head>
-<body>
-    <div id="app">
-        <div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
-        <div class="back-nav">
-            <a href="../L2/market-food-beverage-beverages.html" class="back-link">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Back to Beverages
-            </a>
-        </div>
-        <header class="market-page-header">
-            <div style="text-align:center; margin-bottom:12px;">
-                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 2.1</span>
-            </div>
-            <div class="market-badge"><span class="market-title">Alcoholic Beverages</span></div>
-        </header>
-        <p class="subtitle" style="max-width:560px; margin:0 auto 0;">Beer, wine, spirits, and ready-to-drink cocktails — a $500B+ industry navigating premiumization, craft movements, changing demographics, and the rise of no/low-alcohol alternatives.</p>
-        <hr class="l3-divider">
-        <p class="l3-explanation">Segment follows IWSR's global drinks taxonomy (Beer, Wine, Spirits, RTD/High-Strength Premix), cross-referenced with Euromonitor Alcoholic Drinks and the Distilled Spirits Council (DISCUS) categories.</p>
-        <p class="l3-sources-label" style="margin-top:14px;">Sources</p>
-        <div class="l3-sources-grid">
-            <a href="https://www.theiwsr.com/" target="_blank" rel="noopener" class="l3-source-chip"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>IWSR Drinks Market</a>
-            <a href="https://www.distilledspirits.org/" target="_blank" rel="noopener" class="l3-source-chip"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>DISCUS</a>
-            <a href="https://www.euromonitor.com/alcoholic-drinks" target="_blank" rel="noopener" class="l3-source-chip"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Euromonitor Alcohol</a>
-            <a href="https://www.brewersassociation.org/statistics-and-data/" target="_blank" rel="noopener" class="l3-source-chip"><svg width="9" height="9" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Brewers Association</a>
-        </div>
-        <hr class="l3-divider">
-        <div class="l3-context"><div class="l3-context-inner">
-            <p class="l3-context-label">Market Context</p>
-            <div class="l3-context-row"><span class="l3-context-key">Size / Scale</span><span class="l3-context-val">$500B+ globally — spirits growing fastest at 5% CAGR</span></div>
-            <div class="l3-context-row"><span class="l3-context-key">Growth signal</span><span class="l3-context-val">Premium+ spirits (+8%), RTD cocktails (+15%), no/low-alcohol (+7%); mass beer declining</span></div>
-            <div class="l3-context-row"><span class="l3-context-key">Key players</span><span class="l3-context-val">AB InBev, Diageo, Pernod Ricard, Heineken, LVMH, Constellation Brands</span></div>
-            <div class="l3-context-row"><span class="l3-context-key">Geography</span><span class="l3-context-val">North America 28%, Europe 30%, Asia-Pacific 30% — China largest beer market, India fastest spirits growth</span></div>
-        </div></div>
-        <hr class="l3-divider">
-        <div class="l3-callout"><div class="l3-callout-inner">The alcohol industry faces a generational shift: Gen Z drinks 20% less than millennials did at the same age. This is not just a trend — it is a structural demographic headwind. The opportunity lies in serving moderation-oriented consumers (no/low-alcohol, RTD, premium-less-volume) and helping traditional producers adapt their portfolios and distribution models.</div></div>
-        <div class="l3-pain">
-            <p class="l3-pain-label">Known Pain Points</p>
-            <ul>
-                <li>Three-tier distribution complexity — in the US, mandatory producer-distributor-retailer separation creates enormous inefficiency and limits DTC models for craft producers</li>
-                <li>Age verification for e-commerce — online alcohol sales require identity verification at purchase and delivery, adding friction and cost that limits digital channel growth</li>
-                <li>Premiumization vs. volume decline — consumers buy less but pay more, requiring brands to fundamentally restructure margins and production volumes</li>
-                <li>Regulatory fragmentation — alcohol laws vary not just by country but by state/province, making multi-market expansion extraordinarily complex for small producers</li>
-            </ul>
-        </div>
-        <hr class="l3-divider">
-        <div class="l3-niche"><div class="l3-niche-inner"><h4>How to Choose a Niche</h4><p>Alcohol is heavily regulated, which creates moats for those who understand compliance. The best niches solve distribution pain (helping craft producers reach consumers), enable premiumization (brand storytelling, direct relationships), or serve the moderation movement (no/low-alcohol alternatives with authentic flavor profiles).</p></div></div>
-        <hr class="l3-divider">
-        <div class="l3-cta"><a href="../L3/market-food-beverage-beverages-alcoholic-l3.html" style="display:inline-block;padding:12px 24px;background:var(--green);color:white;border-radius:8px;text-decoration:none;font-weight:500;">View Niches →</a></div>
-    </div>
-    <script src="../../../content/t.js"></script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Alcoholic Beverages — Food &amp; Beverage</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../../style.css">
+<style>.l3-divider{max-width:600px;margin:28px auto;border:none;border-top:1px solid var(--border)}.l3-sources-label{max-width:600px;margin:0 auto 6px;padding:0 16px;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary)}.l3-sources-grid{max-width:600px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:1fr 1fr;gap:5px}.l3-source-chip{display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:6px;font-size:0.75rem;color:var(--text-tertiary);text-decoration:none;transition:color 0.15s}.l3-source-chip:hover{color:var(--text-primary)}.l3-source-chip svg{flex-shrink:0;opacity:0.4}.l3-context{max-width:600px;margin:0 auto;padding:0 16px}.l3-context-inner{border:1px solid var(--border);border-radius:10px;overflow:hidden}.l3-context-label{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);padding:10px 14px 6px}.l3-context-row{display:flex;align-items:baseline;gap:12px;padding:7px 14px;border-top:1px solid var(--border-light)}.l3-context-key{font-size:0.75rem;color:var(--text-tertiary);min-width:110px;flex-shrink:0}.l3-context-val{font-size:0.8rem;font-weight:500;color:var(--text-primary)}.l3-callout{max-width:600px;margin:0 auto 16px;padding:0 16px}.l3-callout-inner{border-left:3px solid var(--green);padding:10px 14px;background:var(--green-light);border-radius:0 8px 8px 0;font-size:0.82rem;color:var(--text-secondary);line-height:1.6}.l3-pain{max-width:600px;margin:0 auto;padding:0 16px}.l3-pain-label{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);margin-bottom:10px}.l3-pain ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px}.l3-pain ul li{display:flex;align-items:flex-start;gap:10px;font-size:0.83rem;color:var(--text-secondary);line-height:1.5}.l3-pain ul li::before{content:"\xb7";font-size:1.2rem;color:var(--green);line-height:1.2;flex-shrink:0}.l3-niche{max-width:600px;margin:0 auto;padding:0 16px}.l3-niche-inner{background:var(--border-light);border-radius:10px;padding:16px 18px}.l3-niche-inner h4{font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);margin:0 0 6px}.l3-niche-inner p{font-size:0.82rem;color:var(--text-secondary);margin:0;line-height:1.6}.l3-cta{max-width:600px;margin:0 auto 48px;padding:0 16px;text-align:center}.l3-explanation{max-width:600px;margin:0 auto;padding:0 16px;font-size:0.78rem;color:var(--text-tertiary);line-height:1.65;text-align:center}</style></head>
+<body><div id="app">
+<div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+<div class="back-nav"><a href="../L2/market-food-beverage-beverages.html" class="back-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to Beverages</a></div>
+<header class="market-page-header"><div style="text-align:center; margin-bottom:12px;"><span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 2.1</span></div><div class="market-badge"><span class="market-title">Alcoholic Beverages</span></div></header>
+<p class="subtitle" style="max-width:560px; margin:0 auto 0;">Beer, wine, spirits, and emerging categories like hard seltzers and RTD cocktails — spanning craft producers, global conglomerates, and complex three-tier distribution systems.</p>
+<hr class="l3-divider">
+<p class="l3-explanation">Data sourced from IWSR Drinks Market Analysis, Euromonitor Alcoholic Drinks, and IBISWorld brewery and distillery industry reports.</p>
+<p class="l3-sources-label" style="margin-top:14px;">Sources</p>
+<div class="l3-sources-grid"><a href="https://www.theiwsr.com/" target="_blank" rel="noopener" class="l3-source-chip"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M12 8.667V12a1.333 1.333 0 01-1.333 1.333H3.333A1.333 1.333 0 012 12V4.667a1.333 1.333 0 011.333-1.334H5.667M9.333 2H14v4.667M6.667 9.333L14 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>IWSR Drinks Market</a><a href="https://www.euromonitor.com/alcoholic-drinks" target="_blank" rel="noopener" class="l3-source-chip"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M12 8.667V12a1.333 1.333 0 01-1.333 1.333H3.333A1.333 1.333 0 012 12V4.667a1.333 1.333 0 011.333-1.334H5.667M9.333 2H14v4.667M6.667 9.333L14 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Euromonitor Alcoholic</a><a href="https://www.ibisworld.com/united-states/industry/breweries/31212/" target="_blank" rel="noopener" class="l3-source-chip"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M12 8.667V12a1.333 1.333 0 01-1.333 1.333H3.333A1.333 1.333 0 012 12V4.667a1.333 1.333 0 011.333-1.334H5.667M9.333 2H14v4.667M6.667 9.333L14 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>IBISWorld Breweries</a><a href="https://www.ttb.gov/" target="_blank" rel="noopener" class="l3-source-chip"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M12 8.667V12a1.333 1.333 0 01-1.333 1.333H3.333A1.333 1.333 0 012 12V4.667a1.333 1.333 0 011.333-1.334H5.667M9.333 2H14v4.667M6.667 9.333L14 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>TTB Alcohol Regulation</a></div>
+<hr class="l3-divider">
+<div class="l3-context"><div class="l3-context-inner">
+<p class="l3-context-label">Market Context</p>
+<div class="l3-context-row"><span class="l3-context-key">Size / Scale</span><span class="l3-context-val">~$680B global market; spirits ~$280B, beer ~$250B, wine ~$150B</span></div><div class="l3-context-row"><span class="l3-context-key">Growth signal</span><span class="l3-context-val">Premium spirits growing 6-8% CAGR; craft beer mature; no/low-alcohol emerging at 7% CAGR</span></div><div class="l3-context-row"><span class="l3-context-key">Key players</span><span class="l3-context-val">AB InBev, Diageo, Pernod Ricard, Heineken, Constellation Brands, Brown-Forman, LVMH</span></div><div class="l3-context-row"><span class="l3-context-key">Geography</span><span class="l3-context-val">Global — US, EU, China, Japan are largest markets; Africa and LatAm fastest growth</span></div>
+</div></div>
+<hr class="l3-divider">
+<div class="l3-callout"><div class="l3-callout-inner">The alcoholic beverage industry is premiumizing globally — consumers drinking less but paying more per occasion. Three-tier distribution (producer → distributor → retailer) in the US creates unique complexity and software opportunities not found in other food categories.</div></div>
+<div class="l3-pain"><p class="l3-pain-label">Known Pain Points</p><ul>
+<li>Three-tier compliance — US alcohol distribution requires navigating 50 different state regulatory frameworks for licensing, reporting, and distribution</li><li>Craft brewery/distillery margin pressure — small producers face 20-30% distributor margins while lacking direct sales channels</li><li>Inventory management across temperature zones — spirits, wine, and beer each require different storage and handling conditions</li><li>DTC wine/spirits shipping — state-by-state shipping laws create a patchwork of compliance requirements for online sellers</li>
+</ul></div>
+<hr class="l3-divider">
+<div class="l3-niche"><div class="l3-niche-inner"><h4>How to Choose a Niche</h4><p>Alcohol compliance and distribution software is one of the best B2B SaaS niches in F&B — regulatory complexity creates high switching costs. DTC wine platforms have proven PMF. Avoid trying to disrupt three-tier distribution — build tools that make it work better.</p></div></div>
+<hr class="l3-divider">
+<div class="l3-cta"></div>
+</div><script src="../../../content/t.js"></script></body></html>
