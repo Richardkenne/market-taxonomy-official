@@ -16,7 +16,7 @@
 - [x] Batch 4: Non-profit, Payments, Pharma & Biotech, Professional Services, Religion, Retail, Security & Defense
 - [x] Batch 5: Software, Sports & Fitness, Technology, Tourism, Transportation, Utilities, Wholesale & Distribution
 
-## Fase 3 — Vertical Market Build (17/43)
+## Fase 3 — Vertical Market Build (19/43)
 Per ogni mercato, in ordine dalla grid L0:
 1. Verificare/finalizzare L1 (fonti, categorie)
 2. Riscrivere L2 pages (4-5 segmenti, fonti segment-level)
@@ -46,12 +46,12 @@ Per ogni mercato, in ordine dalla grid L0:
 - [ ] 19. Payments
 - [ ] 20. Capital Markets
 - [ ] 21. Technology
-- [ ] 22. Software
+- [x] 22. Software — 6 L2, 18 L2.1, 18 L3 (Gartner, IDC, Forrester, Synergy Research)
 - [ ] 23. Hardware
 - [ ] 24. Telecommunications
 - [ ] 25. Media & Entertainment
 - [ ] 26. Gaming
-- [ ] 27. Advertising & Marketing
+- [x] 27. Advertising & Marketing — 6 L2, 19 L2.1, 19 L3 (IAB, eMarketer, GroupM, Magna)
 - [ ] 28. Education
 - [ ] 29. Professional Services
 - [ ] 30. Legal
