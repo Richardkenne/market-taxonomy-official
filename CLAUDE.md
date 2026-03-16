@@ -59,6 +59,11 @@ Build vertically per market (not horizontally per level):
 4. Each L2 gets a L2.1 detail page + 3-5 L3 niches
 5. Verify all links work in chain
 
-## File Counts (actual)
+## File Counts (actual — 2026-03-16)
 - 43 market folders, 43 L1 pages
-- 476 L2 pages, ~1,401 L2.1 pages (only 4 markets), 1,417 L3 pages
+- ~260 L2 pages, ~909 L2.1 pages, ~889 L3 pages
+- ~2,060 total HTML pages, ~2,800 selectable niches
+- All 43/43 markets fully built with authoritative sources
+
+# currentDate
+Today's date is 2026-03-16.

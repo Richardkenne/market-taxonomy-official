@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Mission Systems &amp; Avionics — Niches — Aerospace</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../../style.css">
+<style>.l3-niche-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;gap:16px;color:inherit}.l3-niche-card:first-child{border-top:1px solid var(--border)}.l3-niche-card:hover h3{color:var(--green)}.l3-niche-card h3{font-size:0.9rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s}.l3-niche-card p{font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4}.l3-niche-grid{max-width:560px;margin:0 auto 48px}.l3-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}</style></head>
+<body><div id="app">
+<div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+<div class="back-nav"><a href="../L2/market-aerospace-military-defense-aviation.html" class="back-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to Military &amp; Defense Aviation</a></div>
+<header class="market-page-header"><div style="text-align:center; margin-bottom:12px;"><span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 3</span></div><div class="market-badge"><span class="market-title">Mission Systems &amp; Avionics — Niches</span></div></header>
+<p class="subtitle" style="max-width:560px; margin:0 auto 32px;">Select a niche within Mission Systems and Avionics to discover specific problems.</p>
+<section style="max-width:560px; margin:0 auto; padding:0 16px;">
+<p class="l3-section-label">Select a niche</p>
+<div class="l3-niche-grid">
+<div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Open Architecture Middleware')"><div><h3>Open Architecture Middleware</h3><p>FACE and MOSA-compliant software platforms enabling rapid integration of new sensors and mission systems on military aircraft.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Cognitive Electronic Warfare')"><div><h3>Cognitive Electronic Warfare</h3><p>AI-driven threat identification, jamming optimization, and adaptive electronic attack algorithms for airborne EW systems.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Avionics Software Certification')"><div><h3>Avionics Software Certification</h3><p>Automated testing, verification, and documentation tools accelerating DO-178C and DO-254 certification processes.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Sensor Fusion Platforms')"><div><h3>Sensor Fusion Platforms</h3><p>Multi-sensor data integration combining radar, EO/IR, ESM, and datalink inputs into unified situational awareness displays.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</section>
+<section class="guidance-box" style="max-width:700px; margin:0 auto 48px;"><h4>How to Choose a Niche</h4><p>Open architecture middleware reduces integration time by 50%+. Cognitive EW algorithms are a high-value niche. Software certification automation addresses DO-178C timelines.</p></section>
+</div>
+<script src="../../../content/t.js"></script>
+<script>
+function selectNiche(nicheName) {
+    localStorage.setItem('selected_l3', nicheName);
+    localStorage.setItem('problem_back_url', window.location.href);
+    window.location.href = '../../../problem-selection.html';
+}
+</script>
+</body></html>

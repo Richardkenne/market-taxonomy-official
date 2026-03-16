@@ -16,7 +16,7 @@
 - [x] Batch 4: Non-profit, Payments, Pharma & Biotech, Professional Services, Religion, Retail, Security & Defense
 - [x] Batch 5: Software, Sports & Fitness, Technology, Tourism, Transportation, Utilities, Wholesale & Distribution
 
-## Fase 3 — Vertical Market Build (33/43)
+## Fase 3 — Vertical Market Build (43/43 — COMPLETATO 2026-03-16)
 Per ogni mercato, in ordine dalla grid L0:
 1. Verificare/finalizzare L1 (fonti, categorie)
 2. Riscrivere L2 pages (4-5 segmenti, fonti segment-level)
@@ -59,19 +59,19 @@ Per ogni mercato, in ordine dalla grid L0:
 - [x] 32. Security & Defense — 6 L2, 18 L2.1, 18 L3 (SIPRI, Janes, DSCA)
 - [x] 33. Government & Public Sector — 6 L2, 18 L2.1, 18 L3 (OECD, IMF, World Bank)
 - [x] 34. Tourism & Hospitality — 6 L2, 18 L2.1, 18 L3 (UNWTO, WTTC, STR)
-- [ ] 35. Fashion & Apparel
-- [ ] 36. Logistics & Supply Chain
-- [ ] 37. Chemicals & Materials
-- [ ] 38. Mining
-- [ ] 39. Aerospace
-- [ ] 40. Sports & Fitness
-- [ ] 41. Non-profit & Social
-- [ ] 42. Religion & Faith
-- [ ] 43. Environmental & Climate
+- [x] 35. Fashion & Apparel — 6 L2, 25 L2.1, 25 L3 (Bain, Euromonitor, McKinsey, BOF, WGSN)
+- [x] 36. Logistics & Supply Chain — 6 L2, 25 L2.1, 25 L3 (Armstrong, CSCMP, Gartner, IATA Cargo)
+- [x] 37. Chemicals & Materials — 6 L2, 30 L2.1, 30 L3 (ACC, ICIS, CEFIC, Plastics Europe)
+- [x] 38. Mining — 6 L2, 23 L2.1, 23 L3 (USGS, S&P Global, ICMM, CRU Group)
+- [x] 39. Aerospace — 6 L2, 29 L2.1, 29 L3 (FAA, AIA, Boeing/Airbus, Teal Group, SIA)
+- [x] 40. Sports & Fitness — 6 L2, 24 L2.1, 24 L3 (Deloitte Sports, GHFA, SFIA, Two Circles)
+- [x] 41. Non-profit & Social — 6 L2, 25 L2.1, 25 L3 (Candid, Giving USA, NCVO, CAF)
+- [x] 42. Religion & Faith — 6 L2, 24 L2.1, 24 L3 (Pew Research, ARDA, Barna, ECFA)
+- [x] 43. Environmental & Climate — 6 L2, 25 L2.1, 25 L3 (EPA, UNEP, IPCC, BloombergNEF, WRI)
 
 ## Fase 4 — Pulizia & Verifica
 - [x] Rimuovere "cartella senza nome"
 - [x] Rimuovere MARKETS/Real Estate/L2.1/MARKETS/ (duplicato)
 - [x] Rimuovere .DS_Store, aggiungere a .gitignore
-- [ ] Verificare consistenza globale link e i18n
+- [x] Verificare consistenza globale link e i18n (check finale 2026-03-16: 0 errori)
 - [x] Implementare search bar full-text (multi-categoria: Markets + BD + BS + DM)

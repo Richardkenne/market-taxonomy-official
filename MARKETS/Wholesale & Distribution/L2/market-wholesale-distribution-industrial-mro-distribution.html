@@ -1,123 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industrial & MRO Distribution — Wholesale & Distribution — Market Taxonomy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../../style.css">
-    <style>
-        .l1-cards-grid{display:flex;flex-direction:column;gap:0;max-width:560px;margin:0 auto 48px;padding:0 16px;}
-        .l1-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;cursor:pointer;transition:color 0.15s;text-align:left;gap:16px;color:inherit;}
-        .l1-card:first-child{border-top:1px solid var(--border);}
-        .l1-card:hover h3{color:var(--green);}
-        .l1-card-left{flex:1;}
-        .l1-card-num{font-size:0.65rem;font-weight:700;color:var(--text-tertiary);min-width:24px;flex-shrink:0;}
-        .l1-card h3{font-size:0.95rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s;}
-        .l1-card p{font-size:0.82rem;color:var(--text-secondary);margin:0;line-height:1.4;}
-        .l1-card-tam{font-size:0.73rem;font-weight:600;color:var(--green);white-space:nowrap;flex-shrink:0;}
-        .l1-card-arrow{color:var(--text-tertiary);flex-shrink:0;}
-        .l1-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px;}
-        .l2-sources{display:flex;flex-direction:column;gap:6px;margin:0 auto 32px;max-width:560px;padding:0 16px;}
-        .l2-source-chip{display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--border-light);border-radius:10px;font-size:0.82rem;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:background 0.15s,color 0.15s;}
-        .l2-source-chip:hover{background:#e8f4fd;color:#1a6fa8;}
-        .l2-source-chip svg{flex-shrink:0;}
-    </style>
-</head>
-<body>
-    <div id="app">
-        <div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
-        <div class="back-nav">
-            <a href="../L1/market-wholesale-distribution.html" class="back-link">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Back to Wholesale &amp; Distribution
-            </a>
-        </div>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Industrial &amp; MRO Distribution &mdash; Wholesale &amp; Distribution &mdash; Market Taxonomy</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../../style.css">
+<style>.l2-divider{max-width:600px;margin:28px auto;border:none;border-top:1px solid var(--border)}.l2-sources-label{max-width:600px;margin:0 auto 6px;padding:0 16px;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary)}.l2-sources-grid{max-width:600px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:1fr 1fr;gap:5px}.l2-source-chip{display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:6px;font-size:0.75rem;font-weight:400;color:var(--text-tertiary);text-decoration:none;transition:color 0.15s}.l2-source-chip:hover{color:var(--text-primary)}.l2-source-chip svg{flex-shrink:0;opacity:0.4}.l2-callout{max-width:600px;margin:0 auto 16px;padding:0 16px}.l2-callout-inner{border-left:3px solid var(--green);padding:10px 14px;background:var(--green-light,#f0faf4);border-radius:0 8px 8px 0}.l2-callout-inner p{font-size:0.82rem;color:var(--text-secondary);margin:0;line-height:1.6}.l2-segments-grid{max-width:600px;margin:0 auto 0;padding:0 16px;display:flex;flex-direction:column;gap:6px}.l2-card{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:11px 14px;transition:border-color 0.15s,box-shadow 0.15s}.l2-card:hover{border-color:var(--green);box-shadow:0 1px 8px rgba(0,0,0,0.05)}.l2-card-num{font-size:0.6rem;font-weight:700;color:var(--text-tertiary);letter-spacing:0.05em;flex-shrink:0;width:18px}.l2-card-body{flex:1;min-width:0}.l2-card-top{display:flex;align-items:baseline;gap:8px}.l2-card h3{font-size:0.875rem;font-weight:600;color:var(--text-primary);margin:0;transition:color 0.15s}.l2-card:hover h3{color:var(--green)}.l2-card-size{font-size:0.68rem;font-weight:600;color:var(--green);white-space:nowrap}.l2-card-desc{font-size:0.78rem;color:var(--text-secondary);margin:1px 0 0;line-height:1.4}.l2-card-arrow{color:var(--text-tertiary);flex-shrink:0;transition:color 0.15s,transform 0.15s}.l2-card:hover .l2-card-arrow{color:var(--green);transform:translateX(2px)}.l2-niche-box{max-width:600px;margin:0 auto 48px;padding:0 16px}.l2-niche-inner{background:var(--border-light);border-radius:10px;padding:16px 18px}.l2-niche-inner h4{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-tertiary);margin:0 0 6px}.l2-niche-inner p{font-size:0.82rem;color:var(--text-secondary);margin:0;line-height:1.6}.l2-explanation{max-width:600px;margin:0 auto;padding:0 16px;font-size:0.78rem;color:var(--text-tertiary);line-height:1.65;text-align:center}</style></head>
+<body><div id="app">
+<div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+<div class="back-nav"><a href="../L1/market-wholesale-distribution.html" class="back-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to Wholesale &amp; Distribution</a></div>
+<header class="market-page-header"><div style="text-align:center;margin-bottom:12px;"><span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A &mdash; Level 2</span></div><div class="market-badge"><span class="market-title">Industrial &amp; MRO Distribution</span></div></header>
+<p class="subtitle" style="max-width:560px;margin:0 auto 0;">Distributors of industrial supplies, maintenance/repair/operations parts, safety equipment, and cutting tools serving manufacturing and facility management buyers.</p>
+<hr class="l2-divider">
+<p class="l2-sources-label" style="margin-top:14px;">Sources</p>
+<div class="l2-sources-grid">
+<a class="l2-source-chip" href="https://www.census.gov/naics/?input=4231&chart=2022" target="_blank"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M12 8.667V12a1.333 1.333 0 01-1.333 1.333H3.333A1.333 1.333 0 012 12V4.667a1.333 1.333 0 011.333-1.334H5.667M9.333 2H14v4.667M6.667 9.333L14 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>NAICS 4231–4234 — Industrial Machinery & Supplies</a>
+<a class="l2-source-chip" href="https://www.mdm.com/top-distributors/industrial" target="_blank"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M12 8.667V12a1.333 1.333 0 01-1.333 1.333H3.333A1.333 1.333 0 012 12V4.667a1.333 1.333 0 011.333-1.334H5.667M9.333 2H14v4.667M6.667 9.333L14 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>MDM Top Industrial Distributors</a>
+<a class="l2-source-chip" href="https://www.naw.org/advocacy-policy/research/" target="_blank"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M12 8.667V12a1.333 1.333 0 01-1.333 1.333H3.333A1.333 1.333 0 012 12V4.667a1.333 1.333 0 011.333-1.334H5.667M9.333 2H14v4.667M6.667 9.333L14 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>NAW Industrial Distribution Research</a>
+<a class="l2-source-chip" href="https://www.ibisworld.com/industry/industrial-machinery-equipment-wholesaling.html" target="_blank"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M12 8.667V12a1.333 1.333 0 01-1.333 1.333H3.333A1.333 1.333 0 012 12V4.667a1.333 1.333 0 011.333-1.334H5.667M9.333 2H14v4.667M6.667 9.333L14 2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>IBISWorld Industrial Wholesaling</a>
+</div>
+<hr class="l2-divider">
+<div class="l2-callout"><div class="l2-callout-inner"><p>Focus on segments where regulatory compliance, inventory complexity, or supply chain fragmentation create recurring pain points. Look for sub-markets with high SKU counts, mandatory documentation workflows, or multi-party coordination challenges — these produce the strongest demand for software solutions.</p></div></div>
+<div class="l2-segments-grid">
+<a class="l2-card" href="../L2.1/market-wholesale-distribution-industrial-mro-distribution-safety-ppe.html">
+<span class="l2-card-num">01</span>
+<div class="l2-card-body">
+<div class="l2-card-top"><h3>Safety &amp; PPE Distribution</h3><span class="l2-card-size">$12B+</span></div>
+<p class="l2-card-desc">Wholesale distribution of personal protective equipment, safety gear, respiratory protection, and workplace safety suppl...</p>
+<p style="font-size:0.7rem;color:var(--green);margin:4px 0 0;"><a href="../L2.1/market-wholesale-distribution-industrial-mro-distribution-safety-ppe.html" style="color:var(--green);text-decoration:none;">Explore segment details &rarr;</a></p>
+</div>
+<svg class="l2-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
 
-        <header class="market-page-header">
-            <div style="text-align:center; margin-bottom:12px;">
-                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 2</span>
-            </div>
-            <div class="market-badge">
-                <span class="market-title">Industrial & MRO Distribution</span>
-            </div>
-        </header>
+<a class="l2-card" href="../L2.1/market-wholesale-distribution-industrial-mro-distribution-cutting-tools-metalworking.html">
+<span class="l2-card-num">02</span>
+<div class="l2-card-body">
+<div class="l2-card-top"><h3>Cutting Tools &amp; Metalworking Distribution</h3><span class="l2-card-size">$8B+</span></div>
+<p class="l2-card-desc">Wholesale distribution of precision cutting tools, abrasives, metalworking fluids, and tooling accessories to machine sh...</p>
+<p style="font-size:0.7rem;color:var(--green);margin:4px 0 0;"><a href="../L2.1/market-wholesale-distribution-industrial-mro-distribution-cutting-tools-metalworking.html" style="color:var(--green);text-decoration:none;">Explore segment details &rarr;</a></p>
+</div>
+<svg class="l2-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
 
-        <p class="subtitle" style="max-width:560px; margin:0 auto 24px;">
-            Distributors of industrial supplies, maintenance/repair/operations parts, safety equipment, and cutting tools serving manufacturing and facility management buyers.
-        </p>
+<a class="l2-card" href="../L2.1/market-wholesale-distribution-industrial-mro-distribution-fasteners-hardware.html">
+<span class="l2-card-num">03</span>
+<div class="l2-card-body">
+<div class="l2-card-top"><h3>Fasteners &amp; Hardware Distribution</h3><span class="l2-card-size">$15B+</span></div>
+<p class="l2-card-desc">Wholesale distribution of bolts, nuts, screws, rivets, anchors, and specialty fasteners to OEM manufacturers, constructi...</p>
+<p style="font-size:0.7rem;color:var(--green);margin:4px 0 0;"><a href="../L2.1/market-wholesale-distribution-industrial-mro-distribution-fasteners-hardware.html" style="color:var(--green);text-decoration:none;">Explore segment details &rarr;</a></p>
+</div>
+<svg class="l2-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
 
-        <div class="l2-sources">
-            <a href="https://www.census.gov/naics/?input=4231&chart=2022" target="_blank" rel="noopener" class="l2-source-chip">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                NAICS 4231–4234 — Industrial Machinery & Supplies
-            </a>
-            <a href="https://www.mdm.com/top-distributors/industrial" target="_blank" rel="noopener" class="l2-source-chip">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                MDM Top Industrial Distributors
-            </a>
-            <a href="https://www.naw.org/advocacy-policy/research/" target="_blank" rel="noopener" class="l2-source-chip">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                NAW Industrial Distribution Research
-            </a>
-            <a href="https://www.ibisworld.com/industry/industrial-machinery-equipment-wholesaling.html" target="_blank" rel="noopener" class="l2-source-chip">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1l7 7-7 7M1 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-                IBISWorld Industrial Wholesaling
-            </a>
-        </div>
+<a class="l2-card" href="../L2.1/market-wholesale-distribution-industrial-mro-distribution-bearings-power-transmission.html">
+<span class="l2-card-num">04</span>
+<div class="l2-card-body">
+<div class="l2-card-top"><h3>Bearings &amp; Power Transmission Distribution</h3><span class="l2-card-size">$10B+</span></div>
+<p class="l2-card-desc">Wholesale distribution of bearings, belts, chains, gears, motors, and drives to industrial plants, OEM assemblers, and M...</p>
+<p style="font-size:0.7rem;color:var(--green);margin:4px 0 0;"><a href="../L2.1/market-wholesale-distribution-industrial-mro-distribution-bearings-power-transmission.html" style="color:var(--green);text-decoration:none;">Explore segment details &rarr;</a></p>
+</div>
+<svg class="l2-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
 
-        <section style="max-width:900px; margin:0 auto; padding:0 16px;">
-            <p class="l1-section-label">Select a segment to continue</p>
-            <div class="l1-cards-grid" style="padding:0;">
-
-                <a href="../L2.1/market-wholesale-distribution-industrial-mro-distribution-safety-ppe.html" class="l1-card">
-                    <span class="l1-card-num">01</span>
-                    <div class="l1-card-left">
-                        <h3>Safety & PPE Distribution</h3>
-                        <p>Wholesale distribution of personal protective equipment, safety gear, respiratory protection, and workplace safety suppl...</p>
-                    </div>
-                    <span class="l1-card-tam">$12B+</span>
-                    <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-                <a href="../L2.1/market-wholesale-distribution-industrial-mro-distribution-cutting-tools-metalworking.html" class="l1-card">
-                    <span class="l1-card-num">02</span>
-                    <div class="l1-card-left">
-                        <h3>Cutting Tools & Metalworking Distribution</h3>
-                        <p>Wholesale distribution of precision cutting tools, abrasives, metalworking fluids, and tooling accessories to machine sh...</p>
-                    </div>
-                    <span class="l1-card-tam">$8B+</span>
-                    <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-                <a href="../L2.1/market-wholesale-distribution-industrial-mro-distribution-fasteners-hardware.html" class="l1-card">
-                    <span class="l1-card-num">03</span>
-                    <div class="l1-card-left">
-                        <h3>Fasteners & Hardware Distribution</h3>
-                        <p>Wholesale distribution of bolts, nuts, screws, rivets, anchors, and specialty fasteners to OEM manufacturers, constructi...</p>
-                    </div>
-                    <span class="l1-card-tam">$15B+</span>
-                    <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-                <a href="../L2.1/market-wholesale-distribution-industrial-mro-distribution-bearings-power-transmission.html" class="l1-card">
-                    <span class="l1-card-num">04</span>
-                    <div class="l1-card-left">
-                        <h3>Bearings & Power Transmission Distribution</h3>
-                        <p>Wholesale distribution of bearings, belts, chains, gears, motors, and drives to industrial plants, OEM assemblers, and M...</p>
-                    </div>
-                    <span class="l1-card-tam">$10B+</span>
-                    <svg class="l1-card-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-            </div>
-        </section>
-
-        <section class="guidance-box" style="max-width:700px; margin:0 auto 48px;">
-            <h4>How to Choose a Niche</h4>
-            <p>Focus on segments where regulatory compliance, inventory complexity, or supply chain fragmentation create recurring pain points. Look for sub-markets with high SKU counts, mandatory documentation workflows, or multi-party coordination challenges — these produce the strongest demand for software solutions.</p>
-        </section>
-    </div>
-    <script src="../../../content/t.js"></script>
-</body>
-</html>
+</div>
+<hr class="l2-divider">
+<div class="l2-niche-box"><div class="l2-niche-inner"><h4>How to Choose a Niche</h4><p>Focus on segments where regulatory compliance, inventory complexity, or supply chain fragmentation create recurring pain points. Look for sub-markets with high SKU counts, mandatory documentation workflows, or multi-party coordination challenges — these produce the strongest demand for software solutions.</p></div></div>
+</div><script src="../../../content/t.js"></script></body></html>

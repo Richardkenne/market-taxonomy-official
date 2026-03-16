@@ -1,109 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renovation & Remodeling — Niches — Construction & Infrastructure</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../../style.css">
-    <style>
-        .l3-niche-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;gap:16px;color:inherit;}
-        .l3-niche-card:first-child{border-top:1px solid var(--border);}
-        .l3-niche-card:hover h3{color:var(--green);}
-        .l3-niche-card h3{font-size:0.9rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s;}
-        .l3-niche-card p{font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4;}
-        .l3-niche-grid{max-width:560px;margin:0 auto 48px;}
-        .l3-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px;}
-    </style>
-</head>
-<body>
-    <div id="app">
-        <div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
-        <div class="back-nav">
-            <a href="../L2/market-construction-infrastructure-residential-construction.html" class="back-link">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Back to Residential Construction
-            </a>
-        </div>
-
-        <header class="market-page-header">
-            <div style="text-align:center; margin-bottom:12px;">
-                <span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 3</span>
-            </div>
-            <div class="market-badge">
-                <span class="market-title">Renovation & Remodeling — Niches</span>
-            </div>
-        </header>
-
-        <p class="subtitle" style="max-width:560px; margin:0 auto 32px;">
-            Select a niche within Renovation & Remodeling to see specific problems and begin your analysis.
-        </p>
-
-        <section style="max-width:560px; margin:0 auto; padding:0 16px;">
-            <p class="l3-section-label">Select a niche</p>
-            <div class="l3-niche-grid">
-                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Kitchen & Bath Remodelers')">
-                    <div>
-                        <h3>Kitchen & Bath Remodelers</h3>
-                        <p>Specialists in the two highest-value home renovation categories with complex trades coordination.</p>
-                    </div>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Whole-Home Remodelers')">
-                    <div>
-                        <h3>Whole-Home Remodelers</h3>
-                        <p>Full-service firms handling gut renovations, additions, and major structural modifications.</p>
-                    </div>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Insurance Restoration Contractors')">
-                    <div>
-                        <h3>Insurance Restoration Contractors</h3>
-                        <p>Fire, water, and storm damage restoration specialists working with insurance claims processes.</p>
-                    </div>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Aging-in-Place & Accessibility Contractors')">
-                    <div>
-                        <h3>Aging-in-Place & Accessibility Contractors</h3>
-                        <p>Specialists in home modifications for seniors and disabled residents — ADA compliance and universal design.</p>
-                    </div>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-                <div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Investor Fix-and-Flip Operators')">
-                    <div>
-                        <h3>Investor Fix-and-Flip Operators</h3>
-                        <p>Real estate investors renovating distressed properties for resale with speed and cost optimization focus.</p>
-                    </div>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </div>
-            </div>
-        </section>
-
-        <section class="guidance-box" style="max-width:700px; margin:0 auto 48px;">
-            <h4>How to Choose a Niche</h4>
-            <p>Kitchen & bath remodelers have the highest project frequency and client communication pain — estimating and visualization tools drive sales conversion.</p>
-        </section>
-
-        <div class="l3-cta" style="margin-top: 48px;">
-            <a class="l3-cta-btn" href="../../../numbers.html?l3=market-construction-infrastructure-residential-construction-renovation" style="background:var(--text-secondary);">Numbers & TAM &rarr;</a>
-        </div>
-    </div>
-    <script src="../../../content/t.js"></script>
-    <script>
-    function selectNiche(nicheName) {
-        localStorage.setItem('selected_l3', nicheName);
-        localStorage.setItem('problem_back_url', window.location.href);
-        const l2 = 'Renovation & Remodeling';
-        const words = l2.toLowerCase().split(/[\s\/&-]+/).filter(w => w.length > 2);
-        localStorage.setItem('suggested_primary', words[0] || '');
-        localStorage.setItem('suggested_secondary', words[1] || '');
-        window.location.href = '../../../problem-selection.html';
-    }
-    </script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Renovation — Niches — Construction &amp; Infrastructure</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../../style.css">
+<style>.l3-niche-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;gap:16px;color:inherit}.l3-niche-card:first-child{border-top:1px solid var(--border)}.l3-niche-card:hover h3{color:var(--green)}.l3-niche-card h3{font-size:0.9rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s}.l3-niche-card p{font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4}.l3-niche-grid{max-width:560px;margin:0 auto 48px}.l3-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}</style></head>
+<body><div id="app">
+<div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+<div class="back-nav"><a href="../L2/market-construction-infrastructure-residential-construction.html" class="back-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to Residential Construction</a></div>
+<header class="market-page-header"><div style="text-align:center; margin-bottom:12px;"><span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 3</span></div><div class="market-badge"><span class="market-title">Renovation — Niches</span></div></header>
+<p class="subtitle" style="max-width:560px; margin:0 auto 32px;">Select a niche within Renovation to discover specific problems.</p>
+<section style="max-width:560px; margin:0 auto; padding:0 16px;">
+<p class="l3-section-label">Select a niche</p>
+<div class="l3-niche-grid">
+<div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Kitchen & Bath Remodeling')"><div><h3>Kitchen & Bath Remodeling</h3><p>Full kitchen and bathroom renovation including cabinets, countertops, and plumbing.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Whole-Home Renovation')"><div><h3>Whole-Home Renovation</h3><p>Gut renovation and major remodeling of existing single-family homes.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Historic Preservation & Restoration')"><div><h3>Historic Preservation & Restoration</h3><p>Period-accurate restoration meeting Secretary of Interior standards and tax credit requirements.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Energy Retrofit & Weatherization')"><div><h3>Energy Retrofit & Weatherization</h3><p>Insulation, window replacement, and air sealing for existing home energy efficiency.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</section>
+<section class="guidance-box" style="max-width:700px; margin:0 auto 48px;"><h4>How to Choose a Niche</h4><p>Focus on niches where homeowner expectations, permit requirements, or aging housing stock create renovation market opportunities.</p></section>
+</div>
+<script src="../../../content/t.js"></script>
+<script>
+function selectNiche(nicheName) {
+    localStorage.setItem('selected_l3', nicheName);
+    localStorage.setItem('problem_back_url', window.location.href);
+    window.location.href = '../../../problem-selection.html';
+}
+</script>
+</body></html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sports Team &amp; Uniform — Niches — Fashion &amp; Apparel</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../../../style.css">
+<style>.l3-niche-card{display:flex;align-items:center;justify-content:space-between;text-decoration:none;background:var(--white);border-bottom:1px solid var(--border);padding:16px 4px;gap:16px;color:inherit}.l3-niche-card:first-child{border-top:1px solid var(--border)}.l3-niche-card:hover h3{color:var(--green)}.l3-niche-card h3{font-size:0.9rem;font-weight:600;color:var(--text-primary);margin:0 0 2px;transition:color 0.15s}.l3-niche-card p{font-size:0.8rem;color:var(--text-secondary);margin:0;line-height:1.4}.l3-niche-grid{max-width:560px;margin:0 auto 48px}.l3-section-label{text-align:center;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:16px}</style></head>
+<body><div id="app">
+<div class="home-nav"><a href="../../../index.html" class="home-link">Home</a></div>
+<div class="back-nav"><a href="../L2/market-fashion-apparel-athletic-performance-wear.html" class="back-link"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to Athletic &amp; Performance Wear</a></div>
+<header class="market-page-header"><div style="text-align:center; margin-bottom:12px;"><span class="part-badge part-badge-a"><span class="part-badge-dot"></span>Part A — Level 3</span></div><div class="market-badge"><span class="market-title">Sports Team &amp; Uniform — Niches</span></div></header>
+<p class="subtitle" style="max-width:560px; margin:0 auto 32px;">Select a niche within Sports Team &amp; Uniform to discover specific problems.</p>
+<section style="max-width:560px; margin:0 auto; padding:0 16px;">
+<p class="l3-section-label">Select a niche</p>
+<div class="l3-niche-grid">
+<div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Sports Licensing Management')"><div><h3>Sports Licensing Management</h3><p>Platforms managing licensing agreements, royalty calculations, and compliance across professional leagues, collegiate programs, and athlete NIL deals.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('On-Demand Team Merchandise')"><div><h3>On-Demand Team Merchandise</h3><p>Print-on-demand and custom manufacturing platforms enabling profitable production of team merchandise for small-market, minor league, and niche sports.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="l3-niche-card" style="cursor:pointer;" onclick="selectNiche('Custom Uniform Design Tools')"><div><h3>Custom Uniform Design Tools</h3><p>Online design and ordering platforms for recreational leagues, school teams, and corporate athletic programs — managing team rosters, sizing, and logo placement.</p></div><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+</section>
+<section class="guidance-box" style="max-width:700px; margin:0 auto 48px;"><h4>How to Choose a Niche</h4><p>Licensing management has high complexity and switching costs. On-demand production solves the unit economics problem for long-tail team merchandise. Custom uniform tools serve a fragmented but recurring-revenue market.</p></section>
+</div>
+<script src="../../../content/t.js"></script>
+<script>
+function selectNiche(nicheName) {
+    localStorage.setItem('selected_l3', nicheName);
+    localStorage.setItem('problem_back_url', window.location.href);
+    window.location.href = '../../../problem-selection.html';
+}
+</script>
+</body></html>

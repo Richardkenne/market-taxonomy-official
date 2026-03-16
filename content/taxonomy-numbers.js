@@ -8,7 +8,7 @@
  */
 const TAXONOMY_NUMBERS = {
   L0: { count: "43",       label: "Macro Markets"  },
-  L1: { count: "230+",     label: "Sub-markets"    },
-  L2: { count: "4,370+",   label: "Segments"       },
-  L3: { count: "50,000+",  label: "Niches"         }
+  L1: { count: "260",      label: "Sub-markets"    },
+  L2: { count: "909",      label: "Segments"       },
+  L3: { count: "886",      label: "Niches"         }
 };
